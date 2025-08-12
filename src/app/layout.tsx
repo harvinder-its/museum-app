@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ClientOnly from "@/components/ClientOnly";
+import { AudioProvider } from "@/contexts/AudioContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ਸਿੱਖ ਇਤਿਹਾਸ - Sikh History",
   description: "Explore the rich history of Sikhism through the lives of great martyrs and leaders.",
+  icons: {
+    icon: '/images/favicon.ico',
+  },
 };
 
 export default function RootLayout({
@@ -30,9 +34,11 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <ClientOnly>
-          <main className="min-h-screen">
-            {children}
-          </main>
+          <AudioProvider>
+            <main className="min-h-screen">
+              {children}
+            </main>
+          </AudioProvider>
         </ClientOnly>
       </body>
     </html>

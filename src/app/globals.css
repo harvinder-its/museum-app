@@ -116,3 +116,104 @@ section {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Active navigation button styles */
+.active-nav {
+  position: relative;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(4, 13, 106, 0.3);
+  transform: translateY(-1px);
+}
+
+.active-nav::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(135deg, #ff6b6b, #ffa500);
+  border-radius: 0 2px 2px 0;
+}
+
+.active-nav::after {
+  content: '';
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Audio Player Custom Styles */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ec7b46;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(236, 123, 70, 0.3);
+  transition: all 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 2px 8px rgba(236, 123, 70, 0.4);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ec7b46;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 1px 4px rgba(236, 123, 70, 0.3);
+  transition: all 0.2s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 2px 8px rgba(236, 123, 70, 0.4);
+}
+
+/* Audio player button hover effects */
+.audio-player-button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.audio-player-button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 15px rgba(236, 123, 70, 0.25);
+}
+
+/* Fixed audio player styles */
+.fixed-audio-player {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Ensure footer doesn't overlap with fixed audio player */
+footer {
+  margin-bottom: 80px;
+}
+
+/* When fixed audio player is visible, adjust main content */
+.fixed-audio-player-visible {
+  padding-bottom: 80px;
+}

@@ -1,0 +1,23 @@
+This is a placeholder file.
+
+To add audio files for each section:
+
+1. Create MP3 files with the following names:
+   - bhaimanisingh.mp3
+   - bhaitarusingh.mp3
+   - bhaishubegsingh.mp3
+   - babadeepsingh.mp3
+   - jarnail.mp3
+   - nawabkapursingh.mp3
+   - jassasinghramgharia.mp3
+   - jassasinghahluwalia.mp3
+   - baghelsingh.mp3
+   - chotaghallughara.mp3
+   - dalkhalsa.mp3
+   - vadaghallughara.mp3
+
+2. Place them in this directory
+
+3. The audio player will automatically load the corresponding audio file for each section.
+
+For testing, you can use any MP3 file and rename it to match one of the section IDs above.
