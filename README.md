@@ -1,36 +1,179 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sikh History - Multilingual Website
 
-## Getting Started
+A comprehensive multilingual website showcasing the rich history of Sikhism through the lives of great martyrs and leaders. Built with Next.js 15, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🌍 Multilingual Support
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+The website currently supports:
+- **English** (`/en`) - Default language
+- **Punjabi** (`/pa`) - Gurmukhi script
+
+### Adding New Languages
+
+To add a new language (e.g., Hindi):
+
+1. **Update i18n configuration** in `src/i18n.ts`:
+   ```typescript
+   export const locales = ['en', 'pa', 'hi'] as const;
+   ```
+
+2. **Create translation file** `messages/hi.json`:
+   ```json
+   {
+     "navigation": {
+       "title": "सिख इतिहास",
+       "themeToggle": "थीम बदलें",
+       "progress": "प्रगति",
+       "of": "में से"
+     },
+     "sections": {
+       "bhaimanisingh": {
+         "title": "शहीद भाई मनी सिंह जी",
+         "content": "...",
+         "imageDetails": {
+           "title": "छवि विवरण",
+           "artist": "कलाकार",
+           "size": "आकार",
+           "type": "कला प्रकार"
+         }
+       }
+     }
+   }
+   ```
+
+3. **Update middleware** in `src/middleware.ts`:
+   ```typescript
+   export const config = {
+     matcher: ['/', '/(pa|en|hi)/:path*']
+   };
+   ```
+
+## 🚀 Features
+
+- **Multilingual Support**: Seamless language switching between English and Punjabi
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Dark/Light Theme**: Toggle between dark and light modes
+- **Interactive Navigation**: Sidebar navigation with progress tracking
+- **Rich Content**: Detailed historical information with images and metadata
+- **SEO Optimized**: Proper meta tags and structured content
+
+## 🛠️ Technology Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Internationalization**: next-intl
+- **Icons**: Heroicons (SVG)
+- **Fonts**: Geist Sans & Geist Mono
+
+## 📁 Project Structure
+
+```
+musem-app/
+├── src/
+│   ├── app/
+│   │   ├── [locale]/          # Internationalized routes
+│   │   │   ├── layout.tsx     # Locale-specific layout
+│   │   │   └── page.tsx       # Main page component
+│   │   ├── globals.css        # Global styles
+│   │   ├── layout.tsx         # Root layout
+│   │   └── page.tsx           # Root redirect
+│   ├── components/
+│   │   ├── Header.tsx         # Navigation header
+│   │   ├── Footer.tsx         # Site footer
+│   │   └── ClientOnly.tsx     # Client-side wrapper
+│   ├── i18n.ts               # Internationalization config
+│   └── middleware.ts         # Locale routing middleware
+├── messages/
+│   ├── en.json              # English translations
+│   └── pa.json              # Punjabi translations
+├── public/
+│   └── images/              # Historical images
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Run development server**:
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+3. **Open your browser**:
+   - English: http://localhost:3000/en
+   - Punjabi: http://localhost:3000/pa
 
-To learn more about Next.js, take a look at the following resources:
+## 📝 Content Management
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Adding New Historical Figures
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Update translation files** with new content
+2. **Add images** to `public/images/`
+3. **Update sections array** in the main page component
 
-## Deploy on Vercel
+### Translation Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Each language file follows this structure:
+```json
+{
+  "navigation": {
+    "title": "Site title",
+    "themeToggle": "Theme toggle text",
+    "progress": "Progress text",
+    "of": "Of text"
+  },
+  "sections": {
+    "sectionId": {
+      "title": "Section title",
+      "content": "HTML content",
+      "imageDetails": {
+        "title": "Image details title",
+        "artist": "Artist label",
+        "size": "Size label", 
+        "type": "Type label"
+      }
+    }
+  },
+  "imageDetails": {
+    "sectionId": {
+      "artist": "Artist name",
+      "size": "Image size",
+      "type": "Art type"
+    }
+  },
+  "footer": {
+    "copyright": "Copyright text",
+    "description": "Site description"
+  }
+}
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Deployment
+
+The website is optimized for deployment on Vercel, Netlify, or any static hosting platform that supports Next.js.
+
+### Environment Variables
+
+No environment variables are required for basic functionality.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Add translations for new languages
+4. Submit a pull request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- Sikh community for preserving and sharing this rich history
+- Next.js team for the excellent framework
+- Tailwind CSS for the utility-first styling approach
