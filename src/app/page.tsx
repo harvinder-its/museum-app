@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import AudioPlayer from '@/components/AudioPlayer';
 import FixedAudioPlayer from '@/components/FixedAudioPlayer';
@@ -9,10 +10,9 @@ import Footer from '@/components/Footer';
 export default function Home() {
   const [currentSection, setCurrentSection] = useState(0);
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
   const sectionRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
-  const sections = [
+  const sections = useMemo(() => [
     { id: 'bhaimanisingh', label: 'ਸ਼ਹੀਦ ਭਾਈ ਮਨੀ ਸਿੰਘ ਜੀ' },
     { id: 'bhaitarusingh', label: 'ਸ਼ਹੀਦ ਭਾਈ ਤਾਰੂ ਸਿੰਘ ਜੀ' },
     { id: 'bhaishubegsingh', label: 'ਸ਼ਹੀਦ ਭਾਈ ਸੁਬੇਗ ਸਿੰਘ ਤੇ ਭਾਈ ਸ਼ਾਹਬਾਜ ਸਿੰਘ ਜੀ' },
@@ -25,7 +25,7 @@ export default function Home() {
     { id: 'chotaghallughara', label: 'ਛੋਟਾ ਘੱਲੂਘਾਰਾ' },
     { id: 'dalkhalsa', label: 'ਦਲ ਖ਼ਾਲਸਾ' },
     { id: 'vadaghallughara', label: 'ਵੱਡਾ ਘੱਲੂਘਾਰਾ' },
-  ];
+  ], []);
 
   // Load theme preference from localStorage
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function Home() {
     }
   }, [isDarkMode]);
 
-  // Set up Intersection Observer for scroll-based navigation and fade effects
+  // Set up Intersection Observer for scroll-based navigation
   useEffect(() => {
     const observerOptions = {
       root: null,
@@ -54,12 +54,9 @@ export default function Home() {
     };
 
     const observer = new IntersectionObserver((entries) => {
-      const newVisibleSections = new Set<string>();
-      
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const sectionId = entry.target.id;
-          newVisibleSections.add(sectionId);
           
           // Update current section for navigation highlighting
           const sectionIndex = sections.findIndex(section => section.id === sectionId);
@@ -68,8 +65,6 @@ export default function Home() {
           }
         }
       });
-      
-      setVisibleSections(newVisibleSections);
     }, observerOptions);
 
     // Observe all sections
@@ -251,9 +246,11 @@ export default function Home() {
           
           {/* Image */}
           <div className="mb-8">
-            <img 
+            <Image 
               src={getImageUrl(sectionId)} 
               alt={section.label} 
+              width={800}
+              height={600}
               className="w-full max-w-2xl h-auto rounded-lg shadow-2xl mx-auto block"
               onError={(e) => {
                 e.currentTarget.src = `images/placeholder-gsahib.avif`;
@@ -314,9 +311,11 @@ export default function Home() {
                          {/* Logo */}
              <div className="mb-12 flex items-center justify-center">
                <div className="flex items-center">
-                 <img 
+                 <Image 
                    src={isDarkMode ? "/images/logo-light.png" : "/images/logo.png"} 
                    alt="ਸਿੱਖ ਇਤਿਹਾਸ" 
+                   width={112}
+                   height={112}
                    className="h-28 w-auto"
                    onError={(e) => {
                      e.currentTarget.style.display = 'none';

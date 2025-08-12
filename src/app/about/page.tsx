@@ -181,7 +181,7 @@ export default function About() {
               Get in Touch
             </h2>
             <p className={`text-lg mb-8 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-              Have questions about Sikh history or want to contribute to our mission? We'd love to hear from you.
+              Have questions about Sikh history or want to contribute to our mission? We&apos;d love to hear from you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className={`px-6 py-3 rounded-md text-lg font-medium transition-colors ${
