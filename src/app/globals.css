@@ -8,6 +8,11 @@ body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
+/* Prevent body scroll when mobile menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -121,7 +126,6 @@ section {
 .active-nav {
   position: relative;
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(4, 13, 106, 0.3);
   transform: translateY(-1px);
 }
 
@@ -146,7 +150,6 @@ section {
   height: 8px;
   background: #ffffff;
   border-radius: 50%;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 /* Audio Player Custom Styles */
@@ -167,13 +170,11 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 50%;
   background: #ec7b46;
   cursor: pointer;
-  box-shadow: 0 1px 4px rgba(236, 123, 70, 0.3);
   transition: all 0.2s ease;
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
   transform: scale(1.15);
-  box-shadow: 0 2px 8px rgba(236, 123, 70, 0.4);
 }
 
 input[type="range"]::-moz-range-thumb {
@@ -183,13 +184,11 @@ input[type="range"]::-moz-range-thumb {
   background: #ec7b46;
   cursor: pointer;
   border: none;
-  box-shadow: 0 1px 4px rgba(236, 123, 70, 0.3);
   transition: all 0.2s ease;
 }
 
 input[type="range"]::-moz-range-thumb:hover {
   transform: scale(1.15);
-  box-shadow: 0 2px 8px rgba(236, 123, 70, 0.4);
 }
 
 /* Audio player button hover effects */
@@ -199,7 +198,6 @@ input[type="range"]::-moz-range-thumb:hover {
 
 .audio-player-button:hover {
   transform: scale(1.08);
-  box-shadow: 0 4px 15px rgba(236, 123, 70, 0.25);
 }
 
 /* Fixed audio player styles */
@@ -216,4 +214,52 @@ footer {
 /* When fixed audio player is visible, adjust main content */
 .fixed-audio-player-visible {
   padding-bottom: 80px;
+}
+
+/* Responsive sidebar styles */
+@media (max-width: 1023px) {
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 30;
+  }
+}
+
+/* Mobile menu button styles */
+.mobile-menu-button {
+  position: fixed;
+  top: 80px;
+  left: 16px;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-button:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive text sizing */
+@media (max-width: 640px) {
+  .responsive-text {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .responsive-text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .responsive-text {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }

@@ -68,7 +68,7 @@ export default function About() {
                   </p>
                 </div>
               </div>
-              <div className={`p-8 rounded-lg ${isDarkMode ? 'bg-gray-700' : 'bg-white'} shadow-lg`}>
+              <div className={`p-8 rounded-lg ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
                 <div className="text-center">
                   <div className={`w-24 h-24 mx-auto mb-4 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-blue-600' : 'bg-blue-500'}`}>
                     <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -134,7 +134,7 @@ export default function About() {
             </h2>
             
             <div className="grid md:grid-cols-3 gap-8">
-              <div className={`p-6 rounded-lg text-center ${isDarkMode ? 'bg-gray-700' : 'bg-white'} shadow-lg`}>
+              <div className={`p-6 rounded-lg text-center ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
                 <div className={`w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-blue-600' : 'bg-blue-500'}`}>
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -146,7 +146,7 @@ export default function About() {
                 </p>
               </div>
               
-              <div className={`p-6 rounded-lg text-center ${isDarkMode ? 'bg-gray-700' : 'bg-white'} shadow-lg`}>
+              <div className={`p-6 rounded-lg text-center ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
                 <div className={`w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-green-600' : 'bg-green-500'}`}>
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
@@ -159,7 +159,7 @@ export default function About() {
                 </p>
               </div>
               
-              <div className={`p-6 rounded-lg text-center ${isDarkMode ? 'bg-gray-700' : 'bg-white'} shadow-lg`}>
+              <div className={`p-6 rounded-lg text-center ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
                 <div className={`w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-purple-600' : 'bg-purple-500'}`}>
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
