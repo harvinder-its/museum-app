@@ -35,7 +35,7 @@ export default function RootLayout({
       >
         <ClientOnly>
           <AudioProvider>
-            <main className="min-h-screen">
+            <main className="min-h-screen w-full">
               {children}
             </main>
           </AudioProvider>

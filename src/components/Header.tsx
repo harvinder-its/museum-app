@@ -13,9 +13,9 @@ export default function Header({ isDarkMode, toggleTheme }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className={`${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'} fixed top-0 right-0 z-40 w-full lg:w-auto`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+    <header className={`${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'} fixed top-0 right-0 z-40 w-full max-w-full overflow-x-hidden`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex justify-end items-center py-4">
           {/* Logo 
           <div className="flex-shrink-0">
             <div className="flex items-center">
@@ -127,6 +127,7 @@ export default function Header({ isDarkMode, toggleTheme }: HeaderProps) {
                 </svg>
               )}
             </button>
+            {/* Menu toggle button - commented out
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`p-2 rounded-md transition-colors ${
@@ -139,6 +140,7 @@ export default function Header({ isDarkMode, toggleTheme }: HeaderProps) {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
+            */}
           </div>
         </div>
 
