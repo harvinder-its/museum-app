@@ -260,7 +260,7 @@ export default function Home() {
         }}
       >
         <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8 w-full overflow-x-hidden">
-          <h1 className={`text-2xl md:text-4xl lg:text-6xl font-light mb-6 md:mb-8 text-center ${isDarkMode ? 'text-gray-100' : 'text-gray-900'}`}>
+          <h1 className={`text-2xl md:text-4xl lg:text-6xl font-light mb-6 md:mb-8 text-center leading-relaxed ${isDarkMode ? 'text-gray-100' : 'text-gray-900'}`}>
             {section.label}
           </h1>
           
