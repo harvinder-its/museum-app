@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://musem.app/sitemap.xml
+Sitemap: https://museum.app/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1

@@ -1,24 +1,24 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "About Musem - Sikh History & Heritage | Digital Museum",
-  description: "Learn about Musem's mission to preserve and celebrate Sikh heritage through digital innovation. Discover our interactive exhibits and educational content about Sikh history.",
+  title: "About Museum - Sikh History & Heritage | Digital Museum",
+  description: "Learn about Museum's mission to preserve and celebrate Sikh heritage through digital innovation. Discover our interactive exhibits and educational content about Sikh history.",
   keywords: [
-    "about musem",
+    "about museum",
     "sikh digital museum",
     "sikh heritage preservation",
     "sikh history education",
-    "musem mission",
+    "museum mission",
     "sikh culture digital"
   ],
   openGraph: {
-    title: "About Musem - Sikh History & Heritage | Digital Museum",
-    description: "Learn about Musem's mission to preserve and celebrate Sikh heritage through digital innovation.",
-    url: 'https://musem.app/about',
+    title: "About Museum - Sikh History & Heritage | Digital Museum",
+    description: "Learn about Museum's mission to preserve and celebrate Sikh heritage through digital innovation.",
+    url: 'https://museum.app/about',
   },
   twitter: {
-    title: "About Musem - Sikh History & Heritage | Digital Museum",
-    description: "Learn about Musem's mission to preserve and celebrate Sikh heritage through digital innovation.",
+    title: "About Museum - Sikh History & Heritage | Digital Museum",
+    description: "Learn about Museum's mission to preserve and celebrate Sikh heritage through digital innovation.",
   },
 };
 

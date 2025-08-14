@@ -42,7 +42,7 @@ export default function About() {
           <div className="max-w-4xl mx-auto px-8">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-light mb-6">
-                About Musem
+                About Museum
               </h1>
               <p className={`text-xl md:text-2xl leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                 Preserving and Celebrating Sikh Heritage Through Digital Innovation
@@ -61,7 +61,7 @@ export default function About() {
                 </h2>
                 <div className={`text-lg leading-relaxed space-y-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                   <p>
-                    Musem is dedicated to preserving and sharing the rich heritage of Sikh history through innovative digital experiences. Our platform serves as a bridge between the past and present, making Sikh history accessible to people around the world.
+                    Museum is dedicated to preserving and sharing the rich heritage of Sikh history through innovative digital experiences. Our platform serves as a bridge between the past and present, making Sikh history accessible to people around the world.
                   </p>
                   <p>
                     We believe in the power of technology to educate, inspire, and connect communities. Through our interactive exhibits and comprehensive historical content, we aim to honor the sacrifices and achievements of Sikh heroes while fostering understanding and appreciation for Sikh culture.

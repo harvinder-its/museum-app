@@ -1,1 +1,1 @@
-# musem-app
+# museum-app
