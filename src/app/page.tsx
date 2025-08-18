@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState(0);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const sectionRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
@@ -32,7 +32,10 @@ export default function Home() {
   // Load theme preference from localStorage
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    if (savedTheme === 'light') {
+      setIsDarkMode(false);
+    } else {
+      // Default to dark mode if no preference is saved or if preference is dark
       setIsDarkMode(true);
     }
   }, []);

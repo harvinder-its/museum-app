@@ -100,6 +100,16 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Clear any existing light theme preference to ensure dark mode is default
+              if (typeof window !== 'undefined' && !localStorage.getItem('theme')) {
+                localStorage.setItem('theme', 'dark');
+              }
+            `
+          }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({

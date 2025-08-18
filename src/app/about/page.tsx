@@ -7,12 +7,15 @@ import FixedAudioPlayer from '@/components/FixedAudioPlayer';
 import Link from 'next/link';
 
 export default function About() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   // Load theme preference from localStorage
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    if (savedTheme === 'light') {
+      setIsDarkMode(false);
+    } else {
+      // Default to dark mode if no preference is saved or if preference is dark
       setIsDarkMode(true);
     }
   }, []);
