@@ -163,7 +163,7 @@ section {
   top: 0;
   bottom: 0;
   width: 4px;
-  background: linear-gradient(135deg, #ff6b6b, #ffa500);
+  background: linear-gradient(135deg, #faba04, #ffa500);
   border-radius: 0 2px 2px 0;
 }
 
@@ -185,7 +185,7 @@ input[type="range"]::-webkit-slider-thumb {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #ec7b46;
+  background: #faba04;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -198,7 +198,7 @@ input[type="range"]::-moz-range-thumb {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #ec7b46;
+  background: #faba04;
   cursor: pointer;
   border: none;
   transition: all 0.2s ease;

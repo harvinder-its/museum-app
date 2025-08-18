@@ -54,7 +54,7 @@ export default function AudioPlayer({ audioSrc, title, isDarkMode }: AudioPlayer
             onClick={handlePlayClick}
             className={`flex items-center justify-center transition-all duration-200 hover:scale-110 ${
               isCurrentAudio && isPlaying
-                ? `${isDarkMode ? 'text-[#ec7b46]' : 'text-[#ec7b46]'}`
+                ? `${isDarkMode ? 'text-[#faba04]' : 'text-[#faba04]'}`
                 : `${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`
             }`}
           >
@@ -90,7 +90,7 @@ export default function AudioPlayer({ audioSrc, title, isDarkMode }: AudioPlayer
                 isDarkMode ? 'bg-gray-600/30' : 'bg-gray-200/50'
               } ${!isCurrentAudio ? 'opacity-50 cursor-not-allowed' : ''}`}
               style={{
-                background: isCurrentAudio ? `linear-gradient(to right, #ec7b46 0%, #ec7b46 ${(currentTime / (duration || 1)) * 100}%, ${
+                background: isCurrentAudio ? `linear-gradient(to right, #faba04 0%, #faba04 ${(currentTime / (duration || 1)) * 100}%, ${
                   isDarkMode ? '#37415140' : '#e5e7eb80'
                 } ${(currentTime / (duration || 1)) * 100}%, ${isDarkMode ? '#37415140' : '#e5e7eb80'} 100%)` : undefined
               }}
@@ -113,7 +113,7 @@ export default function AudioPlayer({ audioSrc, title, isDarkMode }: AudioPlayer
                 isDarkMode ? 'bg-gray-600/30' : 'bg-gray-200/50'
               }`}
               style={{
-                background: `linear-gradient(to right, #ec7b46 0%, #ec7b46 ${volume * 100}%, ${
+                background: `linear-gradient(to right, #faba04 0%, #faba04 ${volume * 100}%, ${
                   isDarkMode ? '#37415140' : '#e5e7eb80'
                 } ${volume * 100}%, ${isDarkMode ? '#37415140' : '#e5e7eb80'} 100%)`
               }}

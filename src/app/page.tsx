@@ -289,15 +289,15 @@ export default function Home() {
               
               <div className="space-y-2 md:space-y-3">
                 <div className="flex justify-between items-center">
-                  <span className="text-xs md:text-sm font-medium text-[#ec7b46]">Artist</span>
+                  <span className="text-xs md:text-sm font-medium text-[#faba04]">Artist</span>
                   <span className={`text-xs md:text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>{imageDetails.artist}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-xs md:text-sm font-medium text-[#ec7b46]">Size</span>
+                  <span className="text-xs md:text-sm font-medium text-[#faba04]">Size</span>
                   <span className={`text-xs md:text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>{imageDetails.size}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-xs md:text-sm font-medium text-[#ec7b46]">Type</span>
+                  <span className="text-xs md:text-sm font-medium text-[#faba04]">Type</span>
                   <span className={`text-xs md:text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>{imageDetails.type}</span>
                 </div>
               </div>
