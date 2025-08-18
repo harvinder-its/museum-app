@@ -14,20 +14,89 @@ export default function Home() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const sectionRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
-  const sections = useMemo(() => [
-    { id: 'bhaimanisingh', label: 'ਸ਼ਹੀਦ ਭਾਈ ਮਨੀ ਸਿੰਘ ਜੀ' },
-    { id: 'bhaitarusingh', label: 'ਸ਼ਹੀਦ ਭਾਈ ਤਾਰੂ ਸਿੰਘ ਜੀ' },
-    { id: 'bhaishubegsingh', label: 'ਸ਼ਹੀਦ ਭਾਈ ਸੁਬੇਗ ਸਿੰਘ ਤੇ ਭਾਈ ਸ਼ਾਹਬਾਜ ਸਿੰਘ ਜੀ' },
-    { id: 'babadeepsingh', label: 'ਸ਼ਹੀਦ ਬਾਬਾ ਦੀਪ ਸਿੰਘ ਜੀ' },
-    { id: 'jarnail', label: 'ਜਰਨੈਲ ਸਿੰਘ ਖੁਸ਼ਹਾਲ ਸਿੰਘ ਜੀ' },
-    { id: 'nawabkapursingh', label: 'ਨਵਾਬ ਕਪੂਰ ਸਿੰਘ ਜੀ' },
-    { id: 'jassasinghramgharia', label: 'ਜੱਸਾ ਸਿੰਘ ਰਾਮਘਰੀਆ ਜੀ' },
-    { id: 'jassasinghahluwalia', label: 'ਜੱਸਾ ਸਿੰਘ ਆਹਲੂਵਾਲੀਆ ਜੀ' },
-    { id: 'baghelsingh', label: 'ਬਘੇਲ ਸਿੰਘ ਜੀ' },
-    { id: 'chotaghallughara', label: 'ਛੋਟਾ ਘੱਲੂਘਾਰਾ' },
-    { id: 'dalkhalsa', label: 'ਦਲ ਖ਼ਾਲਸਾ' },
-    { id: 'vadaghallughara', label: 'ਵੱਡਾ ਘੱਲੂਘਾਰਾ' },
+  const [expandedCategories, setExpandedCategories] = useState<string[]>(['guru-kal', 'sikh-history']);
+
+  const categories = useMemo(() => [
+    {
+      id: 'guru-kal',
+      label: 'ਭਾਗ ਪਹਿਲਾ: ਗੁਰੂ ਕਾਲ',
+      type: 'main',
+      children: [
+        {
+          id: 'guru-sahiban',
+          label: 'ਗੁਰੂ ਸਾਹਿਬਾਨ',
+          type: 'category',
+          children: [
+            { id: 'guru-nanak-dev-ji', label: 'ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ' },
+            { id: 'guru-angad-dev-ji', label: 'ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ' },
+            { id: 'guru-amardas-ji', label: 'ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ' },
+            { id: 'guru-ramdas-ji', label: 'ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ' },
+            { id: 'guru-arjan-dev-ji', label: 'ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ' },
+            { id: 'guru-hargobind-sahib-ji', label: 'ਗੁਰੂ ਹਰਿਗੋਬਿੰਦ ਸਾਹਿਬ ਜੀ' },
+            { id: 'guru-har-rai-sahib-ji', label: 'ਗੁਰੂ ਹਰਿਰਾਇ ਸਾਹਿਬ ਜੀ' },
+            { id: 'guru-har-krishan-sahib-ji', label: 'ਗੁਰੂ ਹਰਿਕ੍ਰਿਸ਼ਨ ਸਾਹਿਬ ਜੀ' },
+            { id: 'guru-teg-bahadur-ji', label: 'ਗੁਰੂ ਤੇਗ ਬਹਾਦੁਰ ਜੀ' },
+            { id: 'guru-gobind-singh-ji', label: 'ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ' },
+            { id: 'guru-granth-sahib-ji', label: 'ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ' },
+          ]
+        }
+      ]
+    },
+    {
+      id: 'sikh-history',
+      label: 'ਭਾਗ-ਦੂਜਾ : ਸਿੱਖ ਇਤਿਹਾਸ',
+      type: 'main',
+      children: [
+        {
+          id: 'shahidi',
+          label: 'ਪ੍ਰਮੁੱਖ ਸ਼ਹੀਦੀਆਂ',
+          type: 'category',
+          children: [
+            { id: 'bhaimanisingh', label: 'ਸ਼ਹੀਦ ਭਾਈ ਮਨੀ ਸਿੰਘ ਜੀ' },
+            { id: 'bhaitarusingh', label: 'ਸ਼ਹੀਦ ਭਾਈ ਤਾਰੂ ਸਿੰਘ ਜੀ' },
+            { id: 'bhaishubegsingh', label: 'ਸ਼ਹੀਦ ਭਾਈ ਸੁਬੇਗ ਸਿੰਘ ਤੇ ਭਾਈ ਸ਼ਾਹਬਾਜ ਸਿੰਘ ਜੀ' },
+            { id: 'babadeepsingh', label: 'ਸ਼ਹੀਦ ਬਾਬਾ ਦੀਪ ਸਿੰਘ ਜੀ' },
+          ]
+        },
+        {
+          id: 'jarnail',
+          label: 'ਪ੍ਰਮੁੱਖ ਜਰਨੈਲ',
+          type: 'category',
+          children: [
+            { id: 'nawabkapursingh', label: 'ਨਵਾਬ ਕਪੂਰ ਸਿੰਘ ਜੀ' },
+            { id: 'jassasinghramgharia', label: 'ਸ੍ਰ. ਜੱਸਾ ਸਿੰਘ ਰਾਮਗੜ੍ਹੀਆ' },
+            { id: 'jassasinghahluwalia', label: 'ਸ੍ਰ. ਜੱਸਾ ਸਿੰਘ ਆਹਲੂਵਾਲੀਆ' },
+            { id: 'baghelsingh', label: 'ਸ੍ਰ. ਬਘੇਲ ਸਿੰਘ ਜੀ' },
+          ]
+        },
+        {
+          id: 'events',
+          label: 'ਪ੍ਰਮੁੱਖ ਘਟਨਾਵਾਂ',
+          type: 'category',
+          children: [
+            { id: 'chotaghallughara', label: 'ਛੋਟਾ ਘੱਲੂਘਾਰਾ' },
+            { id: 'dalkhalsa', label: 'ਦਲ ਖ਼ਾਲਸਾ' },
+            { id: 'vadaghallughara', label: 'ਵੱਡਾ ਘੱਲੂਘਾਰਾ' },
+          ]
+        }
+      ]
+    }
   ], []);
+
+  // Flatten all sections for easy access
+  const sections = useMemo(() => {
+    const allSections: { id: string; label: string }[] = [];
+    categories.forEach(category => {
+      category.children.forEach(subCategory => {
+        if (subCategory.type === 'category') {
+          subCategory.children.forEach(section => {
+            allSections.push(section);
+          });
+        }
+      });
+    });
+    return allSections;
+  }, [categories]);
 
   // Load theme preference from localStorage
   useEffect(() => {
@@ -59,37 +128,58 @@ export default function Home() {
     };
   }, []);
 
-  // Set up Intersection Observer for scroll-based navigation
-  useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: '-20% 0px -70% 0px',
-      threshold: 0
-    };
+      // Set up Intersection Observer for scroll-based navigation
+    useEffect(() => {
+      const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -70% 0px',
+        threshold: 0
+      };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const sectionId = entry.target.id;
-          const sectionIndex = sections.findIndex(section => section.id === sectionId);
-          if (sectionIndex !== -1) {
-            setCurrentSection(sectionIndex);
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.id;
+            const sectionIndex = sections.findIndex(section => section.id === sectionId);
+            if (sectionIndex !== -1) {
+              setCurrentSection(sectionIndex);
+              
+              // Auto-expand the category containing the current section
+              categories.forEach(mainCategory => {
+                mainCategory.children.forEach(subCategory => {
+                  if (subCategory.type === 'category') {
+                    const hasCurrentSection = subCategory.children.some(section => section.id === sectionId);
+                    if (hasCurrentSection) {
+                      setExpandedCategories(prev => {
+                        const newExpanded = [...prev];
+                        if (!newExpanded.includes(mainCategory.id)) {
+                          newExpanded.push(mainCategory.id);
+                        }
+                        if (!newExpanded.includes(subCategory.id)) {
+                          newExpanded.push(subCategory.id);
+                        }
+                        return newExpanded;
+                      });
+                    }
+                  }
+                });
+              });
+            }
           }
+        });
+      }, observerOptions);
+
+      sections.forEach(section => {
+        const element = sectionRefs.current[section.id];
+        if (element) {
+          observer.observe(element);
         }
       });
-    }, observerOptions);
 
-    sections.forEach(section => {
-      const element = sectionRefs.current[section.id];
-      if (element) {
-        observer.observe(element);
-      }
-    });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [sections]);
+      return () => {
+        observer.disconnect();
+      };
+    }, [sections, categories]);
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
@@ -119,9 +209,32 @@ export default function Home() {
     setIsSidebarCollapsed(!isSidebarCollapsed);
   };
 
+  const toggleCategory = (categoryId: string) => {
+    setExpandedCategories(prev => 
+      prev.includes(categoryId) 
+        ? prev.filter(id => id !== categoryId)
+        : [...prev, categoryId]
+    );
+  };
+
+  const isCategoryExpanded = (categoryId: string) => {
+    return expandedCategories.includes(categoryId);
+  };
+
   const renderSection = (sectionId: string) => {
     const getImageUrl = (id: string) => {
       const imageMap: { [key: string]: string } = {
+        'guru-nanak-dev-ji': '/images/guru-nanak-dev-ji.jpg',
+        'guru-angad-dev-ji': '/images/guru-angad-dev-ji.jpg',
+        'guru-amardas-ji': '/images/guru-amardas-ji.jpg',
+        'guru-ramdas-ji': '/images/guru-ramdas-ji.jpg',
+        'guru-arjan-dev-ji': '/images/guru-arjan-dev-ji.jpg',
+        'guru-hargobind-sahib-ji': '/images/guru-hargobind-sahib-ji.jpg',
+        'guru-har-rai-sahib-ji': '/images/guru-har-rai-sahib-ji.jpg',
+        'guru-har-krishan-sahib-ji': '/images/guru-har-krishan-sahib-ji.jpg',
+        'guru-teg-bahadur-ji': '/images/guru-teg-bahadur-ji.jpg',
+        'guru-gobind-singh-ji': '/images/guru-gobind-singh-ji.jpg',
+        'guru-granth-sahib-ji': '/images/guru-granth-sahib-ji.jpg',
         bhaimanisingh: '/images/bhai-mani-singh.jpg',
         bhaitarusingh: '/images/bhai-taru-singh.jpeg',
         bhaishubegsingh: '/images/bhai-subeg-singh.jpg',
@@ -140,6 +253,50 @@ export default function Home() {
 
     const getContent = (id: string) => {
       const contentMap: { [key: string]: string } = {
+        'guru-nanak-dev-ji': `
+          <p class="mb-4">ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਸਿੱਖ ਧਰਮ ਦੇ ਪਹਿਲੇ ਗੁਰੂ ਅਤੇ ਸੰਸਥਾਪਕ ਹਨ। ਆਪ ਦਾ ਜਨਮ 1469 ਈਸਵੀ ਵਿੱਚ ਤਲਵੰਡੀ (ਹੁਣ ਨਨਕਾਣਾ ਸਾਹਿਬ) ਵਿੱਚ ਹੋਇਆ ਸੀ। ਗੁਰੂ ਜੀ ਨੇ ਆਪਣੇ ਜੀਵਨ ਕਾਲ ਵਿੱਚ ਦੁਨੀਆ ਭਰ ਦੀ ਯਾਤਰਾ ਕੀਤੀ ਅਤੇ ਆਪਣੇ ਉਪਦੇਸ਼ਾਂ ਰਾਹੀਂ ਲੋਕਾਂ ਨੂੰ ਇੱਕ ਈਸ਼ਵਰ ਦੀ ਭਗਤੀ ਦੀ ਸਿੱਖਿਆ ਦਿੱਤੀ।</p>
+          <p class="mb-4">ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਨੇ ਆਪਣੇ ਉਪਦੇਸ਼ਾਂ ਵਿੱਚ ਜਾਤ-ਪਾਤ ਦੇ ਭੇਦ-ਭਾਵ ਨੂੰ ਖਤਮ ਕਰਨ, ਇੱਕ ਈਸ਼ਵਰ ਦੀ ਭਗਤੀ, ਸੱਚਾਈ ਅਤੇ ਨਿਆਂ ਦੀ ਸਿੱਖਿਆ ਦਿੱਤੀ। ਆਪ ਦੇ ਬਾਣੀ ਵਿੱਚ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਦਾ ਪਹਿਲਾ ਭਾਗ ਸ਼ਾਮਿਲ ਹੈ।</p>
+        `,
+        'guru-angad-dev-ji': `
+          <p class="mb-4">ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ ਸਿੱਖ ਧਰਮ ਦੇ ਦੂਸਰੇ ਗੁਰੂ ਹਨ। ਆਪ ਦਾ ਜਨਮ 1504 ਈਸਵੀ ਵਿੱਚ ਹੋਇਆ ਸੀ। ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ ਨੇ ਗੁਰਮੁਖੀ ਲਿਪੀ ਨੂੰ ਵਿਕਸਿਤ ਕੀਤਾ ਅਤੇ ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਦੇ ਉਪਦੇਸ਼ਾਂ ਨੂੰ ਆਗੇ ਵਧਾਇਆ।</p>
+          <p class="mb-4">ਗੁਰੂ ਜੀ ਨੇ ਲੰਗਰ ਪ੍ਰਥਾ ਨੂੰ ਵਿਕਸਿਤ ਕੀਤਾ ਅਤੇ ਸਿੱਖ ਸੰਗਤਾਂ ਦੀ ਸਥਾਪਨਾ ਕੀਤੀ। ਆਪ ਦੇ ਸਮੇਂ ਵਿੱਚ ਸਿੱਖ ਧਰਮ ਨੂੰ ਸੰਗਠਿਤ ਰੂਪ ਮਿਲਿਆ।</p>
+        `,
+        'guru-amardas-ji': `
+          <p class="mb-4">ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਸਿੱਖ ਧਰਮ ਦੇ ਤੀਜੇ ਗੁਰੂ ਹਨ। ਆਪ ਦਾ ਜਨਮ 1479 ਈਸਵੀ ਵਿੱਚ ਹੋਇਆ ਸੀ। ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਨੇ ਸਿੱਖ ਧਰਮ ਵਿੱਚ ਕਈ ਮਹੱਤਵਪੂਰਨ ਸੁਧਾਰ ਕੀਤੇ।</p>
+          <p class="mb-4">ਗੁਰੂ ਜੀ ਨੇ ਸਤੀ ਪ੍ਰਥਾ ਦਾ ਵਿਰੋਧ ਕੀਤਾ, ਔਰਤਾਂ ਦੀ ਸਮਾਜ ਵਿੱਚ ਸਥਿਤੀ ਨੂੰ ਉੱਚਾ ਕੀਤਾ, ਅਤੇ ਗੋਇੰਦਵਾਲ ਸਾਹਿਬ ਵਿੱਚ ਬਾਊਲੀ ਦੀ ਸਥਾਪਨਾ ਕੀਤੀ। ਆਪ ਦੇ ਸਮੇਂ ਵਿੱਚ ਸਿੱਖ ਧਰਮ ਨੂੰ ਵਿਸ਼ਾਲ ਪ੍ਰਚਾਰ ਮਿਲਿਆ।</p>
+        `,
+        'guru-ramdas-ji': `
+          <p class="mb-4">ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ ਸਿੱਖ ਧਰਮ ਦੇ ਚੌਥੇ ਗੁਰੂ ਹਨ। ਆਪ ਦਾ ਜਨਮ 1534 ਈਸਵੀ ਵਿੱਚ ਹੋਇਆ ਸੀ। ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ ਨੇ ਅੰਮ੍ਰਿਤਸਰ ਸ਼ਹਿਰ ਦੀ ਸਥਾਪਨਾ ਕੀਤੀ ਅਤੇ ਸ੍ਰੀ ਹਰਿਮੰਦਰ ਸਾਹਿਬ ਦੀ ਨੀਂਹ ਰੱਖੀ।</p>
+          <p class="mb-4">ਗੁਰੂ ਜੀ ਨੇ ਸਿੱਖ ਧਰਮ ਨੂੰ ਇੱਕ ਸੰਗਠਿਤ ਧਾਰਮਿਕ ਸੰਪਰਦਾਇ ਵਜੋਂ ਵਿਕਸਿਤ ਕੀਤਾ। ਆਪ ਦੇ ਸਮੇਂ ਵਿੱਚ ਸਿੱਖ ਧਰਮ ਨੂੰ ਇੱਕ ਵਿਸ਼ਾਲ ਧਾਰਮਿਕ ਅਤੇ ਸਮਾਜਿਕ ਆਧਾਰ ਮਿਲਿਆ।</p>
+        `,
+        'guru-arjan-dev-ji': `
+          <p class="mb-4">ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ ਸਿੱਖ ਧਰਮ ਦੇ ਪੰਜਵੇਂ ਗੁਰੂ ਹਨ। ਆਪ ਦਾ ਜਨਮ 1563 ਈਸਵੀ ਵਿੱਚ ਹੋਇਆ ਸੀ। ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ ਨੇ ਸ੍ਰੀ ਹਰਿਮੰਦਰ ਸਾਹਿਬ ਦਾ ਨਿਰਮਾਣ ਪੂਰਾ ਕੀਤਾ ਅਤੇ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਦੀ ਸੰਪਾਦਨਾ ਕੀਤੀ।</p>
+          <p class="mb-4">ਗੁਰੂ ਜੀ ਨੇ ਸਿੱਖ ਧਰਮ ਦੇ ਪਹਿਲੇ ਸ਼ਹੀਦ ਹੋਣ ਦਾ ਗੌਰਵ ਪ੍ਰਾਪਤ ਕੀਤਾ। ਆਪ ਨੂੰ 1606 ਈਸਵੀ ਵਿੱਚ ਲਾਹੌਰ ਵਿੱਚ ਸ਼ਹੀਦ ਕਰ ਦਿੱਤਾ ਗਿਆ ਸੀ। ਗੁਰੂ ਜੀ ਦੀ ਸ਼ਹਾਦਤ ਸਿੱਖ ਇਤਿਹਾਸ ਵਿੱਚ ਇੱਕ ਮਹੱਤਵਪੂਰਨ ਘਟਨਾ ਹੈ।</p>
+        `,
+        'guru-hargobind-sahib-ji': `
+          <p class="mb-4">ਗੁਰੂ ਹਰਿਗੋਬਿੰਦ ਸਾਹਿਬ ਜੀ ਸਿੱਖ ਧਰਮ ਦੇ ਛੇਵੇਂ ਗੁਰੂ ਹਨ। ਆਪ ਦਾ ਜਨਮ 1595 ਈਸਵੀ ਵਿੱਚ ਹੋਇਆ ਸੀ। ਗੁਰੂ ਹਰਿਗੋਬਿੰਦ ਸਾਹਿਬ ਜੀ ਨੇ ਸਿੱਖਾਂ ਨੂੰ ਫੌਜੀ ਸਿਖਲਾਈ ਦੇਣੀ ਸ਼ੁਰੂ ਕੀਤੀ।</p>
+          <p class="mb-4">ਗੁਰੂ ਜੀ ਨੇ ਦੋ ਤਲਵਾਰਾਂ ਧਾਰਨ ਕੀਤੀਆਂ - ਮੀਰੀ ਅਤੇ ਪੀਰੀ। ਮੀਰੀ ਸੰਸਾਰਿਕ ਸ਼ਕਤੀ ਦਾ ਪ੍ਰਤੀਕ ਹੈ ਅਤੇ ਪੀਰੀ ਧਾਰਮਿਕ ਸ਼ਕਤੀ ਦਾ। ਗੁਰੂ ਜੀ ਨੇ ਸਿੱਖਾਂ ਨੂੰ ਆਤਮ ਰੱਖਿਆ ਲਈ ਤਿਆਰ ਕੀਤਾ।</p>
+        `,
+        'guru-har-rai-sahib-ji': `
+          <p class="mb-4">ਗੁਰੂ ਹਰਿਰਾਇ ਸਾਹਿਬ ਜੀ ਸਿੱਖ ਧਰਮ ਦੇ ਸੱਤਵੇਂ ਗੁਰੂ ਹਨ। ਆਪ ਦਾ ਜਨਮ 1630 ਈਸਵੀ ਵਿੱਚ ਹੋਇਆ ਸੀ। ਗੁਰੂ ਹਰਿਰਾਇ ਸਾਹਿਬ ਜੀ ਨੇ ਸਿੱਖ ਧਰਮ ਦੇ ਧਾਰਮਿਕ ਅਤੇ ਸਮਾਜਿਕ ਵਿਕਾਸ ਨੂੰ ਜਾਰੀ ਰੱਖਿਆ।</p>
+          <p class="mb-4">ਗੁਰੂ ਜੀ ਨੇ ਆਪਣੇ ਸਮੇਂ ਵਿੱਚ ਸਿੱਖ ਧਰਮ ਨੂੰ ਸ਼ਾਂਤੀਪੂਰਨ ਢੰਗ ਨਾਲ ਵਿਕਸਿਤ ਕੀਤਾ। ਆਪ ਦੇ ਸਮੇਂ ਵਿੱਚ ਸਿੱਖ ਧਰਮ ਨੂੰ ਵਿਸ਼ਾਲ ਪ੍ਰਚਾਰ ਮਿਲਿਆ।</p>
+        `,
+        'guru-har-krishan-sahib-ji': `
+          <p class="mb-4">ਗੁਰੂ ਹਰਿਕ੍ਰਿਸ਼ਨ ਸਾਹਿਬ ਜੀ ਸਿੱਖ ਧਰਮ ਦੇ ਅੱਠਵੇਂ ਗੁਰੂ ਹਨ। ਆਪ ਦਾ ਜਨਮ 1656 ਈਸਵੀ ਵਿੱਚ ਹੋਇਆ ਸੀ। ਗੁਰੂ ਹਰਿਕ੍ਰਿਸ਼ਨ ਸਾਹਿਬ ਜੀ ਬਹੁਤ ਛੋਟੀ ਉਮਰ ਵਿੱਚ ਗੁਰੂਗੱਦੀ ਪ੍ਰਾਪਤ ਕੀਤੀ।</p>
+          <p class="mb-4">ਗੁਰੂ ਜੀ ਨੇ ਆਪਣੇ ਛੋਟੇ ਜੀਵਨ ਕਾਲ ਵਿੱਚ ਵੀ ਸਿੱਖ ਧਰਮ ਦੀ ਸੇਵਾ ਕੀਤੀ। ਆਪ ਨੂੰ ਬਾਲ ਗੁਰੂ ਵੀ ਕਿਹਾ ਜਾਂਦਾ ਹੈ। ਗੁਰੂ ਜੀ ਦੀ ਛੋਟੀ ਉਮਰ ਵਿੱਚ ਹੀ ਮੌਤ ਹੋ ਗਈ ਸੀ।</p>
+        `,
+        'guru-teg-bahadur-ji': `
+          <p class="mb-4">ਗੁਰੂ ਤੇਗ ਬਹਾਦਰ ਜੀ ਸਿੱਖ ਧਰਮ ਦੇ ਨੌਵੇਂ ਗੁਰੂ ਹਨ। ਆਪ ਦਾ ਜਨਮ 1621 ਈਸਵੀ ਵਿੱਚ ਹੋਇਆ ਸੀ। ਗੁਰੂ ਤੇਗ ਬਹਾਦਰ ਜੀ ਨੇ ਧਾਰਮਿਕ ਆਜ਼ਾਦੀ ਲਈ ਆਪਣੀ ਜਾਨ ਕੁਰਬਾਨ ਕੀਤੀ।</p>
+          <p class="mb-4">ਗੁਰੂ ਜੀ ਨੂੰ 1675 ਈਸਵੀ ਵਿੱਚ ਦਿੱਲੀ ਵਿੱਚ ਸ਼ਹੀਦ ਕਰ ਦਿੱਤਾ ਗਿਆ ਸੀ। ਆਪ ਦੀ ਸ਼ਹਾਦਤ ਧਾਰਮਿਕ ਆਜ਼ਾਦੀ ਲਈ ਸੀ। ਗੁਰੂ ਜੀ ਨੇ ਸਿੱਖਾਂ ਨੂੰ ਧਾਰਮਿਕ ਆਜ਼ਾਦੀ ਲਈ ਲੜਨ ਦੀ ਸਿੱਖਿਆ ਦਿੱਤੀ।</p>
+        `,
+        'guru-gobind-singh-ji': `
+          <p class="mb-4">ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਸਿੱਖ ਧਰਮ ਦੇ ਦਸਵੇਂ ਗੁਰੂ ਹਨ। ਆਪ ਦਾ ਜਨਮ 1666 ਈਸਵੀ ਵਿੱਚ ਹੋਇਆ ਸੀ। ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਨੇ ਖ਼ਾਲਸਾ ਪੰਥ ਦੀ ਸਥਾਪਨਾ ਕੀਤੀ।</p>
+          <p class="mb-4">ਗੁਰੂ ਜੀ ਨੇ ਸਿੱਖਾਂ ਨੂੰ ਪੰਜ ਕਕਾਰਾਂ ਦੀ ਸਿੱਖਿਆ ਦਿੱਤੀ ਅਤੇ ਖ਼ਾਲਸਾ ਪੰਥ ਨੂੰ ਇੱਕ ਸੰਗਠਿਤ ਫੌਜੀ ਸ਼ਕਤੀ ਵਜੋਂ ਵਿਕਸਿਤ ਕੀਤਾ। ਗੁਰੂ ਜੀ ਨੇ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਨੂੰ ਆਪਣਾ ਉੱਤਰਾਧਿਕਾਰੀ ਨਿਯੁਕਤ ਕੀਤਾ।</p>
+        `,
+        'guru-granth-sahib-ji': `
+          <p class="mb-4">ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਸਿੱਖ ਧਰਮ ਦੇ ਗੁਰੂ ਹਨ। ਇਹ ਸਿੱਖ ਧਰਮ ਦੀ ਪਵਿੱਤਰ ਪੁਸਤਕ ਹੈ। ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਵਿੱਚ ਸਿੱਖ ਗੁਰੂਆਂ ਦੀ ਬਾਣੀ ਸ਼ਾਮਿਲ ਹੈ।</p>
+          <p class="mb-4">ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਨੂੰ ਸਿੱਖ ਧਰਮ ਵਿੱਚ ਗੁਰੂ ਦਾ ਦਰਜਾ ਪ੍ਰਾਪਤ ਹੈ। ਇਹ ਸਿੱਖ ਧਰਮ ਦਾ ਸਰਵਉੱਚ ਧਾਰਮਿਕ ਅਧਿਕਾਰ ਹੈ। ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਸਿੱਖ ਧਰਮ ਦੀ ਰੂਹਾਨੀ ਅਤੇ ਧਾਰਮਿਕ ਗਾਈਡ ਹੈ।</p>
+        `,
         bhaimanisingh: `
           <p class="mb-4">ਭਾਈ ਮਨੀ ਸਿੰਘ ਜੀ ਦਾ ਜਨਮ ਭਾਈ ਮਾਈ ਦਾਸ ਜੀ ਤੇ ਮਾਤਾ ਮਧਰੀ ਬਾਈ ਜੀ ਦੇ ਘਰ 1644 ਈ. ਨੂੰ ਪਿੰਡ ਅਲੀਪੁਰ (ਹੁਣ ਪਾਕਿਸਤਾਨ) ਵਿਖੇ ਹੋਇਆ। ਭਾਈ ਮਾਈ ਦਾਸ ਜੀ ਦੇ ਬਾਰਾਂ ਸਪੁੱਤਰ ਸਨ, ਜਿਨ੍ਹਾਂ ਵਿੱਚੋਂ ਭਾਈ ਦਿਆਲਾ ਜੀ ਸ੍ਰੀ ਗੁਰੂ ਤੇਗ ਬਹਾਦਰ ਜੀ ਨਾਲ ਚਾਂਦਨੀ ਚੌਕ ਦਿੱਲੀ ਵਿਖੇ ਸ਼ਹੀਦ ਹੋਏ ਸਨ।</p>
 
@@ -229,6 +386,17 @@ export default function Home() {
 
     const getImageDetails = (id: string) => {
       const detailsMap: { [key: string]: { artist: string; size: string; type: string } } = {
+        'guru-nanak-dev-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'guru-angad-dev-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'guru-amardas-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'guru-ramdas-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'guru-arjan-dev-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'guru-hargobind-sahib-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'guru-har-rai-sahib-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'guru-har-krishan-sahib-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'guru-teg-bahadur-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'guru-gobind-singh-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'guru-granth-sahib-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
         bhaimanisingh: { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
         bhaitarusingh: { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
         bhaishubegsingh: { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
@@ -336,23 +504,84 @@ export default function Home() {
             isDarkMode ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'
           } border-r`}>
             <div className={`h-screen overflow-y-auto sticky top-32 lg:top-36 pt-8 lg:pt-12 p-4 md:p-6 lg:p-8`}>
-              <nav className="space-y-1 md:space-y-2">
-                {sections.map((section, index) => (
-                  <button
-                    key={section.id}
-                    onClick={() => scrollToSection(index)}
-                    className={`w-full flex items-center px-3 md:px-4 py-2 md:py-3 rounded-md text-left transition-all duration-300 cursor-pointer ${
-                      currentSection === index
-                        ? isDarkMode 
-                          ? 'bg-[#040d6a] text-white opacity-100 active-nav' 
-                          : 'bg-[#040d6a] text-white opacity-100 active-nav'
-                        : isDarkMode
-                          ? 'text-gray-300 hover:bg-gray-800 hover:text-gray-100 opacity-80 hover:opacity-100'
-                          : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 opacity-80 hover:opacity-100'
-                    }`}
-                  >
-                    <span className="font-medium text-xs md:text-sm leading-tight">{section.label}</span>
-                  </button>
+              <nav className="space-y-2 md:space-y-3">
+                {categories.map((mainCategory) => (
+                  <div key={mainCategory.id} className="space-y-1">
+                    {/* Main Category Header */}
+                    <button
+                      onClick={() => toggleCategory(mainCategory.id)}
+                      className={`w-full flex items-center justify-between px-3 md:px-4 py-2 md:py-3 rounded-md text-left transition-all duration-300 cursor-pointer ${
+                        isDarkMode
+                          ? 'text-gray-100 hover:bg-gray-800 hover:text-white'
+                          : 'text-gray-900 hover:bg-gray-50 hover:text-gray-900'
+                      }`}
+                    >
+                      <span className="font-semibold text-sm md:text-base leading-tight">{mainCategory.label}</span>
+                      <svg 
+                        className={`w-4 h-4 transition-transform duration-200 ${isCategoryExpanded(mainCategory.id) ? 'rotate-180' : ''}`}
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+
+                                         {/* Sub Categories */}
+                     {isCategoryExpanded(mainCategory.id) && (
+                       <div className="ml-4 space-y-1 border-l-2 border-gray-300 dark:border-gray-600 pl-3">
+                        {mainCategory.children.map((subCategory) => (
+                          <div key={subCategory.id} className="space-y-1">
+                            {/* Sub Category Header */}
+                            <button
+                              onClick={() => toggleCategory(subCategory.id)}
+                              className={`w-full flex items-center justify-between px-3 md:px-4 py-2 md:py-3 rounded-md text-left transition-all duration-300 cursor-pointer ${
+                                isDarkMode
+                                  ? 'text-gray-200 hover:bg-gray-700 hover:text-gray-100'
+                                  : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+                              }`}
+                            >
+                              <span className="font-medium text-xs md:text-sm leading-tight">{subCategory.label}</span>
+                              <svg 
+                                className={`w-3 h-3 transition-transform duration-200 ${isCategoryExpanded(subCategory.id) ? 'rotate-180' : ''}`}
+                                fill="none" 
+                                stroke="currentColor" 
+                                viewBox="0 0 24 24"
+                              >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                              </svg>
+                            </button>
+
+                                                         {/* Individual Sections */}
+                             {isCategoryExpanded(subCategory.id) && (
+                               <div className="ml-4 space-y-1 border-l-2 border-gray-200 dark:border-gray-700 pl-3">
+                                {subCategory.children.map((section, index) => {
+                                  const globalIndex = sections.findIndex(s => s.id === section.id);
+                                  return (
+                                    <button
+                                      key={section.id}
+                                      onClick={() => scrollToSection(globalIndex)}
+                                      className={`w-full flex items-center px-3 md:px-4 py-2 md:py-3 rounded-md text-left transition-all duration-300 cursor-pointer ${
+                                        currentSection === globalIndex
+                                          ? isDarkMode 
+                                            ? 'bg-[#040d6a] text-white opacity-100 active-nav' 
+                                            : 'bg-[#040d6a] text-white opacity-100 active-nav'
+                                          : isDarkMode
+                                            ? 'text-gray-300 hover:bg-gray-800 hover:text-gray-100 opacity-80 hover:opacity-100'
+                                            : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 opacity-80 hover:opacity-100'
+                                      }`}
+                                    >
+                                      <span className="font-medium text-xs md:text-sm leading-tight">{section.label}</span>
+                                    </button>
+                                  );
+                                })}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ))}
               </nav>
 
