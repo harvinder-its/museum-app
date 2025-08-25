@@ -10,11 +10,11 @@ import Footer from '@/components/Footer';
 export default function Home() {
   const [currentSection, setCurrentSection] = useState(0);
   const [isDarkMode, setIsDarkMode] = useState(true);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  // Removed unused state variables: isMobileMenuOpen, isSidebarCollapsed
   const sectionRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
   const [expandedCategories, setExpandedCategories] = useState<string[]>(['guru-kal', 'sikh-history']);
+  const [imageError, setImageError] = useState<{ [key: string]: boolean }>({});
 
   const categories = useMemo(() => [
     {
@@ -191,23 +191,11 @@ export default function Home() {
       const element = sectionRefs.current[section.id];
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
-        setIsMobileMenuOpen(false);
       }
     }
   };
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-    if (!isMobileMenuOpen) {
-      document.body.classList.add('menu-open');
-    } else {
-      document.body.classList.remove('menu-open');
-    }
-  };
-
-  const toggleSidebar = () => {
-    setIsSidebarCollapsed(!isSidebarCollapsed);
-  };
+  // Removed unused functions: toggleMobileMenu and toggleSidebar
 
   const toggleCategory = (categoryId: string) => {
     setExpandedCategories(prev => 
@@ -222,8 +210,6 @@ export default function Home() {
   };
 
   const renderSection = (sectionId: string) => {
-    const [imageError, setImageError] = useState<{ [key: string]: boolean }>({});
-    
     const getImageUrl = (id: string) => {
       const imageMap: { [key: string]: string } = {
         'guru-nanak-dev-ji': '/images/guru-nanak-dev-ji.jpg',
@@ -551,7 +537,7 @@ export default function Home() {
                                                          {/* Individual Sections */}
                              {isCategoryExpanded(subCategory.id) && (
                                <div className="ml-2 md:ml-4 space-y-1 border-l-2 border-gray-200 dark:border-gray-700 pl-2 md:pl-3">
-                                {subCategory.children.map((section, index) => {
+                                {subCategory.children.map((section) => {
                                   const globalIndex = sections.findIndex(s => s.id === section.id);
                                   return (
                                     <button
