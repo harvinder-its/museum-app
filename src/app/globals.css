@@ -372,4 +372,68 @@ footer {
   .sidebar {
     max-width: 100vw;
   }
+  
+  /* Improve mobile navigation */
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Better mobile spacing */
+  .mobile-section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  /* Mobile-friendly buttons */
+  .mobile-button {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.75rem;
+  }
+  
+  /* Mobile audio player */
+  .mobile-audio {
+    max-width: 100%;
+    margin: 0 0.5rem;
+  }
+}
+
+/* Tablet specific improvements */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .tablet-content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .tablet-sidebar {
+    width: 35%;
+  }
+  
+  .tablet-main {
+    width: 65%;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .xs-content {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .xs-text {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  
+  .xs-button {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
 }

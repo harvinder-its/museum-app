@@ -16,12 +16,14 @@ export default function Header({ isDarkMode, toggleTheme }: HeaderProps) {
     <header className="fixed top-0 right-0 z-40 w-full max-w-full overflow-x-hidden">
       {/* Top Bar - Operating Hours */}
       <div className="bg-[#040d6a] text-white py-2 px-4">
-        <div className="max-w-7xl mx-auto text-center text-sm">
-          <span>Gurudwara Sahib Standard Operating Hours</span>
-          <span className="mx-2">|</span>
-          <span>Weekdays: 4.30 AM to 9.00 PM</span>
-          <span className="mx-2">|</span>
-          <span>Weekends: 3.30 AM to 10.00 PM</span>
+        <div className="max-w-7xl mx-auto text-center text-xs sm:text-sm">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center space-y-1 sm:space-y-0">
+            <span>Gurudwara Sahib Standard Operating Hours</span>
+            <span className="hidden sm:inline mx-2">|</span>
+            <span>Weekdays: 4.30 AM to 9.00 PM</span>
+            <span className="hidden sm:inline mx-2">|</span>
+            <span>Weekends: 3.30 AM to 10.00 PM</span>
+          </div>
         </div>
       </div>
 
@@ -37,14 +39,14 @@ export default function Header({ isDarkMode, toggleTheme }: HeaderProps) {
                    alt="Australian Sikh Association" 
                    width={116}
                    height={136}
-                   className="logo"
+                   className="logo w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     // Fallback to text if image fails to load
                     const fallback = document.createElement('div');
                     fallback.className = `text-center ${isDarkMode ? 'text-white' : 'text-[#040d6a]'}`;
                     fallback.innerHTML = `
-                      <div class="font-bold text-lg mb-1">AUSTRALIAN SIKH ASSOCIATION</div>
+                      <div class="font-bold text-sm sm:text-lg mb-1">AUSTRALIAN SIKH ASSOCIATION</div>
                       <div class="text-xs font-semibold">GOD IS ONE</div>
                     `;
                     e.currentTarget.parentNode?.appendChild(fallback);
@@ -111,12 +113,13 @@ export default function Header({ isDarkMode, toggleTheme }: HeaderProps) {
               {/* Donate Button */}
               <Link
                 href="/donate"
-                className="bg-[#faba04] hover:bg-[#e6a800] text-white px-6 py-2 rounded-lg font-medium transition-colors flex items-center"
+                className="bg-[#faba04] hover:bg-[#e6a800] text-white px-3 sm:px-4 md:px-6 py-2 rounded-lg font-medium transition-colors flex items-center text-xs sm:text-sm"
               >
-                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
                 </svg>
-                Donate Now
+                <span className="hidden sm:inline">Donate Now</span>
+                <span className="sm:hidden">Donate</span>
               </Link>
 
               {/* Theme Toggle */}
