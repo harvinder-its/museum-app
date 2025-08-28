@@ -35,7 +35,7 @@ export default function Header({ isDarkMode, toggleTheme }: HeaderProps) {
             <div className="flex-shrink-0">
               <div className="flex items-center">
                     <Image 
-                   src={isDarkMode ? "/images/logo-light.png" : "/images/logo.png"} 
+                   src={isDarkMode ? "/images/asa-logo-dark.webp" : "/images/Logo-Yellow-Asaltd-Gurdwara.webp"} 
                    alt="Australian Sikh Association" 
                    width={116}
                    height={136}
