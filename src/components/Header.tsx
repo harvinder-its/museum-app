@@ -7,10 +7,28 @@ import Image from 'next/image';
 interface HeaderProps {
   isDarkMode: boolean;
   toggleTheme: () => void;
+  basePath?: string;
 }
 
-export default function Header({ isDarkMode, toggleTheme }: HeaderProps) {
+export default function Header({ isDarkMode, toggleTheme, basePath = "" }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const normalizedBasePath = basePath === "/" ? "" : basePath;
+  const trimmedBasePath =
+    normalizedBasePath && normalizedBasePath !== "/" && normalizedBasePath.endsWith("/")
+      ? normalizedBasePath.replace(/\/+$/, "")
+      : normalizedBasePath;
+
+  const hrefFor = (path: string) => {
+    if (!trimmedBasePath) {
+      return path;
+    }
+
+    if (path === "/") {
+      return trimmedBasePath || "/";
+    }
+
+    return `${trimmedBasePath}${path}`;
+  };
 
   return (
     <header className="fixed top-0 right-0 z-40 w-full max-w-full overflow-x-hidden">
@@ -58,20 +76,20 @@ export default function Header({ isDarkMode, toggleTheme }: HeaderProps) {
                          {/* Navigation Menu - Right Side */}
              <nav className="hidden md:flex items-center space-x-8 ml-auto">
               <Link
-                href="/"
+                href={hrefFor("/")}
                 className={`px-3 py-2 font-medium transition-colors ${isDarkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-[#040d6a]'}`}
               >
                 Home
               </Link>
               <Link
-                href="/sikhism"
+                href={hrefFor("/sikhism")}
                 className={`px-3 py-2 font-medium transition-colors ${isDarkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-[#040d6a]'}`}
               >
                 Sikhism
               </Link>
               <div className="relative group">
                 <Link
-                  href="/about"
+                  href={hrefFor("/about")}
                   className={`px-3 py-2 font-medium transition-colors flex items-center ${isDarkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-[#040d6a]'}`}
                 >
                   About
@@ -83,7 +101,7 @@ export default function Header({ isDarkMode, toggleTheme }: HeaderProps) {
               </div>
               <div className="relative group">
                 <Link
-                  href="/services"
+                  href={hrefFor("/services")}
                   className={`px-3 py-2 font-medium transition-colors flex items-center ${isDarkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-[#040d6a]'}`}
                 >
                   Services
@@ -112,7 +130,7 @@ export default function Header({ isDarkMode, toggleTheme }: HeaderProps) {
 
               {/* Donate Button */}
               <Link
-                href="/donate"
+                href={hrefFor("/donate")}
                 className="bg-[#faba04] hover:bg-[#e6a800] text-white px-3 sm:px-4 md:px-6 py-2 rounded-lg font-medium transition-colors flex items-center text-xs sm:text-sm"
               >
                 <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -151,47 +169,47 @@ export default function Header({ isDarkMode, toggleTheme }: HeaderProps) {
             </div>
           </div>
 
-          {/* Mobile Navigation */}
+                  {/* Mobile Navigation */}
           {isMenuOpen && (
             <div className={`md:hidden border-t ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}>
               <div className="px-2 pt-2 pb-3 space-y-1">
                 <Link
-                  href="/"
+                  href={hrefFor("/")}
                   className={`block px-3 py-2 font-medium transition-colors ${isDarkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-[#040d6a]'}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Home
                 </Link>
                 <Link
-                  href="/sikhism"
+                  href={hrefFor("/sikhism")}
                   className={`block px-3 py-2 font-medium transition-colors ${isDarkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-[#040d6a]'}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Sikhism
                 </Link>
                 <Link
-                  href="/about"
+                  href={hrefFor("/about")}
                   className={`block px-3 py-2 font-medium transition-colors ${isDarkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-[#040d6a]'}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About
                 </Link>
                 <Link
-                  href="/services"
+                  href={hrefFor("/services")}
                   className={`block px-3 py-2 font-medium transition-colors ${isDarkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-[#040d6a]'}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Services
                 </Link>
                 <Link
-                  href="/contact"
+                  href={hrefFor("/contact")}
                   className={`block px-3 py-2 font-medium transition-colors ${isDarkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-[#040d6a]'}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact
                 </Link>
                 <Link
-                  href="/donate"
+                  href={hrefFor("/donate")}
                   className="block px-3 py-2 bg-[#faba04] hover:bg-[#e6a800] text-white font-medium transition-colors rounded"
                   onClick={() => setIsMenuOpen(false)}
                 >

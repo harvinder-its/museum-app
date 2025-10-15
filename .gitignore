@@ -22,6 +22,12 @@
 
 # misc
 .DS_Store
+Thumbs.db
+*.code-workspace
+*.swp
+*.swo
+.idea/
+.vscode/
 *.pem
 
 # debug
@@ -35,6 +41,10 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# turbopack / turborepo
+.turbo/
+.turbopack/
 
 # typescript
 *.tsbuildinfo

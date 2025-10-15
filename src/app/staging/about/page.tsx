@@ -36,7 +36,7 @@ export default function About() {
 
   return (
     <div className={`${isDarkMode ? 'dark' : ''}`}>
-      <Header isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+      <Header isDarkMode={isDarkMode} toggleTheme={toggleTheme} basePath="/staging" />
       
       {/* Main Content */}
       <div className="pt-20 min-h-screen">
@@ -113,7 +113,7 @@ export default function About() {
 
             <div className="text-center">
               <Link 
-                href="/"
+                href="/staging"
                 className={`inline-flex items-center px-6 py-3 rounded-md text-lg font-medium transition-colors ${
                   isDarkMode 
                     ? 'bg-blue-600 hover:bg-blue-700 text-white' 
