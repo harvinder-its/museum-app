@@ -34,7 +34,7 @@ export default function Header({ isDarkMode, toggleTheme, basePath = "" }: Heade
     <header className="fixed top-0 right-0 z-40 w-full max-w-full">
       {/* Top Bar - Operating Hours */}
       <div className="bg-[#040d6a] text-white py-2 px-4">
-        <div className="max-w-7xl mx-auto text-center text-xs sm:text-sm">
+        <div className="max-w-[1280px] mx-auto text-center text-xs sm:text-sm">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center space-y-1 sm:space-y-0">
             <span>Gurudwara Sahib Standard Operating Hours</span>
             <span className="hidden sm:inline mx-2">|</span>
@@ -46,8 +46,8 @@ export default function Header({ isDarkMode, toggleTheme, basePath = "" }: Heade
       </div>
 
       {/* Main Header */}
-      <div className={`bg-white text-gray-900 shadow-md relative`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className={`bg-[#f7f7f7] text-gray-900 shadow-md relative`}>
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="flex items-center justify-between py-4">
             {/* Logo - Left Side */}
             <div className="flex-shrink-0">
