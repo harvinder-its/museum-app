@@ -9,76 +9,196 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState(0);
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   // Removed unused state variables: isMobileMenuOpen, isSidebarCollapsed
   const sectionRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
-  const [expandedCategories, setExpandedCategories] = useState<string[]>(['guru-kal', 'sikh-history']);
+  const [expandedCategories, setExpandedCategories] = useState<string[]>(['sikh-history']);
   const [imageError, setImageError] = useState<{ [key: string]: boolean }>({});
 
   const categories = useMemo(() => [
-    {
-      id: 'guru-kal',
-      label: 'ਭਾਗ ਪਹਿਲਾ: ਗੁਰੂ ਕਾਲ',
-      type: 'main',
-      children: [
-        {
-          id: 'guru-sahiban',
-          label: 'ਗੁਰੂ ਸਾਹਿਬਾਨ',
-          type: 'category',
-          children: [
-            { id: 'guru-nanak-dev-ji', label: 'ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ' },
-            { id: 'guru-angad-dev-ji', label: 'ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ' },
-            { id: 'guru-amardas-ji', label: 'ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ' },
-            { id: 'guru-ramdas-ji', label: 'ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ' },
-            { id: 'guru-arjan-dev-ji', label: 'ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ' },
-            { id: 'guru-hargobind-sahib-ji', label: 'ਗੁਰੂ ਹਰਿਗੋਬਿੰਦ ਸਾਹਿਬ ਜੀ' },
-            { id: 'guru-har-rai-sahib-ji', label: 'ਗੁਰੂ ਹਰਿਰਾਇ ਸਾਹਿਬ ਜੀ' },
-            { id: 'guru-har-krishan-sahib-ji', label: 'ਗੁਰੂ ਹਰਿਕ੍ਰਿਸ਼ਨ ਸਾਹਿਬ ਜੀ' },
-            { id: 'guru-teg-bahadur-ji', label: 'ਗੁਰੂ ਤੇਗ ਬਹਾਦੁਰ ਜੀ' },
-            { id: 'guru-gobind-singh-ji', label: 'ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ' },
-            { id: 'guru-granth-sahib-ji', label: 'ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ' },
-          ]
-        }
-      ]
-    },
+    // Temporarily hidden - ਭਾਗ ਪਹਿਲਾ: ਗੁਰੂ ਕਾਲ
+    // {
+    //   id: 'guru-kal',
+    //   label: 'ਭਾਗ ਪਹਿਲਾ: ਗੁਰੂ ਕਾਲ',
+    //   type: 'main',
+    //   children: [
+    //     {
+    //       id: 'guru-sahiban',
+    //       label: 'ਗੁਰੂ ਸਾਹਿਬਾਨ',
+    //       type: 'category',
+    //       children: [
+    //         { id: 'guru-nanak-dev-ji', label: 'ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ' },
+    //         { id: 'guru-angad-dev-ji', label: 'ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ' },
+    //         { id: 'guru-amardas-ji', label: 'ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ' },
+    //         { id: 'guru-ramdas-ji', label: 'ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ' },
+    //         { id: 'guru-arjan-dev-ji', label: 'ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ' },
+    //         { id: 'guru-hargobind-sahib-ji', label: 'ਗੁਰੂ ਹਰਿਗੋਬਿੰਦ ਸਾਹਿਬ ਜੀ' },
+    //         { id: 'guru-har-rai-sahib-ji', label: 'ਗੁਰੂ ਹਰਿਰਾਇ ਸਾਹਿਬ ਜੀ' },
+    //         { id: 'guru-har-krishan-sahib-ji', label: 'ਗੁਰੂ ਹਰਿਕ੍ਰਿਸ਼ਨ ਸਾਹਿਬ ਜੀ' },
+    //         { id: 'guru-teg-bahadur-ji', label: 'ਗੁਰੂ ਤੇਗ ਬਹਾਦੁਰ ਜੀ' },
+    //         { id: 'guru-gobind-singh-ji', label: 'ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ' },
+    //         { id: 'guru-granth-sahib-ji', label: 'ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ' },
+    //       ]
+    //     }
+    //   ]
+    // },
     {
       id: 'sikh-history',
       label: 'ਭਾਗ-ਦੂਜਾ : ਸਿੱਖ ਇਤਿਹਾਸ',
       type: 'main',
       children: [
         {
-          id: 'shahidi',
-          label: 'ਪ੍ਰਮੁੱਖ ਸ਼ਹੀਦੀਆਂ',
+          id: 'foundation',
+          label: 'Foundation',
           type: 'category',
           children: [
-            { id: 'bhaimanisingh', label: 'ਸ਼ਹੀਦ ਭਾਈ ਮਨੀ ਸਿੰਘ ਜੀ' },
-            { id: 'bhaitarusingh', label: 'ਸ਼ਹੀਦ ਭਾਈ ਤਾਰੂ ਸਿੰਘ ਜੀ' },
-            { id: 'bhaishubegsingh', label: 'ਸ਼ਹੀਦ ਭਾਈ ਸੁਬੇਗ ਸਿੰਘ ਤੇ ਭਾਈ ਸ਼ਾਹਬਾਜ ਸਿੰਘ ਜੀ' },
-            { id: 'babadeepsingh', label: 'ਸ਼ਹੀਦ ਬਾਬਾ ਦੀਪ ਸਿੰਘ ਜੀ' },
+            { id: 'pritham-bhagauti-simri-kai', label: 'ਪ੍ਰਿਥਮ ਭਗਉਤੀ ਸਿਮਰਿ ਕੈ  (ਸ਼ਸਤਰ)' },
+            { id: 'nam-japo', label: 'ਨਾਮ ਜਪੋ' },
+            { id: 'kirt-karo', label: 'ਕਿਰਤ ਕਰੋ' },
+            { id: 'vand-chhako', label: 'ਵੰਡ ਛਕੋ' },
+            { id: 'ang-sahib', label: 'ਅੰਗ ਸਾਹਿਬ' },
+            { id: 'patshahi-badshahi', label: 'ਪਾਤਸ਼ਾਹੀ - ਬਾਦਸ਼ਾਹੀ' },
           ]
         },
         {
-          id: 'jarnail',
-          label: 'ਪ੍ਰਮੁੱਖ ਜਰਨੈਲ',
+          id: 'history',
+          label: 'History',
           type: 'category',
           children: [
-            { id: 'nawabkapursingh', label: 'ਨਵਾਬ ਕਪੂਰ ਸਿੰਘ ਜੀ' },
-            { id: 'jassasinghramgharia', label: 'ਸ੍ਰ. ਜੱਸਾ ਸਿੰਘ ਰਾਮਗੜ੍ਹੀਆ' },
-            { id: 'jassasinghahluwalia', label: 'ਸ੍ਰ. ਜੱਸਾ ਸਿੰਘ ਆਹਲੂਵਾਲੀਆ' },
-            { id: 'baghelsingh', label: 'ਸ੍ਰ. ਬਘੇਲ ਸਿੰਘ ਜੀ' },
+            { id: 'chappar-jhiri-di-jang', label: 'ਚੱਪੜ ਝਿੜੀ ਦੀ ਜੰਗ' },
+            { id: 'baba-banda-singh-bahadur', label: 'ਬਾਬਾ ਬੰਦਾ ਸਿੰਘ ਬਹਾਦੁਰ' },
+            { id: 'bhai-tara-singh-wan-di-jang', label: 'ਭਾਈ ਤਾਰਾ ਸਿੰਘ ਵਾਂ ਦਾ ਜੰਗ' },
+            { id: 'chavinde-waliyan-bibiyan-di-jang', label: 'ਚਵਿੰਡੇ ਵਾਲੀਆਂ ਬੀਬੀਆਂ ਦੀ ਜੰਗ' },
+            { id: 'bhai-mani-singh-shahadat', label: 'ਭਾਈ ਮਨੀ ਸਿੰਘ ਸ਼ਹਾਦਤ' },
+            { id: 'bhai-garja-singh-bota-singh', label: 'ਭਾਈ ਗਰਜਾ ਸਿੰਘ ਬੋਤਾ ਸਿੰਘ' },
+            { id: 'chota-ghallughara', label: 'ਛੋਟਾ ਘੱਲੂਘਾਰਾ' },
+            { id: 'bhai-taru-singh-shahadat', label: 'ਭਾਈ ਤਾਰੂ ਸਿੰਘ ਸ਼ਹਾਦਤ' },
+            { id: 'dal-khalsa-da-gathan', label: 'ਦਲ ਖ਼ਾਲਸਾ ਦਾ ਗਠਨ' },
+            { id: 'baba-deep-singh-ji-di-jang', label: 'ਬਾਬਾ ਦੀਪ ਸਿੰਘ ਜੀ ਦਾ ਜੰਗ' },
+            { id: 'vada-ghallughara', label: 'ਵੱਡਾ ਘੱਲੂਘਾਰਾ' },
+            { id: 'akali', label: 'ਅਕਾਲੀ' },
+            { id: 'jassa-singh-ramgharia', label: 'ਜੱਸਾ ਸਿੰਘ ਰਾਮਗੜ੍ਹੀਆ' },
+            { id: '18vi-sadi-da-singh', label: '੧੮ਵੀਂ ਸਦੀ ਦਾ ਸਿੰਘ' },
+            { id: 'jain-khan-di-maut-te-sarhind-utte-kabza', label: 'ਜੈਨ ਖਾਨ ਦੀ ਮੌਤ ਤੇ ਸਰਹਿੰਦ ਉੱਤੇ ਕਬਜ਼ਾ' },
+            { id: 'singh-vs-singh', label: 'ਸਿੰਘ vs ਸਿੰਘ' },
+            { id: 'darbar-maharaja-ranjit-singh', label: 'ਦਰਬਾਰ ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ' },
+            { id: 'anglo-sikh-jangan-mudki-di-jang', label: 'ਐਂਗਲੋ - ਸਿੱਖ ਜੰਗਾਂ - ਮੁੱਦਕੀ ਦੀ ਜੰਗ' },
+            { id: 'kuka-lehar', label: 'ਕੂਕਾ ਲਹਿਰ' },
+            { id: 'gadar-lehar', label: 'ਗਦਰ ਲਹਿਰ' },
+            { id: 'babbar-akali-lehar', label: 'ਬਬਰ ਅਕਾਲੀ ਲਹਿਰ' },
+            { id: 'vishav-jangan', label: 'ਵਿਸ਼ਵ ਜੰਗਾਂ' },
           ]
         },
         {
-          id: 'events',
-          label: 'ਪ੍ਰਮੁੱਖ ਘਟਨਾਵਾਂ',
+          id: 'portrait',
+          label: 'Portrait',
+          type: 'category',
+      children: [
+            { id: 'akali-phula-singh-ji', label: 'ਅਕਾਲੀ ਫੂਲਾ ਸਿੰਘ ਜੀ' },
+            { id: 'sardar-hari-singh-nalwa', label: 'ਸਰਦਾਰ ਹਰੀ ਸਿੰਘ ਨਲਵਾ' },
+            { id: 'maharani-jind-kaur', label: 'ਮਹਾਰਾਣੀ ਜਿੰਦ ਕੌਰ' },
+            { id: 'kanwar-naunihal-singh', label: 'ਕੰਵਰ ਨੌਨਿਹਾਲ ਸਿੰਘ' },
+            { id: 'maharaja-dalip-singh', label: 'ਮਹਾਰਾਜਾ ਦਲੀਪ ਸਿੰਘ' },
+          ]
+        },
+        {
+          id: 'gadar-lehar-portrait',
+          label: 'Gadar Lehar Portrait',
           type: 'category',
           children: [
-            { id: 'chotaghallughara', label: 'ਛੋਟਾ ਘੱਲੂਘਾਰਾ' },
-            { id: 'dalkhalsa', label: 'ਦਲ ਖ਼ਾਲਸਾ' },
-            { id: 'vadaghallughara', label: 'ਵੱਡਾ ਘੱਲੂਘਾਰਾ' },
+            { id: 'baba-sohan-singh-bhakna', label: 'ਬਾਬਾ ਸੋਹਣ ਸਿੰਘ ਭਕਨਾ' },
+            { id: 'shahid-kartar-singh-sarabha', label: 'ਸ਼ਹੀਦ ਕਰਤਾਰ ਸਿੰਘ ਸਰਾਭਾ' },
+            { id: 'bibi-gulab-kaur', label: 'ਬੀਬੀ ਗੁਲਾਬ ਕੌਰ' },
           ]
-        }
+        },
+        {
+          id: 'babbar-akali-lehar-portrait',
+          label: 'Babbar Akali Lehar Portrait',
+          type: 'category',
+          children: [
+            { id: 'babbar-karam-singh', label: 'ਬਬਰ ਕਰਮ ਸਿੰਘ' },
+            { id: 'babbar-ratan-singh', label: 'ਬਬਰ ਰਤਨ ਸਿੰਘ' },
+            { id: 'babbar-kishan-singh-gargaj', label: 'ਬਬਰ ਕਿਸ਼ਨ ਸਿੰਘ ਗੜਗੱਜ' },
+            { id: 'babbar-dhanna-singh-bahibal-kalan', label: 'ਬਬਰ ਧੰਨਾ ਸਿੰਘ ਬਹਿਬਲ ਕਲਾਂ' },
+            { id: 'babbar-harbans-singh-sarhala', label: 'ਬਬਰ ਹਰਬੰਸ ਸਿੰਘ ਸਰਹਾਲਾ' },
+          ]
+        },
+        {
+          id: '20th-century-portraits',
+          label: '20th Century Portraits',
+          type: 'category',
+          children: [
+            { id: 'bhai-vir-singh-ji', label: 'ਭਾਈ ਵੀਰ ਸਿੰਘ ਜੀ' },
+            { id: 'pro-puran-singh', label: 'ਪ੍ਰੋ ਪੂਰਨ ਸਿੰਘ' },
+            { id: 'gyani-ditt-singh', label: 'ਗਿਆਨੀ ਦਿੱਤ ਸਿੰਘ' },
+            { id: 'bhai-randhir-singh-ji', label: 'ਭਾਈ ਰਣਧੀਰ ਸਿੰਘ ਜੀ' },
+            { id: 'master-tara-singh', label: 'ਮਾਸਟਰ ਤਾਰਾ ਸਿੰਘ' },
+            { id: 'dr-ganda-singh', label: 'ਡਾ ਗੰਡਾ ਸਿੰਘ' },
+            { id: 'karam-singh-historian', label: 'ਕਰਮ ਸਿੰਘ ਹਿਸਟੋਰੀਅਨ' },
+            { id: 'bibi-harnam-kaur', label: 'ਬੀਬੀ ਹਰਨਾਮ ਕੌਰ' },
+            { id: 'bhai-kahan-singh-nabha', label: 'ਭਾਈ ਕਾਹਨ ਸਿੰਘ ਨਾਭਾ' },
+          ]
+        },
+        {
+          id: 'modern-art-style-painting',
+          label: 'Modern Art Style Painting',
+          type: 'category',
+          children: [
+            { id: '1947-di-vand', label: '੧੯੪੭ ਦੀ ਵੰਡ' },
+          ]
+        },
+        {
+          id: 'teja-ghallughara',
+          label: 'ਤੀਜਾ ਘੱਲੂਘਾਰਾ',
+          type: 'category',
+          children: [
+            { id: 'santan-di-shahadat', label: 'ਸੰਤਾਂ ਦੀ ਸ਼ਹਾਦਤ' },
+          ]
+        },
+        {
+          id: '1978',
+          label: '1978',
+          type: 'category',
+          children: [
+            { id: 'bhai-fauja-singh-ji', label: 'ਭਾਈ ਫੌਜਾ ਸਿੰਘ ਜੀ' },
+          ]
+        },
+        {
+          id: 'teja-ghallughara-portrait',
+          label: 'ਤੀਜਾ ਘੱਲੂਘਾਰਾ Portrait',
+          type: 'category',
+          children: [
+            { id: 'teja-ghallughara-june-1984', label: 'ਤੀਜਾ ਘੱਲੂਘਰਾ - ਜੂਨ 1984(ਅਕਾਲ ਤਖ਼ਤ ਸਾਹਿਬ ਮਾਡਲ)' },
+            { id: 'sant-jarnail-singh-ji', label: 'ਸੰਤ ਜਰਨੈਲ ਸਿੰਘ ਜੀ' },
+            { id: 'bhai-amrik-singh-ji', label: 'ਭਾਈ ਅਮਰੀਕ ਸਿੰਘ ਜੀ' },
+            { id: 'general-subeg-singh-ji', label: 'ਜਨਰਲ ਸੁਬੇਗ ਸਿੰਘ ਜੀ' },
+            { id: 'baba-thahara-singh-ji', label: 'ਬਾਬਾ ਠਾਹਰਾ ਸਿੰਘ ਜੀ' },
+            { id: 'bibi-upkar-kaur', label: 'ਬੀਬੀ ਉਪਕਾਰ ਕੌਰ' },
+            { id: 'bhai-mehnga-singh-babar', label: 'ਭਾਈ ਮਹਿੰਗਾ ਸਿੰਘ ਬਬਰ' },
+          ]
+        },
+        {
+          id: 'sikh-genocide',
+          label: 'Sikh Genocide',
+          type: 'category',
+          children: [
+            { id: 'november-1984', label: 'ਨਵੰਬਰ ੧੯੮੪' },
+          ]
+        },
+        {
+          id: 'punjabi-culture',
+          label: 'Punjabi Culture',
+          type: 'category',
+          children: [
+            { id: 'purana-ghar', label: 'ਪੁਰਾਣਾ ਘਰ' },
+            { id: 'stepu', label: 'ਸਟੈਪੂ' },
+            { id: 'maan-di-kala', label: 'ਮਾਂ ਦੀ ਕਲਾ' },
+            { id: 'dadi-pota', label: 'ਦਾਦੀ ਪੋਤਾ' },
+          ]
+        },
+        { id: 'kirtan', label: 'Kirtan' },
+        { id: 'map', label: 'Map' },
       ]
     }
   ], []);
@@ -92,6 +212,9 @@ export default function Home() {
           subCategory.children.forEach(section => {
             allSections.push(section);
           });
+        } else {
+          // Direct section (no nested category)
+          allSections.push(subCategory);
         }
       });
     });
@@ -161,6 +284,17 @@ export default function Home() {
                         return newExpanded;
                       });
                     }
+                  } else {
+                    // Direct section (no nested category)
+                    if (subCategory.id === sectionId) {
+                      setExpandedCategories(prev => {
+                        const newExpanded = [...prev];
+                        if (!newExpanded.includes(mainCategory.id)) {
+                          newExpanded.push(mainCategory.id);
+                        }
+                        return newExpanded;
+                      });
+                    }
                   }
                 });
               });
@@ -190,10 +324,60 @@ export default function Home() {
     if (section) {
       const element = sectionRefs.current[section.id];
       if (element) {
+        // Update URL hash
+        window.history.pushState(null, '', `#${section.id}`);
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
   };
+
+  // Handle URL hash navigation
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.substring(1); // Remove the # symbol
+      if (hash) {
+        const sectionIndex = sections.findIndex(s => s.id === hash);
+        if (sectionIndex !== -1) {
+          setCurrentSection(sectionIndex);
+          // Ensure the category is expanded
+          const section = sections[sectionIndex];
+          if (section) {
+            // Find which category this section belongs to
+            categories.forEach(category => {
+              if (category.children) {
+                const foundInCategory = category.children.some(child => 
+                  child.id === section.id || 
+                  (child.children && child.children.some(subChild => subChild.id === section.id))
+                );
+                if (foundInCategory) {
+                  setExpandedCategories(prev => 
+                    prev.includes(category.id) ? prev : [...prev, category.id]
+                  );
+                }
+              }
+            });
+          }
+          // Scroll to the section after a short delay to ensure DOM is ready
+          setTimeout(() => {
+            const element = sectionRefs.current[hash];
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 100);
+        }
+      }
+    };
+
+    // Handle initial hash on page load
+    handleHashChange();
+
+    // Listen for hash changes (browser back/forward)
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, [sections, categories]);
 
   // Removed unused functions: toggleMobileMenu and toggleSidebar
 
@@ -488,7 +672,7 @@ export default function Home() {
 <p class="mb-4">ਦਲ ਖ਼ਾਲਸਾ ਦੀ ਸਥਾਪਨਾ ਨੇ ਸਿੱਖ ਸੈਨਿਕ ਸ਼ਕਤੀ ਨੂੰ ਹੋਰ ਮਜ਼ਬੂਤ ਕੀਤਾ। ਅਬਦਾਲੀ ਦੇ ਹਮਲਿਆਂ ਤੇ ਆਪਸੀ ਪਾਟੋਧਾੜ ਕਾਰਨ ਲਾਹੌਰ ਹਕੂਮਤ ਬਹੁਤ ਕਮਜ਼ੋਰ ਹੋ ਚੁੱਕੀ ਸੀ। ਸਿੱਖਾਂ ਲਈ ਕੇਵਲ ਅਬਦਾਲੀ ਦੇ ਹਮਲੇ ਹੀ ਚੁਣੌਤੀ ਬਣੇ ਹੋਏ ਸਨ। ਸਿੱਖ ਮਿਸਲਾਂ ਦੀਆਂ ਸਾਂਝੀਆਂ ਕਾਰਵਾਈਆਂ ਨੇ ਅਬਦਾਲੀ ਤੇ ਉਸ ਦੇ ਅਹਿਲਕਾਰਾਂ ਨੂੰ ਚਾਰੋਂ ਖਾਨੇ ਚਿੱਤ ਕਰਕੇ ਲਾਹੌਰ ਦੇ ਤਖ਼ਤ ਨੂੰ ਜਾ ਮੱਲਿਆ ਸੀ। ਸ੍ਰੀ ਜੱਸਾ ਸਿੰਘ ਆਹਲੂਵਾਲੀਆ ਨੂੰ ‘ਸੁਲਤਾਨ-ਉਲ-ਕੌਮ’ ਦੀ ਉਪਾਧੀ ਨਾਲ ਨਿਵਾਜਿਆ ਗਿਆ ਸੀ। ਇਨ੍ਹਾਂ ਗਿਆਰਾਂ ਮਿਸਲਾਂ ਦੇ ਰਾਜ ਪ੍ਰਬੰਧ ਨੂੰ ਇਕ ਜਗ੍ਹਾ ਸਥਾਪਤ ਕਰਦਿਆਂ ਸ਼ੁਕਰਚੱਕੀਆ ਮਿਸਲ ਦੇ ਜਥੇਦਾਰ ਸ੍ਰੀ ਰਣਜੀਤ ਸਿੰਘ ਨੇ ਸਿੱਖ ਰਾਜ ਦੀ ਸਥਾਪਨਾ ਕੀਤੀ ਸੀ।</p>
         `,
         vadaghallughara: `
-         <p class="mb-4">ਅਠਾਰਵੀਂ ਸਦੀ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਘਟਨਾਵਾਂ ਵਿੱਚੋਂ ਵੱਡਾ ਘੱਲੂਘਾਰਾ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਅਹਿਮ ਘਟਨਾ ਹੈ। ਇਸ ਘੱਲੂਘਾਰੇ 'ਚ ਕਾਹਨੂੰਵਾਨ ਵਿਖੇ 1746ਈ. ਵਿੱਚ ਵਾਪਰੇ ਘੱਲੂਘਾਰੇ ਦੇ ਮੁਕਾਬਲੇ ਸਿੱਖਾਂ ਦਾ ਭਾਰੀ ਜਾਨੀ-ਮਾਲੀ ਨੁਕਸਾਨ ਹੋਇਆ ਸੀ, ਜਿਸ ਕਰਕੇ ਇਸ ਸਾਕੇ ਨੂੰ ‘ਵੱਡੇ ਘੱਲੂਘਾਰੇ' ਦਾ ਨਾਮ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ। ਇਹ ਸਾਕਾ ਅਬਦਾਲੀ ਦੁਆਰਾ ਕੁੱਪ-ਰਹੀੜੇ ਦੇ ਸਥਾਨ 'ਤੇ ਵਰਤਾਇਆ ਗਿਆ ਸੀ। ਅਬਦਾਲੀ ਨੇ 1747ਈ. ਤੋਂ 1767ਈ. ਤੱਕ ਹਿੰਦੁਸਤਾਨ 'ਤੇ ਅੱਠ ਹਮਲੇ ਕੀਤੇ ਸਨ। ਅਬਦਾਲੀ ਦੇ ਪਹਿਲੇ ਚਾਰ ਹਮਲਿਆਂ ਨੇ ਮੁਗਲ ਸਾਮਰਾਜ ਨੂੰ ਖੇਰੂੰ-ਖੇਰੂੰ ਕਰ ਦਿੱਤਾ ਸੀ। ਅਬਦਾਲੀ ਨੇ ਪੰਜਵੇਂ ਹਮਲੇ ਦੌਰਾਨ ਮਰਾਠਿਆਂ ਨੂੰ ਮਾਤ ਦਿੱਤੀ ਅਤੇ ਆਪਣੇ ਅੰਤਲੇ ਤਿੰਨ ਹਮਲਿਆਂ (1762, 1764, 1767ਈ.) ਦੌਰਾਨ ਸਿੱਖਾਂ ਨੂੰ ਕੁਚਲਣ ਦੀ ਨਾਕਾਮ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ ਸੀ। ਅਬਦਾਲੀ ਨੇ ਲਾਹੌਰ, ਸਰਹਿੰਦ, ਮਲੇਰਕੋਟਲਾ, ਜਲੰਧਰ-ਦੁਆਬ ਆਦਿ ਇਲਾਕਿਆਂ 'ਚ ਆਪਣੇ ਅਹਿਲਕਾਰ ਨਿਯੁਕਤ ਕਰ ਦਿੱਤੇ ਸਨ।</p>
+         <p class="mb-4">ਅਠਾਰਵੀਂ ਸਦੀ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਘਟਨਾਵਾਂ ਵਿੱਚੋਂ ਵੱਡਾ ਘੱਲੂਘਾਰਾ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਅਹਿਮ ਘਟਨਾ ਹੈ। ਇਸ ਘੱਲੂਘਾਰੇ 'ਚ ਕਾਹਨੂੰਵਾਨ ਵਿਖੇ 1746ਈ. ਵਿੱਚ ਵਾਪਰੇ ਘੱਲੂਘਾਰੇ ਦੇ ਮੁਕਾਬਲੇ ਸਿੱਖਾਂ ਦਾ ਭਾਰੀ ਜਾਨੀ-ਮਾਲੀ ਨੁਕਸਾਨ ਹੋਇਆ ਸੀ, ਜਿਸ ਕਰਕੇ ਇਸ ਸਾਕੇ ਨੂੰ 'ਵੱਡੇ ਘੱਲੂਘਾਰੇ' ਦਾ ਨਾਮ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ। ਇਹ ਸਾਕਾ ਅਬਦਾਲੀ ਦੁਆਰਾ ਕੁੱਪ-ਰਹੀੜੇ ਦੇ ਸਥਾਨ 'ਤੇ ਵਰਤਾਇਆ ਗਿਆ ਸੀ। ਅਬਦਾਲੀ ਨੇ 1747ਈ. ਤੋਂ 1767ਈ. ਤੱਕ ਹਿੰਦੁਸਤਾਨ 'ਤੇ ਅੱਠ ਹਮਲੇ ਕੀਤੇ ਸਨ। ਅਬਦਾਲੀ ਦੇ ਪਹਿਲੇ ਚਾਰ ਹਮਲਿਆਂ ਨੇ ਮੁਗਲ ਸਾਮਰਾਜ ਨੂੰ ਖੇਰੂੰ-ਖੇਰੂੰ ਕਰ ਦਿੱਤਾ ਸੀ। ਅਬਦਾਲੀ ਨੇ ਪੰਜਵੇਂ ਹਮਲੇ ਦੌਰਾਨ ਮਰਾਠਿਆਂ ਨੂੰ ਮਾਤ ਦਿੱਤੀ ਅਤੇ ਆਪਣੇ ਅੰਤਲੇ ਤਿੰਨ ਹਮਲਿਆਂ (1762, 1764, 1767ਈ.) ਦੌਰਾਨ ਸਿੱਖਾਂ ਨੂੰ ਕੁਚਲਣ ਦੀ ਨਾਕਾਮ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ ਸੀ। ਅਬਦਾਲੀ ਨੇ ਲਾਹੌਰ, ਸਰਹਿੰਦ, ਮਲੇਰਕੋਟਲਾ, ਜਲੰਧਰ-ਦੁਆਬ ਆਦਿ ਇਲਾਕਿਆਂ 'ਚ ਆਪਣੇ ਅਹਿਲਕਾਰ ਨਿਯੁਕਤ ਕਰ ਦਿੱਤੇ ਸਨ।</p>
 
 <p class="mb-4">ਦਲ ਖ਼ਾਲਸਾ ਦੀ ਸਥਾਪਨਾ ਨੇ ਸਿੱਖ ਸੈਨਿਕ ਸ਼ਕਤੀ ਨੂੰ ਪੰਜਾਬ ਅੰਦਰ ਬਹੁਤ ਮਜ਼ਬੂਤ ਕਰ ਦਿੱਤਾ ਸੀ। ਅਬਦਾਲੀ ਦੇ ਹਰ ਹਮਲੇ ਸਮੇਂ ਸਿੱਖਾਂ ਨੇ ਉਸ ਨੂੰ ਸਖ਼ਤ ਚੁਣੌਤੀ ਦਿੱਤੀ ਸੀ। ਸਿੱਖ, ਅਬਦਾਲੀ ਦੁਆਰਾ ਲੁੱਟੇ ਮਾਲ-ਅਸਬਾਬ ਵਿੱਚੋਂ ਵੱਡਾ ਹਿੱਸਾ ਖੋਹ ਲੈਂਦੇ ਸਨ। ਅਬਦਾਲੀ ਨੇ ਪੰਜਵੇਂ ਹਮਲੇ ਦੌਰਾਨ ਮਰਾਠਿਆਂ ਨੂੰ ਪਾਣੀਪਤ ਦੇ ਸਥਾਨ 'ਤੇ ਬੁਰੀ ਤਰ੍ਹਾਂ ਹਰਾਇਆ ਸੀ। ਅਬਦਾਲੀ ਦੇ ਵਾਪਸ ਲਾਹੌਰ ਰਾਹੀਂ ਅਫਗਾਨਿਸਤਾਨ ਜਾਂਦਿਆਂ ਸਿੱਖਾਂ ਨੇ ਅਬਦਾਲੀ ਨੂੰ ਗੁਰੀਲਾ ਯੁੱਧ ਨੀਤੀ ਤਹਿਤ ਬਹੁਤ ਪ੍ਰੇਸ਼ਾਨ ਕੀਤਾ ਸੀ। ਮੁਗਲ-ਮਰਾਠਿਆਂ ਨੂੰ ਹਰਾਉਣ ਉਪਰੰਤ ਹਿੰਦੁਸਤਾਨ ਵਿੱਚ ਸਿੱਖ ਹੀ ਉਸ ਲਈ ਚੁਣੌਤੀ ਬਣੇ ਹੋਏ ਸਨ। ਸਿੱਖਾਂ ਦੀਆਂ ਕਾਰਵਾਈਆਂ ਤੋਂ ਪ੍ਰੇਸ਼ਾਨ ਅਬਦਾਲੀ ਸਿੱਖਾਂ ਨੂੰ ਸਬਕ ਸਿਖਾਉਣਾ ਚਾਹੁੰਦਾ ਸੀ।</p>
 
@@ -503,6 +687,334 @@ export default function Home() {
 <p class="mb-4">ਸਿੱਖ ਨਸ਼ਲਕੁਸ਼ੀ ਨੂੰ ਅੰਜਾਮ ਦਿੰਦਿਆਂ ਵਾਪਸ ਲਾਹੌਰ ਜਾਂਦਿਆਂ ਅਬਦਾਲੀ ਨੇ ਸ੍ਰੀ ਹਰਿਮੰਦਰ ਸਾਹਿਬ ਨੂੰ ਢਹਿ ਢੇਰੀ ਕਰਕੇ ਅੰਮ੍ਰਿਤਸਰ ਸਰੋਵਰ ਨੂੰ ਪੂਰ ਦਿੱਤਾ ਸੀ। ਇਸ ਘੱਲੂਘਾਰੇ ਵਿੱਚ ਸਿੱਖਾਂ ਦਾ ਭਾਰੀ ਜਾਨੀ-ਮਾਲੀ ਨੁਕਸਾਨ ਹੋਇਆ ਸੀ। ਸਿੱਖ ਕੌਮ ਉੱਤੇ ਇਹ ਘੱਲੂਘਾਰਾ ਨਾ ਮਿਟਣ ਵਾਲਾ ਜਖ਼ਮ ਸੀ, ਪਰ ਸਿੰਘਾਂ ਵਿੱਚ ਉਹੀ ਉਤਸ਼ਾਹ ਤੇ ਜ਼ਜਬਾ ਬਰਕਰਾਰ ਸੀ ਜੋ ਇਸ ਸਾਕੇ ਤੋਂ ਪਹਿਲਾਂ ਸੀ। ਅਬਦਾਲੀ ਨੂੰ ਭਰਮ ਸੀ ਕਿ ਸਿੱਖ ਇਸ ਲੜਾਈ ਤੋਂ ਬਾਅਦ ਛੇਤੀ ਪੰਜਾਬ ਵਿੱਚ ਸਿਰ ਨਹੀਂ ਚੁਕ ਸਕਣਗੇ, ਪਰ ਅਬਦਾਲੀ ਦਾ ਇਹ ਭਰਮ ਪੰਜ-ਛੇ ਮਹੀਨਿਆਂ ਬਾਅਦ ਅੰਮ੍ਰਿਤਸਰ ਵਿਖੇ ਹਾਰ ਖਾਣ ਉਪਰੰਤ ਲਹਿ ਗਿਆ ਸੀ।</p>
 
 <p class="mb-4">ਖ਼ਾਲਸਾ ਪੰਥ ਹਰ ਸਾਲ 27 ਮਾਘ ਨੂੰ ਵੱਡੇ ਘੱਲੂਘਾਰੇ ਦੇ ਸ਼ਹੀਦ-ਸਿੰਘਾਂ ਨੂੰ ਯਾਦ ਕਰਦਾ ਹੈ।</p>`,
+        foundation: `
+          <p class="mb-4">The Foundation section explores the fundamental principles and establishment of Sikhism. This section covers the core teachings of the Gurus and the philosophical foundations that shaped the Sikh faith.</p>
+          <p class="mb-4">Sikhism was founded on the principles of equality, justice, and devotion to one God. The foundation of Sikhism is built upon the teachings of Guru Nanak Dev Ji and the subsequent Gurus who expanded and refined these principles.</p>
+        `,
+        history: `
+          <p class="mb-4">The History section provides a comprehensive overview of Sikh historical events, significant periods, and the evolution of the Sikh community through different eras.</p>
+          <p class="mb-4">From the time of the Gurus to the modern era, Sikh history is marked by periods of growth, challenges, and resilience. This section chronicles the major events that have shaped Sikh identity and community.</p>
+        `,
+        portrait: `
+          <p class="mb-4">The Portrait section features artistic representations of significant figures in Sikh history. These portraits capture the essence and spirit of the individuals who have played important roles in Sikh tradition.</p>
+          <p class="mb-4">Each portrait tells a story and provides insight into the character and contributions of the subject. The artistic styles vary, reflecting different periods and artistic traditions.</p>
+        `,
+        'gadar-lehar-portrait': `
+          <p class="mb-4">The Gadar Lehar Portrait section showcases artistic representations related to the Gadar Movement, a significant chapter in Sikh and Indian history during the early 20th century.</p>
+          <p class="mb-4">The Gadar Movement was a revolutionary movement that sought to overthrow British rule in India. This section features portraits of key figures and events from this important period.</p>
+        `,
+        'babbar-akali-lehar-portrait': `
+          <p class="mb-4">The Babbar Akali Lehar Portrait section presents artistic depictions related to the Babbar Akali Movement, which was a significant political and religious movement in Sikh history.</p>
+          <p class="mb-4">This movement played a crucial role in Sikh political awakening and the struggle for religious and political rights. The portraits in this section capture the spirit and determination of the movement's participants.</p>
+        `,
+        '20th-century-portraits': `
+          <p class="mb-4">The 20th Century Portraits section features artistic representations of significant Sikh figures from the 1900s. This period was marked by major social, political, and religious changes.</p>
+          <p class="mb-4">These portraits reflect the modern era of Sikh history, showcasing leaders, activists, and community members who contributed to Sikh society during the 20th century.</p>
+        `,
+        'modern-art-style-painting': `
+          <p class="mb-4">The Modern Art Style Painting section presents contemporary artistic interpretations of Sikh themes and subjects. These works combine traditional Sikh iconography with modern artistic techniques.</p>
+          <p class="mb-4">Modern artists have found new ways to express Sikh values and history through contemporary art forms, creating a bridge between tradition and innovation.</p>
+        `,
+        'teja-ghallughara': `
+          <p class="mb-4">ਤੀਜਾ ਘੱਲੂਘਾਰਾ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਇੱਕ ਮਹੱਤਵਪੂਰਨ ਘਟਨਾ ਹੈ। ਇਹ ਘਟਨਾ ਸਿੱਖ ਕੌਮ ਦੇ ਇਤਿਹਾਸ ਵਿੱਚ ਇੱਕ ਦੁਖਦਾਈ ਅਧਿਆਇ ਹੈ।</p>
+          <p class="mb-4">ਤੀਜਾ ਘੱਲੂਘਾਰਾ ਦੇ ਸਮੇਂ ਸਿੱਖਾਂ ਨੇ ਬਹੁਤ ਸਾਰੀਆਂ ਮੁਸ਼ਕਲਾਂ ਦਾ ਸਾਮਣਾ ਕੀਤਾ। ਇਸ ਘਟਨਾ ਨੇ ਸਿੱਖ ਕੌਮ ਦੇ ਇਤਿਹਾਸ ਵਿੱਚ ਇੱਕ ਗਹਿਰਾ ਪ੍ਰਭਾਵ ਛੱਡਿਆ।</p>
+        `,
+        '1978': `
+          <p class="mb-4">The year 1978 marks a significant period in Sikh history. This section explores the events and developments that occurred during this important year.</p>
+          <p class="mb-4">1978 was a year of significant change and challenge for the Sikh community. The events of this year had lasting impacts on Sikh society and politics.</p>
+        `,
+        'teja-ghallughara-portrait': `
+          <p class="mb-4">ਤੀਜਾ ਘੱਲੂਘਾਰਾ Portrait ਸੈਕਸ਼ਨ ਵਿੱਚ ਇਸ ਘਟਨਾ ਨਾਲ ਸਬੰਧਿਤ ਕਲਾਤਮਕ ਚਿੱਤਰ ਪੇਸ਼ ਕੀਤੇ ਗਏ ਹਨ। ਇਹ ਪੋਰਟਰੇਟ ਇਸ ਦੁਖਦਾਈ ਘਟਨਾ ਦੀ ਯਾਦ ਦਿਲਾਉਂਦੇ ਹਨ।</p>
+          <p class="mb-4">ਇਹ ਕਲਾਤਮਕ ਰਚਨਾਵਾਂ ਤੀਜਾ ਘੱਲੂਘਾਰਾ ਦੇ ਸਮੇਂ ਦੀਆਂ ਘਟਨਾਵਾਂ ਅਤੇ ਉਸ ਸਮੇਂ ਦੇ ਲੋਕਾਂ ਦੇ ਦੁੱਖਾਂ ਨੂੰ ਦਰਸਾਉਂਦੀਆਂ ਹਨ।</p>
+        `,
+        'sikh-genocide': `
+          <p class="mb-4">The Sikh Genocide section addresses one of the darkest chapters in Sikh history. This section provides information about the systematic persecution and violence faced by the Sikh community.</p>
+          <p class="mb-4">This section serves as a memorial to those who suffered and as an educational resource to ensure that such events are never forgotten and never repeated.</p>
+        `,
+        'punjabi-culture': `
+          <p class="mb-4">The Punjabi Culture section celebrates the rich cultural heritage of Punjab and its influence on Sikh traditions. This section explores the music, dance, literature, and customs that define Punjabi culture.</p>
+          <p class="mb-4">Punjabi culture is deeply intertwined with Sikh values and traditions. This section showcases the vibrant cultural expressions that have enriched Sikh community life.</p>
+        `,
+        kirtan: `
+          <p class="mb-4">The Kirtan section explores the devotional music tradition of Sikhism. Kirtan is a form of musical worship that involves singing hymns from the Guru Granth Sahib.</p>
+          <p class="mb-4">Kirtan plays a central role in Sikh worship and community gatherings. This section provides information about the history, significance, and practice of Kirtan in Sikh tradition.</p>
+        `,
+        map: `
+          <p class="mb-4">The Map section provides geographical context for Sikh history and heritage. This section includes maps showing important historical locations, pilgrimage sites, and significant places in Sikh history.</p>
+          <p class="mb-4">Maps help visitors understand the geographical spread of Sikh influence and the locations of important historical events and sacred sites.</p>
+        `,
+        // Foundation subsections
+        'pritham-bhagauti-simri-kai': `
+          <p class="mb-4">ਪ੍ਰਿਥਮ ਭਗਉਤੀ ਸਿਮਰਿ ਕੈ (ਸ਼ਸਤਰ) ਸਿੱਖ ਧਰਮ ਦਾ ਮੂਲ ਮੰਤਰ ਹੈ। ਇਹ ਮੰਤਰ ਸਿੱਖਾਂ ਲਈ ਸ਼ਸਤਰਾਂ ਦੀ ਪੂਜਾ ਅਤੇ ਉਨ੍ਹਾਂ ਦੀ ਸ਼ਕਤੀ ਨੂੰ ਯਾਦ ਕਰਨ ਦਾ ਤਰੀਕਾ ਹੈ।</p>
+          <p class="mb-4">ਇਸ ਮੰਤਰ ਦੁਆਰਾ ਸਿੱਖ ਆਪਣੇ ਆਪ ਨੂੰ ਯਾਦ ਦਿਵਾਉਂਦੇ ਹਨ ਕਿ ਸ਼ਸਤਰ ਸਿਰਫ਼ ਹਿੰਸਾ ਲਈ ਨਹੀਂ, ਸਗੋਂ ਧਰਮ ਅਤੇ ਨਿਆਂ ਦੀ ਰੱਖਿਆ ਲਈ ਹਨ।</p>
+        `,
+        'nam-japo': `
+          <p class="mb-4">ਨਾਮ ਜਪੋ ਸਿੱਖ ਧਰਮ ਦੇ ਤਿੰਨ ਮੂਲ ਸਿਧਾਂਤਾਂ ਵਿੱਚੋਂ ਪਹਿਲਾ ਹੈ। ਇਸ ਦਾ ਮਤਲਬ ਹੈ ਰੱਬ ਦਾ ਨਾਮ ਜਪਣਾ ਅਤੇ ਉਸ ਦੀ ਯਾਦ ਵਿੱਚ ਰਹਿਣਾ।</p>
+          <p class="mb-4">ਨਾਮ ਜਪਣਾ ਸਿੱਖਾਂ ਦੇ ਰੋਜ਼ਾਨਾ ਜੀਵਨ ਦਾ ਅਹਿਮ ਹਿੱਸਾ ਹੈ ਅਤੇ ਇਹ ਉਨ੍ਹਾਂ ਨੂੰ ਆਪਣੇ ਆਪ ਨੂੰ ਰੱਬ ਨਾਲ ਜੋੜਨ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।</p>
+        `,
+        'kirt-karo': `
+          <p class="mb-4">ਕਿਰਤ ਕਰੋ ਸਿੱਖ ਧਰਮ ਦਾ ਦੂਜਾ ਮੂਲ ਸਿਧਾਂਤ ਹੈ। ਇਸ ਦਾ ਮਤਲਬ ਹੈ ਈਮਾਨਦਾਰੀ ਨਾਲ ਮਿਹਨਤ ਕਰਨਾ ਅਤੇ ਆਪਣੇ ਹੱਥਾਂ ਨਾਲ ਕਮਾਈ ਕਰਨਾ।</p>
+          <p class="mb-4">ਸਿੱਖ ਧਰਮ ਵਿੱਚ ਮਿਹਨਤ ਨੂੰ ਪੂਜਾ ਮੰਨਿਆ ਜਾਂਦਾ ਹੈ ਅਤੇ ਇਹ ਸਿੱਖਾਂ ਦੇ ਜੀਵਨ ਦਾ ਅਟੁੱਟ ਹਿੱਸਾ ਹੈ।</p>
+        `,
+        'vand-chhako': `
+          <p class="mb-4">ਵੰਡ ਛਕੋ ਸਿੱਖ ਧਰਮ ਦਾ ਤੀਜਾ ਮੂਲ ਸਿਧਾਂਤ ਹੈ। ਇਸ ਦਾ ਮਤਲਬ ਹੈ ਆਪਣੀ ਕਮਾਈ ਵਿੱਚੋਂ ਦੂਜਿਆਂ ਨਾਲ ਵੰਡਣਾ ਅਤੇ ਸੇਵਾ ਕਰਨਾ।</p>
+          <p class="mb-4">ਇਹ ਸਿਧਾਂਤ ਸਿੱਖਾਂ ਨੂੰ ਸਿਖਾਉਂਦਾ ਹੈ ਕਿ ਧਨ-ਦੌਲਤ ਸਿਰਫ਼ ਆਪਣੇ ਲਈ ਨਹੀਂ, ਸਗੋਂ ਸਮਾਜ ਦੀ ਭਲਾਈ ਲਈ ਵਰਤਣਾ ਚਾਹੀਦਾ ਹੈ।</p>
+        `,
+        'ang-sahib': `
+          <p class="mb-4">ਅੰਗ ਸਾਹਿਬ ਸਿੱਖ ਧਰਮ ਵਿੱਚ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਦੇ ਅੰਗਾਂ ਦਾ ਸਤਿਕਾਰ ਹੈ। ਇਹ ਸਿੱਖਾਂ ਲਈ ਪਵਿੱਤਰ ਗ੍ਰੰਥ ਦੀ ਮਹਾਨਤਾ ਨੂੰ ਦਰਸਾਉਂਦਾ ਹੈ।</p>
+          <p class="mb-4">ਅੰਗ ਸਾਹਿਬ ਦਾ ਸਤਿਕਾਰ ਸਿੱਖਾਂ ਨੂੰ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਦੀ ਸਿੱਖਿਆ ਨੂੰ ਆਪਣੇ ਜੀਵਨ ਵਿੱਚ ਉਤਾਰਨ ਲਈ ਪ੍ਰੇਰਿਤ ਕਰਦਾ ਹੈ।</p>
+        `,
+        'patshahi-badshahi': `
+          <p class="mb-4">ਪਾਤਸ਼ਾਹੀ - ਬਾਦਸ਼ਾਹੀ ਸਿੱਖ ਇਤਿਹਾਸ ਦਾ ਅਹਿਮ ਪ੍ਰਕਰਣ ਹੈ। ਇਹ ਸਿੱਖ ਰਾਜ ਦੀ ਸਥਾਪਨਾ ਅਤੇ ਉਸ ਦੇ ਰਾਜਨੀਤਿਕ ਪ੍ਰਭਾਵ ਨੂੰ ਦਰਸਾਉਂਦਾ ਹੈ।</p>
+          <p class="mb-4">ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ ਦੇ ਸਮੇਂ ਸਿੱਖ ਰਾਜ ਨੇ ਪੰਜਾਬ ਵਿੱਚ ਇੱਕ ਮਜ਼ਬੂਤ ਸਾਮਰਾਜ ਸਥਾਪਿਤ ਕੀਤਾ ਸੀ।</p>
+        `,
+        // History subsections
+        'chappar-jhiri-di-jang': `
+          <p class="mb-4">ਚੱਪੜ ਝਿੜੀ ਦੀ ਜੰਗ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਇੱਕ ਮਹੱਤਵਪੂਰਨ ਲੜਾਈ ਸੀ। ਇਸ ਲੜਾਈ ਵਿੱਚ ਸਿੱਖਾਂ ਨੇ ਬਹਾਦਰੀ ਦਾ ਪ੍ਰਦਰਸ਼ਨ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਇਹ ਲੜਾਈ ਸਿੱਖ ਇਤਿਹਾਸ ਵਿੱਚ ਉਨ੍ਹਾਂ ਦੀ ਸੈਨਿਕ ਸ਼ਕਤੀ ਅਤੇ ਰਣਨੀਤੀ ਦਾ ਪ੍ਰਮਾਣ ਹੈ।</p>
+        `,
+        'baba-banda-singh-bahadur': `
+          <p class="mb-4">ਬਾਬਾ ਬੰਦਾ ਸਿੰਘ ਬਹਾਦੁਰ ਸਿੱਖ ਇਤਿਹਾਸ ਦੇ ਮਹਾਨ ਯੋਧਿਆਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖ ਰਾਜ ਦੀ ਨੀਂਹ ਰੱਖਣ ਵਿੱਚ ਅਹਿਮ ਭੂਮਿਕਾ ਨਿਭਾਈ ਸੀ।</p>
+          <p class="mb-4">ਬਾਬਾ ਬੰਦਾ ਸਿੰਘ ਬਹਾਦੁਰ ਨੇ ਮੁਗਲ ਸਾਮਰਾਜ ਦੇ ਵਿਰੁੱਧ ਸੰਘਰਸ਼ ਕੀਤਾ ਅਤੇ ਸਿੱਖਾਂ ਲਈ ਇੱਕ ਸੁਤੰਤਰ ਰਾਜ ਦੀ ਸਥਾਪਨਾ ਕੀਤੀ।</p>
+        `,
+        'bhai-tara-singh-wan-di-jang': `
+          <p class="mb-4">ਭਾਈ ਤਾਰਾ ਸਿੰਘ ਵਾਂ ਦਾ ਜੰਗ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਇੱਕ ਪ੍ਰਸਿੱਧ ਲੜਾਈ ਸੀ। ਇਸ ਲੜਾਈ ਵਿੱਚ ਭਾਈ ਤਾਰਾ ਸਿੰਘ ਨੇ ਬਹਾਦਰੀ ਦਾ ਪ੍ਰਦਰਸ਼ਨ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਇਹ ਲੜਾਈ ਸਿੱਖਾਂ ਦੀ ਰਣਨੀਤੀ ਅਤੇ ਸੈਨਿਕ ਕੁਸ਼ਲਤਾ ਦਾ ਪ੍ਰਮਾਣ ਹੈ।</p>
+        `,
+        'chavinde-waliyan-bibiyan-di-jang': `
+          <p class="mb-4">ਚਵਿੰਡੇ ਵਾਲੀਆਂ ਬੀਬੀਆਂ ਦੀ ਜੰਗ ਸਿੱਖ ਇਤਿਹਾਸ ਵਿੱਚ ਔਰਤਾਂ ਦੀ ਬਹਾਦਰੀ ਦਾ ਪ੍ਰਮਾਣ ਹੈ। ਇਸ ਲੜਾਈ ਵਿੱਚ ਸਿੱਖ ਔਰਤਾਂ ਨੇ ਆਪਣੀ ਬਹਾਦਰੀ ਦਾ ਪ੍ਰਦਰਸ਼ਨ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਇਹ ਘਟਨਾ ਸਿੱਖ ਧਰਮ ਵਿੱਚ ਔਰਤਾਂ ਦੇ ਸਮਾਨ ਅਧਿਕਾਰਾਂ ਅਤੇ ਉਨ੍ਹਾਂ ਦੀ ਸ਼ਕਤੀ ਨੂੰ ਦਰਸਾਉਂਦੀ ਹੈ।</p>
+        `,
+        'bhai-mani-singh-shahadat': `
+          <p class="mb-4">ਭਾਈ ਮਨੀ ਸਿੰਘ ਸ਼ਹਾਦਤ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਇੱਕ ਪ੍ਰੇਰਨਾਦਾਇਕ ਘਟਨਾ ਹੈ। ਭਾਈ ਮਨੀ ਸਿੰਘ ਨੇ ਆਪਣੀ ਜਾਨ ਦੇ ਬਦਲੇ ਧਰਮ ਦੀ ਰੱਖਿਆ ਕੀਤੀ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਸ਼ਹਾਦਤ ਸਿੱਖਾਂ ਲਈ ਇੱਕ ਪ੍ਰੇਰਨਾ ਸਰੋਤ ਹੈ ਅਤੇ ਇਹ ਦਰਸਾਉਂਦੀ ਹੈ ਕਿ ਧਰਮ ਲਈ ਕੁਰਬਾਨੀ ਦੇਣਾ ਕਿੰਨਾ ਮਹੱਤਵਪੂਰਨ ਹੈ।</p>
+        `,
+        'bhai-garja-singh-bota-singh': `
+          <p class="mb-4">ਭਾਈ ਗਰਜਾ ਸਿੰਘ ਬੋਤਾ ਸਿੰਘ ਸਿੱਖ ਇਤਿਹਾਸ ਦੇ ਮਹਾਨ ਸ਼ਹੀਦਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਆਪਣੀ ਜਾਨ ਦੇ ਬਦਲੇ ਧਰਮ ਦੀ ਰੱਖਿਆ ਕੀਤੀ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਸ਼ਹਾਦਤ ਸਿੱਖਾਂ ਲਈ ਇੱਕ ਪ੍ਰੇਰਨਾ ਸਰੋਤ ਹੈ ਅਤੇ ਇਹ ਦਰਸਾਉਂਦੀ ਹੈ ਕਿ ਧਰਮ ਲਈ ਕੁਰਬਾਨੀ ਦੇਣਾ ਕਿੰਨਾ ਮਹੱਤਵਪੂਰਨ ਹੈ।</p>
+        `,
+        'chota-ghallughara': `
+          <p class="mb-4">ਛੋਟਾ ਘੱਲੂਘਾਰਾ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਇੱਕ ਦੁਖਦਾਈ ਘਟਨਾ ਹੈ। ਇਸ ਘਟਨਾ ਵਿੱਚ ਸਿੱਖਾਂ ਨੂੰ ਬਹੁਤ ਸਾਰੀਆਂ ਮੁਸ਼ਕਲਾਂ ਦਾ ਸਾਮਣਾ ਕਰਨਾ ਪਿਆ ਸੀ।</p>
+          <p class="mb-4">ਇਸ ਘੱਲੂਘਾਰੇ ਨੇ ਸਿੱਖ ਕੌਮ ਦੇ ਇਤਿਹਾਸ ਵਿੱਚ ਇੱਕ ਗਹਿਰਾ ਪ੍ਰਭਾਵ ਛੱਡਿਆ ਅਤੇ ਇਹ ਸਿੱਖਾਂ ਦੀ ਰਣਨੀਤੀ ਅਤੇ ਸਹਿਨਸ਼ੀਲਤਾ ਦਾ ਪ੍ਰਮਾਣ ਹੈ।</p>
+        `,
+        'bhai-taru-singh-shahadat': `
+          <p class="mb-4">ਭਾਈ ਤਾਰੂ ਸਿੰਘ ਸ਼ਹਾਦਤ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਇੱਕ ਪ੍ਰੇਰਨਾਦਾਇਕ ਘਟਨਾ ਹੈ। ਭਾਈ ਤਾਰੂ ਸਿੰਘ ਨੇ ਆਪਣੀ ਜਾਨ ਦੇ ਬਦਲੇ ਧਰਮ ਦੀ ਰੱਖਿਆ ਕੀਤੀ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਸ਼ਹਾਦਤ ਸਿੱਖਾਂ ਲਈ ਇੱਕ ਪ੍ਰੇਰਨਾ ਸਰੋਤ ਹੈ ਅਤੇ ਇਹ ਦਰਸਾਉਂਦੀ ਹੈ ਕਿ ਧਰਮ ਲਈ ਕੁਰਬਾਨੀ ਦੇਣਾ ਕਿੰਨਾ ਮਹੱਤਵਪੂਰਨ ਹੈ।</p>
+        `,
+        'dal-khalsa-da-gathan': `
+          <p class="mb-4">ਦਲ ਖ਼ਾਲਸਾ ਦਾ ਗਠਨ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਇੱਕ ਮਹੱਤਵਪੂਰਨ ਘਟਨਾ ਸੀ। ਇਸ ਦੁਆਰਾ ਸਿੱਖਾਂ ਨੇ ਆਪਣੀ ਸੈਨਿਕ ਸ਼ਕਤੀ ਨੂੰ ਸੰਗਠਿਤ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਦਲ ਖ਼ਾਲਸਾ ਦੇ ਗਠਨ ਨੇ ਸਿੱਖਾਂ ਨੂੰ ਇੱਕ ਮਜ਼ਬੂਤ ਸੈਨਿਕ ਸੰਗਠਨ ਦਿੱਤਾ ਅਤੇ ਇਹ ਉਨ੍ਹਾਂ ਦੀ ਰੱਖਿਆ ਲਈ ਬਹੁਤ ਮਹੱਤਵਪੂਰਨ ਸੀ।</p>
+        `,
+        'baba-deep-singh-ji-di-jang': `
+          <p class="mb-4">ਬਾਬਾ ਦੀਪ ਸਿੰਘ ਜੀ ਦਾ ਜੰਗ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਇੱਕ ਪ੍ਰਸਿੱਧ ਲੜਾਈ ਸੀ। ਇਸ ਲੜਾਈ ਵਿੱਚ ਬਾਬਾ ਦੀਪ ਸਿੰਘ ਨੇ ਬਹਾਦਰੀ ਦਾ ਪ੍ਰਦਰਸ਼ਨ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਇਹ ਲੜਾਈ ਸਿੱਖਾਂ ਦੀ ਰਣਨੀਤੀ ਅਤੇ ਸੈਨਿਕ ਕੁਸ਼ਲਤਾ ਦਾ ਪ੍ਰਮਾਣ ਹੈ।</p>
+        `,
+        'vada-ghallughara': `
+          <p class="mb-4">ਵੱਡਾ ਘੱਲੂਘਾਰਾ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਇੱਕ ਦੁਖਦਾਈ ਘਟਨਾ ਹੈ। ਇਸ ਘਟਨਾ ਵਿੱਚ ਸਿੱਖਾਂ ਨੂੰ ਬਹੁਤ ਸਾਰੀਆਂ ਮੁਸ਼ਕਲਾਂ ਦਾ ਸਾਮਣਾ ਕਰਨਾ ਪਿਆ ਸੀ।</p>
+          <p class="mb-4">ਇਸ ਘੱਲੂਘਾਰੇ ਨੇ ਸਿੱਖ ਕੌਮ ਦੇ ਇਤਿਹਾਸ ਵਿੱਚ ਇੱਕ ਗਹਿਰਾ ਪ੍ਰਭਾਵ ਛੱਡਿਆ ਅਤੇ ਇਹ ਸਿੱਖਾਂ ਦੀ ਰਣਨੀਤੀ ਅਤੇ ਸਹਿਨਸ਼ੀਲਤਾ ਦਾ ਪ੍ਰਮਾਣ ਹੈ।</p>
+        `,
+        'akali': `
+          <p class="mb-4">ਅਕਾਲੀ ਸਿੱਖ ਇਤਿਹਾਸ ਦੇ ਮਹਾਨ ਯੋਧਿਆਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖ ਰਾਜ ਦੀ ਸਥਾਪਨਾ ਅਤੇ ਰੱਖਿਆ ਵਿੱਚ ਅਹਿਮ ਭੂਮਿਕਾ ਨਿਭਾਈ ਸੀ।</p>
+          <p class="mb-4">ਅਕਾਲੀ ਦੀ ਬਹਾਦਰੀ ਅਤੇ ਰਣਨੀਤੀ ਸਿੱਖ ਇਤਿਹਾਸ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'jassa-singh-ramgharia': `
+          <p class="mb-4">ਜੱਸਾ ਸਿੰਘ ਰਾਮਗੜ੍ਹੀਆ ਸਿੱਖ ਇਤਿਹਾਸ ਦੇ ਮਹਾਨ ਸਰਦਾਰਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖ ਰਾਜ ਦੀ ਸਥਾਪਨਾ ਵਿੱਚ ਅਹਿਮ ਭੂਮਿਕਾ ਨਿਭਾਈ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਰਾਜਨੀਤਿਕ ਸੂਝ ਅਤੇ ਸੈਨਿਕ ਕੁਸ਼ਲਤਾ ਸਿੱਖ ਇਤਿਹਾਸ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        '18vi-sadi-da-singh': `
+          <p class="mb-4">੧੮ਵੀਂ ਸਦੀ ਦਾ ਸਿੰਘ ਸਿੱਖ ਇਤਿਹਾਸ ਦਾ ਇੱਕ ਮਹੱਤਵਪੂਰਨ ਪੜਾਅ ਸੀ। ਇਸ ਸਮੇਂ ਸਿੱਖਾਂ ਨੇ ਆਪਣੀ ਸ਼ਕਤੀ ਨੂੰ ਸੰਗਠਿਤ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਇਸ ਸਦੀ ਵਿੱਚ ਸਿੱਖਾਂ ਨੇ ਕਈ ਮਹੱਤਵਪੂਰਨ ਲੜਾਈਆਂ ਲੜੀਆਂ ਅਤੇ ਆਪਣਾ ਰਾਜ ਸਥਾਪਿਤ ਕੀਤਾ।</p>
+        `,
+        'jain-khan-di-maut-te-sarhind-utte-kabza': `
+          <p class="mb-4">ਜੈਨ ਖਾਨ ਦੀ ਮੌਤ ਤੇ ਸਰਹਿੰਦ ਉੱਤੇ ਕਬਜ਼ਾ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਇੱਕ ਮਹੱਤਵਪੂਰਨ ਘਟਨਾ ਸੀ। ਇਸ ਘਟਨਾ ਨੇ ਸਿੱਖਾਂ ਦੀ ਸ਼ਕਤੀ ਨੂੰ ਵਧਾਇਆ ਸੀ।</p>
+          <p class="mb-4">ਸਰਹਿੰਦ ਉੱਤੇ ਕਬਜ਼ਾ ਸਿੱਖਾਂ ਲਈ ਇੱਕ ਮਹੱਤਵਪੂਰਨ ਜਿੱਤ ਸੀ ਅਤੇ ਇਸ ਨੇ ਉਨ੍ਹਾਂ ਦੀ ਸ਼ਕਤੀ ਨੂੰ ਵਧਾਇਆ।</p>
+        `,
+        'singh-vs-singh': `
+          <p class="mb-4">ਸਿੰਘ vs ਸਿੰਘ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਇੱਕ ਦੁਖਦਾਈ ਘਟਨਾ ਸੀ। ਇਸ ਘਟਨਾ ਵਿੱਚ ਸਿੱਖਾਂ ਨੇ ਆਪਸ ਵਿੱਚ ਲੜਾਈ ਕੀਤੀ ਸੀ।</p>
+          <p class="mb-4">ਇਹ ਘਟਨਾ ਸਿੱਖ ਇਤਿਹਾਸ ਦਾ ਇੱਕ ਦੁਖਦਾਈ ਅਧਿਆਇ ਹੈ ਅਤੇ ਇਸ ਨੇ ਸਿੱਖ ਕੌਮ ਨੂੰ ਕਮਜ਼ੋਰ ਕੀਤਾ ਸੀ।</p>
+        `,
+        'darbar-maharaja-ranjit-singh': `
+          <p class="mb-4">ਦਰਬਾਰ ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ ਸਿੱਖ ਇਤਿਹਾਸ ਦਾ ਸੁਨਹਿਰੀ ਦੌਰ ਸੀ। ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ ਨੇ ਪੰਜਾਬ ਵਿੱਚ ਇੱਕ ਮਜ਼ਬੂਤ ਸਾਮਰਾਜ ਸਥਾਪਿਤ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੇ ਸਮੇਂ ਸਿੱਖ ਰਾਜ ਨੇ ਆਪਣੀ ਸ਼ਕਤੀ ਦਾ ਚਰਮ ਸੀਮਾ ਪ੍ਰਾਪਤ ਕੀਤਾ ਸੀ।</p>
+        `,
+        'anglo-sikh-jangan-mudki-di-jang': `
+          <p class="mb-4">ਐਂਗਲੋ - ਸਿੱਖ ਜੰਗਾਂ - ਮੁੱਦਕੀ ਦੀ ਜੰਗ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਇੱਕ ਮਹੱਤਵਪੂਰਨ ਲੜਾਈ ਸੀ। ਇਸ ਲੜਾਈ ਵਿੱਚ ਸਿੱਖਾਂ ਨੇ ਅੰਗਰੇਜ਼ਾਂ ਦੇ ਵਿਰੁੱਧ ਲੜਾਈ ਕੀਤੀ ਸੀ।</p>
+          <p class="mb-4">ਇਹ ਲੜਾਈ ਸਿੱਖ ਇਤਿਹਾਸ ਦਾ ਇੱਕ ਮਹੱਤਵਪੂਰਨ ਪੜਾਅ ਸੀ ਅਤੇ ਇਸ ਨੇ ਸਿੱਖ ਰਾਜ ਦੇ ਅੰਤ ਦਾ ਸੰਕੇਤ ਦਿੱਤਾ ਸੀ।</p>
+        `,
+        'kuka-lehar': `
+          <p class="mb-4">ਕੂਕਾ ਲਹਿਰ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਇੱਕ ਮਹੱਤਵਪੂਰਨ ਧਾਰਮਿਕ ਅਤੇ ਸਮਾਜਿਕ ਲਹਿਰ ਸੀ। ਇਸ ਲਹਿਰ ਨੇ ਸਿੱਖ ਧਰਮ ਦੇ ਪੁਨਰਜਾਗਰਣ ਵਿੱਚ ਅਹਿਮ ਭੂਮਿਕਾ ਨਿਭਾਈ ਸੀ।</p>
+          <p class="mb-4">ਕੂਕਾ ਲਹਿਰ ਦੇ ਨੇਤਾਵਾਂ ਨੇ ਸਿੱਖ ਧਰਮ ਦੇ ਮੂਲ ਸਿਧਾਂਤਾਂ ਨੂੰ ਮੁੜ ਸਥਾਪਿਤ ਕਰਨ ਦਾ ਯਤਨ ਕੀਤਾ ਸੀ।</p>
+        `,
+        'gadar-lehar': `
+          <p class="mb-4">ਗਦਰ ਲਹਿਰ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਇੱਕ ਮਹੱਤਵਪੂਰਨ ਰਾਜਨੀਤਿਕ ਲਹਿਰ ਸੀ। ਇਸ ਲਹਿਰ ਨੇ ਭਾਰਤ ਦੀ ਆਜ਼ਾਦੀ ਲਈ ਸੰਘਰਸ਼ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਗਦਰ ਲਹਿਰ ਦੇ ਨੇਤਾਵਾਂ ਨੇ ਅੰਗਰੇਜ਼ ਸਾਮਰਾਜ ਦੇ ਵਿਰੁੱਧ ਸੰਘਰਸ਼ ਕੀਤਾ ਅਤੇ ਭਾਰਤ ਦੀ ਆਜ਼ਾਦੀ ਲਈ ਯੋਗਦਾਨ ਪਾਇਆ।</p>
+        `,
+        'babbar-akali-lehar': `
+          <p class="mb-4">ਬਬਰ ਅਕਾਲੀ ਲਹਿਰ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਇੱਕ ਮਹੱਤਵਪੂਰਨ ਰਾਜਨੀਤਿਕ ਲਹਿਰ ਸੀ। ਇਸ ਲਹਿਰ ਨੇ ਸਿੱਖਾਂ ਦੇ ਅਧਿਕਾਰਾਂ ਲਈ ਸੰਘਰਸ਼ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਬਬਰ ਅਕਾਲੀ ਲਹਿਰ ਦੇ ਨੇਤਾਵਾਂ ਨੇ ਸਿੱਖਾਂ ਦੇ ਧਾਰਮਿਕ ਅਤੇ ਰਾਜਨੀਤਿਕ ਅਧਿਕਾਰਾਂ ਲਈ ਸੰਘਰਸ਼ ਕੀਤਾ।</p>
+        `,
+        'vishav-jangan': `
+          <p class="mb-4">ਵਿਸ਼ਵ ਜੰਗਾਂ ਸਿੱਖ ਇਤਿਹਾਸ ਦਾ ਇੱਕ ਮਹੱਤਵਪੂਰਨ ਪੜਾਅ ਸੀ। ਇਸ ਸਮੇਂ ਸਿੱਖਾਂ ਨੇ ਵਿਸ਼ਵ ਪੱਧਰ 'ਤੇ ਆਪਣੀ ਭੂਮਿਕਾ ਨਿਭਾਈ ਸੀ।</p>
+          <p class="mb-4">ਵਿਸ਼ਵ ਜੰਗਾਂ ਵਿੱਚ ਸਿੱਖਾਂ ਦੀ ਭਾਗੀਦਾਰੀ ਉਨ੍ਹਾਂ ਦੀ ਸੈਨਿਕ ਸ਼ਕਤੀ ਅਤੇ ਬਹਾਦਰੀ ਦਾ ਪ੍ਰਮਾਣ ਹੈ।</p>
+        `,
+        // Portrait subsections
+        'akali-phula-singh-ji': `
+          <p class="mb-4">ਅਕਾਲੀ ਫੂਲਾ ਸਿੰਘ ਜੀ ਸਿੱਖ ਇਤਿਹਾਸ ਦੇ ਮਹਾਨ ਯੋਧਿਆਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖ ਰਾਜ ਦੀ ਸਥਾਪਨਾ ਅਤੇ ਰੱਖਿਆ ਵਿੱਚ ਅਹਿਮ ਭੂਮਿਕਾ ਨਿਭਾਈ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਬਹਾਦਰੀ ਅਤੇ ਰਣਨੀਤੀ ਸਿੱਖ ਇਤਿਹਾਸ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'sardar-hari-singh-nalwa': `
+          <p class="mb-4">ਸਰਦਾਰ ਹਰੀ ਸਿੰਘ ਨਲਵਾ ਸਿੱਖ ਇਤਿਹਾਸ ਦੇ ਮਹਾਨ ਸਰਦਾਰਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖ ਰਾਜ ਦੀ ਸਥਾਪਨਾ ਵਿੱਚ ਅਹਿਮ ਭੂਮਿਕਾ ਨਿਭਾਈ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਰਾਜਨੀਤਿਕ ਸੂਝ ਅਤੇ ਸੈਨਿਕ ਕੁਸ਼ਲਤਾ ਸਿੱਖ ਇਤਿਹਾਸ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'maharani-jind-kaur': `
+          <p class="mb-4">ਮਹਾਰਾਣੀ ਜਿੰਦ ਕੌਰ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਇੱਕ ਮਹਾਨ ਔਰਤ ਸੀ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖ ਰਾਜ ਦੀ ਰੱਖਿਆ ਵਿੱਚ ਅਹਿਮ ਭੂਮਿਕਾ ਨਿਭਾਈ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਬਹਾਦਰੀ ਅਤੇ ਰਾਜਨੀਤਿਕ ਸੂਝ ਸਿੱਖ ਇਤਿਹਾਸ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'kanwar-naunihal-singh': `
+          <p class="mb-4">ਕੰਵਰ ਨੌਨਿਹਾਲ ਸਿੰਘ ਸਿੱਖ ਇਤਿਹਾਸ ਦੇ ਮਹਾਨ ਯੁਵਰਾਜਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖ ਰਾਜ ਦੀ ਸਥਾਪਨਾ ਵਿੱਚ ਅਹਿਮ ਭੂਮਿਕਾ ਨਿਭਾਈ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਬਹਾਦਰੀ ਅਤੇ ਰਣਨੀਤੀ ਸਿੱਖ ਇਤਿਹਾਸ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'maharaja-dalip-singh': `
+          <p class="mb-4">ਮਹਾਰਾਜਾ ਦਲੀਪ ਸਿੰਘ ਸਿੱਖ ਇਤਿਹਾਸ ਦੇ ਆਖਰੀ ਮਹਾਰਾਜਾ ਸਨ। ਉਨ੍ਹਾਂ ਦੇ ਸਮੇਂ ਸਿੱਖ ਰਾਜ ਦਾ ਅੰਤ ਹੋਇਆ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦਾ ਜੀਵਨ ਸਿੱਖ ਇਤਿਹਾਸ ਦਾ ਇੱਕ ਦੁਖਦਾਈ ਅਧਿਆਇ ਹੈ।</p>
+        `,
+        // Gadar Lehar Portrait subsections
+        'baba-sohan-singh-bhakna': `
+          <p class="mb-4">ਬਾਬਾ ਸੋਹਣ ਸਿੰਘ ਭਕਨਾ ਗਦਰ ਲਹਿਰ ਦੇ ਮਹਾਨ ਨੇਤਾਵਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਭਾਰਤ ਦੀ ਆਜ਼ਾਦੀ ਲਈ ਸੰਘਰਸ਼ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਰਾਜਨੀਤਿਕ ਸੂਝ ਅਤੇ ਸੰਘਰਸ਼ ਗਦਰ ਲਹਿਰ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'shahid-kartar-singh-sarabha': `
+          <p class="mb-4">ਸ਼ਹੀਦ ਕਰਤਾਰ ਸਿੰਘ ਸਰਾਭਾ ਗਦਰ ਲਹਿਰ ਦੇ ਮਹਾਨ ਸ਼ਹੀਦਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਭਾਰਤ ਦੀ ਆਜ਼ਾਦੀ ਲਈ ਆਪਣੀ ਜਾਨ ਕੁਰਬਾਨ ਕੀਤੀ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਸ਼ਹਾਦਤ ਗਦਰ ਲਹਿਰ ਦੇ ਇਤਿਹਾਸ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'bibi-gulab-kaur': `
+          <p class="mb-4">ਬੀਬੀ ਗੁਲਾਬ ਕੌਰ ਗਦਰ ਲਹਿਰ ਦੀ ਇੱਕ ਮਹਾਨ ਔਰਤ ਸੀ। ਉਨ੍ਹਾਂ ਨੇ ਭਾਰਤ ਦੀ ਆਜ਼ਾਦੀ ਲਈ ਸੰਘਰਸ਼ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਬਹਾਦਰੀ ਅਤੇ ਸੰਘਰਸ਼ ਗਦਰ ਲਹਿਰ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        // Babbar Akali Lehar Portrait subsections
+        'babbar-karam-singh': `
+          <p class="mb-4">ਬਬਰ ਕਰਮ ਸਿੰਘ ਬਬਰ ਅਕਾਲੀ ਲਹਿਰ ਦੇ ਮਹਾਨ ਨੇਤਾਵਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖਾਂ ਦੇ ਅਧਿਕਾਰਾਂ ਲਈ ਸੰਘਰਸ਼ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਰਾਜਨੀਤਿਕ ਸੂਝ ਅਤੇ ਸੰਘਰਸ਼ ਬਬਰ ਅਕਾਲੀ ਲਹਿਰ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'babbar-ratan-singh': `
+          <p class="mb-4">ਬਬਰ ਰਤਨ ਸਿੰਘ ਬਬਰ ਅਕਾਲੀ ਲਹਿਰ ਦੇ ਮਹਾਨ ਨੇਤਾਵਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖਾਂ ਦੇ ਅਧਿਕਾਰਾਂ ਲਈ ਸੰਘਰਸ਼ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਰਾਜਨੀਤਿਕ ਸੂਝ ਅਤੇ ਸੰਘਰਸ਼ ਬਬਰ ਅਕਾਲੀ ਲਹਿਰ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'babbar-kishan-singh-gargaj': `
+          <p class="mb-4">ਬਬਰ ਕਿਸ਼ਨ ਸਿੰਘ ਗੜਗੱਜ ਬਬਰ ਅਕਾਲੀ ਲਹਿਰ ਦੇ ਮਹਾਨ ਨੇਤਾਵਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖਾਂ ਦੇ ਅਧਿਕਾਰਾਂ ਲਈ ਸੰਘਰਸ਼ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਰਾਜਨੀਤਿਕ ਸੂਝ ਅਤੇ ਸੰਘਰਸ਼ ਬਬਰ ਅਕਾਲੀ ਲਹਿਰ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'babbar-dhanna-singh-bahibal-kalan': `
+          <p class="mb-4">ਬਬਰ ਧੰਨਾ ਸਿੰਘ ਬਹਿਬਲ ਕਲਾਂ ਬਬਰ ਅਕਾਲੀ ਲਹਿਰ ਦੇ ਮਹਾਨ ਨੇਤਾਵਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖਾਂ ਦੇ ਅਧਿਕਾਰਾਂ ਲਈ ਸੰਘਰਸ਼ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਰਾਜਨੀਤਿਕ ਸੂਝ ਅਤੇ ਸੰਘਰਸ਼ ਬਬਰ ਅਕਾਲੀ ਲਹਿਰ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'babbar-harbans-singh-sarhala': `
+          <p class="mb-4">ਬਬਰ ਹਰਬੰਸ ਸਿੰਘ ਸਰਹਾਲਾ ਬਬਰ ਅਕਾਲੀ ਲਹਿਰ ਦੇ ਮਹਾਨ ਨੇਤਾਵਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖਾਂ ਦੇ ਅਧਿਕਾਰਾਂ ਲਈ ਸੰਘਰਸ਼ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਰਾਜਨੀਤਿਕ ਸੂਝ ਅਤੇ ਸੰਘਰਸ਼ ਬਬਰ ਅਕਾਲੀ ਲਹਿਰ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        // 20th Century Portraits subsections
+        'bhai-vir-singh-ji': `
+          <p class="mb-4">ਭਾਈ ਵੀਰ ਸਿੰਘ ਜੀ ਸਿੱਖ ਇਤਿਹਾਸ ਦੇ ਮਹਾਨ ਲੇਖਕਾਂ ਅਤੇ ਵਿਦਵਾਨਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖ ਸਾਹਿਤ ਦੇ ਵਿਕਾਸ ਵਿੱਚ ਅਹਿਮ ਭੂਮਿਕਾ ਨਿਭਾਈ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਸਾਹਿਤਿਕ ਰਚਨਾ ਸਿੱਖ ਇਤਿਹਾਸ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'pro-puran-singh': `
+          <p class="mb-4">ਪ੍ਰੋ ਪੂਰਨ ਸਿੰਘ ਸਿੱਖ ਇਤਿਹਾਸ ਦੇ ਮਹਾਨ ਵਿਦਵਾਨਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖ ਧਰਮ ਦੇ ਵਿਕਾਸ ਵਿੱਚ ਅਹਿਮ ਭੂਮਿਕਾ ਨਿਭਾਈ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਵਿਦਵਤਾ ਸਿੱਖ ਇਤਿਹਾਸ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'gyani-ditt-singh': `
+          <p class="mb-4">ਗਿਆਨੀ ਦਿੱਤ ਸਿੰਘ ਸਿੱਖ ਇਤਿਹਾਸ ਦੇ ਮਹਾਨ ਵਿਦਵਾਨਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖ ਧਰਮ ਦੇ ਵਿਕਾਸ ਵਿੱਚ ਅਹਿਮ ਭੂਮਿਕਾ ਨਿਭਾਈ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਵਿਦਵਤਾ ਸਿੱਖ ਇਤਿਹਾਸ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'bhai-randhir-singh-ji': `
+          <p class="mb-4">ਭਾਈ ਰਣਧੀਰ ਸਿੰਘ ਜੀ ਸਿੱਖ ਇਤਿਹਾਸ ਦੇ ਮਹਾਨ ਧਾਰਮਿਕ ਨੇਤਾਵਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖ ਧਰਮ ਦੇ ਵਿਕਾਸ ਵਿੱਚ ਅਹਿਮ ਭੂਮਿਕਾ ਨਿਭਾਈ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਧਾਰਮਿਕ ਸੂਝ ਸਿੱਖ ਇਤਿਹਾਸ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'master-tara-singh': `
+          <p class="mb-4">ਮਾਸਟਰ ਤਾਰਾ ਸਿੰਘ ਸਿੱਖ ਇਤਿਹਾਸ ਦੇ ਮਹਾਨ ਰਾਜਨੀਤਿਕ ਨੇਤਾਵਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖਾਂ ਦੇ ਅਧਿਕਾਰਾਂ ਲਈ ਸੰਘਰਸ਼ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਰਾਜਨੀਤਿਕ ਸੂਝ ਸਿੱਖ ਇਤਿਹਾਸ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'dr-ganda-singh': `
+          <p class="mb-4">ਡਾ ਗੰਡਾ ਸਿੰਘ ਸਿੱਖ ਇਤਿਹਾਸ ਦੇ ਮਹਾਨ ਇਤਿਹਾਸਕਾਰਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖ ਇਤਿਹਾਸ ਦੇ ਖੋਜ ਵਿੱਚ ਅਹਿਮ ਭੂਮਿਕਾ ਨਿਭਾਈ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਇਤਿਹਾਸਿਕ ਖੋਜ ਸਿੱਖ ਇਤਿਹਾਸ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'karam-singh-historian': `
+          <p class="mb-4">ਕਰਮ ਸਿੰਘ ਹਿਸਟੋਰੀਅਨ ਸਿੱਖ ਇਤਿਹਾਸ ਦੇ ਮਹਾਨ ਇਤਿਹਾਸਕਾਰਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖ ਇਤਿਹਾਸ ਦੇ ਖੋਜ ਵਿੱਚ ਅਹਿਮ ਭੂਮਿਕਾ ਨਿਭਾਈ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਇਤਿਹਾਸਿਕ ਖੋਜ ਸਿੱਖ ਇਤਿਹਾਸ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'bibi-harnam-kaur': `
+          <p class="mb-4">ਬੀਬੀ ਹਰਨਾਮ ਕੌਰ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਇੱਕ ਮਹਾਨ ਔਰਤ ਸੀ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖ ਧਰਮ ਦੇ ਵਿਕਾਸ ਵਿੱਚ ਅਹਿਮ ਭੂਮਿਕਾ ਨਿਭਾਈ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਧਾਰਮਿਕ ਸੂਝ ਸਿੱਖ ਇਤਿਹਾਸ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'bhai-kahan-singh-nabha': `
+          <p class="mb-4">ਭਾਈ ਕਾਹਨ ਸਿੰਘ ਨਾਭਾ ਸਿੱਖ ਇਤਿਹਾਸ ਦੇ ਮਹਾਨ ਵਿਦਵਾਨਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖ ਧਰਮ ਦੇ ਵਿਕਾਸ ਵਿੱਚ ਅਹਿਮ ਭੂਮਿਕਾ ਨਿਭਾਈ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਵਿਦਵਤਾ ਸਿੱਖ ਇਤਿਹਾਸ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        // Modern Art Style Painting subsections
+        '1947-di-vand': `
+          <p class="mb-4">੧੯੪੭ ਦੀ ਵੰਡ ਭਾਰਤੀ ਇਤਿਹਾਸ ਦੀ ਇੱਕ ਦੁਖਦਾਈ ਘਟਨਾ ਸੀ। ਇਸ ਘਟਨਾ ਨੇ ਭਾਰਤ ਅਤੇ ਪਾਕਿਸਤਾਨ ਦੇ ਵਿਚਕਾਰ ਵੰਡ ਕੀਤੀ ਸੀ।</p>
+          <p class="mb-4">ਇਸ ਵੰਡ ਨੇ ਸਿੱਖਾਂ ਸਮੇਤ ਸਾਰੇ ਭਾਰਤੀਆਂ ਨੂੰ ਬਹੁਤ ਸਾਰੀਆਂ ਮੁਸ਼ਕਲਾਂ ਦਾ ਸਾਮਣਾ ਕਰਨਾ ਪਿਆ ਸੀ।</p>
+        `,
+        // ਤੀਜਾ ਘੱਲੂਘਾਰਾ subsections
+        'santan-di-shahadat': `
+          <p class="mb-4">ਸੰਤਾਂ ਦੀ ਸ਼ਹਾਦਤ ਤੀਜਾ ਘੱਲੂਘਾਰਾ ਦੀ ਇੱਕ ਮਹੱਤਵਪੂਰਨ ਘਟਨਾ ਸੀ। ਇਸ ਘਟਨਾ ਵਿੱਚ ਕਈ ਸੰਤਾਂ ਨੇ ਆਪਣੀ ਜਾਨ ਕੁਰਬਾਨ ਕੀਤੀ ਸੀ।</p>
+          <p class="mb-4">ਇਹ ਸ਼ਹਾਦਤ ਸਿੱਖਾਂ ਲਈ ਇੱਕ ਪ੍ਰੇਰਨਾ ਸਰੋਤ ਹੈ ਅਤੇ ਇਹ ਦਰਸਾਉਂਦੀ ਹੈ ਕਿ ਧਰਮ ਲਈ ਕੁਰਬਾਨੀ ਦੇਣਾ ਕਿੰਨਾ ਮਹੱਤਵਪੂਰਨ ਹੈ।</p>
+        `,
+        // 1978 subsections
+        'bhai-fauja-singh-ji': `
+          <p class="mb-4">ਭਾਈ ਫੌਜਾ ਸਿੰਘ ਜੀ 1978 ਦੇ ਸਮੇਂ ਦੇ ਮਹਾਨ ਸਿੱਖ ਨੇਤਾਵਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖਾਂ ਦੇ ਅਧਿਕਾਰਾਂ ਲਈ ਸੰਘਰਸ਼ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਰਾਜਨੀਤਿਕ ਸੂਝ ਅਤੇ ਸੰਘਰਸ਼ ਸਿੱਖ ਇਤਿਹਾਸ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        // ਤੀਜਾ ਘੱਲੂਘਾਰਾ Portrait subsections
+        'teja-ghallughara-june-1984': `
+          <p class="mb-4">ਤੀਜਾ ਘੱਲੂਘਰਾ - ਜੂਨ 1984 (ਅਕਾਲ ਤਖ਼ਤ ਸਾਹਿਬ ਮਾਡਲ) ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਇੱਕ ਦੁਖਦਾਈ ਘਟਨਾ ਸੀ। ਇਸ ਘਟਨਾ ਵਿੱਚ ਅਕਾਲ ਤਖ਼ਤ ਸਾਹਿਬ 'ਤੇ ਹਮਲਾ ਕੀਤਾ ਗਿਆ ਸੀ।</p>
+          <p class="mb-4">ਇਹ ਘਟਨਾ ਸਿੱਖ ਇਤਿਹਾਸ ਦਾ ਇੱਕ ਦੁਖਦਾਈ ਅਧਿਆਇ ਹੈ ਅਤੇ ਇਸ ਨੇ ਸਿੱਖ ਕੌਮ ਨੂੰ ਗਹਿਰਾ ਸਦਮਾ ਪਹੁੰਚਾਇਆ ਸੀ।</p>
+        `,
+        'sant-jarnail-singh-ji': `
+          <p class="mb-4">ਸੰਤ ਜਰਨੈਲ ਸਿੰਘ ਜੀ ਤੀਜਾ ਘੱਲੂਘਾਰਾ ਦੇ ਮਹਾਨ ਨੇਤਾਵਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖਾਂ ਦੇ ਅਧਿਕਾਰਾਂ ਲਈ ਸੰਘਰਸ਼ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਰਾਜਨੀਤਿਕ ਸੂਝ ਅਤੇ ਸੰਘਰਸ਼ ਤੀਜਾ ਘੱਲੂਘਾਰਾ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'bhai-amrik-singh-ji': `
+          <p class="mb-4">ਭਾਈ ਅਮਰੀਕ ਸਿੰਘ ਜੀ ਤੀਜਾ ਘੱਲੂਘਾਰਾ ਦੇ ਮਹਾਨ ਨੇਤਾਵਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖਾਂ ਦੇ ਅਧਿਕਾਰਾਂ ਲਈ ਸੰਘਰਸ਼ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਰਾਜਨੀਤਿਕ ਸੂਝ ਅਤੇ ਸੰਘਰਸ਼ ਤੀਜਾ ਘੱਲੂਘਾਰਾ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'general-subeg-singh-ji': `
+          <p class="mb-4">ਜਨਰਲ ਸੁਬੇਗ ਸਿੰਘ ਜੀ ਤੀਜਾ ਘੱਲੂਘਾਰਾ ਦੇ ਮਹਾਨ ਨੇਤਾਵਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖਾਂ ਦੇ ਅਧਿਕਾਰਾਂ ਲਈ ਸੰਘਰਸ਼ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਰਾਜਨੀਤਿਕ ਸੂਝ ਅਤੇ ਸੰਘਰਸ਼ ਤੀਜਾ ਘੱਲੂਘਾਰਾ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'baba-thahara-singh-ji': `
+          <p class="mb-4">ਬਾਬਾ ਠਾਹਰਾ ਸਿੰਘ ਜੀ ਤੀਜਾ ਘੱਲੂਘਾਰਾ ਦੇ ਮਹਾਨ ਨੇਤਾਵਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖਾਂ ਦੇ ਅਧਿਕਾਰਾਂ ਲਈ ਸੰਘਰਸ਼ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਰਾਜਨੀਤਿਕ ਸੂਝ ਅਤੇ ਸੰਘਰਸ਼ ਤੀਜਾ ਘੱਲੂਘਾਰਾ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'bibi-upkar-kaur': `
+          <p class="mb-4">ਬੀਬੀ ਉਪਕਾਰ ਕੌਰ ਤੀਜਾ ਘੱਲੂਘਾਰਾ ਦੀ ਇੱਕ ਮਹਾਨ ਔਰਤ ਸੀ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖਾਂ ਦੇ ਅਧਿਕਾਰਾਂ ਲਈ ਸੰਘਰਸ਼ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਬਹਾਦਰੀ ਅਤੇ ਸੰਘਰਸ਼ ਤੀਜਾ ਘੱਲੂਘਾਰਾ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        'bhai-mehnga-singh-babar': `
+          <p class="mb-4">ਭਾਈ ਮਹਿੰਗਾ ਸਿੰਘ ਬਬਰ ਤੀਜਾ ਘੱਲੂਘਾਰਾ ਦੇ ਮਹਾਨ ਨੇਤਾਵਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਸਿੱਖਾਂ ਦੇ ਅਧਿਕਾਰਾਂ ਲਈ ਸੰਘਰਸ਼ ਕੀਤਾ ਸੀ।</p>
+          <p class="mb-4">ਉਨ੍ਹਾਂ ਦੀ ਰਾਜਨੀਤਿਕ ਸੂਝ ਅਤੇ ਸੰਘਰਸ਼ ਤੀਜਾ ਘੱਲੂਘਾਰਾ ਵਿੱਚ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+        `,
+        // Sikh Genocide subsections
+        'november-1984': `
+          <p class="mb-4">ਨਵੰਬਰ ੧੯੮੪ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀ ਇੱਕ ਦੁਖਦਾਈ ਘਟਨਾ ਸੀ। ਇਸ ਮਹੀਨੇ ਵਿੱਚ ਸਿੱਖਾਂ ਦੇ ਵਿਰੁੱਧ ਹਿੰਸਾ ਕੀਤੀ ਗਈ ਸੀ।</p>
+          <p class="mb-4">ਇਹ ਘਟਨਾ ਸਿੱਖ ਇਤਿਹਾਸ ਦਾ ਇੱਕ ਦੁਖਦਾਈ ਅਧਿਆਇ ਹੈ ਅਤੇ ਇਸ ਨੇ ਸਿੱਖ ਕੌਮ ਨੂੰ ਗਹਿਰਾ ਸਦਮਾ ਪਹੁੰਚਾਇਆ ਸੀ।</p>
+        `,
+        // Punjabi Culture subsections
+        'purana-ghar': `
+          <p class="mb-4">ਪੁਰਾਣਾ ਘਰ ਪੰਜਾਬੀ ਸੱਭਿਆਚਾਰ ਦਾ ਇੱਕ ਮਹੱਤਵਪੂਰਨ ਹਿੱਸਾ ਹੈ। ਇਹ ਪੰਜਾਬੀ ਪਰਿਵਾਰਾਂ ਦੇ ਰਿਸ਼ਤਿਆਂ ਅਤੇ ਮੁੱਲਾਂ ਨੂੰ ਦਰਸਾਉਂਦਾ ਹੈ।</p>
+          <p class="mb-4">ਪੁਰਾਣਾ ਘਰ ਪੰਜਾਬੀ ਸੱਭਿਆਚਾਰ ਦੀ ਪਛਾਣ ਹੈ ਅਤੇ ਇਹ ਪੰਜਾਬੀ ਲੋਕਾਂ ਦੇ ਜੀਵਨ ਦਾ ਅਟੁੱਟ ਹਿੱਸਾ ਹੈ।</p>
+        `,
+        'stepu': `
+          <p class="mb-4">ਸਟੈਪੂ ਪੰਜਾਬੀ ਸੱਭਿਆਚਾਰ ਦਾ ਇੱਕ ਮਹੱਤਵਪੂਰਨ ਹਿੱਸਾ ਹੈ। ਇਹ ਪੰਜਾਬੀ ਲੋਕਾਂ ਦੇ ਰੋਜ਼ਾਨਾ ਜੀਵਨ ਨੂੰ ਦਰਸਾਉਂਦਾ ਹੈ।</p>
+          <p class="mb-4">ਸਟੈਪੂ ਪੰਜਾਬੀ ਸੱਭਿਆਚਾਰ ਦੀ ਪਛਾਣ ਹੈ ਅਤੇ ਇਹ ਪੰਜਾਬੀ ਲੋਕਾਂ ਦੇ ਜੀਵਨ ਦਾ ਅਟੁੱਟ ਹਿੱਸਾ ਹੈ।</p>
+        `,
+        'maan-di-kala': `
+          <p class="mb-4">ਮਾਂ ਦੀ ਕਲਾ ਪੰਜਾਬੀ ਸੱਭਿਆਚਾਰ ਦਾ ਇੱਕ ਮਹੱਤਵਪੂਰਨ ਹਿੱਸਾ ਹੈ। ਇਹ ਪੰਜਾਬੀ ਮਾਵਾਂ ਦੀ ਕਲਾਤਮਕਤਾ ਨੂੰ ਦਰਸਾਉਂਦਾ ਹੈ।</p>
+          <p class="mb-4">ਮਾਂ ਦੀ ਕਲਾ ਪੰਜਾਬੀ ਸੱਭਿਆਚਾਰ ਦੀ ਪਛਾਣ ਹੈ ਅਤੇ ਇਹ ਪੰਜਾਬੀ ਲੋਕਾਂ ਦੇ ਜੀਵਨ ਦਾ ਅਟੁੱਟ ਹਿੱਸਾ ਹੈ।</p>
+        `,
+        'dadi-pota': `
+          <p class="mb-4">ਦਾਦੀ ਪੋਤਾ ਪੰਜਾਬੀ ਸੱਭਿਆਚਾਰ ਦਾ ਇੱਕ ਮਹੱਤਵਪੂਰਨ ਹਿੱਸਾ ਹੈ। ਇਹ ਪੰਜਾਬੀ ਪਰਿਵਾਰਾਂ ਦੇ ਰਿਸ਼ਤਿਆਂ ਨੂੰ ਦਰਸਾਉਂਦਾ ਹੈ।</p>
+          <p class="mb-4">ਦਾਦੀ ਪੋਤਾ ਪੰਜਾਬੀ ਸੱਭਿਆਚਾਰ ਦੀ ਪਛਾਣ ਹੈ ਅਤੇ ਇਹ ਪੰਜਾਬੀ ਲੋਕਾਂ ਦੇ ਜੀਵਨ ਦਾ ਅਟੁੱਟ ਹਿੱਸਾ ਹੈ।</p>
+        `,
       };
       return contentMap[id] || '<p>Content not available</p>';
     };
@@ -532,6 +1044,97 @@ export default function Home() {
         chotaghallughara: { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
         dalkhalsa: { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
         vadaghallughara: { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        foundation: { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        history: { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        portrait: { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'gadar-lehar-portrait': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'babbar-akali-lehar-portrait': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        '20th-century-portraits': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'modern-art-style-painting': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'teja-ghallughara': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        '1978': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'teja-ghallughara-portrait': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'sikh-genocide': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'punjabi-culture': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        kirtan: { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        map: { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        // Foundation subsections
+        'pritham-bhagauti-simri-kai': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'nam-japo': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'kirt-karo': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'vand-chhako': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'ang-sahib': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'patshahi-badshahi': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        // History subsections
+        'chappar-jhiri-di-jang': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'baba-banda-singh-bahadur': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'bhai-tara-singh-wan-di-jang': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'chavinde-waliyan-bibiyan-di-jang': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'bhai-mani-singh-shahadat': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'bhai-garja-singh-bota-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'chota-ghallughara': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'bhai-taru-singh-shahadat': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'dal-khalsa-da-gathan': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'baba-deep-singh-ji-di-jang': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'vada-ghallughara': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'akali': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'jassa-singh-ramgharia': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        '18vi-sadi-da-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'jain-khan-di-maut-te-sarhind-utte-kabza': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'singh-vs-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'darbar-maharaja-ranjit-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'anglo-sikh-jangan-mudki-di-jang': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'kuka-lehar': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'gadar-lehar': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'babbar-akali-lehar': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'vishav-jangan': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        // Portrait subsections
+        'akali-phula-singh-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'sardar-hari-singh-nalwa': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'maharani-jind-kaur': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'kanwar-naunihal-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'maharaja-dalip-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        // Gadar Lehar Portrait subsections
+        'baba-sohan-singh-bhakna': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'shahid-kartar-singh-sarabha': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'bibi-gulab-kaur': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        // Babbar Akali Lehar Portrait subsections
+        'babbar-karam-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'babbar-ratan-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'babbar-kishan-singh-gargaj': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'babbar-dhanna-singh-bahibal-kalan': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'babbar-harbans-singh-sarhala': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        // 20th Century Portraits subsections
+        'bhai-vir-singh-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'pro-puran-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'gyani-ditt-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'bhai-randhir-singh-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'master-tara-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'dr-ganda-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'karam-singh-historian': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'bibi-harnam-kaur': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'bhai-kahan-singh-nabha': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        // Modern Art Style Painting subsections
+        '1947-di-vand': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        // ਤੀਜਾ ਘੱਲੂਘਾਰਾ subsections
+        'santan-di-shahadat': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        // 1978 subsections
+        'bhai-fauja-singh-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        // ਤੀਜਾ ਘੱਲੂਘਾਰਾ Portrait subsections
+        'teja-ghallughara-june-1984': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'sant-jarnail-singh-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'bhai-amrik-singh-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'general-subeg-singh-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'baba-thahara-singh-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'bibi-upkar-kaur': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'bhai-mehnga-singh-babar': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        // Sikh Genocide subsections
+        'november-1984': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        // Punjabi Culture subsections
+        'purana-ghar': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'stepu': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'maan-di-kala': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'dadi-pota': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
       };
       return detailsMap[id] || { artist: 'Unknown', size: 'Unknown', type: 'Unknown' };
     };
@@ -548,15 +1151,15 @@ export default function Home() {
     return (
       <section 
         id={sectionId} 
-        className={`pt-16 sm:pt-20 md:pt-24 lg:pt-28 pb-8 sm:pb-12 md:pb-16 lg:pb-20 transition-opacity duration-500 w-full ${isDarkMode ? 'bg-gray-900 text-gray-100' : 'bg-white text-gray-900'}`}
+        className={`pt-16 sm:pt-20 md:pt-24 lg:pt-28 pb-8 sm:pb-12 md:pb-16 lg:pb-20 transition-opacity duration-500 w-full scroll-mt-24 sm:scroll-mt-28 md:scroll-mt-32 lg:scroll-mt-40 ${isDarkMode ? 'bg-gray-900 text-gray-100' : 'bg-white text-gray-900'}`}
         ref={(el: HTMLDivElement | null) => {
           sectionRefs.current[sectionId] = el;
         }}
       >
         <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 w-full overflow-x-hidden">
-          <h1 className={`text-xl sm:text-2xl md:text-4xl lg:text-6xl font-light mb-4 sm:mb-6 md:mb-8 text-left leading-relaxed ${isDarkMode ? 'text-gray-100' : 'text-gray-900'}`}>
+          <h2 className={`text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 md:mb-8 text-left leading-relaxed ${isDarkMode ? 'text-gray-100' : 'text-gray-900'}`}>
             {section.label}
-          </h1>
+          </h2>
           
           <div className="mb-4 sm:mb-6 md:mb-8">
             <Image 
@@ -647,7 +1250,10 @@ export default function Home() {
                                          {/* Sub Categories */}
                      {isCategoryExpanded(mainCategory.id) && (
                        <div className="ml-2 md:ml-4 space-y-1 border-l-2 border-gray-300 dark:border-gray-600 pl-2 md:pl-3">
-                        {mainCategory.children.map((subCategory) => (
+                        {mainCategory.children.map((subCategory) => {
+                          // Check if this is a nested category or direct section
+                          if (subCategory.type === 'category') {
+                            return (
                           <div key={subCategory.id} className="space-y-1">
                             {/* Sub Category Header */}
                             <button
@@ -695,7 +1301,29 @@ export default function Home() {
                               </div>
                             )}
                           </div>
-                        ))}
+                            );
+                          } else {
+                            // Direct section (no nested category)
+                            const globalIndex = sections.findIndex(s => s.id === subCategory.id);
+                            return (
+                              <button
+                                key={subCategory.id}
+                                onClick={() => scrollToSection(globalIndex)}
+                                className={`w-full flex items-center px-2 md:px-3 lg:px-4 py-2 md:py-3 rounded-md text-left transition-all duration-300 cursor-pointer ${
+                                  currentSection === globalIndex
+                                    ? isDarkMode 
+                                      ? 'bg-[#040d6a] text-white opacity-100 active-nav' 
+                                      : 'bg-[#040d6a] text-white opacity-100 active-nav'
+                                    : isDarkMode
+                                      ? 'text-gray-300 hover:bg-gray-800 hover:text-gray-100 opacity-80 hover:opacity-100'
+                                      : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 opacity-80 hover:opacity-100'
+                                }`}
+                              >
+                                <span className="font-medium text-xs md:text-sm leading-tight">{subCategory.label}</span>
+                              </button>
+                            );
+                          }
+                        })}
                       </div>
                     )}
                   </div>
@@ -719,6 +1347,16 @@ export default function Home() {
           {/* Main content area - Full width on mobile, 72% on desktop */}
           <div className="w-full lg:w-[72%] lg:pl-4">
             <div className="px-4 sm:px-6 lg:px-8 w-full max-w-full overflow-x-hidden">
+              {/* Main page title - only h1 on the page */}
+              <div className="pt-24 sm:pt-28 md:pt-32 lg:pt-40 pb-4">
+                <h1 className={`text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold text-center mb-4 ${isDarkMode ? 'text-gray-100' : 'text-gray-900'}`}>
+                  Sikh History & Heritage
+                </h1>
+                <p className={`text-center text-lg sm:text-xl md:text-2xl ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                  Explore the rich history of Sikhism through digital museum
+                </p>
+              </div>
+              
               <div className="overflow-y-auto w-full">
                 {sections.map((section) => (
                   <div key={section.id} className="w-full">

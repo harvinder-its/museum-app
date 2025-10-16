@@ -8,7 +8,7 @@ export default function LandingPage() {
       }}
     >
       <div className="px-6 text-center">
-        <h1 className="mt-6 text-4xl font-light sm:text-5xl md:text-6xl">
+        <h1 className="mt-6 text-4xl font-bold sm:text-5xl md:text-6xl">
           Website Coming Soon
         </h1>
       </div>

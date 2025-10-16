@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-family: var(--font-raleway), var(--font-geist-sans), system-ui, sans-serif;
   /* Ensure body takes full width and height */
   width: 100%;
   min-height: 100vh;

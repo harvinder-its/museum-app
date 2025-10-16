@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Header from '@/components/Header';
 
 export default function ResponsiveTest() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
