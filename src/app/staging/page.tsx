@@ -23,202 +23,79 @@ export default function Home() {
   const [imageError, setImageError] = useState<{ [key: string]: boolean }>({});
 
   const categories = useMemo<NavItem[]>(() => [
-    // Temporarily hidden - ਭਾਗ ਪਹਿਲਾ: ਗੁਰੂ ਕਾਲ
-    // {
-    //   id: 'guru-kal',
-    //   label: 'ਭਾਗ ਪਹਿਲਾ: ਗੁਰੂ ਕਾਲ',
-    //   type: 'main',
-    //   children: [
-    //     {
-    //       id: 'guru-sahiban',
-    //       label: 'ਗੁਰੂ ਸਾਹਿਬਾਨ',
-    //       type: 'category',
-    //       children: [
-    //         { id: 'guru-nanak-dev-ji', label: 'ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ' },
-    //         { id: 'guru-angad-dev-ji', label: 'ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ' },
-    //         { id: 'guru-amardas-ji', label: 'ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ' },
-    //         { id: 'guru-ramdas-ji', label: 'ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ' },
-    //         { id: 'guru-arjan-dev-ji', label: 'ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ' },
-    //         { id: 'guru-hargobind-sahib-ji', label: 'ਗੁਰੂ ਹਰਿਗੋਬਿੰਦ ਸਾਹਿਬ ਜੀ' },
-    //         { id: 'guru-har-rai-sahib-ji', label: 'ਗੁਰੂ ਹਰਿਰਾਇ ਸਾਹਿਬ ਜੀ' },
-    //         { id: 'guru-har-krishan-sahib-ji', label: 'ਗੁਰੂ ਹਰਿਕ੍ਰਿਸ਼ਨ ਸਾਹਿਬ ਜੀ' },
-    //         { id: 'guru-teg-bahadur-ji', label: 'ਗੁਰੂ ਤੇਗ ਬਹਾਦੁਰ ਜੀ' },
-    //         { id: 'guru-gobind-singh-ji', label: 'ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ' },
-    //         { id: 'guru-granth-sahib-ji', label: 'ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ' },
-    //       ]
-    //     }
-    //   ]
-    // },
-    {
-      id: 'foundation',
-      label: 'Foundation',
-      type: 'category',
-      children: [
-            { id: 'pritham-bhagauti-simri-kai', label: 'ਪ੍ਰਿਥਮ ਭਗਉਤੀ ਸਿਮਰਿ ਕੈ  (ਸ਼ਸਤਰ)' },
-            { id: 'nam-japo', label: 'ਨਾਮ ਜਪੋ' },
-            { id: 'kirt-karo', label: 'ਕਿਰਤ ਕਰੋ' },
-            { id: 'vand-chhako', label: 'ਵੰਡ ਛਕੋ' },
-            { id: 'ang-sahib', label: 'ਅੰਗ ਸਾਹਿਬ' },
-            { id: 'patshahi-badshahi', label: 'ਪਾਤਸ਼ਾਹੀ - ਬਾਦਸ਼ਾਹੀ' },
-      ]
-    },
-    {
-      id: 'history',
-      label: 'History',
-      type: 'category',
-      children: [
-            { id: 'chappar-jhiri-di-jang', label: 'ਚੱਪੜ ਝਿੜੀ ਦੀ ਜੰਗ' },
-            { id: 'baba-banda-singh-bahadur', label: 'ਬਾਬਾ ਬੰਦਾ ਸਿੰਘ ਬਹਾਦੁਰ' },
-            { id: 'bhai-tara-singh-wan-di-jang', label: 'ਭਾਈ ਤਾਰਾ ਸਿੰਘ ਵਾਂ ਦਾ ਜੰਗ' },
-            { id: 'chavinde-waliyan-bibiyan-di-jang', label: 'ਚਵਿੰਡੇ ਵਾਲੀਆਂ ਬੀਬੀਆਂ ਦੀ ਜੰਗ' },
-            { id: 'bhai-mani-singh-shahadat', label: 'ਭਾਈ ਮਨੀ ਸਿੰਘ ਸ਼ਹਾਦਤ' },
-            { id: 'bhai-garja-singh-bota-singh', label: 'ਭਾਈ ਗਰਜਾ ਸਿੰਘ ਬੋਤਾ ਸਿੰਘ' },
-            { id: 'chota-ghallughara', label: 'ਛੋਟਾ ਘੱਲੂਘਾਰਾ' },
-            { id: 'bhai-taru-singh-shahadat', label: 'ਭਾਈ ਤਾਰੂ ਸਿੰਘ ਸ਼ਹਾਦਤ' },
-            { id: 'dal-khalsa-da-gathan', label: 'ਦਲ ਖ਼ਾਲਸਾ ਦਾ ਗਠਨ' },
-            { id: 'baba-deep-singh-ji-di-jang', label: 'ਬਾਬਾ ਦੀਪ ਸਿੰਘ ਜੀ ਦਾ ਜੰਗ' },
-            { id: 'vada-ghallughara', label: 'ਵੱਡਾ ਘੱਲੂਘਾਰਾ' },
-            { id: 'akali', label: 'ਅਕਾਲੀ' },
-            { id: 'jassa-singh-ramgharia', label: 'ਜੱਸਾ ਸਿੰਘ ਰਾਮਗੜ੍ਹੀਆ' },
-            { id: '18vi-sadi-da-singh', label: '੧੮ਵੀਂ ਸਦੀ ਦਾ ਸਿੰਘ' },
-            { id: 'jain-khan-di-maut-te-sarhind-utte-kabza', label: 'ਜੈਨ ਖਾਨ ਦੀ ਮੌਤ ਤੇ ਸਰਹਿੰਦ ਉੱਤੇ ਕਬਜ਼ਾ' },
-            { id: 'singh-vs-singh', label: 'ਸਿੰਘ vs ਸਿੰਘ' },
-            { id: 'darbar-maharaja-ranjit-singh', label: 'ਦਰਬਾਰ ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ' },
-            { id: 'anglo-sikh-jangan-mudki-di-jang', label: 'ਐਂਗਲੋ - ਸਿੱਖ ਜੰਗਾਂ - ਮੁੱਦਕੀ ਦੀ ਜੰਗ' },
-            { id: 'kuka-lehar', label: 'ਕੂਕਾ ਲਹਿਰ' },
-            { id: 'gadar-lehar', label: 'ਗਦਰ ਲਹਿਰ' },
-            { id: 'babbar-akali-lehar', label: 'ਬਬਰ ਅਕਾਲੀ ਲਹਿਰ' },
-            { id: 'vishav-jangan', label: 'ਵਿਸ਼ਵ ਜੰਗਾਂ' },
-      ]
-    },
-    {
-      id: 'portrait',
-      label: 'Portrait',
-      type: 'category',
-      children: [
-            { id: 'akali-phula-singh-ji', label: 'ਅਕਾਲੀ ਫੂਲਾ ਸਿੰਘ ਜੀ' },
-            { id: 'sardar-hari-singh-nalwa', label: 'ਸਰਦਾਰ ਹਰੀ ਸਿੰਘ ਨਲਵਾ' },
-            { id: 'maharani-jind-kaur', label: 'ਮਹਾਰਾਣੀ ਜਿੰਦ ਕੌਰ' },
-            { id: 'kanwar-naunihal-singh', label: 'ਕੰਵਰ ਨੌਨਿਹਾਲ ਸਿੰਘ' },
-            { id: 'maharaja-dalip-singh', label: 'ਮਹਾਰਾਜਾ ਦਲੀਪ ਸਿੰਘ' },
-      ]
-    },
-    {
-      id: 'gadar-lehar-portrait',
-      label: 'Gadar Lehar Portrait',
-      type: 'category',
-      children: [
-            { id: 'baba-sohan-singh-bhakna', label: 'ਬਾਬਾ ਸੋਹਣ ਸਿੰਘ ਭਕਨਾ' },
-            { id: 'shahid-kartar-singh-sarabha', label: 'ਸ਼ਹੀਦ ਕਰਤਾਰ ਸਿੰਘ ਸਰਾਭਾ' },
-            { id: 'bibi-gulab-kaur', label: 'ਬੀਬੀ ਗੁਲਾਬ ਕੌਰ' },
-      ]
-    },
-    {
-      id: 'babbar-akali-lehar-portrait',
-      label: 'Babbar Akali Lehar Portrait',
-      type: 'category',
-      children: [
-            { id: 'babbar-karam-singh', label: 'ਬਬਰ ਕਰਮ ਸਿੰਘ' },
-            { id: 'babbar-ratan-singh', label: 'ਬਬਰ ਰਤਨ ਸਿੰਘ' },
-            { id: 'babbar-kishan-singh-gargaj', label: 'ਬਬਰ ਕਿਸ਼ਨ ਸਿੰਘ ਗੜਗੱਜ' },
-            { id: 'babbar-dhanna-singh-bahibal-kalan', label: 'ਬਬਰ ਧੰਨਾ ਸਿੰਘ ਬਹਿਬਲ ਕਲਾਂ' },
-            { id: 'babbar-harbans-singh-sarhala', label: 'ਬਬਰ ਹਰਬੰਸ ਸਿੰਘ ਸਰਹਾਲਾ' },
-      ]
-    },
-    {
-      id: '20th-century-portraits',
-      label: '20th Century Portraits',
-      type: 'category',
-      children: [
-            { id: 'bhai-vir-singh-ji', label: 'ਭਾਈ ਵੀਰ ਸਿੰਘ ਜੀ' },
-            { id: 'pro-puran-singh', label: 'ਪ੍ਰੋ ਪੂਰਨ ਸਿੰਘ' },
-            { id: 'gyani-ditt-singh', label: 'ਗਿਆਨੀ ਦਿੱਤ ਸਿੰਘ' },
-            { id: 'bhai-randhir-singh-ji', label: 'ਭਾਈ ਰਣਧੀਰ ਸਿੰਘ ਜੀ' },
-            { id: 'master-tara-singh', label: 'ਮਾਸਟਰ ਤਾਰਾ ਸਿੰਘ' },
-            { id: 'dr-ganda-singh', label: 'ਡਾ ਗੰਡਾ ਸਿੰਘ' },
-            { id: 'karam-singh-historian', label: 'ਕਰਮ ਸਿੰਘ ਹਿਸਟੋਰੀਅਨ' },
-            { id: 'bibi-harnam-kaur', label: 'ਬੀਬੀ ਹਰਨਾਮ ਕੌਰ' },
-            { id: 'bhai-kahan-singh-nabha', label: 'ਭਾਈ ਕਾਹਨ ਸਿੰਘ ਨਾਭਾ' },
-      ]
-    },
-    {
-      id: 'modern-art-style-painting',
-      label: 'Modern Art Style Painting',
-      type: 'category',
-      children: [
-            { id: '1947-di-vand', label: '੧੯੪੭ ਦੀ ਵੰਡ' },
-      ]
-    },
-    {
-      id: 'teja-ghallughara',
-      label: 'ਤੀਜਾ ਘੱਲੂਘਾਰਾ',
-      type: 'category',
-      children: [
-            { id: 'santan-di-shahadat', label: 'ਸੰਤਾਂ ਦੀ ਸ਼ਹਾਦਤ' },
-      ]
-    },
-    {
-      id: '1978',
-      label: '1978',
-      type: 'category',
-      children: [
-            { id: 'bhai-fauja-singh-ji', label: 'ਭਾਈ ਫੌਜਾ ਸਿੰਘ ਜੀ' },
-      ]
-    },
-    {
-      id: 'teja-ghallughara-portrait',
-      label: 'ਤੀਜਾ ਘੱਲੂਘਾਰਾ Portrait',
-      type: 'category',
-      children: [
-            { id: 'teja-ghallughara-june-1984', label: 'ਤੀਜਾ ਘੱਲੂਘਰਾ - ਜੂਨ 1984(ਅਕਾਲ ਤਖ਼ਤ ਸਾਹਿਬ ਮਾਡਲ)' },
-            { id: 'sant-jarnail-singh-ji', label: 'ਸੰਤ ਜਰਨੈਲ ਸਿੰਘ ਜੀ' },
-            { id: 'bhai-amrik-singh-ji', label: 'ਭਾਈ ਅਮਰੀਕ ਸਿੰਘ ਜੀ' },
-            { id: 'general-subeg-singh-ji', label: 'ਜਨਰਲ ਸੁਬੇਗ ਸਿੰਘ ਜੀ' },
-            { id: 'baba-thahara-singh-ji', label: 'ਬਾਬਾ ਠਾਹਰਾ ਸਿੰਘ ਜੀ' },
-            { id: 'bibi-upkar-kaur', label: 'ਬੀਬੀ ਉਪਕਾਰ ਕੌਰ' },
-            { id: 'bhai-mehnga-singh-babar', label: 'ਭਾਈ ਮਹਿੰਗਾ ਸਿੰਘ ਬਬਰ' },
-      ]
-    },
-    {
-      id: 'sikh-genocide',
-      label: 'Sikh Genocide',
-      type: 'category',
-      children: [
-            { id: 'november-1984', label: 'ਨਵੰਬਰ ੧੯੮੪' },
-      ]
-    },
-    {
-      id: 'punjabi-culture',
-      label: 'Punjabi Culture',
-      type: 'category',
-      children: [
-            { id: 'purana-ghar', label: 'ਪੁਰਾਣਾ ਘਰ' },
-            { id: 'stepu', label: 'ਸਟੈਪੂ' },
-            { id: 'maan-di-kala', label: 'ਮਾਂ ਦੀ ਕਲਾ' },
-            { id: 'dadi-pota', label: 'ਦਾਦੀ ਪੋਤਾ' },
-      ]
-    },
-    { id: 'kirtan', label: 'Kirtan' },
-    { id: 'map', label: 'Map' },
+    { id: 'pritham-bhagauti-simri-kai', label: 'ਪ੍ਰਿਥਮ ਭਗਉਤੀ ਸਿਮਰਿ ਕੈ  (ਸ਼ਸਤਰ)' },
+    { id: 'nam-japo', label: 'ਨਾਮ ਜਪੋ' },
+    { id: 'kirt-karo', label: 'ਕਿਰਤ ਕਰੋ' },
+    { id: 'vand-chhako', label: 'ਵੰਡ ਛਕੋ' },
+    { id: 'ang-sahib', label: 'ਸਬਦ ਗੁਰੂ ਸੁਰਤਿ ਧੁਨਿ ਚੇਲਾ॥' },
+    { id: 'chappar-jhiri-di-jang', label: 'ਚੱਪੜ ਝਿੜੀ ਦੀ ਜੰਗ' },
+    { id: 'baba-banda-singh-bahadur', label: 'ਬਾਬਾ ਬੰਦਾ ਸਿੰਘ ਬਹਾਦੁਰ' },
+    { id: 'bhai-tara-singh-wan-di-jang', label: 'ਭਾਈ ਤਾਰਾ ਸਿੰਘ ਵਾਂ ਦਾ ਜੰਗ' },
+    { id: 'chavinde-waliyan-bibiyan-di-jang', label: 'ਚਵਿੰਡੇ ਵਾਲੀਆਂ ਬੀਬੀਆਂ ਦੀ ਜੰਗ' },
+    { id: 'bhai-mani-singh-shahadat', label: 'ਭਾਈ ਮਨੀ ਸਿੰਘ ਸ਼ਹਾਦਤ' },
+    { id: 'bhai-garja-singh-bota-singh', label: 'ਭਾਈ ਗਰਜਾ ਸਿੰਘ ਬੋਤਾ ਸਿੰਘ' },
+    { id: 'chota-ghallughara', label: 'ਛੋਟਾ ਘੱਲੂਘਾਰਾ' },
+    { id: 'bhai-taru-singh-shahadat', label: 'ਭਾਈ ਤਾਰੂ ਸਿੰਘ ਸ਼ਹਾਦਤ' },
+    { id: 'dal-khalsa-da-gathan', label: 'ਦਲ ਖ਼ਾਲਸਾ ਦਾ ਗਠਨ' },
+    { id: 'baba-deep-singh-ji-di-jang', label: 'ਬਾਬਾ ਦੀਪ ਸਿੰਘ ਜੀ ਦਾ ਜੰਗ' },
+    { id: 'vada-ghallughara', label: 'ਵੱਡਾ ਘੱਲੂਘਾਰਾ' },
+    { id: 'akali', label: 'ਅਕਾਲੀ' },
+    { id: 'jassa-singh-ramgharia', label: 'ਜੱਸਾ ਸਿੰਘ ਰਾਮਗੜ੍ਹੀਆ' },
+    { id: '18vi-sadi-da-singh', label: '੧੮ਵੀਂ ਸਦੀ ਦਾ ਸਿੰਘ' },
+    { id: 'jain-khan-di-maut-te-sarhind-utte-kabza', label: 'ਜੈਨ ਖਾਨ ਦੀ ਮੌਤ ਤੇ ਸਰਹਿੰਦ ਉੱਤੇ ਕਬਜ਼ਾ' },
+    { id: 'patshahi-badshahi', label: 'ਪਾਤਸ਼ਾਹੀ - ਬਾਦਸ਼ਾਹੀ' },
+    { id: 'singh-vs-singh', label: 'ਸਿੰਘ vs ਸਿੰਘ' },
+    { id: 'darbar-maharaja-ranjit-singh', label: 'ਦਰਬਾਰ ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ' },
+    { id: 'akali-phula-singh-ji', label: 'ਅਕਾਲੀ ਫੂਲਾ ਸਿੰਘ ਜੀ' },
+    { id: 'sardar-hari-singh-nalwa', label: 'ਸਰਦਾਰ ਹਰੀ ਸਿੰਘ ਨਲਵਾ' },
+    { id: 'maharani-jind-kaur', label: 'ਮਹਾਰਾਣੀ ਜਿੰਦ ਕੌਰ' },
+    { id: 'kanwar-naunihal-singh', label: 'ਕੰਵਰ ਨੌਨਿਹਾਲ ਸਿੰਘ' },
+    { id: 'maharaja-dalip-singh', label: 'ਮਹਾਰਾਜਾ ਦਲੀਪ ਸਿੰਘ' },
+    { id: 'anglo-sikh-jangan-mudki-di-jang', label: 'ਐਂਗਲੋ - ਸਿੱਖ ਜੰਗਾਂ - ਮੁੱਦਕੀ ਦੀ ਜੰਗ' },
+    { id: 'kuka-lehar', label: 'ਕੂਕਾ ਲਹਿਰ' },
+    { id: 'gadar-lehar', label: 'ਗਦਰ ਲਹਿਰ' },
+    { id: 'baba-sohan-singh-bhakna', label: 'ਬਾਬਾ ਸੋਹਣ ਸਿੰਘ ਭਕਨਾ' },
+    { id: 'shahid-kartar-singh-sarabha', label: 'ਸ਼ਹੀਦ ਕਰਤਾਰ ਸਿੰਘ ਸਰਾਭਾ' },
+    { id: 'bibi-gulab-kaur', label: 'ਬੀਬੀ ਗੁਲਾਬ ਕੌਰ' },
+    { id: 'babbar-akali-lehar', label: 'ਬਬਰ ਅਕਾਲੀ ਲਹਿਰ' },
+    { id: 'babbar-karam-singh', label: 'ਬਬਰ ਕਰਮ ਸਿੰਘ' },
+    { id: 'babbar-ratan-singh', label: 'ਬਬਰ ਰਤਨ ਸਿੰਘ' },
+    { id: 'babbar-kishan-singh-gargaj', label: 'ਬਬਰ ਕਿਸ਼ਨ ਸਿੰਘ ਗੜਗੱਜ' },
+    { id: 'babbar-dhanna-singh-bahibal-kalan', label: 'ਬਬਰ ਧੰਨਾ ਸਿੰਘ ਬਹਿਬਲ ਕਲਾਂ' },
+    { id: 'babbar-harbans-singh-sarhala', label: 'ਬਬਰ ਹਰਬੰਸ ਸਿੰਘ ਸਰਹਾਲਾ' },
+    { id: 'bhai-vir-singh-ji', label: 'ਭਾਈ ਵੀਰ ਸਿੰਘ ਜੀ' },
+    { id: 'pro-puran-singh', label: 'ਪ੍ਰੋ ਪੂਰਨ ਸਿੰਘ' },
+    { id: 'gyani-ditt-singh', label: 'ਗਿਆਨੀ ਦਿੱਤ ਸਿੰਘ' },
+    { id: 'bhai-randhir-singh-ji', label: 'ਭਾਈ ਰਣਧੀਰ ਸਿੰਘ ਜੀ' },
+    { id: 'master-tara-singh', label: 'ਮਾਸਟਰ ਤਾਰਾ ਸਿੰਘ' },
+    { id: 'dr-ganda-singh', label: 'ਡਾ ਗੰਡਾ ਸਿੰਘ' },
+    { id: 'karam-singh-historian', label: 'ਕਰਮ ਸਿੰਘ ਹਿਸਟੋਰੀਅਨ' },
+    { id: 'bibi-harnam-kaur', label: 'ਬੀਬੀ ਹਰਨਾਮ ਕੌਰ' },
+    { id: 'bhai-kahan-singh-nabha', label: 'ਭਾਈ ਕਾਹਨ ਸਿੰਘ ਨਾਭਾ' },
+    { id: 'vishav-jangan', label: 'ਵਿਸ਼ਵ ਜੰਗਾਂ' },
+    { id: '1947-di-vand', label: '੧੯੪੭ ਦੀ ਵੰਡ' },
+    { id: 'bhai-fauja-singh-ji', label: 'ਭਾਈ ਫੌਜਾ ਸਿੰਘ ਜੀ' },
+    { id: 'santan-di-shahadat', label: 'ਸੰਤਾਂ ਦੀ ਸ਼ਹਾਦਤ' },
+    { id: 'teja-ghallughara-june-1984', label: 'ਤੀਜਾ ਘੱਲੂਘਰਾ - ਜੂਨ 1984 (ਅਕਾਲ ਤਖ਼ਤ ਸਾਹਿਬ ਮਾਡਲ)' },
+    { id: 'sant-jarnail-singh-ji', label: 'ਸੰਤ ਜਰਨੈਲ ਸਿੰਘ ਜੀ' },
+    { id: 'bhai-amrik-singh-ji', label: 'ਭਾਈ ਅਮਰੀਕ ਸਿੰਘ ਜੀ' },
+    { id: 'general-subeg-singh-ji', label: 'ਜਨਰਲ ਸੁਬੇਗ ਸਿੰਘ ਜੀ' },
+    { id: 'baba-thahara-singh-ji', label: 'ਬਾਬਾ ਠਾਹਰਾ ਸਿੰਘ ਜੀ' },
+    { id: 'bibi-upkar-kaur', label: 'ਬੀਬੀ ਉਪਕਾਰ ਕੌਰ' },
+    { id: 'bhai-mehnga-singh-babar', label: 'ਭਾਈ ਮਹਿੰਗਾ ਸਿੰਘ ਬਬਰ' },
+    { id: 'november-1984', label: 'ਨਵੰਬਰ ੧੯੮੪' },
+    { id: 'purana-ghar', label: 'ਪੰਜਾਬ ਦਾ ਪੁਰਾਣਾ ਘਰ' },
+    { id: 'stepu', label: 'ਸਟੈਪੂ - ਪੰਜਾਬ ਦੀਆਂ ਲੋਕ ਖੇਡਾਂ' },
+    { id: 'maan-di-kala', label: 'ਮਾਂ ਦੀ ਕਲਾ' },
+    { id: 'dadi-pota', label: 'ਦਾਦੀ ਪੋਤਾ' },
+    { id: 'kirtan-instruments', label: 'ਕੀਰਤਨ (ਲਿਖਤ)' },
+    { id: 'kirtan', label: 'ਕੀਰਤਨ' },
+    { id: 'map', label: 'ਪੰਜਾਬ ਦਾ ਨਕਸ਼ਾ' },
   ], []);
 
-  // Flatten all sections for easy access
+  // Since categories are now flat, sections are the same as categories
   const sections = useMemo(() => {
-    const allSections: { id: string; label: string }[] = [];
-
-    const collectSections = (items: NavItem[]) => {
-      items.forEach(item => {
-        if (item.children && item.children.length > 0) {
-          collectSections(item.children);
-        } else {
-          allSections.push({ id: item.id, label: item.label });
-        }
-      });
-    };
-
-    collectSections(categories);
-
-    return allSections;
+    return categories.map(category => ({ id: category.id, label: category.label }));
   }, [categories]);
 
   // Load theme preference from localStorage
@@ -351,6 +228,7 @@ export default function Home() {
         'kirt-karo': '/images/museumpaintings/3-kirat-karo-earn-an-honest-living.jpg',
         'vand-chhako': '/images/museumpaintings/4-vand-shako-share-what-you-have.jpg',
         'ang-sahib': '/images/museumpaintings/5-shabad-guru-surat-dhun-chela.jpg',
+        'patshahi-badshahi': '/images/museumpaintings/21-patshahi-badshahi.JPG',
         // History section
         'chappar-jhiri-di-jang': '/images/museumpaintings/6-battle-of-chappad-chidi.jpg',
         'baba-banda-singh-bahadur': '/images/museumpaintings/7-baba-banda-singh-bahadar.jpg',
@@ -367,6 +245,58 @@ export default function Home() {
         'jassa-singh-ramgharia': '/images/museumpaintings/18-jassa-singh-ramgarhia.jpg',
         '18vi-sadi-da-singh': '/images/museumpaintings/19-18th-century-singh.jpg',
         'jain-khan-di-maut-te-sarhind-utte-kabza': '/images/museumpaintings/20-jain-khaan-and-victory-over-sirhind.jpg',
+        'darbar-maharaja-ranjit-singh': '/images/museumpaintings/23-darbar-maharaja-ranjit-singh.jpeg',
+        'anglo-sikh-jangan-mudki-di-jang': '/images/museumpaintings/29-anglo-sikh-war.jpg',
+        'kuka-lehar': '/images/museumpaintings/30-kooka-lehar.jpeg',
+        'gadar-lehar': '/images/museumpaintings/31-ghadar-movement.jpg',
+        'babbar-akali-lehar': '/images/museumpaintings/35-babbar-akali-movement.jpg',
+        // Portrait section
+        'akali-phula-singh-ji': '/images/museumpaintings/24-akali-phoola-singh-ji.jpg',
+        'sardar-hari-singh-nalwa': '/images/museumpaintings/25-sardar-hari-singh-nalwa.png',
+        'maharani-jind-kaur': '/images/museumpaintings/26-maharani-jind-kaur.jpg',
+        'kanwar-naunihal-singh': '/images/museumpaintings/27-kunwar-nau-nihal-singh.jpg',
+        'maharaja-dalip-singh': '/images/museumpaintings/28-maharaj-duleep-singh.jpg',
+        // Gadar Lehar Portrait section
+        'baba-sohan-singh-bhakna': '/images/museumpaintings/32-baba-sohan-singh-bhakna.jpg',
+        'shahid-kartar-singh-sarabha': '/images/museumpaintings/33-kartar-singh-sarabha.jpeg',
+        'bibi-gulab-kaur': '/images/museumpaintings/34-bibi-gulab-kaur.jpg',
+        // Babbar Akali Lehar Portrait section
+        'babbar-karam-singh': '/images/museumpaintings/36-babar-karm-singh-rakkad.jpeg',
+        'babbar-ratan-singh': '/images/museumpaintings/37-babar-ratan-singh.jpeg',
+        'babbar-kishan-singh-gargaj': '/images/museumpaintings/338-babar-kishan-singh-gadgajj.jpeg',
+        'babbar-dhanna-singh-bahibal-kalan': '/images/museumpaintings/39-babar-dhanna-singh-behbalpur.jpg',
+        // 20th Century Portraits section
+        'bhai-vir-singh-ji': '/images/museumpaintings/41-bhai-veer-singh-ji.jpg',
+        'pro-puran-singh': '/images/museumpaintings/42ProfPooranSingh.JPG',
+        'gyani-ditt-singh': '/images/museumpaintings/43GiyaniDittSingh.JPG',
+        'bhai-randhir-singh-ji': '/images/museumpaintings/44BhaiRandhirSinghJi.jpg',
+        'master-tara-singh': '/images/museumpaintings/45MasterTaraSingh.jpg',
+        'dr-ganda-singh': '/images/museumpaintings/46DoctorGandhaSingh.jpg',
+        'karam-singh-historian': '/images/museumpaintings/47KarmSinghHistorian.jpg',
+        'bibi-harnam-kaur': '/images/museumpaintings/48BibiHarnamKaur.jpg',
+        // History section (World Wars)
+        'vishav-jangan': '/images/museumpaintings/50SikhsInWorldWars.jpg',
+        // Modern Art Style Painting
+        '1947-di-vand': '/images/museumpaintings/51Partitionof1947.jpg',
+        // 1978 section
+        'bhai-fauja-singh-ji': '/images/museumpaintings/52BhaiFaujaSingh-Saka 1978.jpg',
+        // Teja Ghallughara Portrait section
+        'santan-di-shahadat': '/images/museumpaintings/53MartyrdomSantJarnailSinghJi.jpg',
+        'teja-ghallughara-june-1984': '/images/museumpaintings/54AkalTakhatSahibModel.jpg',
+        'sant-jarnail-singh-ji': '/images/museumpaintings/55SantJarnailSinghJi.jpg',
+        'bhai-amrik-singh-ji': '/images/museumpaintings/56BhaiAmrikSinghji.jpg',
+        'general-subeg-singh-ji': '/images/museumpaintings/57GeneralSubeghSinghJi.jpg',
+        'baba-thahara-singh-ji': '/images/museumpaintings/58BabaThahraSinghJi.jpg',
+        'bibi-upkar-kaur': '/images/museumpaintings/59BibiUpkarKaurJi.jpg',
+        'bhai-mehnga-singh-babar': '/images/museumpaintings/60BhaiMehngaSinghBabbar.jpg',
+        // Sikh Genocide section
+        'november-1984': '/images/museumpaintings/61November1984.jpg',
+        // Punjabi Culture section
+        'stepu': '/images/museumpaintings/63Stapoo .JPG',
+        'maan-di-kala': '/images/museumpaintings/64Mother_sCreation.jpg',
+        'dadi-pota': '/images/museumpaintings/65DadiPota.jpg',
+        // Kirtan
+        'kirtan': '/images/museumpaintings/67KirtanSculpture.jpg',
         // Old mappings (kept for backward compatibility)
         bhaimanisingh: '/images/bhai-mani-singh.jpg',
         bhaitarusingh: '/images/bhai-taru-singh.jpeg',
@@ -1026,85 +956,88 @@ export default function Home() {
         'teja-ghallughara-portrait': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
         'sikh-genocide': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
         'punjabi-culture': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        kirtan: { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        map: { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
         // Foundation subsections
-        'pritham-bhagauti-simri-kai': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'nam-japo': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'kirt-karo': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'vand-chhako': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'ang-sahib': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'patshahi-badshahi': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'pritham-bhagauti-simri-kai': { artist: 'ਪਰਮ ਸਿੰਘ', size: '600x400', type: 'Traditional Arms' },
+        'nam-japo': { artist: 'ਜਸਪ੍ਰੀਤ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'kirt-karo': { artist: 'ਜਸਪ੍ਰੀਤ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'vand-chhako': { artist: 'ਜਸਪ੍ਰੀਤ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'ang-sahib': { artist: 'ਮਨਜੀਤ ਕੌਰ', size: '600x400', type: 'Miniature Style Painting' },
+        'patshahi-badshahi': { artist: 'ਪਰਮ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
         // History subsections
-        'chappar-jhiri-di-jang': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'baba-banda-singh-bahadur': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'bhai-tara-singh-wan-di-jang': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'chavinde-waliyan-bibiyan-di-jang': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'bhai-mani-singh-shahadat': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'bhai-garja-singh-bota-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'chota-ghallughara': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'bhai-taru-singh-shahadat': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'dal-khalsa-da-gathan': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'baba-deep-singh-ji-di-jang': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'vada-ghallughara': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'akali': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'jassa-singh-ramgharia': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        '18vi-sadi-da-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'jain-khan-di-maut-te-sarhind-utte-kabza': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'singh-vs-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'darbar-maharaja-ranjit-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'anglo-sikh-jangan-mudki-di-jang': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'kuka-lehar': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'gadar-lehar': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'babbar-akali-lehar': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'vishav-jangan': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'chappar-jhiri-di-jang': { artist: 'ਪਰਮ ਸਿੰਘ', size: '600x400', type: 'Canvas Print' },
+        'baba-banda-singh-bahadur': { artist: 'ਜਗਦੀਪ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'bhai-tara-singh-wan-di-jang': { artist: 'ਪਰਮ ਸਿੰਘ', size: '600x400', type: 'Canvas Print' },
+        'chavinde-waliyan-bibiyan-di-jang': { artist: 'ਪਰਮ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'bhai-mani-singh-shahadat': { artist: 'ਕੁਲਦੀਪ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'bhai-garja-singh-bota-singh': { artist: 'ਮਨਿੰਦਰ ਸਿੰਘ', size: '600x400', type: 'Oil Painting Replica' },
+        'chota-ghallughara': { artist: 'ਪਰਮ ਸਿੰਘ', size: '600x400', type: 'Canvas Print' },
+        'bhai-taru-singh-shahadat': { artist: 'ਜਗਵਿੰਦਰ ਸਿੰਘ', size: '600x400', type: 'Low Relief' },
+        'dal-khalsa-da-gathan': { artist: 'ਪਰਮ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'baba-deep-singh-ji-di-jang': { artist: 'ਪਰਮ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'vada-ghallughara': { artist: 'ਪਰਮ ਸਿੰਘ', size: '600x400', type: 'Canvas Print' },
+        'akali': { artist: 'ਮਨਜੀਤ ਕੌਰ', size: '600x400', type: 'Miniature Painting Replica' },
+        'jassa-singh-ramgharia': { artist: 'ਮਨਜੀਤ ਕੌਰ', size: '600x400', type: 'Miniature Painting Replica' },
+        '18vi-sadi-da-singh': { artist: 'ਪਰਮ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'jain-khan-di-maut-te-sarhind-utte-kabza': { artist: 'ਪਰਮ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'singh-vs-singh': { artist: 'ਜਗਵਿੰਦਰ ਸਿੰਘ', size: '600x400', type: 'Metal Sculpture' },
+        'darbar-maharaja-ranjit-singh': { artist: 'ਜਗਦੀਪ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'anglo-sikh-jangan-mudki-di-jang': { artist: 'ਗੁਰਰਾਜ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'kuka-lehar': { artist: 'ਜਸਪ੍ਰੀਤ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'gadar-lehar': { artist: 'ਕੁਲਦੀਪ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'babbar-akali-lehar': { artist: 'ਕੁਲਦੀਪ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'vishav-jangan': { artist: 'ਜਗਦੀਪ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
         // Portrait subsections
-        'akali-phula-singh-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'sardar-hari-singh-nalwa': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'maharani-jind-kaur': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'kanwar-naunihal-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'maharaja-dalip-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'akali-phula-singh-ji': { artist: 'ਪਰਮ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'sardar-hari-singh-nalwa': { artist: 'ਪਰਮ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'maharani-jind-kaur': { artist: 'ਸੁਯਸ਼', size: '600x400', type: 'Oil Painting' },
+        'kanwar-naunihal-singh': { artist: 'ਸੁਯਸ਼', size: '600x400', type: 'Oil Painting' },
+        'maharaja-dalip-singh': { artist: 'ਸੁਯਸ਼', size: '600x400', type: 'Oil Painting' },
         // Gadar Lehar Portrait subsections
-        'baba-sohan-singh-bhakna': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'shahid-kartar-singh-sarabha': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'bibi-gulab-kaur': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'baba-sohan-singh-bhakna': { artist: 'ਕੁਲਦੀਪ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'shahid-kartar-singh-sarabha': { artist: 'ਗੁਰਸ਼ਰਨ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'bibi-gulab-kaur': { artist: 'ਡੇਨੀਅਲ', size: '600x400', type: 'Oil Painting' },
         // Babbar Akali Lehar Portrait subsections
-        'babbar-karam-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'babbar-ratan-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'babbar-kishan-singh-gargaj': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'babbar-dhanna-singh-bahibal-kalan': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'babbar-harbans-singh-sarhala': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'babbar-karam-singh': { artist: 'ਕੁਲਦੀਪ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'babbar-ratan-singh': { artist: 'ਕੁਲਦੀਪ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'babbar-kishan-singh-gargaj': { artist: 'ਕੁਲਦੀਪ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'babbar-dhanna-singh-bahibal-kalan': { artist: 'ਸੁਯਸ਼', size: '600x400', type: 'Oil Painting' },
+        'babbar-harbans-singh-sarhala': { artist: 'ਸੁਯਸ਼', size: '600x400', type: 'Oil Painting' },
         // 20th Century Portraits subsections
-        'bhai-vir-singh-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'pro-puran-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'gyani-ditt-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'bhai-randhir-singh-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'master-tara-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'dr-ganda-singh': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'karam-singh-historian': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'bibi-harnam-kaur': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'bhai-kahan-singh-nabha': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'bhai-vir-singh-ji': { artist: 'ਸੁਯਸ਼', size: '600x400', type: 'Oil Painting' },
+        'pro-puran-singh': { artist: 'ਡੇਨੀਅਲ', size: '600x400', type: 'Oil Painting' },
+        'gyani-ditt-singh': { artist: 'ਸੁਯਸ਼', size: '600x400', type: 'Oil Painting' },
+        'bhai-randhir-singh-ji': { artist: 'ਗੁਰਰਾਜ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'master-tara-singh': { artist: 'ਗੁਰਰਾਜ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'dr-ganda-singh': { artist: 'ਪਰਮ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'karam-singh-historian': { artist: 'ਗੁਰਸ਼ਰਨ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'bibi-harnam-kaur': { artist: 'ਸੁਯਸ਼', size: '600x400', type: 'Oil Painting' },
+        'bhai-kahan-singh-nabha': { artist: 'ਪਰਮ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
         // Modern Art Style Painting subsections
-        '1947-di-vand': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        '1947-di-vand': { artist: 'ਰਵਿੰਦਰ ਸਿੰਘ', size: '600x400', type: 'Canvas Print' },
         // ਤੀਜਾ ਘੱਲੂਘਾਰਾ subsections
-        'santan-di-shahadat': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'santan-di-shahadat': { artist: 'ਪਰਮ ਸਿੰਘ', size: '600x400', type: 'Canvas Print' },
         // 1978 subsections
-        'bhai-fauja-singh-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'bhai-fauja-singh-ji': { artist: 'ਜਸਪ੍ਰੀਤ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
         // ਤੀਜਾ ਘੱਲੂਘਾਰਾ Portrait subsections
-        'teja-ghallughara-june-1984': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'sant-jarnail-singh-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'bhai-amrik-singh-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'general-subeg-singh-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'baba-thahara-singh-ji': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'bibi-upkar-kaur': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'bhai-mehnga-singh-babar': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'teja-ghallughara-june-1984': { artist: 'ਜਗਵਿੰਦਰ ਸਿੰਘ', size: '600x400', type: 'Model' },
+        'sant-jarnail-singh-ji': { artist: 'ਗੁਰਰਾਜ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'bhai-amrik-singh-ji': { artist: 'ਸੁਯਸ਼', size: '600x400', type: 'Oil Painting' },
+        'general-subeg-singh-ji': { artist: 'ਸੁਯਸ਼', size: '600x400', type: 'Oil Painting' },
+        'baba-thahara-singh-ji': { artist: 'ਸੁਯਸ਼', size: '600x400', type: 'Oil Painting' },
+        'bibi-upkar-kaur': { artist: 'ਸੁਯਸ਼', size: '600x400', type: 'Oil Painting' },
+        'bhai-mehnga-singh-babar': { artist: 'ਸੁਯਸ਼', size: '600x400', type: 'Oil Painting' },
         // Sikh Genocide subsections
-        'november-1984': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'november-1984': { artist: 'ਜਸਪ੍ਰੀਤ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
         // Punjabi Culture subsections
-        'purana-ghar': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'stepu': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'maan-di-kala': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
-        'dadi-pota': { artist: 'Unknown Artist', size: '600x400', type: 'Digital Art' },
+        'purana-ghar': { artist: 'ਜਗਦੀਪ ਸਿੰਘ', size: '600x400', type: 'Miniature Model' },
+        'stepu': { artist: 'ਸੁਖਪ੍ਰੀਤ ਸਿੰਘ ਆਰਟਿਸਟ', size: '600x400', type: 'Oil Painting' },
+        'maan-di-kala': { artist: 'ਜਸਪ੍ਰੀਤ ਸਿੰਘ', size: '600x400', type: 'Oil Painting' },
+        'dadi-pota': { artist: 'ਪਰਮ ਸਿੰਘ', size: '600x400', type: 'Canvas Print' },
+        // Kirtan subsections
+        'kirtan-instruments': { artist: '', size: '600x400', type: 'Set of Instruments' },
+        'kirtan': { artist: 'ਜਗਵਿੰਦਰ ਸਿੰਘ', size: '600x400', type: 'Sculpture' },
+        // Map
+        'map': { artist: 'ਪਰਮ ਸਿੰਘ', size: '600x400', type: 'Paper Print' },
       };
       return detailsMap[id] || { artist: 'Unknown', size: 'Unknown', type: 'Unknown' };
     };
