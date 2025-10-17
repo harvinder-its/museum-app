@@ -7,16 +7,22 @@ import AudioPlayer from '@/components/AudioPlayer';
 import FixedAudioPlayer from '@/components/FixedAudioPlayer';
 import Footer from '@/components/Footer';
 
+type NavItem = {
+  id: string;
+  label: string;
+  type?: string;
+  children?: NavItem[];
+};
+
 export default function Home() {
   const [currentSection, setCurrentSection] = useState(0);
   const [isDarkMode, setIsDarkMode] = useState(false);
   // Removed unused state variables: isMobileMenuOpen, isSidebarCollapsed
   const sectionRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
-  const [expandedCategories, setExpandedCategories] = useState<string[]>(['sikh-history']);
   const [imageError, setImageError] = useState<{ [key: string]: boolean }>({});
 
-  const categories = useMemo(() => [
+  const categories = useMemo<NavItem[]>(() => [
     // Temporarily hidden - ਭਾਗ ਪਹਿਲਾ: ਗੁਰੂ ਕਾਲ
     // {
     //   id: 'guru-kal',
@@ -44,28 +50,23 @@ export default function Home() {
     //   ]
     // },
     {
-      id: 'sikh-history',
-      label: 'ਸਿੱਖ ਇਤਿਹਾਸ',
-      type: 'main',
+      id: 'foundation',
+      label: 'Foundation',
+      type: 'category',
       children: [
-        {
-          id: 'foundation',
-          label: 'Foundation',
-          type: 'category',
-          children: [
             { id: 'pritham-bhagauti-simri-kai', label: 'ਪ੍ਰਿਥਮ ਭਗਉਤੀ ਸਿਮਰਿ ਕੈ  (ਸ਼ਸਤਰ)' },
             { id: 'nam-japo', label: 'ਨਾਮ ਜਪੋ' },
             { id: 'kirt-karo', label: 'ਕਿਰਤ ਕਰੋ' },
             { id: 'vand-chhako', label: 'ਵੰਡ ਛਕੋ' },
             { id: 'ang-sahib', label: 'ਅੰਗ ਸਾਹਿਬ' },
             { id: 'patshahi-badshahi', label: 'ਪਾਤਸ਼ਾਹੀ - ਬਾਦਸ਼ਾਹੀ' },
-          ]
-        },
-        {
-          id: 'history',
-          label: 'History',
-          type: 'category',
-          children: [
+      ]
+    },
+    {
+      id: 'history',
+      label: 'History',
+      type: 'category',
+      children: [
             { id: 'chappar-jhiri-di-jang', label: 'ਚੱਪੜ ਝਿੜੀ ਦੀ ਜੰਗ' },
             { id: 'baba-banda-singh-bahadur', label: 'ਬਾਬਾ ਬੰਦਾ ਸਿੰਘ ਬਹਾਦੁਰ' },
             { id: 'bhai-tara-singh-wan-di-jang', label: 'ਭਾਈ ਤਾਰਾ ਸਿੰਘ ਵਾਂ ਦਾ ਜੰਗ' },
@@ -88,47 +89,47 @@ export default function Home() {
             { id: 'gadar-lehar', label: 'ਗਦਰ ਲਹਿਰ' },
             { id: 'babbar-akali-lehar', label: 'ਬਬਰ ਅਕਾਲੀ ਲਹਿਰ' },
             { id: 'vishav-jangan', label: 'ਵਿਸ਼ਵ ਜੰਗਾਂ' },
-          ]
-        },
-        {
-          id: 'portrait',
-          label: 'Portrait',
-          type: 'category',
+      ]
+    },
+    {
+      id: 'portrait',
+      label: 'Portrait',
+      type: 'category',
       children: [
             { id: 'akali-phula-singh-ji', label: 'ਅਕਾਲੀ ਫੂਲਾ ਸਿੰਘ ਜੀ' },
             { id: 'sardar-hari-singh-nalwa', label: 'ਸਰਦਾਰ ਹਰੀ ਸਿੰਘ ਨਲਵਾ' },
             { id: 'maharani-jind-kaur', label: 'ਮਹਾਰਾਣੀ ਜਿੰਦ ਕੌਰ' },
             { id: 'kanwar-naunihal-singh', label: 'ਕੰਵਰ ਨੌਨਿਹਾਲ ਸਿੰਘ' },
             { id: 'maharaja-dalip-singh', label: 'ਮਹਾਰਾਜਾ ਦਲੀਪ ਸਿੰਘ' },
-          ]
-        },
-        {
-          id: 'gadar-lehar-portrait',
-          label: 'Gadar Lehar Portrait',
-          type: 'category',
-          children: [
+      ]
+    },
+    {
+      id: 'gadar-lehar-portrait',
+      label: 'Gadar Lehar Portrait',
+      type: 'category',
+      children: [
             { id: 'baba-sohan-singh-bhakna', label: 'ਬਾਬਾ ਸੋਹਣ ਸਿੰਘ ਭਕਨਾ' },
             { id: 'shahid-kartar-singh-sarabha', label: 'ਸ਼ਹੀਦ ਕਰਤਾਰ ਸਿੰਘ ਸਰਾਭਾ' },
             { id: 'bibi-gulab-kaur', label: 'ਬੀਬੀ ਗੁਲਾਬ ਕੌਰ' },
-          ]
-        },
-        {
-          id: 'babbar-akali-lehar-portrait',
-          label: 'Babbar Akali Lehar Portrait',
-          type: 'category',
-          children: [
+      ]
+    },
+    {
+      id: 'babbar-akali-lehar-portrait',
+      label: 'Babbar Akali Lehar Portrait',
+      type: 'category',
+      children: [
             { id: 'babbar-karam-singh', label: 'ਬਬਰ ਕਰਮ ਸਿੰਘ' },
             { id: 'babbar-ratan-singh', label: 'ਬਬਰ ਰਤਨ ਸਿੰਘ' },
             { id: 'babbar-kishan-singh-gargaj', label: 'ਬਬਰ ਕਿਸ਼ਨ ਸਿੰਘ ਗੜਗੱਜ' },
             { id: 'babbar-dhanna-singh-bahibal-kalan', label: 'ਬਬਰ ਧੰਨਾ ਸਿੰਘ ਬਹਿਬਲ ਕਲਾਂ' },
             { id: 'babbar-harbans-singh-sarhala', label: 'ਬਬਰ ਹਰਬੰਸ ਸਿੰਘ ਸਰਹਾਲਾ' },
-          ]
-        },
-        {
-          id: '20th-century-portraits',
-          label: '20th Century Portraits',
-          type: 'category',
-          children: [
+      ]
+    },
+    {
+      id: '20th-century-portraits',
+      label: '20th Century Portraits',
+      type: 'category',
+      children: [
             { id: 'bhai-vir-singh-ji', label: 'ਭਾਈ ਵੀਰ ਸਿੰਘ ਜੀ' },
             { id: 'pro-puran-singh', label: 'ਪ੍ਰੋ ਪੂਰਨ ਸਿੰਘ' },
             { id: 'gyani-ditt-singh', label: 'ਗਿਆਨੀ ਦਿੱਤ ਸਿੰਘ' },
@@ -138,37 +139,37 @@ export default function Home() {
             { id: 'karam-singh-historian', label: 'ਕਰਮ ਸਿੰਘ ਹਿਸਟੋਰੀਅਨ' },
             { id: 'bibi-harnam-kaur', label: 'ਬੀਬੀ ਹਰਨਾਮ ਕੌਰ' },
             { id: 'bhai-kahan-singh-nabha', label: 'ਭਾਈ ਕਾਹਨ ਸਿੰਘ ਨਾਭਾ' },
-          ]
-        },
-        {
-          id: 'modern-art-style-painting',
-          label: 'Modern Art Style Painting',
-          type: 'category',
-          children: [
+      ]
+    },
+    {
+      id: 'modern-art-style-painting',
+      label: 'Modern Art Style Painting',
+      type: 'category',
+      children: [
             { id: '1947-di-vand', label: '੧੯੪੭ ਦੀ ਵੰਡ' },
-          ]
-        },
-        {
-          id: 'teja-ghallughara',
-          label: 'ਤੀਜਾ ਘੱਲੂਘਾਰਾ',
-          type: 'category',
-          children: [
+      ]
+    },
+    {
+      id: 'teja-ghallughara',
+      label: 'ਤੀਜਾ ਘੱਲੂਘਾਰਾ',
+      type: 'category',
+      children: [
             { id: 'santan-di-shahadat', label: 'ਸੰਤਾਂ ਦੀ ਸ਼ਹਾਦਤ' },
-          ]
-        },
-        {
-          id: '1978',
-          label: '1978',
-          type: 'category',
-          children: [
+      ]
+    },
+    {
+      id: '1978',
+      label: '1978',
+      type: 'category',
+      children: [
             { id: 'bhai-fauja-singh-ji', label: 'ਭਾਈ ਫੌਜਾ ਸਿੰਘ ਜੀ' },
-          ]
-        },
-        {
-          id: 'teja-ghallughara-portrait',
-          label: 'ਤੀਜਾ ਘੱਲੂਘਾਰਾ Portrait',
-          type: 'category',
-          children: [
+      ]
+    },
+    {
+      id: 'teja-ghallughara-portrait',
+      label: 'ਤੀਜਾ ਘੱਲੂਘਾਰਾ Portrait',
+      type: 'category',
+      children: [
             { id: 'teja-ghallughara-june-1984', label: 'ਤੀਜਾ ਘੱਲੂਘਰਾ - ਜੂਨ 1984(ਅਕਾਲ ਤਖ਼ਤ ਸਾਹਿਬ ਮਾਡਲ)' },
             { id: 'sant-jarnail-singh-ji', label: 'ਸੰਤ ਜਰਨੈਲ ਸਿੰਘ ਜੀ' },
             { id: 'bhai-amrik-singh-ji', label: 'ਭਾਈ ਅਮਰੀਕ ਸਿੰਘ ਜੀ' },
@@ -176,48 +177,47 @@ export default function Home() {
             { id: 'baba-thahara-singh-ji', label: 'ਬਾਬਾ ਠਾਹਰਾ ਸਿੰਘ ਜੀ' },
             { id: 'bibi-upkar-kaur', label: 'ਬੀਬੀ ਉਪਕਾਰ ਕੌਰ' },
             { id: 'bhai-mehnga-singh-babar', label: 'ਭਾਈ ਮਹਿੰਗਾ ਸਿੰਘ ਬਬਰ' },
-          ]
-        },
-        {
-          id: 'sikh-genocide',
-          label: 'Sikh Genocide',
-          type: 'category',
-          children: [
+      ]
+    },
+    {
+      id: 'sikh-genocide',
+      label: 'Sikh Genocide',
+      type: 'category',
+      children: [
             { id: 'november-1984', label: 'ਨਵੰਬਰ ੧੯੮੪' },
-          ]
-        },
-        {
-          id: 'punjabi-culture',
-          label: 'Punjabi Culture',
-          type: 'category',
-          children: [
+      ]
+    },
+    {
+      id: 'punjabi-culture',
+      label: 'Punjabi Culture',
+      type: 'category',
+      children: [
             { id: 'purana-ghar', label: 'ਪੁਰਾਣਾ ਘਰ' },
             { id: 'stepu', label: 'ਸਟੈਪੂ' },
             { id: 'maan-di-kala', label: 'ਮਾਂ ਦੀ ਕਲਾ' },
             { id: 'dadi-pota', label: 'ਦਾਦੀ ਪੋਤਾ' },
-          ]
-        },
-        { id: 'kirtan', label: 'Kirtan' },
-        { id: 'map', label: 'Map' },
       ]
-    }
+    },
+    { id: 'kirtan', label: 'Kirtan' },
+    { id: 'map', label: 'Map' },
   ], []);
 
   // Flatten all sections for easy access
   const sections = useMemo(() => {
     const allSections: { id: string; label: string }[] = [];
-    categories.forEach(category => {
-      category.children.forEach(subCategory => {
-        if (subCategory.type === 'category') {
-          subCategory.children.forEach(section => {
-            allSections.push(section);
-          });
+
+    const collectSections = (items: NavItem[]) => {
+      items.forEach(item => {
+        if (item.children && item.children.length > 0) {
+          collectSections(item.children);
         } else {
-          // Direct section (no nested category)
-          allSections.push(subCategory);
+          allSections.push({ id: item.id, label: item.label });
         }
       });
-    });
+    };
+
+    collectSections(categories);
+
     return allSections;
   }, [categories]);
 
@@ -266,38 +266,6 @@ export default function Home() {
             const sectionIndex = sections.findIndex(section => section.id === sectionId);
             if (sectionIndex !== -1) {
               setCurrentSection(sectionIndex);
-              
-              // Auto-expand the category containing the current section
-              categories.forEach(mainCategory => {
-                mainCategory.children.forEach(subCategory => {
-                  if (subCategory.type === 'category') {
-                    const hasCurrentSection = subCategory.children.some(section => section.id === sectionId);
-                    if (hasCurrentSection) {
-                      setExpandedCategories(prev => {
-                        const newExpanded = [...prev];
-                        if (!newExpanded.includes(mainCategory.id)) {
-                          newExpanded.push(mainCategory.id);
-                        }
-                        if (!newExpanded.includes(subCategory.id)) {
-                          newExpanded.push(subCategory.id);
-                        }
-                        return newExpanded;
-                      });
-                    }
-                  } else {
-                    // Direct section (no nested category)
-                    if (subCategory.id === sectionId) {
-                      setExpandedCategories(prev => {
-                        const newExpanded = [...prev];
-                        if (!newExpanded.includes(mainCategory.id)) {
-                          newExpanded.push(mainCategory.id);
-                        }
-                        return newExpanded;
-                      });
-                    }
-                  }
-                });
-              });
             }
           }
         });
@@ -313,7 +281,7 @@ export default function Home() {
       return () => {
         observer.disconnect();
       };
-    }, [sections, categories]);
+    }, [sections]);
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
@@ -339,24 +307,6 @@ export default function Home() {
         const sectionIndex = sections.findIndex(s => s.id === hash);
         if (sectionIndex !== -1) {
           setCurrentSection(sectionIndex);
-          // Ensure the category is expanded
-          const section = sections[sectionIndex];
-          if (section) {
-            // Find which category this section belongs to
-            categories.forEach(category => {
-              if (category.children) {
-                const foundInCategory = category.children.some(child => 
-                  child.id === section.id || 
-                  (child.children && child.children.some(subChild => subChild.id === section.id))
-                );
-                if (foundInCategory) {
-                  setExpandedCategories(prev => 
-                    prev.includes(category.id) ? prev : [...prev, category.id]
-                  );
-                }
-              }
-            });
-          }
           // Scroll to the section after a short delay to ensure DOM is ready
           setTimeout(() => {
             const element = sectionRefs.current[hash];
@@ -377,21 +327,9 @@ export default function Home() {
     return () => {
       window.removeEventListener('hashchange', handleHashChange);
     };
-  }, [sections, categories]);
+  }, [sections]);
 
   // Removed unused functions: toggleMobileMenu and toggleSidebar
-
-  const toggleCategory = (categoryId: string) => {
-    setExpandedCategories(prev => 
-      prev.includes(categoryId) 
-        ? prev.filter(id => id !== categoryId)
-        : [...prev, categoryId]
-    );
-  };
-
-  const isCategoryExpanded = (categoryId: string) => {
-    return expandedCategories.includes(categoryId);
-  };
 
   const renderSection = (sectionId: string) => {
     const getImageUrl = (id: string) => {
@@ -1232,110 +1170,24 @@ export default function Home() {
           <div className={`w-full lg:w-[28%] lg:pr-4 ${
             isDarkMode ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'
           } border-b lg:border-b-0 lg:border-r`}>
-            <div className={`h-auto lg:h-screen overflow-y-auto lg:sticky lg:top-32 lg:top-36 pt-4 lg:pt-8 lg:pt-12 p-4 md:p-6 lg:p-8`}>
+            <div className={`h-auto lg:h-screen overflow-y-auto lg:sticky lg:top-36 pt-8 lg:pt-16 p-4 md:p-6 lg:p-8`}>
               <nav className="space-y-2 md:space-y-3">
-                {categories.map((mainCategory) => (
-                  <div key={mainCategory.id} className="space-y-1">
-                    {/* Main Category Header */}
-                    <button
-                      onClick={() => toggleCategory(mainCategory.id)}
-                      className={`w-full flex items-center justify-between px-3 md:px-4 py-2 md:py-3 rounded-md text-left transition-all duration-300 cursor-pointer ${
-                        isDarkMode
-                          ? 'text-gray-100 hover:bg-gray-800 hover:text-white'
-                          : 'text-gray-900 hover:bg-gray-50 hover:text-gray-900'
-                      }`}
-                    >
-                      <span className="font-semibold text-sm md:text-base leading-tight">{mainCategory.label}</span>
-                      <svg 
-                        className={`w-4 h-4 transition-transform duration-200 ${isCategoryExpanded(mainCategory.id) ? 'rotate-180' : ''}`}
-                        fill="none" 
-                        stroke="currentColor" 
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </button>
-
-                                         {/* Sub Categories */}
-                     {isCategoryExpanded(mainCategory.id) && (
-                       <div className="ml-2 md:ml-4 space-y-1 border-l-2 border-gray-300 dark:border-gray-600 pl-2 md:pl-3">
-                        {mainCategory.children.map((subCategory) => {
-                          // Check if this is a nested category or direct section
-                          if (subCategory.type === 'category') {
-                            return (
-                          <div key={subCategory.id} className="space-y-1">
-                            {/* Sub Category Header */}
-                            <button
-                              onClick={() => toggleCategory(subCategory.id)}
-                              className={`w-full flex items-center justify-between px-2 md:px-3 lg:px-4 py-2 md:py-3 rounded-md text-left transition-all duration-300 cursor-pointer ${
-                                isDarkMode
-                                  ? 'text-gray-200 hover:bg-gray-700 hover:text-gray-100'
-                                  : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
-                              }`}
-                            >
-                              <span className="font-medium text-xs md:text-sm leading-tight">{subCategory.label}</span>
-                              <svg 
-                                className={`w-3 h-3 transition-transform duration-200 ${isCategoryExpanded(subCategory.id) ? 'rotate-180' : ''}`}
-                                fill="none" 
-                                stroke="currentColor" 
-                                viewBox="0 0 24 24"
-                              >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                              </svg>
-                            </button>
-
-                                                         {/* Individual Sections */}
-                             {isCategoryExpanded(subCategory.id) && (
-                               <div className="ml-2 md:ml-4 space-y-1 border-l-2 border-gray-200 dark:border-gray-700 pl-2 md:pl-3">
-                                {subCategory.children.map((section) => {
-                                  const globalIndex = sections.findIndex(s => s.id === section.id);
-                                  return (
-                                    <button
-                                      key={section.id}
-                                      onClick={() => scrollToSection(globalIndex)}
-                                      className={`w-full flex items-center px-2 md:px-3 lg:px-4 py-2 md:py-3 rounded-md text-left transition-all duration-300 cursor-pointer ${
-                                        currentSection === globalIndex
-                                          ? isDarkMode 
-                                            ? 'bg-[#040d6a] text-white opacity-100 active-nav' 
-                                            : 'bg-[#040d6a] text-white opacity-100 active-nav'
-                                          : isDarkMode
-                                            ? 'text-gray-300 hover:bg-gray-800 hover:text-gray-100 opacity-80 hover:opacity-100'
-                                            : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 opacity-80 hover:opacity-100'
-                                      }`}
-                                    >
-                                      <span className="font-medium text-xs md:text-sm leading-tight">{section.label}</span>
-                                    </button>
-                                  );
-                                })}
-                              </div>
-                            )}
-                          </div>
-                            );
-                          } else {
-                            // Direct section (no nested category)
-                            const globalIndex = sections.findIndex(s => s.id === subCategory.id);
-                            return (
-                              <button
-                                key={subCategory.id}
-                                onClick={() => scrollToSection(globalIndex)}
-                                className={`w-full flex items-center px-2 md:px-3 lg:px-4 py-2 md:py-3 rounded-md text-left transition-all duration-300 cursor-pointer ${
-                                  currentSection === globalIndex
-                                    ? isDarkMode 
-                                      ? 'bg-[#040d6a] text-white opacity-100 active-nav' 
-                                      : 'bg-[#040d6a] text-white opacity-100 active-nav'
-                                    : isDarkMode
-                                      ? 'text-gray-300 hover:bg-gray-800 hover:text-gray-100 opacity-80 hover:opacity-100'
-                                      : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 opacity-80 hover:opacity-100'
-                                }`}
-                              >
-                                <span className="font-medium text-xs md:text-sm leading-tight">{subCategory.label}</span>
-                              </button>
-                            );
-                          }
-                        })}
-                      </div>
-                    )}
-                  </div>
+                {sections.map((section, index) => (
+                  <button
+                    key={section.id}
+                    onClick={() => scrollToSection(index)}
+                    className={`w-full flex items-center px-3 md:px-4 py-2 md:py-3 rounded-md text-left transition-all duration-300 cursor-pointer ${
+                      currentSection === index
+                        ? isDarkMode
+                          ? 'bg-[#040d6a] text-white opacity-100 active-nav'
+                          : 'bg-[#040d6a] text-white opacity-100 active-nav'
+                        : isDarkMode
+                          ? 'text-gray-300 hover:bg-gray-800 hover:text-gray-100 opacity-80 hover:opacity-100'
+                          : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 opacity-80 hover:opacity-100'
+                    }`}
+                  >
+                    <span className="font-[550] text-xs md:text-sm leading-tight">{section.label}</span>
+                  </button>
                 ))}
               </nav>
 
