@@ -798,100 +798,115 @@ export default function Home() {
           <p class="mb-4">Maps help visitors understand the geographical spread of Sikh influence and the locations of important historical events and sacred sites.</p>
         `,
         // Foundation subsections
-        'pritham-bhagauti-simri-kai': `<p class="mb-4">ਪ੍ਰਿਥਮ ਭਗਉਤੀ ਸਿਮਰਿ ਕੈ ਗੁਰ ਨਾਨਕ ਲਈਂ ਧਿਆਇ ॥ ਫਿਰਿ ਅੰਗਦ ਗੁਰ ਤੇ ਅਮਰਦਾਸੁ ਰਾਮਦਾਸੈ ਹੋਈਂ ਸਹਾਇ ॥ ਅਰਜਨ ਹਰਿਗੋਬਿੰਦ ਨੋ ਸਿਮਰੌ ਸ੍ਰੀ ਹਰਿਰਾਇ ॥ ਸ੍ਰੀ ਹਰਿਕ਼੍ਰਿਸਨ ਧਿਆਈਐ ਜਿਸੁ ਡਿਠੈ ਸਭੁ ਦੁਖੁ ਜਾਇ ॥ ਤੇਗ ਬਹਾਦਰ ਸਿਮਰਿਐ ਘਰਿ ਨਉ ਨਿਧਿ ਆਵੈ ਧਾਇ ॥ ਸਭ ਥਾਈਂ ਹੋਇ ਸਹਾਇ ॥੧॥</p>`,
+        'pritham-bhagauti-simri-kai': `
+          <p class="mb-4">First, remembering the Primal Power (Bhagauti), meditate on Guru Nanak. Then, may Guru Angad, Guru Amar Das, and Guru Ram Das grant their aid. I remember Guru Arjan and Guru Hargobind, and Sri Har Rai. Meditate on Sri Har Krishan, at whose very sight all sorrow departs. Remembering Guru Tegh Bahadur, the nine treasures hasten into the home. May help be present everywhere. (1) May the Tenth Sovereign, Sahib Sri Guru Gobind Singh Ji, be our support in all places.</p>
+        `,
         'nam-japo': `
-          <p class="mb-4">ਸਿੱਖ ਧਰਮ ਵਿੱਚ "ਨਾਮ ਜਪੋ" ਬੁਨਿਆਦੀ ਸਿਧਾਂਤ ਹੈ। 'ਨਾਮ ਜਪੋ' ਨੂੰ ਸਮਝਣ ਵਾਸਤੇ ਪਹਿਲਾਂ ਇਹ ਜਾਣਨਾ ਜ਼ਰੂਰੀ ਹੈ ਕਿ ਗੁਰਮਤਿ ਅਨੁਸਾਰ ਨਾਮ ਕੀ ਹੈ? 'ਅਧਿਆਤਮਿਕ ਸੱਤਾ ਵਿੱਚ 'ਨਾਮ' 'ਪਰਮ ਸੱਤਾ' ਦਾ ਸੂਚਕ ਹੈ। 'ਨਾਮ' ਦਾ ਹੀ ਸਾਰਾ ਪਸਾਰਾ ਹੈ ਤੇ 'ਨਾਮ' ਹੀ ਸ੍ਰਿਸ਼ਟੀ ਨੂੰ ਚਲਾ ਰਿਹਾ ਹੈ।</p>
+          <p class="mb-4">In the Sikh path, "Naam Japo"—to remember and repeat the Divine Name—is a foundational principle. To grasp it, we first ask: What is "Naam" in Gurmat? In the spiritual order, "Naam" signifies the Supreme Reality. All the expanse is of the Naam, and by Naam the creation moves. The Mahan Kosh (Great Lexicon) notes under "Naam" that it is the Creator and the cognitive word of His Command (Hukam).</p>
           
-          <p class="mb-4">ਮਹਾਨ ਕੋਸ਼ ਵਿੱਚ 'ਨਾਮ' ਦੇ ਇੰਦਰਾਜ ਹੇਠ ਦਰਜ ਹੈ ਕਿ 'ਨਾਮ' ਕਰਤਾਰ ਅਤੇ ਉਸ ਦਾ ਹੁਕਮ ਬੋਧਿਕ ਸ਼ਬਦ ਹੈ। ਗੁਰੂ ਸਾਹਿਬਾਨ ਨੇ ਅਧਿਆਤਮਿਕ ਵਿਕਾਸ ਅਤੇ ਸਵੈ-ਬੋਧ ਲਈ ਮਨੁੱਖ ਨੂੰ ਨਾਮ ਜਪਣ ਦਾ ਉਪਦੇਸ਼ ਦਿੱਤਾ ਜਿਸ ਵਿੱਚ ਪਰਮਾਤਮਾ ਦੇ ਨਾਮ ਅਤੇ ਗੁਣਾਂ ਨੂੰ ਲਗਾਤਾਰ ਸਿਮ੍ਰਿਤੀ 'ਚ ਰੱਖਣਾ ਹੈ। ਗੁਰਮਤਿ ਅਨੁਸਾਰ ਨਾਮ ਸਿਰਫ਼ ਅਕਾਲ ਪੁਰਖ ਦਾ ਸਿਮਰਨਾ ਹੈ। ਗੁਰਬਾਣੀ ਅੰਦਰ ਨਾਮ ਸਮੋਇਆ ਹੋਇਆ ਹੈ, ਜਿਸ ਨੂੰ ਜਪ ਕੇ 'ਨਾਮੀ' ਭਾਵ 'ਅਕਾਲ ਪੁਰਖ' ਤੱਕ ਪਹੁੰਚਿਆ ਜਾ ਸਕਦਾ ਹੈ।</p>
+          <p class="mb-4">The Gurus instructed humankind to remember the Naam for spiritual growth and self-realization—keeping the Name and qualities of the Divine constantly alive in one's awareness. In Gurmat, Naam is remembrance of the Timeless One alone. The Gurbani contains the Naam; by meditating upon it, one can reach the Naami—the Akal Purakh Himself.</p>
           
-          <p class="mb-4">ਗੁਰਬਾਣੀ ਵਿੱਚ ਨਾਮ ਜਪਣ ਤੋਂ ਪਹਿਲਾਂ ਇਸ ਨੂੰ ਜਾਣਨ ਦਾ ਉਪਦੇਸ਼ ਕੀਤਾ ਮਿਲਦਾ ਹੈ-<br/>
-          ਪੜਹਿ ਮਨਮੁਖ ਪਰੁ ਬਿਧਿ ਨਹੀ ਜਾਨਾ ॥ ਨਾਮੁ ਨ ਬੂਝਹਿ ਭਰਮਿ ਭੁਲਾਨਾ ॥<br/>
-          (ਮਾਰੂ ਮ:੧, ਅੰਗ ੧੦੩੨)</p>
+          <p class="mb-4">Before reciting, Gurbani first teaches us to recognize the Naam:<br/>
+          "They read, but the self-willed do not know the way;<br/>
+          they do not understand the Naam, and wander in delusion."<br/>
+          (Marū, Guru Nanak, ang 1032)</p>
           
-          <p class="mb-4">ਸ੍ਰੀ ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਫ਼ਰਮਾਉਂਦੇ ਹਨ ਕਿ ਹੇ ਜੋਗੀ! ਧਰਮ ਦੀ ਵਾਰਤਾ ਦਾ ਨਿਚੋੜ ਇਹੀ ਹੈ ਕਿ ਨਾਮ ਦੇ ਬਿਨਾਂ ਜੋਗ ਕਮਾਇਆ ਹੀ ਨਹੀਂ ਜਾ ਸਕਦਾ-<br/>
-          ਸਬਦੈ ਕਾ ਨਿਬੇੜਾ ਸੁਣਿ ਤੂ ਅਉਧੂ ਬਿਨੁ ਨਾਵੈ ਜੋਗੁ ਨ ਹੋਈ॥<br/>
-          (ਰਾਗੁ ਰਾਮਕਲੀ, ਅੰਗ ੯੪੬)</p>
+          <p class="mb-4">Sri Guru Nanak Dev Ji says to the yogi: the essence of religious discourse is this—without Naam there is no Yoga:<br/>
+          "Hear, O ascetic, the decision of the Word:<br/>
+          without the Name, there is no yoga."<br/>
+          (Rag Ramkalī, ang 946)</p>
           
-          <p class="mb-4">ਸਿੱਖ ਧਰਮ ਵਿੱਚ ਨਾਮ ਜਪਣ ਦਾ ਭਾਵ ਹਰ ਵੇਲੇ ਪਰਮਾਤਮਾ ਨੂੰ ਹਾਜ਼ਰ-ਨਾਜ਼ਰ ਸਮਝਣਾ ਹੈ। ਪਰਮਾਤਮਾ ਨੂੰ ਸਰਵ-ਵਿਆਪਕ, ਅਗੰਮ-ਅਗੋਚਰ, ਸਰਵ-ਸ਼ਕਤੀਮਾਨ, ਕਾਦਰ, ਕਰਤਾ, ਕਰੀਮ, ਰਹੀਮ ਸਮਝ ਕੇ ਉਸ ਦੀ ਰਜ਼ਾ ਵਿੱਚ ਚੱਲਣਾ ਹੈ। ਆਪਣੇ ਜੀਵਨ ਨੂੰ ਗੁਰੂ ਦੀ ਸਿੱਖਿਆ ਮੁਤਾਬਿਕ ਢਾਲਣਾ, ਕਰਤੇ ਦੀ ਸਿਫ਼ਤ-ਸਾਲਾਹ ਕਰਨੀ ਅਤੇ ਗੁਰੂ ਜੀ ਦੇ ਹੁਕਮ ਅਨੁਸਾਰ ਜੀਵਨ ਜਿਊਂਣਾ ਹੈ।</p>
+          <p class="mb-4">In Sikhi, meditating on the Naam means to remain ever aware of the Divine's presence—seeing the One as pervading all, unfathomable, all-powerful, merciful and just, and walking in His Will. One shapes life by the Guru's teachings, sings the Creator's praise, and lives by the Guru's command.</p>
           
-          <p class="mb-4">ਗੁਰਮਤਿ ਵਿੱਚ ਨਾਮ ਜਪਣ ਦਾ ਭਾਵ ਇਹ ਨਹੀਂ ਕਿ ਦੁਨੀਆ ਦੀ ਕਾਰ-ਵਿਹਾਰ ਛੱਡ ਕੇ ਜੋਗੀਆਂ ਜਾਂ ਸਿੱਧਾਂ ਵਾਂਗ ਪਹਾੜਾਂ ਦੀਆਂ ਕੰਦਰਾਂ ਜਾਂ ਗੁਫਾਵਾਂ 'ਚ ਬੈਠ ਕੇ ਨਾਮ ਦਾ ਰਟਨ ਕੀਤਾ ਜਾਵੇ ਤੇ ਸਰੀਰ ਨੂੰ ਤਸੀਹੇ ਦਿੱਤੇ ਜਾਣ। ਸਗੋਂ ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਨੇ "ਬਨ ਸੇ ਸਦਨ ਸਭੈ ਕਰਿ ਸਮਝਹੁ ਮਨ ਹੀ ਮਾਹਿ ਉਦਾਸਾ" ਰਾਹੀਂ ਮਨੁੱਖ ਨੂੰ ਸਮਾਜ ਵਿੱਚ ਵਿਚਰਦਿਆਂ 'ਨਾਮ ਜਪਣ' ਦਾ ਉਪਦੇਸ਼ ਦਿੱਤਾ, ਜਿਸ ਨਾਲ "ਹਸੰਦਿਆ ਖੇਲੰਦਿਆ ਪੈਨੰਦਿਆ ਖਾਵੰਦਿਆ" ਹੀ ਮੁਕਤ ਪਦ ਪ੍ਰਾਪਤ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।</p>
+          <p class="mb-4">Naam Japo does not mean abandoning the world and retreating to caves like ascetics to mutter the Name while torturing the body. Rather, Guru Sahib teaches:<br/>
+          "Understand forests and homes as one;<br/>
+          keep detachment in the mind itself."<br/>
+          Thus, moving within society, one should practice Naam so that "laughing, playing, dressing, eating" one receives liberation.</p>
           
-          <p class="mb-4">ਨਾਮ ਸਿਮਰਨ ਨਾਲ ਮਨੁੱਖ ਅਧਿਆਤਮਿਕ ਅਨੁਸ਼ਾਸਨ 'ਚ ਰਹਿੰਦਿਆਂ ਅੰਦਰੂਨੀ ਸ਼ਾਂਤੀ ਦਾ ਅਨੁਭਵ ਕਰਕੇ ਸੰਸਾਰਿਕ ਮੋਹ ਤੋਂ ਨਿਰਲੇਪ ਰਹਿ ਸਕਦਾ ਹੈ। ਪਰਮਾਤਮਾ ਦੇ ਗੁਣ ਗਾਇਣ ਕਰਨ ਨਾਲ ਮਨ ਅੰਦਰ ਗਿਆਨ ਦਾ ਪ੍ਰਗਾਸ ਹੁੰਦਾ ਹੈ ਤੇ ਹਿਰਦੇ ਅੰਦਰ ਸ਼ਬਦ-ਗੁਰੂ ਦਾ ਵਾਸਾ ਹੋ ਜਾਂਦਾ ਹੈ। ਜਦ ਸ਼ਬਦ-ਗੁਰੂ ਦਾ ਪ੍ਰਕਾਸ਼ ਹਿਰਦੇ ਵਿੱਚ ਹੁੰਦਾ ਹੈ ਤਾਂ ਉਸ ਨਾਲ ਚੰਚਲ ਮਨ ਨੂੰ ਸਥਿਰਤਾ ਦੀ ਦਾਤ ਪ੍ਰਾਪਤ ਹੁੰਦੀ ਹੈ। ਇਸ ਲਈ 'ਨਾਮ ਜਪੋ, ਕਿਰਤ ਕਰੋ, ਵੰਡ ਛਕੋ' ਦਾ ਤ੍ਰੈ-ਸੂਤਰੀ ਸਿਧਾਂਤ ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਨੇ ਬਖ਼ਸ਼ਿਆ ਹੈ ਜਿਸ ਨਾਲ ਸੰਸਾਰਿਕ ਨਿਰਬਾਹ ਵੀ ਚੱਲਦਾ ਹੈ ਤੇ ਮਨੁੱਖ ਦਾ ਸੰਸਾਰ 'ਤੇ ਆਉਣ ਦਾ ਮਨੋਰਥ ਵੀ ਸੰਪੂਰਨ ਹੁੰਦਾ ਹੈ।</p>
+          <p class="mb-4">Through Naam Simran, a person, disciplined in spirit, tastes inward peace, remaining untouched by worldly attachment. Singing the Lord's virtues lights wisdom within; the Shabad-Guru comes to dwell in the heart. When the Shabad shines there, the restless mind receives the gift of steadiness. For this reason, the Gurus blessed the threefold path: "Naam Japo, Kirat Karo, Vand Chhako"—so that worldly life proceeds rightly and the soul's purpose in coming to this world is fulfilled.</p>
         `,
         'kirt-karo': `
-          <p class="mb-4">ਸ੍ਰੀ ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਦੇ ਸਮਕਾਲੀ ਸਮੇਂ ਸਮਾਜਿਕ, ਧਾਰਮਿਕ, ਰਾਜਨੀਤਿਕ ਅਤੇ ਆਰਥਿਕ ਬਣਤਰ ਦਾ ਤਾਣਾ-ਬਾਣਾ ਉਲਝਿਆ ਹੋਇਆ ਸੀ। ਧਾਰਮਿਕ ਆਗੂਆਂ ਨੇ ਧਰਮ ਨੂੰ ਏਨਾ ਪੀਡਾ ਕਰ ਛੱਡਿਆ ਸੀ ਕਿ ਆਮ ਜਨਤਾ ਉਸ ਉਤੇ ਚੱਲ ਨਹੀਂ ਸੀ ਸਕਦੀ ਅਤੇ ਉਹ ਖ਼ੁਦ ਕੁਰਾਹੇ ਪਏ ਹੋਏ ਸਨ। ਰਾਜਨੀਤਿਕ ਰਸੂਖ਼ ਰੱਖਦੇ ਰਜਵਾੜੇ ਵੀ ਆਪਣੇ ਰਾਜ-ਧਰਮ ਤੋਂ ਲਾਂਭੇ ਹੋਏ ਪਏ ਸਨ। ਸ੍ਰੀ ਗੁਰੂ ਨਾਨਕ ਸਾਹਿਬ ਨੇ ਆਪਣੇ ੶ਬਦਾਂ ਵਿਚ ਬਿਆਨ ਕੀਤਾ ਹੈ "ਸਰਮੁ ਧਰਮੁ ਦੁਇ ਛਪਿ ਖਲੋਏ ਕੂੜੁ ਫਿਰੈ ਪਰਧਾਨੁ ਵੇ ਲਾਲੋ"। ਜਗਤ ਦੀ ਹਨੇਰ-ਗਰਦੀ ਨੂੰ ਠੱਲ੍ਹ ਪਾਉਣ ਲਈ ਗੁਰੂ ਸਾਹਿਬ ਨੇ ਬੀੜ੍ਹਾ ਚੁਕਿਆ, ਜਿਸ ਨੂੰ ਭਾਈ ਗੁਰਦਾਸ ਜੀ ਨੇ "ਚੜ੍ਹਿਆ ਸੋਧਣਿ ਧਰਤਿ ਲੁਕਾਈ" ਦੇ ੶ਬਦਾਂ ਰਾਹੀਂ ਦਰਸਾਇਆ ਹੈ।</p>
+          <p class="mb-4">In Guru Nanak's time, society's religious, political, and economic fabric was tangled. Religious leaders had twisted faith so badly that ordinary people couldn't follow it; rulers with influence strayed from rightful duty. Guru Sahib says:<br/>
+          "Modesty and righteousness stood hidden away; falsehood paraded as leader, O Lalo."</p>
           
-          <p class="mb-4">ਸ੍ਰੀ ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਨੇ ਲੁਕਾਈ ਨੂੰ ਜੋ ਸੰਕਲਪ ਅਤੇ ਸਿਧਾਂਤ ਦਿਤੇ ਉਨ੍ਹਾਂ ਉਤੇ ਚਲਣਾ ਆਮ ਜਨਤਾ ਲਈ ਬੜਾ ਸੁਖਾਲਾ ਸੀ। ਸਮੁੱਚੀ ਮਾਨਵਤਾ ਦੀ ਭਲਾਈ ਲਈ ਕਿਰਤ ਕਰੋ, ਨਾਮ ਜਪੋ ਅਤੇ ਵੰਡ ਛਕੋ ਦਾ ਤਿੰਨ-ਸੂਤਰੀ ਸਿਧਾਂਤ ਲਾਹੇਵੰਦਾ ਸਾਬਤ ਹੋਇਆ। ਇਹ ਤਿੰਨੇ ਸੰਕਲਪ 'ਘਾਲਿ ਖਾਇ ਕਿਛੁ ਹਥਹੁ ਦੇਇ' ਦਾ ਅਮਲੀ ਰੂਪ ਹਨ। ਸ੍ਰੀ ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਬਾਣੀ ਵਿਚ ਜ਼ਿਕਰ ਕਰਦੇ ਹਨ-<br/>
-          ਇਕਿ ਗਿਰਹੀ ਸੇਵਕ ਸਾਧਿਕਾ ਗੁਰਮਤੀ ਲਾਗੇ॥ ਨਾਮੁ ਦਾਨੁ ਇਸਨਾਨੁ ਦ੍ਰਿੜੁ ਹਰਿ ਭਗਤਿ ਸੁ ਜਾਗੇ॥<br/>
-          (ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ, ਅੰਗ 418)</p>
+          <p class="mb-4">To clear that darkness, the Guru took up the mission—described by Bhai Gurdas Ji as:<br/>
+          "He rose to transform a hidden earth."</p>
           
-          <p class="mb-4">ਉਪਰੋਕਤ ਪਹਿਲੀ ਪੰਗਤੀ ਵਿਚ ਗੁਰੂ ਸਾਹਿਬ 'ਗਿਰਹੀ' ਰਾਹੀਂ ਕਿਰਤ ਵੱਲ ਇਸ਼ਾਰਾ ਕਰਦੇ ਹਨ। ਵੰਡ ਕੇ ਛਕਣ ਦੇ ਪਿਛੋਕੜ ਵਿਚ ਕਿਰਤ ਦਾ ਸੰਕਲਪ ਕਾਰਜਸ਼ੀਲ ਹੈ। ਇਕ ਕਿਰਤੀ ਗੁਰਸਿਖ ਹੀ ਕਿਰਤ ਰਾਹੀਂ ਜੁਟਾਏ ਪਦਾਰਥ ਵੰਡ ਕੇ ਛਕ ਸਕਦਾ ਹੈ। ਸ੍ਰੀ ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਨੇ ਪਰਮਾਤਮਾ ਦੇ ਕਿਰਤੀ ਸੁਭਾਅ ਨੂੰ ਅਨੁਭਵ ਕਰਦਿਆ 'ਮੂਲ ਮੰਤਰ' ਵਿੱਚ ਅਕਾਲ ਪੁਰਖ ਨੂੰ 'ਕਰਤਾ' ਬਿਆਨ ਕੀਤਾ ਹੈ। ਮਨੁੱਖ ਪਰਾਤਮਾ ਦੀ ਅੰਸ਼ ਹੈ, ਇਸ ਲਈ ਕਿਰਤ ਕਰਨੀ ਮਨੁੱਖ ਦਾ ਬੁਨਿਆਦੀ ਫਰਜ਼ ਹੈ।</p>
+          <p class="mb-4">Guru Nanak's principles were simple and doable for all. For the welfare of all humanity, the threefold doctrine—Kirat Karo (earn by honest labor), Naam Japo (remember the Name), Vand Chhako (share what you have)—proved immensely fruitful. These three are the lived expression of:<br/>
+          "Earn by toil, and out of your hands give."</p>
           
-          <p class="mb-4">ਗੁਰਮਤਿ ਅਨੁਸਾਰ ਮਨੁੱਖ ਨੇ ਦਸਾਂ ਨਹੁੰਆਂ ਦੀ ਕਿਰਤ ਕਰਨੀ ਹੈ, ਜਿਸ ਵਿੱਚ ਧੋਖਾ, ਫਰੇਬ, ਬੇਈਮਾਨੀ ਨਾ ਹੋਵੇ ਸਗੋਂ ਇਮਾਨਦਾਰੀ ਤੇ ਸੱਚੀ ਭਾਵਨਾ ਹੋਵੇ। ਆਪਣੇ ਸੁਆਰਥੀ ਹਿੱਤਾਂ ਦੀ ਪੂਰਤੀ ਲਈ ਬੇਈਮਾਨ ਢੰਗ ਤਰੀਕਿਆਂ ਦੀ ਕਿਰਤ ਕਰਕੇ ਇਕੱਤਰ ਕੀਤਾ ਧਨ ਕਦੇ ਵੀ ਮਨੁੱਖ ਦੇ ਜੀਵਨ ਲਈ ਫਲਦਾਇਕ ਨਹੀਂ ਹੋ ਸਕਦਾ। ਗੁਰਬਾਣੀ ਦਾ ਫਰਮਾਣ ਹੈ:<br/>
-          ਪਾਪਾ ਬਾਝਹੁ ਹੋਵੈ ਨਾਹੀ ਮੁਇਆ ਸਾਥਿ ਨ ਜਾਈ।।<br/>
-          (ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ, ਅੰਗ 417)</p>
+          <p class="mb-4">Guru Nanak says:<br/>
+          "Some, as householders, serve and practice; through the Guru's wisdom they are attached.<br/>
+          They fix Naam, charity, and cleansing within, and awake to the Lord's devotion."<br/>
+          (Sri Guru Granth Sahib, ang 418)</p>
           
-          <p class="mb-4">ਸ੍ਰੀ ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਨੇ ਦੇਸ਼-ਵਿਦੇਸ਼ ਦੀਆਂ ਪ੍ਰਚਾਰ ਫੇਰੀਆਂ ਦੌਰਾਨ ਸੱਚੀ ਕਿਰਤ ਕਰਨ ਦਾ ਗੁਰਮਤਿ ਸਿਧਾਂਤ ਲੋਕਾਈ ਨੂੰ ਦ੍ਰਿੜ ਕਰਵਾਇਆ। ਗੁਰੂ ਸਾਹਿਬ ਨੇ ਪ੍ਰਚਾਰ ਫੇਰੀਆ ਉਪਰੰਤ ਕਰਤਾਰਪੁਰ ਸਾਹਿਬ ਨਗਰ ਦੀ ਸਥਾਪਨਾ ਕਰਕੇ ਇਸ ਨੂੰ ਵਿਵਹਾਰਿਕ ਸਰੂਪ ਪ੍ਰਦਾਨ ਕੀਤਾ। ਗੁਰੂ ਸਾਹਿਬ ਦੇ ਜੀਵਨ ਇਤਿਹਾਸ ਵਿੱਚੋਂ ਭਾਈ ਲਾਲੋ ਜੀ ਅਤੇ ਚੌਧਰੀ ਮਲਕ ਭਾਗੋ ਦੀ ਸਾਖੀ ਸੱਚੀ ਕਿਰਤ ਕਰਨ ਲਈ ਗੁਰਸਿੱਖਾਂ ਨੂੰ ਸਿੱਖਿਆਂ ਪ੍ਰਦਾਨ ਕਰਦੀ ਹੈ।</p>
+          <p class="mb-4">"Kirat"—honest livelihood—is the ground that makes sharing possible. Only one who earns righteously can share righteously. In the Mul Mantar, feeling the Creator's working nature, Guru Nanak calls the Timeless One "Karta"—the Doer. Being a spark of the Divine, working is the human being's basic duty. The Sikh is to work with both hands—free of deceit or fraud—marked by honesty and sincere feeling. Wealth gathered by dishonest means can never bear true fruit:<br/>
+          "Without sins, one cannot live;<br/>
+          and nothing goes along with you when you die."<br/>
+          (Sri Guru Granth Sahib, ang 417)</p>
           
-          <p class="mb-4">ਗੁਰਮਤਿ ਅਨੁਸਾਰ ਮਨੁੱਖ ਆਪਣੇ ਨਿਤਾਪ੍ਰਤੀ ਕਾਰ ਵਿਹਾਰ ਦੌਰਾਨ ਸੱਚੀ ਕਿਰਤ ਕਰਦਾ ਹੋਇਆ ਪਰਮਾਤਮਾ ਨੂੰ ਯਾਦ ਰੱਖਦਾ ਹੈ, ਜੋ ਮਨੁੱਖੀ ਜੀਵਨ ਦਾ ਮੁਖ ਮਨੋਰਥ ਹੈ। ਗੁਰਬਾਣੀ ਵਿੱਚ ਭਗਤ ਕਬੀਰ ਜੀ ਦੇ ਸਲੋਕਾਂ ਅਧੀਨ ਭਗਤ ਨਾਮਦੇਵ ਜੀ ਅਤੇ ਭਗਤ ਤ੍ਰਿਲੋਚਨ ਜੀ ਦੀ ਵਾਰਤਾਲਾਪ ਗੁਰਸਿੱਖ ਨੂੰ ਸੱਚੀ ਕਿਰਤ ਕਰਦਿਆਂ ਨਾਮ ਜਪਣ ਲਈ ਪ੍ਰਪੱਕ ਕਰਦੀ ਹੈ:<br/>
-          ਨਾਮਾ ਮਾਇਆ ਮੋਹਿਆ ਕਹੈ ਤਿਲੋਚਨਾ ਮੀਤ।। ਕਾਹੇ ਛੀਪਹੁ ਛਾਇਲੈ ਰਾਮ ਨ ਲਾਵਹੁ ਚੀਤੁ।।<br/>
-          ਨਾਮਾ ਕਹੈ ਤਿਲੋਚਨਾ ਮੁਖ ਤੇ ਰਾਮੁ ਸੰਮਾਲਿ।। ਹਾਥ ਪਾਉ ਕਰਿ ਕਾਮੁ ਸਭੁ ਚੀਤੁ ਨਿਰੰਜਨ ਨਾਲਿ।।<br/>
-          (ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ, ਅੰਗ 1375)</p>
+          <p class="mb-4">On his missionary journeys, Guru Nanak established this Gurmat principle of honest earning, and then gave it practical form by founding Kartarpur Sahib. The well-known account of Bhai Lalo and Chaudhary Malik Bhago teaches the Sikhs the worth of truthful work. In daily life, Gurmat tells us to remember the Divine while working, which is the central aim of life. The dialogue in Gurbani involving Bhagat Namdev Ji and Bhagat Trilochan Ji strengthens the Sikh to remember the Lord while doing one's tasks:</p>
           
-          <p class="mb-4">ਇਸ ਪ੍ਰਕਾਰ ਮਾਨਵਤਾ ਦੀ ਤਰੱਕੀ ਲਈ ਸੱਚੀ ਕਿਰਤ ਕਰਨੀ ਚਾਹੀਦੀ ਹੈ। ਕਿਰਤ ਮਨੁੱਖ ਨੂੰ ਤੰਦਰੁਸਤ ਅਤੇ ਤਕੜਾ ਰੱਖਦੀ ਹੈ। ਮਨੁੱਖ ਪਰਮਾਤਮਾ ਦੀ ਕੁਦਰਤ ਨੂੰ ਵੱਧ ਸਮਝਦਾ ਹੈ। ਮਨੁੱਖ ਨੂੰ ਆਲਸੀ ਅਤੇ ਨਿਕੰਮਾ ਬਿਲਕੁਲ ਨਹੀਂ ਹੋਣਾ ਚਾਹੀਦਾ, ਹਮੇਸ਼ਾ ਉਦਮਸ਼ੀਲ ਰਹਿਣਾ ਚਾਹੀਦਾ ਹੈ।</p>
+          <p class="mb-4">Trilochan says: "Nama, friend, you are entangled in Maya—<br/>
+          Why do you patch leather? Why not fix your mind on the Lord?"<br/>
+          Namdev replies: "Trilochan, keep God upon your lips—<br/>
+          with hands and feet do all your work, but keep your consciousness with the Immaculate One."<br/>
+          (Sri Guru Granth Sahib, ang 1375)</p>
           
-          <p class="mb-4">ਉਦਮੁ ਕਰੇਦਿਆ ਜੀਉ ਤੂੰ ਕਮਾਵਦਿਆ ਸੁਖ ਭੁੰਚੁ।।<br/>
-          ਧਿਆਇਦਿਆ ਤੂੰ ਪ੍ਰਭੂ ਮਿਲੁ ਨਾਨਕ ਉਤਰੀ ਚਿੰਤੁ।।<br/>
-          (ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ, ਅੰਗ 522)<br/><br/>
-          ਹਥੀ ਕਾਰ ਕਮਾਵਣੀ ਪੈਰੀ ਚਲਿ ਸਤਿਸੰਗਿ ਮਿਲੇਹੀ।।<br/>
-          ਕਿਰਤਿ ਵਿਰਤਿ ਕਰਿ ਧਰਮ ਦੀ ਖਟਿ ਖਵਾਲਣੁ ਕਾਰਿ ਕਰੇਹੀ।।<br/>
-          (ਵਾਰਾਂ ਭਾਈ ਗੁਰਦਾਸ ਜੀ, ਵਾਰ-1, ਪਉੜੀ 3)</p>
+          <p class="mb-4">So for human progress, true work must be done. Work keeps one healthy and strong, deepens one's grasp of the Creator's play, and wards off sloth. Ever be industrious:<br/>
+          "Make effort, O soul, and enjoy the comfort you earn;<br/>
+          meditating on the Lord, you will meet Him, O Nanak, and anxiety will depart."<br/>
+          (Sri Guru Granth Sahib, ang 522)</p>
+          
+          <p class="mb-4">"Work with your hands; walk with your feet to the holy congregation.<br/>
+          Earn by righteous labor and share to nourish righteousness."<br/>
+          (Varan Bhai Gurdas Ji, Var 1, Pauṛī 3)</p>
         `,
         'vand-chhako': `
-          <p class="mb-4">ਵੰਡ ਛਕਣ ਦਾ ਸੰਕਲਪ ਗੁਰਮਤਿ ਦੇ ਤਿੰਨ ਸੂਤਰੀ ਸਿਧਾਂਤ (ਨਾਮ ਜਪੋ, ਕਿਰਤ ਕਰੋ, ਵੰਡ ਛਕੋ) ਵਿਚ ਸਮਿਲਿਤ ਹੈ। ਮਹਾਨ ਕੋਸ਼ ਵਿਚ ਵੰਡ ਛਕਣ ਬਾਰੇ ਇਕਠਾ ਇੰਦਰਾਜ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੁੰਦਾ ਪਰ 'ਵੰਡ' ਅਤੇ 'ਛਕਣਾ' ਵੱਖਰੇ-ਵੱਖਰੇ ਰੂਪ ਵਿਚ ਮਿਲਦੇ ਹਨ। 'ਵੰਡ' ਸ਼ਬਦ ਦੇ ਅਰਥ ਹਨ- ਅਲੱਗ ਕਰਨਾ, ਹਿੱਸਾ ਕਰਨਾ, ਢੱਕਣਾ, ਹਿੱਸਾ ਅਤੇ ਆਟਾ ਛਾਣਨ ਤੋਂ ਛਾਣਨੀ ਵਿਚ ਬਚਿਆ ਸੂਹੜਾ ਆਦਿ ਮਿਲਦੇ ਹਨ। ਛਕਣਾ ਦੇ ਅਰਥ- ਖਾਣਾ, ਭੋਜਨ ਕਰਨਾ ਅਤੇ ਤ੍ਰਿਪਤ ਹੋਣਾ ਆਦਿ ਮਿਲਦੇ ਹਨ।</p>
+          <p class="mb-4">Vand Chhako is part of the Gurmat threefold principle (Naam Japo, Kirat Karo, Vand Chhako). In lexicons, "Vand" can mean to separate, to apportion, a portion; "Chhakkṇa" means to eat, partake, be satisfied. The Gurmat Nirṇay Kosh defines it thus: "Using appropriately what you possess for the help of those in need is called Vand Chhakkṇa."</p>
           
-          <p class="mb-4">ਗੁਰਮਤਿ ਨਿਰਣਯ ਕੋਸ਼ ਅਨੁਸਾਰ, "ਲੋੜਵੰਦਾਂ ਦੀ ਸਹਾਇਤਾ ਲਈ ਜੋ ਕੁਝ ਤੁਹਾਡੇ ਕੋਲ ਹੈ, ਉਸਦੀ ਸੁਯੋਗ ਵਰਤੋਂ ਦਾ ਨਾਂ 'ਵੰਡ ਛਕਣਾ' ਹੈ।" ਉਪਰੋਕਤ ਕੋਸ਼ਗਤ ਅਰਥਾਂ ਤੋਂ ਵੰਡ ਛਕਣ ਦੇ ਅਰਥ- ਕੋਈ ਵੀ ਵਸਤ ਜੋ ਵਿਅਕਤੀ ਜਾਂ ਮਨੁੱਖ ਕੋਲ ਹੈ, ਉਸ ਵਿੱਚੋਂ ਬਰਾਬਰ ਦਾ ਹਿੱਸਾ ਕੱਢ ਕੇ ਲੋੜਵੰਦ ਜਾਂ ਪਦਾਰਥ ਛਕਣ ਦੀ ਇਛਾ ਰੱਖਣ ਵਾਲੇ ਨੂੰ ਦੇਣਾ ਆਦਿ ਉਘੜ੍ਹ ਕੇ ਸਾਮ੍ਹਣੇ ਆਉਂਦੇ ਹਨ।</p>
+          <p class="mb-4">From these meanings, Vand Chhako emerges as: taking an equal portion from what you have and giving it to one in need or one who wishes to partake. The concept springs from Guru Nanak's line:<br/>
+          "By toil earn your living, and from your hands give."<br/>
+          Here, Vand Chhako is "hathahu dei"—give from your hands. Sri Guru Arjan Dev Ji emphasizes its importance:<br/>
+          "Eat and spend together, O brothers;<br/>
+          there will be no loss—it will only increase."</p>
           
-          <p class="mb-4">'ਵੰਡ ਛਕਣ' ਦਾ ਸੰਕਲਪ ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਵੱਲੋਂ ਉਚਾਰਨ ਪੰਗਤੀ "ਘਾਲਿ ਖਾਇ ਕਿਛੁ ਹਥਹੁ ਦੇਇ" ਵਿਚੋਂ ਉਪਜਦਾ ਹੈ। ਏਥੇ ਵੰਡ ਛਕਣ ਨੂੰ 'ਹਥਹੁ ਦੇਇ' ਕਰ ਕੇ ਦਰਸਾਇਆ ਹੈ। ਸ੍ਰੀ ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ ਵੀ ਵੰਡ ਛਕਣ ਦੇ ਸੰਕਲਪ ਦੀ ਮਹੱੱਤਤਾ ਬਾਣੀ ਵਿਚ ਦਰਸਾਉਂਦੇ ਹੋਏ ਜ਼ਿਕਰ ਕਰਦੇ ਹਨ-<br/>
-          ਖਾਵਹਿ ਖਰਚਹਿ ਰਲਿ ਮਿਲਿ ਭਾਈ॥ ਤੋਟਿ ਨ ਆਵੈ ਵਧਦੋ ਜਾਈ॥</p>
+          <p class="mb-4">Bhai Gurdas Ji, interpreter of Gurmat, writes:<br/>
+          "Earn by toil, and the Gursikhs eat together."<br/>
+          "Eating together" is exactly Vand Chhako. In the Gurus' time, every Sikh lived this principle. In the era of Guru Amar Das Ji, both Vand Chhako and offerings (kar-bhet) existed; over time, daswandh (giving one-tenth) took shape, likely inspired by Vand Chhako. In Gurmat, Vand Chhako and daswandh each has its own identity—daswandh is offered for the Guru's cause:<br/>
+          "Whatever you earn,<br/>
+          give a tenth for the Guru's sake."<br/>
+          (Bhai Santokh Singh, Sri Gur Pratap Sūraj Granth)</p>
           
-          <p class="mb-4">ਸ੍ਰੀ ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ ਦੇ ਸਮਕਾਲੀ ਭਾਈ ਗੁਰਦਾਸ ਜੀ, ਜੋ ਗੁਰਮਤਿ ਸਿਧਾਂਤਾਂ ਦੇ ਵਿਆਖਿਆਕਾਰ ਹਨ, ਉਹ ਆਪਣੀ ਰਚਨਾ ਵਿਚ ਬਿਆਨ ਕਰਦੇ ਹਨ-<br/>
-          ਘਾਲਿ ਖਾਇ ਗੁਰਸਿਖ ਮਿਲਿ ਖਾਣਾ॥<br/>
-          'ਗੁਰਸਿਖ ਮਿਲਿ ਖਾਣਾ' ਤੋਂ ਭਾਵ ਵੰਡ ਕੇ ਛਕਣ ਤੋਂ ਹੀ ਹੈ। ਉਪਰੋਕਤ ਹਵਾਲਿਆਂ ਰਾਹੀਂ ਸਾਨੂੰ ਸਹਿਜੇ ਹੀ ਗਿਆਤ ਹੋ ਜਾਂਦਾ ਹੈ ਕਿ ਗੁਰੂ-ਕਾਲ ਵਿਚ ਹਰੇਕ ਗੁਰਸਿਖ 'ਵੰਡ ਛਕਣ' ਦੇ ਸੰਕਲਪ ਉਤੇ ਅਮਲੀ ਰੂਪ ਵਿਚ ਪਹਿਰਾ ਦਿੰਦਾ ਸੀ।</p>
+          <p class="mb-4">When Guru Amar Das Ji began the digging of the Goindwal Baolī, Sikhs used to bring kar-bhet before the Guru:<br/>
+          "One day, in the assembly, he proclaimed,<br/>
+          'Here, the baoli will bring salvation…'<br/>
+          The Guru prepared for the holy work;<br/>
+          blessed ones came forward for service…<br/>
+          a great gathering of the Sangat assembled;<br/>
+          each, to his capacity, brought offerings."<br/>
+          (Sri Gur Pratap Sūraj Granth)</p>
           
-          <p class="mb-4">ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਦੇ ਗੁਰਿਆਈ ਕਾਲ ਵੇਲੇ ਵੰਡ ਛਕਣ ਅਤੇ ਕਾਰ-ਭੇਟ ਦਾ ਸੰਕਲਪ; ਦੋਵੇਂ ਮੌਜੂਦ ਸਨ। ਕਾਰ-ਭੇਟ ਨੇ ਬਾਅਦ ਵਿਚ ਕੁਝ ਸਮੇਂ ਉਪਰੰਤ ਦਸਵੰਧ ਦਾ ਰੂਪ ਅਖ਼ਤਿਆਰ ਕਰ ਲਿਆ। 'ਦਸਵੰਧ' ਦੇ ਸਿਧਾਂਤ ਦੀ ਰੂਪ-ਰੇਖਾ 'ਵੰਡ ਛਕਣ' ਦੇ ਸੰਕਲਪ ਤੋਂ ਪ੍ਰੇਰਿਤ ਜਾਪਦੀ ਹੈ। ਉਂਝ ਗੁਰਮਤਿ ਵਿਚ 'ਵੰਡ ਛਕਣ' ਦਾ ਸੰਕਲਪ ਅਤੇ 'ਦਸਵੰਧ' ਦਾ ਸਿਧਾਂਤ ਆਪਣੀ ਵੱਖਰੀ-ਵੱਖਰੀ ਹੋਂਦ ਰੱਖਦੇ ਹਨ। ਦਸਵੰਧ ਗੁਰੂ ਦੇ ਨਮਿਤ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ-<br/>
-          ਜੋ ਅਪਨੀ ਕਛੁ ਕਰਹੁ ਕਮਾਈ। ਗੁਰ ਹਿਤ ਦਿਹੁ ਦਸਵੰਧ ਬਨਾਈ।<br/>
-          (ਭਾਈ ਸੰਤੋਖ ਸਿੰਘ, ਸ੍ਰੀ ਗੁਰ ਪ੍ਰਤਾਪ ਸੂਰਜ ਗ੍ਰੰਥ (ਜਿਲਦ ਪੰਜਵੀਂ))</p>
+          <p class="mb-4">Even today, daswandh belongs to the Guru Panth and can be used for its causes; Vand Chhako preserved its independent identity then as now, as we see in Guru Arjan's Bani and Bhai Gurdas's Vars. Sharing strengthens bonds among Sikhs and the wider community—ties we so often lack today.</p>
           
-          <p class="mb-4">ਜਦੋਂ ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਨੇ ਗੋਇੰਦਵਾਲ ਸਾਹਿਬ ਬਾਉਲੀ ਦੀ ਖੁਦਾਈ ਦੀ ਸੇਵਾ ਆਰੰਭ ਕਰਵਾਈ ਤਾਂ ਉਸ ਸਮੇਂ ਸਿਖ 'ਕਾਰ-ਭੇਟ' ਗੁਰੂ ਦੇ ਸਨਮੁਖ ਲੈ ਕੇ ਹਾਜ਼ਰ ਹੁੰਦੇ ਸਨ-<br/>
-          ਇਕ ਦਿਨ ਸਭਾ ਮਝਾਰ ਉਚਾਰਾ। ਇਹਾਂ ਬਾਵਲੀ ਲਗਹਿ ਉਦਾਰਾ।...<br/>
-          ਤੀਰਥ ਕੀ ਤਿਯਾਰੀ ਗੁਰੁ ਕਰੈਂ। ਹੁਇ ਨਿਹਾਲ ਸੇਵਾ ਹਿਤ ਧਰੈਂ।...<br/>
-          ਭਯੋ ਮੇਲ ਸੰਗਤਿ ਕੋ ਭਾਰੋ। ਜਥਾ ਸਕਤਿ ਲੈ ਆਵਹਿਂ ਕਾਰੋ।<br/>
-          (ਭਾਈ ਸੰਤੋਖ ਸਿੰਘ, ਸ੍ਰੀ ਗੁਰ ਪ੍ਰਤਾਪ ਸੂਰਜ ਗ੍ਰੰਥ (ਜਿਲਦ ਪੰਜਵੀਂ))</p>
+          <p class="mb-4">Rehatnamas mention Vand Chhako. Bhai Prahlad Singh writes:<br/>
+          "Let the Sikh distribute the blessed food;<br/>
+          for such a Sikh the Guru would give his very life."<br/>
+          Thus, whoever guards this principle wins the Guru's pleasure. In the 18th century, even amidst persecution and exile, the Khalsa did not forget to share; after preparing langar, they would call out loudly so that the needy and hungry ate first, then they themselves.</p>
           
-          <p class="mb-4">ਅਜੋਕੇ ਸਮੇਂ ਵਿਚ ਵੀ ਦਸਵੰਧ ਗੁਰੂ-ਪੰਥ ਦਾ ਹੈ, ਉਹ ਇਸ ਨੂੰ ਜਿਸ ਕਾਜੈ ਚਾਹੇ ਵਰਤ ਸਕਦਾ ਹੈ। 'ਵੰਡ ਛਕਣ' ਦਾ ਸੰਕਲਪ ਗੁਰੂ-ਕਾਲ ਵੇਲੇ ਵੀ ਦਸਵੰਧ ਨਾਲੋਂ ਅੱਡਰੀ ਹੋਂਦ ਬਰਕਰਾਰ ਰੱਖਦਾ ਸੀ, ਜਿਸ ਦਾ ਹਵਾਲਾ ਸਾਨੂੰ ਸ੍ਰੀ ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ ਦੀ ਬਾਣੀ ਅਤੇ ਭਾਈ ਗੁਰਦਾਸ ਜੀ ਦੀਆਂ ਵਾਰਾਂ ਵਿਚੋਂ ਪ੍ਰਾਪਤ ਹੁੰਦਾ ਹੈ। ਵੰਡ ਕੇ ਛਕਣਾ ਗੁਰਭਾਈਆਂ ਅਤੇ ਸਮਾਜਿਕ ਭਾਈਚਾਰੇ ਨਾਲ ਸਾਂਝ ਨੂੰ ਦ੍ਰਿੜ੍ਹ ਕਰਵਾੳਂੁਣਾ ਹੈ, ਜਿਸ ਤੋਂ ਅਜੋਕੇ ਸਮੇਂ ਵਿਚ ਅਸੀਂ ਦੂਰ ਖਿਸਕ ਰਹੇ ਹਾਂ।</p>
+          <p class="mb-4">Bhai Ratan Singh Bhangu records that Sikhs always shared—no Singh ate alone or in secret; if one had food, all ate together; otherwise they would keep langar going:<br/>
+          "If he had (food), he opened his hand and gave; if not, he would not eat alone.<br/>
+          It has ever been the Khalsa's way: none eats secretly or alone.<br/>
+          If there is but one (share), all eat together; otherwise, they call it the 'langar of contentment.'<br/>
+          First offer openly, then eat; loving the Singhs, call them together."<br/>
+          (Ratan Singh Bhangu, Sri Gur Panth Prakash)</p>
           
-          <p class="mb-4">ਸਿਖ ਰਹਿਤਨਾਮਿਆਂ ਵਿਚ ਵੰਡ ਛਕਣ ਦਾ ਜ਼ਿਕਰ ਮਿਲਦਾ ਹੈ। ਭਾਈ ਪ੍ਰਹਿਲਾਦ ਸਿੰਘ ਜੀ ਆਪਣੇ ਰਹਿਤਨਾਮੇ ਵਿਚ ਦਰਸਾਉਂਦੇ ਹਨ-<br/>
-          ਕਰਿ ਪ੍ਰਸਾਦਿ ਸਿਖ ਮੁਖ ਪਾਵੈ। ਤਿਸ ਸਿਖ ਪੈ ਗੁਰ ਵਾਰਨੇ ਜਾਵੈ।<br/>
-          ਉਪਰੋਕਤ ਹਵਾਲਿਆਂ ਨਾਲ ਸਪੱਸ਼ਟ ਹੈ ਕਿ ਜੋ ਵੀ ਸਿਖ 'ਵੰਡ ਛਕਣ' ਦੇ ਸੰਕਲਪ 'ਤੇ ਪਹਿਰਾ ਦਿੰਦਾ ਹੈ, ਉਸ ਨੂੰ ਗੁਰੂ ਦੀ ਖੁਸ਼ੀ ਪ੍ਰਾਪਤ ਹੁੰਦੀ ਹੈ।</p>
-          
-          <p class="mb-4">ਅਠਾਰਵੀਂ ਸਦੀ ਵਿਚ ਰਾਜਸੀ ਹਾਲਾਤ ਸਿਖਾਂ ਦੇ ਅਨੁਕੂਲ ਨਹੀਂ ਸਨ ਅਤੇ ਘਰਾਂ ਤੋਂ ਬੇਘਰ ਹੋਇਆ ਖ਼ਾਲਸਾ ਘੋੜਿਆਂ ਦੀਆਂ ਕਾਠੀਆਂ 'ਤੇ ਦਿਨ ਅਤੇ ਰਾਤ ਜੰਗਲ-ਬੇਲਿਆਂ ਵਿਚ ਗੁਜ਼ਾਰਦਾ ਸੀ। ਉਸ ਸਮੇਂ ਵੀ ਗੁਰੂ ਦੇ ਸਿੱਖਾਂ ਨੇ ਵੰਡ ਕੇ ਛਕਣ ਦੇ ਸੰਕਲਪ ਨੂੰ ਨਹੀਂ ਵਿਸਾਰਿਆ ਅਤੇ ਲੰਗਰ ਤਿਆਰ ਹੋਣ ਤੋਂ ਬਾਅਦ ਉਚੀ ਹੋਕਾ ਦੇ ਕੇ ਲੋੜਵੰਦਾਂ ਅਤੇ ਭੁਖਣ-ਭਾਣਿਆਂ ਨੂੰ ਪ੍ਰਸ਼ਾਦਾ ਛਕਾ, ਪਿਛੋਂ ਆਪ ਛਕਦੇ ਸਨ। ਭਾਈ ਰਤਨ ਸਿੰਘ ਭੰਗੂ ਵੰਡ ਕੇ ਛਕਣ ਦਾ ਜ਼ਿਕਰ ਕਰਦੇ ਹੋਏ ਦੱਸਦੇ ਹਨ ਕਿ ਸਿਖ ਆਪਸ ਵਿਚ ਵੰਡ ਕੇ ਛਕਦੇ ਸਨ। ਖ਼ਾਲਸੇ ਦੀ ਇਹ ਰਹੁ-ਰੀਤ ਸੀ ਕਿ ਕੋਈ ਵੀ ਸਿੰਘ ਇਕੱਲਾ ਅਤੇ ਲੁਕ ਕੇ ਨਹੀਂ ਸੀ ਛਕਦਾ। ਜੇਕਰ ਇਕ ਕੋਲ ਵਸਤ ਹੁੰਦੀ ਤਾਂ ਸਾਰੇ ਰਲ-ਮਿਲ ਛਕਦੇ, ਨਹੀਂ ਤਾਂ ਲੰਗਰ ਮਸਤਾਨਾ ਦੱਸਦੇ ਸਨ-<br/>
-          ਪਾਸ ਹੋਤਿ ਤੌ ਦੇਤ ਖੁਲਾਇ। ਹੋਇ ਨਹੀਂ ਤਾਂ ਇਕਲੋ ਨ ਖਾਇ।<br/>
-          ਹੁਤੀ ਪਹਿਲੋਂ ਖਾਲਸੌ ਯਹਿ ਰੀਤ। ਇਕਲੋ ਨ ਖਾਵੈ ਲੁਕ ਕਰ ਕੀਤ।<br/>
-          ਇਕ ਪੈ ਹੋਇ ਤੌ ਸਭ ਮਿਲ ਖਾਹਿਂ। ਨਹਿਂ ਹੁਇ ਤੇ ਲੰਗਰ ਮਸਤ ਅਖਾਹਿਂ।<br/>
-          ਔਰ ਖੁਲਾਇ ਆ ਪਿੱਛੋਂ ਖਾਵੈ। ਬਹੁਤ ਪਯਾਰ ਕਰ ਸਿੰਘਨ ਸਦਾਵੈ।<br/>
-          (ਰਤਨ ਸਿੰਘ ਭੰਗੂ, ਸ੍ਰੀ ਗੁਰ ਪੰਥ ਪ੍ਰਕਾਸ਼, (ਸੰਪਾ.) ਡਾ. ਬਲਵੰਤ ਸਿੰਘ ਢਿੱਲੋਂ)</p>
-          
-          <p class="mb-4">ਵੰਡ ਕੇ ਛਕਣ ਦਾ ਸੰਕਲਪ ਊਚ-ਨੀਚ, ਭੇਦ-ਭਾਵ, ਧਰਮ, ਜਾਤ, ਰੰਗ ਅਤੇ ਨਸਲ ਆਦਿ ਦੇ ਵਿਤਕਰਿਆਂ ਨੂੰ ਤਿਆਗ ਕੇ ਜੀਵਨ ਜਿਉਣ ਦੀ ਜੁਗਤਿ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ। ਇਸ ਸੰਕਲਪ ਨੂੰ ਵਿਵਹਾਰਕ ਤੌਰ 'ਤੇ ਅਪਨਾਉਂਣ ਵਾਲਾ ਵਿਅਕਤੀ; ਵੈਰੀ ਜਾਂ ਮੀਤ ਦੀ ਪਛਾਣ ਨਹੀਂ ਕਰਦਾ, ਸਗੋਂ ਵੰਡ ਕੇ ਛਕਣ ਵੇਲੇ ਹਰੇਕ ਨੂੰ ਸਮਦ੍ਰਿਸ਼ਟੀ ਨਾਲ ਵੇਖਦਾ ਹੈ। ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਵੱਲੋਂ ਦ੍ਰਿੜ੍ਹ ਕਰਵਾਏ 'ਵੰਡ ਛਕਣ' ਦੇ ਸੰਕਲਪ ਸਦਕਾ ਅਸੀਂ ਵਿਸ਼ਵ-ਭਾਈਚਾਰਕ ਸਾਂਝ ਪੈਦਾ ਕਰ ਸਕਦੇ ਹਾਂ, ਜਿਸ ਦੀ ਅਜੋਕੇ ਸਮੇਂ ਵਿਚ ਬੇਹਦ ਲੋੜ੍ਹ ਪ੍ਰਤੀਤ ਹੁੰਦੀ ਹੈ।</p>
+          <p class="mb-4">Vand Chhako teaches us to live beyond caste, creed, religion, color, race—showing equal regard to all. Through the Guru's insistence on sharing, we can build a global brotherhood, sorely needed today.</p>
         `,
         'ang-sahib': `
-          <p class="mb-4">ਗਿਆਰਹਵੇਂ ਸਿੱਖ ਗੁਰੂ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਹਨ, ਜੋ ਸਿੱਖਾਂ ਦੇ ਸਦਾ ਕਾਲੀਨ ਆਤਮਕ ਗੁਰੂ ਹਨ। ਇਹ ਕੋਈ ਵਿਅਕਤੀ ਨਹੀਂ, ਸਗੋਂ ਪਵਿੱਤਰ ਗ੍ਰੰਥ ਹੈ ਜਿਸ ਵਿੱਚ ਸਿੱਖ ਗੁਰੂਆਂ ਅਤੇ ਸੰਤਾਂ ਦੀ ਬਾਣੀ ਸੰਗ੍ਰਹਿਤ ਹੈ। ਇਹ ਸੱਚ, ਸਮਾਨਤਾ, ਭਗਤੀ ਅਤੇ ਨਿਮਰਤਾ ਦਾ ਉਪਦੇਸ਼ ਦਿੰਦਾ ਹੈ। ਸਿੱਖ ਇਸ ਤੋਂ ਸਦੀਵੀ ਮਾਰਗਦਰਸ਼ਨ ਲੈਂਦੇ ਹਨ।</p>
+          <p class="mb-4">"Shabad Guru, Surat Dhun Chela" — The Word is the Guru; Consciousness, the Disciple of Its Melody</p>
           
-          <p class="mb-4">ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਸਿੱਖ ਧਰਮ ਦਾ ਕੇਂਦਰੀ ਗ੍ਰੰਥ ਹੈ ਜੋ ਸਿੱਖਾਂ ਦੇ ਗਿਆਰਹਵੇਂ ਗੁਰੂ ਦੇ ਰੂਪ ਵਿੱਚ ਪੂਜਿਆ ਜਾਂਦਾ ਹੈ। ਇਸ ਵਿੱਚ ਸਿੱਖ ਗੁਰੂਆਂ, ਭਗਤਾਂ ਅਤੇ ਸੰਤਾਂ ਦੀ ਪਵਿੱਤਰ ਬਾਣੀ ਸ਼ਾਮਲ ਹੈ। ਇਹ ਗ੍ਰੰਥ ਸਿੱਖਾਂ ਲਈ ਸਦਾ ਕਾਲੀਨ ਗੁਰੂ ਹੈ ਅਤੇ ਇਸ ਦਾ ਸਤਿਕਾਰ ਸਿੱਖ ਧਰਮ ਦਾ ਮੂਲ ਆਧਾਰ ਹੈ।</p>
-          
-          <p class="mb-4">ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਵਿੱਚ ਸ਼ਾਮਲ ਬਾਣੀ ਸਿੱਖਾਂ ਨੂੰ ਸੱਚੇ ਜੀਵਨ ਦਾ ਮਾਰਗ ਦਿਖਾਉਂਦੀ ਹੈ। ਇਹ ਇੱਕ ਇੱਕ ਇਨਸਾਨ ਦੀ ਸਮਾਨਤਾ, ਭਗਤੀ ਦੀ ਮਹੱਤਤਾ, ਅਤੇ ਸੇਵਾ ਦੇ ਮਹੱਤਵ ਨੂੰ ਉਜਾਗਰ ਕਰਦੀ ਹੈ। ਸਿੱਖ ਇਸ ਪਵਿੱਤਰ ਗ੍ਰੰਥ ਤੋਂ ਆਪਣੇ ਜੀਵਨ ਦੇ ਹਰ ਪੜਾਅ 'ਤੇ ਮਾਰਗਦਰਸ਼ਨ ਲੈਂਦੇ ਹਨ।</p>
-          
-          <p class="mb-4">ਅੰਗ ਸਾਹਿਬ ਦਾ ਸਤਿਕਾਰ ਸਿੱਖ ਧਰਮ ਦਾ ਅਟੁੱਟ ਹਿੱਸਾ ਹੈ। ਇਹ ਸਿੱਖਾਂ ਨੂੰ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਦੀ ਸਿੱਖਿਆ ਨੂੰ ਆਪਣੇ ਜੀਵਨ ਵਿੱਚ ਉਤਾਰਨ ਲਈ ਪ੍ਰੇਰਿਤ ਕਰਦਾ ਹੈ। ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਸਿੱਖਾਂ ਲਈ ਸਿਰਫ਼ ਇੱਕ ਧਾਰਮਿਕ ਗ੍ਰੰਥ ਨਹੀਂ, ਸਗੋਂ ਇੱਕ ਜੀਵਤ ਗੁਰੂ ਹੈ ਜੋ ਸਦਾ ਸਿੱਖਾਂ ਦਾ ਮਾਰਗਦਰਸ਼ਨ ਕਰਦਾ ਰਹਿੰਦਾ ਹੈ।</p>
+          <p class="mb-4">The eleventh Sikh Guru is the Sri Guru Granth Sahib, the eternal spiritual Guru of the Sikhs—not a person but the sacred scripture containing the Bani of the Sikh Gurus and saints. It teaches truth, equality, devotion, and humility. Sikhs seek timeless guidance from it.</p>
         `,
         'patshahi-badshahi': `
           <p class="mb-4">ਗੁਰੂ ਖਾਲਸਾ ਪੰਥ ਅਕਾਲ ਪੁਰਖ ਦੀ ਮੌਜ ਨਾਲ ਪ੍ਰਗਟ ਹੋਇਆ ਤੇ ਆਪਣਾ ਮਾਲਕ ਸਿਰਫ ਅਕਾਲ ਪੁਰਖ ਨੂੰ ਮੰਨਦਾ ਹੈ। ਖਾਲਸੇ ਵਲੋਂ ਇਸ ਧਰਤੀ ਦੀ ਅਗਵਾਈ ਦਾ ਕੇਂਦਰ ਸ੍ਰੀ ਅਕਾਲ ਤਖ਼ਤ ਸਾਹਿਬ ਹੈ ਤੇ ਉਸਦੀ ਸਲਤਨਤ ਦਾ ਘੇਰਾ ਅਸੀਮ ਹੈ। ਖਾਲਸੇ ਦੀ ਛਤਰ ਛਾਇਆ ਹੇਠ ਦੁਨਿਆਵੀ ਬਾਦਸ਼ਾਹੀਆਂ ਇਕ ਤਵਾਜਨ ਵਿਚ ਵਿਚਰਦੀਆਂ ਰਹੀਆਂ ਨੇ ਤੇ ਅੱਗੋਂ ਵਿਚਰਦੀਆਂ ਰਹਿਣਗੀਆਂ।</p>
@@ -908,186 +923,128 @@ export default function Home() {
         `,
         // History subsections
         'chappar-jhiri-di-jang': `
-          <p class="mb-4">ਦਸਵੇਂ ਪਾਤਸ਼ਾਹ ਨੇ ਜਾਲਮ ਨੂੰ ਸੋਧਣ ਲਈ ਬਾਬਾ ਬੰਦਾ ਸਿੰਘ ਬਹਾਦਰ ਨੂੰ ਪੰਜ ਤੀਰ ਦੇ ਕੇ ਪੰਜਾਂ ਸਿੰਘਾਂ ਦੀ ਤਾਬਿਆ ਵਿਚ ਪੰਜਾਬ ਵੱਲ ਨੂੰ ਤੋਰਿਆ। ਦੁਸ਼ਟਾਂ ਨੂੰ ਸੋਧਦਿਆਂ ਆਖ਼ਰ ਉਹ ਦਿਨ ਆ ਗਿਆ ਜਿਸ ਦਿਨ ਛੋਟੇ ਸਾਹਿਬਜਾਦਿਆਂ ਨੂੰ ਸ਼ਹੀਦ ਕਰਨ ਵਾਲੇ ਵਜ਼ੀਰ ਖਾਨ ਦਾ ਸੋਧਾ ਲੱਗਣਾ ਸੀ। ਚੱਪੜਚਿੜੀ ਦੇ ਮੈਦਾਨ ਚ ਘਮਸਾਨ ਦਾ ਯੁੱਧ ਚੱਲਿਆ ਜਿਸ ਵਿਚ ਦੁਪਹਿਰ ਤਕ ਸਿੰਘ ਭਾਰੂ ਰਹੇ ਪਰ ਵਜ਼ੀਰ ਖਾਨ ਕੋਲ ਬਹੁਤ ਜਿਆਦਾ ਫੌਜ ਤੇ ਜੰਗੀ ਅਮਲਾ-ਫੈਲਾ ਹੋਣ ਕਾਰਨ ਦੁਪਿਹਰੋਂ ਬਾਦ ਜੰਗ ਸਿੰਘਾਂ ਉੱਤੇ ਹਾਵੀ ਹੋਣ ਲੱਗੀ।</p>
+          <p class="mb-4">To chastise tyranny, the Tenth Guru sent Baba Banda Singh Bahadur toward Punjab, blessing him with five arrows and placing him under the command of the Panj Singh. As the Singhs gathered and fought battles, the day arrived when Wazir Khan—who had martyred the Younger Sahibzade—would be faced in the field.</p>
           
-          <p class="mb-4">ਇਹ ਦੇਖਦਿਆਂ ਬਾਬਾ ਬਾਜ਼ ਸਿੰਘ ਨੇ ਬਾਬਾ ਬੰਦਾ ਸਿੰਘ ਜੀ ਨੂੰ ਜੋ ਇਕ ਉੱਚੀ ਟਿੱਬੀ ਤੋਂ ਜੰਗ ਨੂੰ ਦੇਖ ਰਹੇ ਸਨ ਕਿਹਾ ਕਿ ਉਹ ਹੁਣ ਜੰਗ ਵਿਚ ਆ ਜਾਣ ਤਾਂ ਜੋ ਜੰਗ ਦੁਬਾਰਾ ਸਾਡੇ ਹੱਕ 'ਚ ਹੋ ਜਾਵੇ ਤੇ ਜਾਲਮ ਵਜ਼ੀਰ ਖਾਨ ਦਾ ਸੋਧਾ ਲੱਗ ਸਕੇ। ਬਾਬਾ ਬੰਦਾ ਸਿੰਘ ਜੀ ਨੇ ਗੁਰੂ ਸਾਹਿਬ ਅੱਗੇ ਅਰਦਾਸ ਕੀਤੀ ਤੇ ਆਪਣੇ ਘੋੜੇ 'ਤੇ ਚੜ ਗਏ। ਸ੍ਰੀ ਗੁਰ ਪੰਥ ਪ੍ਰਕਾਸ਼ 'ਚ ਅੰਕਿਤ ਹੈ ਕਿ-<br/>
-          ਹਸਿ ਬੰਦੇ ਘੋੜੋ ਮੰਗਯੋ ਕਹਿ ਮਾਲਕ ਪਹੁੰਚਯੋ ਆਇ ।<br/>
-          ਮਾਰੋ ਲੇਵੋ ਲੂਟ ਕਹਿ ਦਯੋ ਸੁ ਤੀਰ ਚਲਾਇ ।੩੦।</p>
+          <p class="mb-4">At Chappar Chiri, a fierce battle raged. Until noon, the Singhs dominated; but because Wazir Khan had much larger forces and artillery, the tide began turning against the Singhs in the afternoon. Seeing this, Baba Baaz Singh urged Baba Banda Singh, who was observing from a high mound, to enter the fray so the battle would again turn in their favor and the tyrant receive justice. Banda Singh prayed before Guru Sahib and mounted his horse. As recorded in Sri Gur Panth Prakash:</p>
           
-          <p class="mb-4">ਗੁਰੂ ਸਾਹਿਬ ਦੇ ਬਖਸ਼ੇ ਤੀਰਾਂ ਵਿਚੋਂ ਇਕ ਤੀਰ ਬਾਬਾ ਜੀ ਨੇ ਚਲਾ ਦਿੱਤਾ ਜਿਸ ਨਾਲ ਜੰਗ ਦਾ ਸਾਰਾ ਮਹੌਲ ਬਦਲ ਗਿਆ। ਛੇਤੀ ਹੀ ਸਿੰਘਾਂ ਦੀ ਫਤਿਹ ਹੋ ਗਈ ਤੇ ਉਨ੍ਹਾਂ ਵਜ਼ੀਰ ਖਾਨ ਨੂੰ ਫੜ ਕੇ ਤੇ ਸਰਹਿੰਦ ਲਿਜਾ ਕੇ ਸੋਧ ਦਿੱਤਾ।</p>
+          <p class="mb-4">"Smiling, Banda called for his horse, saying, 'Master, I have arrived.'<br/>
+          'Strike! Seize! Plunder!'—so saying, he loosed the arrow."</p>
+          
+          <p class="mb-4">Firing one of the arrows blessed by the Guru, Baba Ji changed the course of the battlefield. Soon the Singhs were victorious; they captured Wazir Khan, took him to Sirhind, and punished him.</p>
         `,
         'baba-banda-singh-bahadur': `
-          <p class="mb-4">ਬਾਬਾ ਬੰਦਾ ਸਿੰਘ ਬਹਾਦਰ ਇੱਕ ਮਹਾਨ ਸਿੱਖ ਯੋਧਾ ਅਤੇ ਸ਼ਹੀਦ ਸਨ, ਜਿਨ੍ਹਾਂ ਦਾ ਜਨਮ 16 ਅਕਤੂਬਰ 1670 ਨੂੰ ਜੰਮੂ ਖੇਤਰ ਦੇ ਰਾਜੌਰੀ ਵਿੱਚ ਇੱਕ ਰਾਜਪੂਤ ਪਰਿਵਾਰ ਵਿੱਚ ਹੋਇਆ ਸੀ ।</p>
-          <p class="mb-4">ਜਵਾਨੀ ਵਿੱਚ ਇੱਕ ਗਰਭਵਤੀ ਹਿਰਨੀ ਨੂੰ ਮਾਰਨ ਦੀ ਦੁਖਦਾਈ ਘਟਨਾ ਨੇ ਉਨ੍ਹਾਂ ਦਾ ਦਿਲ ਬਦਲ ਦਿੱਤਾ। ਉਹ ਘਰ ਛੱਡ ਕੇ ਸੰਨਿਆਸੀ ਬਣ ਗਏ ਅਤੇ ਮਾਧੋ ਦਾਸ ਬੈਰਾਗੀ ਵਜੋਂ ਜਾਣੇ ਜਾਣ ਲੱਗੇ ਅਤੇ ਆਖ਼ਰਕਾਰ ਮਹਾਰਾਸ਼ਟਰ ਦੇ ਨਾਂਦੇੜ ਵਿੱਚ ਵਸ ਗਏ।</p>
-          <p class="mb-4">1708 ਵਿੱਚ ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਨਾਂਦੇੜ ਵਿਖੇ ਉਨ੍ਹਾਂ ਦੀ ਕੁਟੀਆ ਵਿੱਚ ਆਏ। ਮਾਧੋ ਦਾਸ ਨੇ ਆਪਣੀਆਂ ਤਾਂਤਰਿਕ ਸ਼ਕਤੀਆਂ ਨਾਲ ਗੁਰੂ ਜੀ ਨੂੰ ਪ੍ਰਭਾਵਿਤ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ, ਪਰ ਅਸਫਲ ਰਿਹਾ। ਹਾਰ ਮੰਨ ਕੇ ਉਸਨੇ ਨਿਮਰਤਾ ਨਾਲ ਕਿਹਾ: "ਮੈਂ ਤੁਹਾਡਾ ਬੰਦਾ (ਗ਼ੁਲਾਮ) ਹਾਂ।"</p>
-          <p class="mb-4">ਗੁਰੂ ਜੀ ਨੇ ਉਨ੍ਹਾਂ ਨੂੰ ਬੈਰਾਗੀ ਜੀਵਨ ਛੱਡ ਕੇ ਧਰਮ ਲਈ ਲੜਨ ਲਈ ਪ੍ਰੇਰਿਤ ਕੀਤਾ। 3 ਸਤੰਬਰ 1708 ਨੂੰ ਗੁਰੂ ਜੀ ਨੇ ਮਾਧੋ ਦਾਸ ਨੂੰ ਖੰਡੇ ਦੀ ਪਾਹੁਲ ਦੇ ਕੇ ਉਨ੍ਹਾਂ ਦਾ ਨਾਮ ਬੰਦਾ ਸਿੰਘ ਬਹਾਦਰ ਰੱਖਿਆ।</p>
-          <p class="mb-4">ਉਨ੍ਹਾਂ ਨੇ ਬੰਦਾ ਸਿੰਘ ਨੂੰ ਪੰਜਾਬ ਵਿੱਚ ਮੁਗ਼ਲਾਂ ਦੇ ਜ਼ੁਲਮ ਨੂੰ ਖਤਮ ਕਰਨ ਅਤੇ ਖਾਸ ਕਰਕੇ ਨਵਾਬ ਵਜ਼ੀਰ ਖ਼ਾਨ ਨੂੰ ਸਜ਼ਾ ਦੇਣ ਲਈ ਭੇਜਿਆ। ਗੁਰੂ ਜੀ ਨੇ ਬੰਦਾ ਸਿੰਘ ਨੂੰ ਪੰਜ ਸਿੱਖਾਂ ਦੀ ਤਾਬਿਆ ਵਿਚ (ਬਾਜ ਸਿੰਘ, ਰਾਮ ਸਿੰਘ, ਬਿਨੋਦ ਸਿੰਘ, ਕਾਹਨ ਸਿੰਘ ਅਤੇ ਫ਼ਤਿਹ ਸਿੰਘ), ਪੰਜ ਸੋਨੇ ਦੇ ਤੀਰ ਅਤੇ ਹੁਕਮਨਾਮਾ ਦੇ ਕੇ ਪੰਜਾਬ ਵੱਲ ਰਵਾਨਾ ਕੀਤਾ।</p>
-          <p class="mb-4">ਬਾਬਾ ਬੰਦਾ ਸਿੰਘ ਬਹਾਦਰ ਵਲੋਂ ਸੋਨੀਪਤ ਅਤੇ ਕੈਥਲ ਵਿਖੇ ਸਰਕਾਰੀ ਖਜ਼ਾਨੇ ਲੁੱਟ ਕੇ ਗਰੀਬਾਂ ਵਿੱਚ ਵੰਡੇ ਗਏ। ਸਮਾਣਾ (ਗੁਰੂ ਤੇਗ ਬਹਾਦਰ ਜੀ ਅਤੇ ਛੋਟੇ ਸਾਹਿਬਜ਼ਾਦਿਆਂ ਦੇ ਜਲਾਦਾਂ ਦਾ ਘਰ) 'ਤੇ ਹਮਲਾ ਕੀਤਾ ਗਿਆ, ਜੋ ਕਿ ਬੰਦਾ ਸਿੰਘ ਦੀ ਪਹਿਲੀ ਖੇਤਰੀ ਜਿੱਤ ਅਤੇ ਪ੍ਰਸ਼ਾਸਨਿਕ ਇਕਾਈ ਬਣੀ।</p>
-          <p class="mb-4">ਸਢੌਰਾ (ਸੱਯਦ ਬੁੱਧੂ ਸ਼ਾਹ ਨੂੰ ਤੰਗ ਕਰਨ ਵਾਲਾ ਸਥਾਨ) ਨੂੰ ਤਬਾਹ ਕੀਤਾ ਗਿਆ, ਜਿੱਥੇ 'ਕਤਲ ਗੜ੍ਹੀ' ਵਜੋਂ ਜਾਣੀ ਜਾਂਦੀ ਇਮਾਰਤ ਵਿੱਚ ਕਈ ਮੁਸਲਮਾਨਾਂ ਦਾ ਕਤਲੇਆਮ ਕੀਤਾ ਗਿਆ।</p>
-          <p class="mb-4">12 ਮਈ 1710 ਨੂੰ ਬੰਦਾ ਸਿੰਘ ਨੇ ਚੱਪੜ ਚਿੜੀ ਦੇ ਸਥਾਨ 'ਤੇ ਸਰਹਿੰਦ ਦੀ ਲੜਾਈ ਵਿੱਚ ਨਵਾਬ ਵਜ਼ੀਰ ਖ਼ਾਨ ਦੀ ਵੱਡੀ ਫੌਜ ਨੂੰ ਹਰਾਇਆ ਅਤੇ ਵਜ਼ੀਰ ਖ਼ਾਨ ਨੂੰ ਮਾਰ ਦਿੱਤਾ ਗਿਆ। ਅਗਲੇ ਦਿਨ ਸਰਹਿੰਦ ਸ਼ਹਿਰ ਫ਼ਤਿਹ ਹੋਇਆ।</p>
-          <p class="mb-4">ਬੰਦਾ ਸਿੰਘ ਨੇ ਲੋਹਗੜ੍ਹ ਨੂੰ ਪਹਿਲੇ ਸਿੱਖ ਰਾਜ ਦੀ ਰਾਜਧਾਨੀ ਬਣਾਇਆ, ਸਿੱਕੇ ਜਾਰੀ ਕੀਤੇ, ਅਤੇ ਸਭ ਤੋਂ ਮਹੱਤਵਪੂਰਨ ਤੌਰ 'ਤੇ, ਜ਼ਮੀਨਦਾਰੀ ਪ੍ਰਣਾਲੀ ਨੂੰ ਖਤਮ ਕਰਕੇ ਕਿਸਾਨੀ ਮਾਲਕੀ ਸਥਾਪਤ ਕੀਤੀ।</p>
-          <p class="mb-4">ਮੁਗ਼ਲ ਬਾਦਸ਼ਾਹ ਬਹਾਦਰ ਸ਼ਾਹ ਨੇ ਸਿੱਖਾਂ ਵਿਰੁੱਧ ਕਾਰਵਾਈਆਂ ਸ਼ੁਰੂ ਕਰ ਦਿੱਤੀਆਂ। ਬੰਦਾ ਸਿੰਘ ਨੂੰ ਪੰਜਾਬ ਦੇ ਮੈਦਾਨਾਂ ਵਿੱਚੋਂ ਕੱਢ ਕੇ ਗੁਰਦਾਸ ਨੰਗਲ ਪਿੰਡ ਵਿਖੇ ਘੇਰ ਲਿਆ ਗਿਆ।</p>
-          <p class="mb-4">ਅੱਠ ਮਹੀਨਿਆਂ ਦੀ ਬਹਾਦਰੀ ਭਰੀ ਘੇਰਾਬੰਦੀ ਤੋਂ ਬਾਅਦ, ਜਦੋਂ ਰਸਦ ਅਤੇ ਗੋਲਾ ਬਾਰੂਦ ਖਤਮ ਹੋ ਗਿਆ, ਤਾਂ 17 ਦਸੰਬਰ 1715 ਨੂੰ ਬੰਦਾ ਸਿੰਘ ਅਤੇ ਲਗਭਗ 740 ਸਿੱਖਾਂ ਨੂੰ ਗ੍ਰਿਫ਼ਤਾਰ ਕਰ ਲਿਆ ਗਿਆ।</p>
-          <p class="mb-4">ਉਨ੍ਹਾਂ ਨੂੰ ਜ਼ੰਜੀਰਾਂ ਵਿੱਚ ਜਕੜ ਕੇ ਦਿੱਲੀ ਲਿਜਾਇਆ ਗਿਆ, ਜਿੱਥੇ ਉਨ੍ਹਾਂ ਦਾ ਜਲੂਸ ਕੱਢਿਆ ਗਿਆ।</p>
-          <p class="mb-4">9 ਜੂਨ 1716 ਨੂੰ, ਬਾਬਾ ਬੰਦਾ ਸਿੰਘ ਬਹਾਦਰ ਨੂੰ ਦਿੱਲੀ ਵਿੱਚ ਉਨ੍ਹਾਂ ਦੇ ਬੇਟੇ ਅਜੇ ਸਿੰਘ ਸਮੇਤ ਬੇਰਹਿਮੀ ਨਾਲ ਸ਼ਹੀਦ ਕਰ ਦਿੱਤਾ ਗਿਆ।</p>
+          <p class="mb-4">Baba Banda Singh Bahadur was a great Sikh warrior and martyr, born 16 October 1670 in Rajouri (Jammu) to a Rajput family. In youth, after a painful incident in which he killed a pregnant doe, his heart changed. Leaving home to become an ascetic known as Madho Das Bairagi, he eventually settled at Nanded in Maharashtra.</p>
+          
+          <p class="mb-4">In 1708, Guru Gobind Singh Ji visited his hut. Madho Das tried to impress the Guru with sorcery but failed; humbled, he said, "I am your Banda (servant)." The Guru urged him to leave asceticism and fight for Dharma. On 3 September 1708, the Guru administered Khande-di-Pahul and named him Banda Singh Bahadur, sending him to Punjab to end Mughal tyranny, especially to punish Nawab Wazir Khan.</p>
+          
+          <p class="mb-4">Under the guidance of five Singhs—Baaz Singh, Ram Singh, Binod Singh, Kahan Singh, and Fateh Singh—the Guru gave him five golden arrows and a hukamnama. Banda Singh distributed captured state treasuries at Sonipat and Kaithal among the poor; he struck Samana (home of executioners of Guru Tegh Bahadur Ji and the younger Sahibzade), his first territorial victory and administrative unit; he destroyed Sadhora (where Syed Buddhu Shah had been tormented), where many were killed in a place called "Qatal Garhi."</p>
+          
+          <p class="mb-4">On 12 May 1710, at Chappar Chiri, he defeated Wazir Khan's large army; Wazir Khan was killed, and Sirhind fell the next day. Banda made Lohgarh the capital of the first Sikh state, issued coins, and—most importantly—abolished the feudal landlord system to establish peasant proprietorship.</p>
+          
+          <p class="mb-4">The Mughal emperor Bahadur Shah launched reprisals. Banda was driven from the plains and besieged at Gurdas Nangal. After eight months of heroic resistance and the exhaustion of provisions and ammunition, Banda Singh and about 740 Sikhs were captured on 17 December 1715, marched in chains to Delhi, and paraded. On 9 June 1716, Baba Banda Singh Bahadur was martyred in Delhi with his young son Ajay Singh.</p>
         `,
         'bhai-tara-singh-wan-di-jang': `
-          <p class="mb-4">ਅਠਾਰ੍ਹਵੀਂ ਸਦੀ ਦੇ ਤੀਸਰੇ ਦਹਾਕੇ ਦੌਰਾਨ ਭਾਈ ਤਾਰਾ ਸਿੰਘ ਵਾਂ ਅਤੇ ਉਨ੍ਹਾਂ ਦੇ ਜਥੇ ਵੱਲੋਂ 'ਵਾਂ' ਪਿੰਡ 'ਚ ਲੜੀ ਜੰਗ ਸਿੱਖ ਇਤਿਹਾਸ ਦੀਆਂ ਅਸਾਵੀਆਂ ਜੰਗਾਂ ਵਿੱਚ ਸ਼ੁਮਾਰ ਹੈ। ਭਾਈ ਤਾਰਾ ਸਿੰਘ ਵਾਂ ਨੇ ਸਿੱਖ ਪਰੰਪਰਾ 'ਤੇ ਪਹਿਰਾ ਦਿੰਦਿਆਂ ਜੂਝ ਕੇ ਸ਼ਹੀਦੀ ਪਾਈ।</p>
+          <p class="mb-4">In the third decade of the 18th century, the battle fought by Bhai Tara Singh of Van and his band in Van village ranks among the stirring engagements of Sikh history. Guarding Sikh tradition, he fought and attained martyrdom.</p>
           
-          <p class="mb-4">ਉਨ੍ਹਾਂ ਦਾ ਜਨਮ ਭਾਈ ਗੁਰਦਾਸ ਸਿੰਘ ਦੇ ਘਰ 1702 ਈ. ਦੇ ਆਸ-ਪਾਸ ਹੋਇਆ ਕਿਆਸ ਕੀਤਾ ਜਾਂਦਾ ਹੈ। ਉਨ੍ਹਾਂ ਦੇ ਪਿਤਾ ਭਾਈ ਗੁਰਦਾਸ ਸਿੰਘ ਨੇ ਸ੍ਰੀ ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਦੇ ਹਜ਼ੂਰ ਰਹਿ ਕੇ ਸੇਵਾ ਨਿਭਾਈ ਤੇ ਬਾਬਾ ਬੰਦਾ ਸਿੰਘ ਜੀ ਦੇ ਵੇਲੇ ਵੀ ਸਿੱਖ ਮੁਹਿੰਮਾਂ ਵਿੱਚ ਯੋਗਦਾਨ ਪਾਇਆ ਸੀ।</p>
+          <p class="mb-4">Likely born around 1702 to Bhai Gurdas Singh, who had served Guru Har Rai and later supported Sikh campaigns under Banda Singh Bahadur, Bhai Tara Singh was the eldest of five brothers. He took Khande-di-Pahul under Bhai Mani Singh's leadership. He built a fortified enclosure (vaṛa) on his fields near Van—so high that even a man on a camel couldn't peer inside.</p>
           
-          <p class="mb-4">ਭਾਈ ਤਾਰਾ ਸਿੰਘ ਵਾਂ ਭਾਈ ਮਨੀ ਸਿੰਘ ਜੀ ਦੀ ਜਥੇਦਾਰੀ ਵਿੱਚ ਖੰਡੇ ਦੀ ਪਾਹੁਲ ਛਕ ਕੇ ਸਿੰਘ ਸਜੇ ਸਨ। ਉਹ 'ਵਾਂ' ਪਿੰਡ ਨਾਲ ਲੱਗਦੇ ਆਪਣੇ ਖੇਤਾਂ ਵਿਚ ਵਾੜਾ ਬਣਾ ਕੇ ਨਿਵਾਸ ਕਰਦੇ ਸਨ। ਉਨ੍ਹਾਂ ਆਪਣਾ ਵਾੜਾ ਏਨਾ ਉੱਚਾ ਵਲਿਆ ਸੀ ਕਿ ਊਠ 'ਤੇ ਸਵਾਰ ਬੰਦਾ ਵੀ ਅੰਦਰ ਝਾਤ ਨਹੀਂ ਸੀ ਮਾਰ ਸਕਦਾ।</p>
+          <p class="mb-4">After Banda Singh's martyrdom, the Sikhs adopted guerrilla tactics—by day hiding in forests, by night striking and melting away. Bands operating near Van would rest and eat at Bhai Tara Singh's enclosure before slipping away again before dawn. The state kept close watch on such Sikhs. A quarrel with local official Sahib Rai Nausheria brought the matter to Ja'far Beg, the faujdar of Patti. His first raid failed; he then asked Zakirya Khan, governor of Lahore, for help. Zakirya Khan sent Moman Khan with 2200 cavalry and war materiel to attack.</p>
           
-          <p class="mb-4">ਬਾਬਾ ਬੰਦਾ ਸਿੰਘ ਜੀ ਬਹਾਦਰ ਦੀ ਸ਼ਹੀਦੀ ਤੋਂ ਬਾਅਦ ਸਿੱਖਾਂ ਨੇ ਅਠਾਰ੍ਹਵੀਂ ਸਦੀ ਦੇ ਦੌਰਾਨ ਮੁਗ਼ਲਾਂ ਨਾਲ ਗੁਰੀਲਾ ਯੁੱਧ ਨੀਤੀ ਅਪਣਾਈ। ਇਸ ਨੀਤੀ ਤਹਿਤ ਸਿੰਘ ਦਿਨੇ ਜੰਗਲ-ਬੇਲਿਆਂ ਵਿੱਚ ਸਮਾਂ ਬਤੀਤ ਕਰਦੇ ਪਰ ਜਿਉਂ ਹੀ ਰਾਤ ਹੁੰਦੀ ਬਾਹਰ ਨਿਕਲ ਕੇ ਨਿੱਕੀਆਂ-ਮੋਟੀਆਂ ਝੜਪਾਂ ਕਰਦੇ।</p>
+          <p class="mb-4">The Singhs learned of the approach. In council, they judged the imperial army too numerous and well-armed; prudence suggested withdrawing to forests like other bands. Bhai Tara Singh set out toward Malwa; reaching near Bahadur Nagar to ford the Sutlej, his conscience would not let him flee. Taking out a Dasam Granth he always kept in his coffer, he drew a Gurbani line for guidance:</p>
           
-          <p class="mb-4">ਲਾਹੌਰ ਦੇ ਸੂਬੇਦਾਰ ਜ਼ਕਰੀਆ ਖ਼ਾਨ ਨੇ ਮੋਮਨ ਖ਼ਾਨ ਨੂੰ 2200 ਘੋੜਸਵਾਰ ਤੇ ਹੋਰ ਜੰਗੀ ਸਮਾਨ ਦੇ ਕੇ ਭਾਈ ਤਾਰਾ ਸਿੰਘ ਵਾਂ 'ਤੇ ਚੜ੍ਹਾਈ ਕਰਨ ਦੀ ਤਾਕੀਦ ਕੀਤੀ। ਭਾਈ ਤਾਰਾ ਸਿੰਘ ਵਾਂ ਨੇ ਸਾਥੀ ਸਿੰਘਾਂ ਨਾਲ ਮਸ਼ਵਰਾ ਕੀਤਾ ਕਿ ਸ਼ਾਹੀ ਫ਼ੌਜ ਦਾ ਟਾਕਰਾ ਕਰਨ ਲਈ ਸਾਨੂੰ ਵੀ ਤਿਆਰੀ ਕਰਨੀ ਚਾਹੀਦੀ ਹੈ।</p>
+          <p class="mb-4">"If one could escape death by fleeing from Time,<br/>
+          tell me—why run away?"<br/>
+          (Sri Dasam Granth)</p>
           
-          <p class="mb-4">ਭਾਈ ਤਾਰਾ ਸਿੰਘ ਨੂੰ ਸੁੱਝੀ ਕਿ ਸਾਨੂੰ ਇਉਂ ਕਾਇਰਾਂ ਵਾਂਗ ਨਹੀਂ ਭੱਜਣਾ ਚਾਹੀਦਾ। ਉਨ੍ਹਾਂ ਨੇ ਆਪਣੇ ਖਜ਼ਾਨੇ ਵਿੱਚੋਂ ਦਸ ਗ੍ਰੰਥੀ ਕੱਢੀ ਤੇ ਗੁਰਬਾਣੀ ਦੀ ਓਟ ਲੈਣ ਲਈ 'ਗੁਰਬਾਣੀ ਵਾਕ' ਲਿਆ: "ਜੋ ਕਹੂੰ ਕਾਲ ਤੇ ਭਾਜ ਕੇ ਬਾਚੀਅਤ ਤੋ ਕਿਹ ਕੁੰਟ ਕਹੋ ਭਜਿ ਜਈਯੈ॥"</p>
-          
-          <p class="mb-4">ਉਕਤ 'ਗੁਰਬਾਣੀ ਵਾਕ' ਨੇ ਭਾਈ ਸਾਹਿਬ 'ਤੇ ਗਹਿਰਾ ਅਸਰ ਕੀਤਾ ਤੇ ਉਨ੍ਹਾਂ ਨੇ ਮਾਲਵੇ ਵੱਲ ਨੂੰ ਨਿਕਲਣ ਦਾ ਇਰਾਦਾ ਤਿਆਗ ਦਿੱਤਾ। ਉਹ ਸਿੰਘਾਂ ਦੇ ਜਥੇ ਸਮੇਤ ਸਤਲੁਜ ਦੇ ਪੱਤਣ ਬਹਾਦਰ ਨਗਰ ਤੋਂ ਵਾਪਸ ਪਰਤ ਆਏ ਤੇ ਵਾੜੇ ਵਿੱਚ ਆ ਡਟੇ।</p>
-          
-          <p class="mb-4">ਲਾਹੌਰ ਤੋਂ ਚੱਲਿਆ ਮੋਮਨ ਖ਼ਾਨ ਪੈਂਡਾ ਤੈਅ ਕਰਦਾ ਭਾਈ ਤਾਰਾ ਸਿੰਘ ਵਾਂ ਦੇ ਵਾੜੇ ਕੋਲ ਆ ਪਹੁੰਚਿਆ। ਸਿੰਘ ਗੁਰੂ ਦੇ ਹੁਕਮ ਨੂੰ ਕਬੂਲਦੇ ਹੋਏ ਸ਼ਹੀਦੀਆਂ ਪਾਉਣ ਲਈ ਤਿਆਰ-ਬਰ-ਤਿਆਰ ਸਨ। ਸਿੰਘਾਂ ਨੇ ਧੌਂਸੇ 'ਤੇ ਚੋਟ ਲਾਈ, ਅੰਮ੍ਰਿਤ ਵੇਲੇ ਗੂੰਜ ਏਨੀ ਹੋਈ ਕਿ ਸ਼ਾਹੀ ਫ਼ੌਜ ਇੱਕ ਵਾਰ ਤਾਂ ਭੈ-ਭੀਤ ਹੋ ਗਈ।</p>
-          
-          <p class="mb-4">ਸਿੰਘ ਗਿਣਤੀ ਦੇ ਸਿਰਫ਼ 22 ਕੁ ਸਨ ਤੇ ਸ਼ਾਹੀ ਫ਼ੌਜ ਕਿਤੇ ਵੱਧ ਸੀ। ਸਿੰਘਾਂ ਨੇ ਮੁਗ਼ਲਾਂ ਦਾ ਡਟ ਕੇ ਮੁਕਾਬਲਾ ਕੀਤਾ। ਇਸ ਜੰਗ ਦੌਰਾਨ ਸਿੰਘਾਂ ਨੇ ਮੁਗ਼ਲ ਸੈਨਾ ਦਾ ਭਾਰੀ ਨੁਕਸਾਨ ਕਰ ਦਿੱਤਾ। ਆਖ਼ਰ ਭਾਈ ਤਾਰਾ ਸਿੰਘ ਵਾਂ ਵੀ ਮੁਗ਼ਲਾਂ ਨਾਲ ਲੋਹਾ ਲੈਂਦੇ ਹੋਏ ਸ਼ਹੀਦੀ ਪਾ ਗਏ। ਇਹ ਸਾਕਾ ਸੰਨ 1725-26 ਦੇ ਆਸਪਾਸ ਦਾ ਹੈ।</p>
-          
-          <p class="mb-4">ਅਠਾਰ੍ਹਵੀਂ ਸਦੀ ਦੇ ਸਿੰਘਾਂ ਨੇ ਸ਼ਬਦ-ਗੁਰੂ ਦੀ ਓਟ ਸਦਕਾ 'ਗੁਰਬਾਣੀ ਵਾਕ' 'ਤੇ ਚੱਲਦਿਆਂ ਰਣਤੱਤੇ ਨੂੰ ਛੱਡ ਕੇ ਭੱਜਣ ਨਾਲੋਂ ਜੂਝ ਕੇ ਸ਼ਹੀਦੀ ਪਾਉਣ ਨੂੰ ਤਰਜੀਹ ਦਿੱਤੀ। ਭਾਈ ਤਾਰਾ ਸਿੰਘ ਵਾਂ ਤੇ ਸਾਥੀ ਸ਼ਹੀਦ ਸਿੰਘਾਂ ਦਾ 'ਸ਼ਹੀਦ ਗੰਜ' ਪਿੰਡ 'ਵਾਂ' ਵਿੱਚ ਸੁਸ਼ੋਭਿਤ ਹੈ।</p>
+          <p class="mb-4">Deeply struck, he abandoned the plan to withdraw, returned with his band, and held the enclosure. Moman Khan arrived. At amrit-vela, the Singhs beat the war-drum; their cry "akal!" shook the sky. Only about twenty-two Singhs stood against vastly more. They fought fiercely—Taqi Beg was wounded by Bhai Tara Singh's hand. Many Mughals fell. Moman Khan then ordered a united charge. One by one, the Singhs attained martyrdom in the field; at last, Bhai Tara Singh too fell fighting. This occurred around 1725–26. The Sikhs of that century, sheltered by the Shabad-Guru, chose martyrdom over flight. The memorial "Shaheed Ganj" of Bhai Tara Singh and his comrades stands in Van.</p>
         `,
         'chavinde-waliyan-bibiyan-di-jang': `
-          <p class="mb-4">1726 'ਚ ਇਕ ਜਾਫਰ ਬੇਗ ਨਾਂ ਦਾ ਤੁਰਕ ਸਾਹਿਬ ਰਾਏ ਨਾ ਦੇ ਇਕ ਸਰਕਾਰੀ ਝੋਲੀ ਚੁੱਕ ਮਗਰ ਲੱਗ ਕੇ ਨੌਸਹਿਰੇ 'ਚ ਸਿੰਘਾਂ ਨਾਲ ਲੜਿਆ ਸੀ ਤੇ ਥੋੜ੍ਹੇ ਜਿਹੇ ਸਿੰਘਾਂ ਤੋਂ ਬੁਰੀ ਤਰਾਂ ਹਾਰ ਖਾ ਕੇ ਅੰਮ੍ਰਿਤਸਰ ਵੱਲ ਨੂੰ ਭੱਜ ਆਇਆ ਸੀ। ਹਾਰ ਦੀ ਨਮੋਸ਼ੀ ਤੋਂ ਨਿਜਾਤ ਪਾਉਣ ਲਈ ਉਹ ਕੋਈ ਬਹਾਨਾ ਲੱਭ ਰਿਹਾ ਸੀ ਤੇ ਉਸ ਨੂੰ ਚਵਿੰਡੇ 'ਚ ਸਰਦਾਰ ਬਹਾਦਰ ਸਿੰਘ ਦੇ ਸਪੁੱਤਰ ਦੇ ਵਿਆਹ ਦਾ ਪਤਾ ਲੱਗਾ, ਜਿਸ ਵਿੱਚ ਕਾਫ਼ੀ ਸਿੰਘ-ਸਿੰਘਣੀਆਂ ਨੇ ਸ਼ਾਮੂਲੀਅਤ ਕੀਤੀ ਹੋਈ ਸੀ।</p>
+          <p class="mb-4">In 1726, a Turk named Ja'far Beg, after being badly beaten by a small band of Sikhs near Naushehra over a tax dispute, fled toward Amritsar. Burning with shame, he sought an excuse for revenge and heard that in Chavinde, at the wedding of Sardar Bahadur Singh's son, many Sikhs—men and women—had gathered. He surrounded the village with his defeated force. The Sikhs, however, completed the anand ceremony undisturbed; then, after langar, the mounted Khalsa struck a flank of the encircling troops, cut many down, and broke out.</p>
           
-          <p class="mb-4">ਜਾਫਰ ਬੇਗ ਨੇ ਆਪਣੀ ਹਾਰੀ ਹੋਈ ਫੌਜ ਨੂੰ ਨਾਲ ਲੈ ਕੇ ਚਵਿੰਡੇ ਪਿੰਡ ਨੂੰ ਘੇਰਾ ਪਾ ਲਿਆ। ਸਿੰਘਾਂ ਨੂੰ ਵੀ ਇਸਦੀ ਖ਼ਬਰ ਮਿਲ ਗਈ ਪਰ ਉਹ ਅਨੰਦ ਕਾਰਜ ਦੀ ਮਰਿਯਾਦਾ ਨਿਰਵਿਘਨ ਨਿਭਾਉਂਦੇ ਰਹੇ। ਪ੍ਰਸ਼ਾਦਾ ਪਾਣੀ ਛਕ ਕੇ ਤਿਆਰ-ਬਰ-ਤਿਆਰ ਖਾਲਸਾ ਘੋੜਿਆਂ ਤੇ ਸਵਾਰ ਹੋਇਆ ਤੇ ਫੌਜ ਦੇ ਘੇਰੇ ਉੱਤੇ ਇਕ ਪਾਸੇ ਹਮਲਾ ਕਰ ਕੇ ਬਹੁਤਿਆਂ ਨੂੰ ਮੌਤ ਦੇ ਘਾਟ ਉਤਾਰ ਚੀਰਦਾ ਹੋਇਆ ਨਿਕਲ ਗਿਆ।</p>
+          <p class="mb-4">Twice thwarted, Ja'far Beg's malice turned vile; he stormed the house to assault the women. Inside were twenty Sikh women. At once they fortified the house like a small fort. They barred the door; two stood at Ja'far Beg's side, two kept watch on every angle, two were tasked with distributing supplies as needed, and fourteen readied muskets and bows, waiting.</p>
           
-          <p class="mb-4">ਪਹਿਲਾਂ ਨੌਸ਼ਹਿਰੇ 'ਚ ਤੇ ਹੁਣ ਇੱਥੇ ਵੀ ਸਿੰਘ ਕਾਬੂ ਨਾ ਆਏ ਤਾਂ ਜਾਫਰ ਬੇਗ ਬਹੁਤ ਕਲ਼ਪਿਆ ਤੇ ਕਮੀਨਗੀ 'ਤੇ ਉੱਤਰ ਆਇਆ। ਉਹ ਵਿਆਹ ਵਾਲੇ ਘਰ 'ਚ ਬੀਬੀਆਂ ਉੱਤੇ ਹਮਲਾ ਕਰਨ ਲਈ ਪਿੰਡ 'ਚ ਜਾ ਵੜਿਆ। ਘਰ ਵਿੱਚ 20 ਸਿੰਘਣੀਆਂ ਸਨ।</p>
+          <p class="mb-4">The moment came. As the first contingent advanced at Ja'far Beg's signal, a rain of bullets and arrows fell—true to the mark—throwing the troops into confusion. Ja'far Beg had not imagined such resistance. When powder ran low, the arrows still came in sheets. He then pushed close with fifty soldiers to the wall. The women drew their swords. In this hand-to-hand clash, the lightning-fast blades unnerved the enemy.</p>
           
-          <p class="mb-4">ਇੱਥੇ ਜਾਫਰ ਬੇਗ ਨਾਲ ਉਹ ਹੋਈ ਜੋ ਪਹਿਲੀਆਂ ਦੋ ਹਾਰਾਂ ਵਿੱਚ ਵੀ ਨਾ ਹੋਈ ਸੀ। ਉਸ ਦੇ ਪਿੰਡ ਵਿੱਚ ਆ ਵੜਨ ਦੀ ਖ਼ਬਰ ਸੁਣਦਿਆਂ ਹੀ ਬੀਬੀਆਂ ਨੇ ਘਰ ਵਿੱਚ ਕਿਲੇ ਵਰਗੀ ਮੋਰਚੇਬੰਦੀ ਕਰ ਲਈ। ਘਰ ਦਾ ਦਰਵਾਜ਼ਾ ਢੋ ਕੇ ਦੋ ਸ਼ੀਂਹਣੀਆਂ ਉਸਦੇ ਕੋਲ ਖੜ੍ਹ ਗਈਆਂ। ਦੋ ਇਸ ਦੇਖ-ਰੇਖ 'ਚ ਲੱਗ ਗਈਆਂ ਕਿ ਕਿਤੋਂ ਵੈਰੀ ਰਾਹ ਬਣਾ ਕੇ ਅੰਦਰ ਨਾ ਆ ਵੜੇ, ਦੋ ਜਣੀਆਂ ਲੋੜ ਅਨੁਸਾਰ ਸਭ ਨੂੰ ਚੀਜ਼ਾਂ ਪਹੁੰਚਾਣ ਲਈ ਖੜੀਆਂ ਕੀਤੀਆਂ ਗਈਆਂ ਤੇ 14 ਜਣੀਆਂ ਬੰਦੂਕਾਂ ਤੇ ਤੀਰ ਕਮਾਨ ਸਾਂਭ ਕੇ ਵੈਰੀ ਦੀ ਉਡੀਕ ਕਰਨ ਲੱਗੀਆਂ।</p>
+          <p class="mb-4">Bibi Dharam Kaur, wed barely two hours before, cut down many and, though grievously wounded, fell. Hoping to salvage some "prize," Ja'far Beg reached to seize her; with a flash of her sword, she severed his arm. Screaming, he ran; his troops broke and fled.</p>
           
-          <p class="mb-4">ਇਸ ਅਨੋਖੀ ਲੜਾਈ ਦੇ ਸ਼ੁਰੂ ਹੋਣ ਦਾ ਛਿਣ ਆ ਗਿਆ। ਫ਼ੌਜਦਾਰ ਜਾਫਰ ਬੇਗ ਨੇ ਆਪਣੀ ਪਹਿਲੀ ਫ਼ੌਜੀ ਟੁਕੜੀ ਨੂੰ ਅੱਗੇ ਵਧਣ ਦਾ ਇਸ਼ਾਰਾ ਕੀਤਾ ਹੀ ਸੀ ਕਿ ਅੱਗਿਓਂ ਗੋਲ਼ੀਆਂ ਤੇ ਤੀਰਾਂ ਦਾ ਮੀਂਹ ਵਰ੍ਹਨ ਲੱਗਾ। ਬਿਲਕੁਲ ਨਿਸ਼ਾਨੇ 'ਤੇ ਲੱਗਦੀਆਂ ਗੋਲ਼ੀਆਂ ਤੇ ਤੀਰਾਂ ਨੇ ਫੌਜ ਬੌਂਦਲਾ ਦਿੱਤੀ।</p>
-          
-          <p class="mb-4">ਜਾਫਰ ਬੇਗ ਨੂੰ ਅਜਿਹੇ ਟਕਰਾਅ ਦਾ ਬਿਲਕੁਲ ਵੀ ਅੰਦਾਜ਼ਾ ਨਾ ਸੀ। ਫੌਜ ਦੀ ਅੱਗੇ ਵਧਣ ਦੀ ਰਫ਼ਤਾਰ ਮੱਧਮ ਪੈ ਗਈ। ਬੀਬੀਆਂ ਕੋਲ਼ ਜਿੰਨਾਂ ਕੁ ਗੋਲੀ-ਸਿੱਕਾ ਸੀ ਉਨ੍ਹਾਂ ਸਾਰਾ ਚਲਾ ਦਿੱਤਾ ਤੇ ਇਹ ਮੁੱਕਣ ਤੋਂ ਬਾਅਦ ਤੀਰਾਂ ਦੀ ਵਾਛੜ ਜਾਰੀ ਰਹੀ।</p>
-          
-          <p class="mb-4">ਜਾਫਰ ਬੇਗ ਹੰਭਲਾ ਮਾਰ ਕੇ ੫੦ ਸਿਪਾਹੀਆਂ ਦੀ ਟੁਕੜੀ ਲੈ ਕੇ ਘਰ ਦੀਆਂ ਕੰਧਾਂ ਕੋਲ ਆ ਪਹੁੰਚਿਆ। ਇਹ ਦੇਖ ਬੀਬੀਆਂ ਨੇ ਕਿਰਪਾਨਾਂ ਧੂਹ ਲਈਆਂ। ਆਹਮੋਂ-ਸਾਹਮਣੇ ਹੁੰਦੀ ਇਸ ਲੜਾਈ 'ਚ ਬੀਬੀਆਂ ਵੱਲੋਂ ਬਿਜਲੀ ਵਾਂਗ ਚਲਦੀ ਕਿਰਪਾਨ ਨੂੰ ਦੇਖ ਵੈਰੀ ਦਾ ਦਿਲ ਬਹਿ ਗਿਆ ਤੇ ਉਨ੍ਹਾਂ ਨੂੰ ਜਿੱਤ ਕੇ ਤੇ ਬਚ ਕੇ ਨਿਕਲਣਾ ਮੁਸ਼ਕਲ ਜਾਪਣ ਲੱਗਾ।</p>
-          
-          <p class="mb-4">ਇਸ ਭੇੜ ਵਿੱਚ ਬੀਬੀ ਧਰਮ ਕੌਰ ਜਿਸਦਾ 2 ਕੁ ਘੰਟੇ ਪਹਿਲਾਂ ਹੀ ਵਿਆਹ ਹੋਇਆ ਸੀ, ਦੀ ਤੇਗ ਤੁਰਕਾਂ ਨੂੰ ਕਾਲ ਰੂਪ ਹੀ ਜਾਪ ਰਹੀ ਸੀ। ਉਹ ਬਹੁਤਿਆਂ ਨੂੰ ਜ਼ਿੰਦਗੀ ਦੇ ਤਾਣੇ-ਬਾਣੇ ਤੋਂ ਮੁਕਤ ਕਰਦੀ ਹੋਈ, ਲੜਦੀ-ਲੜਦੀ ਬੁਰੀ ਤਰਾਂ ਜਖਮੀ ਹੋ ਗਈ ਤੇ ਜ਼ਮੀਨ ਉੱਤੇ ਡਿਗ ਪਈ।</p>
-          
-          <p class="mb-4">ਜਾਫਰ ਬੇਗ ਨੂੰ ਜਾਪਿਆ ਕਿ ਇਸ ਬੁਰੀ ਤਰਾਂ ਹੋਈ ਹਾਰ ਵਿੱਚ ਵੀ ਜੇ ਉਹ ਧਰਮ ਕੌਰ ਨੂੰ ਅਗਵਾ ਕਰ ਕੇ ਲੈ ਜਾਵੇ ਤਾਂ ਕੁੱਝ ਨਾ ਕੁੱਝ ਤਾਂ ਕਹਿਣ ਲਈ ਬਚ ਜਾਵੇਗਾ। ਅਜਿਹੀ ਮਨਸ਼ਾ ਨਾਲ ਉਸ ਨੇ ਬੀਬੀ ਧਰਮ ਕੌਰ ਵੱਲ ਹੱਥ ਵਧਾਇਆ। ਜਾਫਰ ਬੇਗ ਦਾ ਆਪਣੇ ਵੱਲ ਆਉਂਦਾ ਹੱਥ ਦੇਖ ਡਿਗੀ ਪਈ ਧਰਮ ਕੌਰ ਨੇ ਅਸਮਾਨੀ ਬਿਜਲੀ ਦੀ ਤੇਜ਼ੀ ਨਾਲ ਆਪਣੀ ਤੇਗ ਦਾ ਵਾਰ ਕੀਤਾ ਤੇ ਜਾਫਰ ਬੇਗ ਦੀ ਬਾਂਹ ਵੱਢ ਦਿੱਤੀ। ਉਹ ਬੁਰੀ ਤਰਾਂ ਕੁਰਲਾ ਉੱਠਿਆ ਤੇ ਇਕਦੱਮ ਪਿੱਛੇ ਨੂੰ ਭੱਜਿਆ, ਮਗਰੇ ਫੌਜ ਭੱਜ ਨਿਕਲੀ।</p>
-          
-          <p class="mb-4">ਇਸ ਬੇ-ਮੇਲ਼ ਲੜਾਈ 'ਚ ਬੱਸ ਚਾਰ ਬੀਬੀਆਂ ਜਖਮੀ ਹੋਈਆ ਤੇ ਇਨ੍ਹਾਂ ਬਹਾਦਰ ਕੌਰਾਂ ਨੇ ਦੁਨੀਆਂ ਨੂੰ ਦੱਸ ਦਿੱਤਾ ਕਿ ਕਿਵੇਂ ਦਸਮ ਪਿਤਾ ਦਾ ਖੰਡੇ-ਬਾਟੇ ਦਾ ਅੰਮ੍ਰਿਤ ਚਿੜੀਆਂ ਵਿੱਚ ਬਾਜ ਨੂੰ ਝਪੱਟਣ ਦੀ ਤਾਕਤ ਭਰ ਦਿੰਦਾ ਹੈ।</p>
+          <p class="mb-4">In this uneven fight, only four women were wounded—yet they showed the world how the Guru's amrit makes sparrows strike like hawks.</p>
         `,
         'bhai-mani-singh-shahadat': `
-          <p class="mb-4">ਭਾਈ ਮਨੀ ਸਿੰਘ ਜੀ ਦਾ ਜਨਮ ਭਾਈ ਮਾਈ ਦਾਸ ਜੀ ਤੇ ਮਾਤਾ ਮਧਰੀ ਬਾਈ ਜੀ ਦੇ ਘਰ 1644ਈ. ਨੂੰ ਪਿੰਡ ਅਲੀਪੁਰ (ਹੁਣਪਾਕਿਸਤਾਨ) ਵਿਖੇ ਹੋਇਆ। ਭਾਈ ਮਾਈ ਦਾਸ ਜੀ ਦੇ ਬਾਰਾਂ ਸਪੁੱਤਰ ਸਨ, ਜਿਨ੍ਹਾਂ ਵਿੱਚੋਂ ਭਾਈ ਦਿਆਲਾ ਜੀ ਸ੍ਰੀ ਗੁਰੂ ਤੇਗ ਬਹਾਦਰ ਜੀਨਾਲ ਚਾਂਦਨੀ ਚੌਂਕ ਦਿੱਲੀ ਵਿਖੇ ਸ਼ਹੀਦ ਹੋਏ ਸਨ।</p>
+          <p class="mb-4">Bhai Mani Singh Ji was born in 1644 in Alipur (now Pakistan) to Bhai Mai Das Ji and Mata Madhri Bai Ji. His father had twelve sons, including Bhai Dayala Ji, who was martyred with Guru Tegh Bahadur Ji at Chandni Chowk, Delhi. Bhai Mani Singh married Bibi Seeto Ji, who bore five sons: Udai Singh, Ajab Singh, Ajaib Singh, Anok Singh, and Bachittar Singh. His son Bhai Bachittar Singh, defending Lohgarh Fort at Anandpur Sahib, pierced the elephant's trunk with a nagani spear.</p>
           
-          <p class="mb-4">ਭਾਈ ਮਨੀ ਸਿੰਘ ਜੀ ਦਾ ਵਿਆਹ ਬੀਬੀ ਸੀਤੋ ਜੀ ਨਾਲ ਹੋਇਆ, ਜਿਨ੍ਹਾ ਦੀ ਕੁੱਖ ਤੋਂਪੰਜ ਸਪੁੱਤਰਾਂ ਉਦੈ ਸਿੰਘ, ਅਜਬ ਸਿੰਘ ਅਜਾਇਬ ਸਿੰਘ, ਅਨਕ ਸਿੰਘ, ਬਚਿੱਤਰ ਸਿੰਘ ਨੇ ਜਨਮ ਲਿਆ। ਭਾਈ ਮਨੀ ਸਿੰਘ ਜੀ ਦੇਸਪੁੱਤਰ ਭਾਈ ਬਚਿੱਤਰ ਸਿੰਘ ਨੇ ਅਨੰਦਪੁਰ ਸਾਹਿਬ ਵਿਖੇ ਕਿਲਾ ਲੋਹਗੜ੍ਹ ਸਾਹਿਬ ਦੀ ਰੱਖਿਆ ਸਮੇਂ ਨਾਗਣੀ ਬਰਛੇ ਨਾਲ ਹਾਥੀ ਦਾਸਿਰ ਵਿੰਨਿਆ ਸੀ।</p>
+          <p class="mb-4">At thirteen, he joined his father in service to Guru Har Rai at Kiratpur Sahib, where he served daily in langar and remained absorbed in devotion. He also served Guru Har Krishan and accompanied him to Delhi to spread Gurmat. Under Guru Tegh Bahadur, he engaged in many services; by Guru Gobind Singh's time, he had mastered warfare, writing Gurbani manuscripts, and katha. His gentle nature, obedience, and steadfast faith earned him great respect in the Guru's court.</p>
           
-          <p class="mb-4">ਭਾਈ ਮਨੀ ਸਿੰਘ ਜੀ ਆਪਣੇ ਪਿਤਾ ਨਾਲ ਤੇਰਾਂ ਸਾਲ ਦੀ ਉਮਰ ਵਿੱਚ ਕੀਰਤਪਰ ਸਾਹਿਬ ਵਿਖੇ ਸ੍ਰੀ ਗੁਰੂ ਹਰਿਰਾਇ ਸਾਹਿਬਦੀ ਸੇਵਾ ਵਿੱਚ ਹਾਜ਼ਰ ਹੋਏ ਸਨ। ਆਪ ਰੋਜ਼ਾਨਾ ਲੰਗਰ ਵਿੱਚ ਸੇਵਾ ਕਰਦੇ ਅਤੇ ਭਜਨ ਬੰਦਗੀ 'ਚ ਲੀਨ ਰਹਿੰਦੇ ਸਨ। ਆਪ ਸ੍ਰੀ ਗੁਰੂਹਰਿਕ੍ਰਿਸ਼ਨ ਸਾਹਿਬ ਜੀ ਦੀ ਸੇਵਾ ਵਿੱਚ ਵੀ ਰਹੇ ਅਤੇ ਉਨ੍ਹਾਂ ਨਾਲ ਗੁਰਮਤਿ ਦੇ ਪ੍ਰਚਾਰ-ਪ੍ਰਸਾਰ ਲਈ ਦਿੱਲੀ ਵੀ ਗਏ।</p>
+          <p class="mb-4">A leading Sikh of the Tenth Guru's time, he fought bravely in battles at Bhangani, Nadaun, and Anandpur Sahib. For his valor and learning, the Guru honored him with the title "Diwan." At the Khalsa's creation, he and his five sons took amrit. At the Sangat's request, the Guru appointed him Granthi of Sri Harimandir Sahib and Jathedar of Sri Akal Takht Sahib.</p>
           
-          <p class="mb-4">ਸ੍ਰੀ ਗੁਰੂ ਤੇਗਬਹਾਦਰ ਜੀ ਦੇ ਸਮੇਂ ਆਪ ਅਨੇਕ ਸੇਵਾਵਾਂ ਵਿੱਚ ਸ਼ਾਮਲ ਰਹੇ ਸਨ। ਸ੍ਰੀ ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਦੇ ਗੁਰਿਆਈ ਕਾਲ ਤੱਕ ਆਪ ਜੀ ਯੁੱਧਕਲਾ, ਗੁਰਬਾਣੀ ਦੀਆਂ ਪੋਥੀਆਂ ਲਿਖਣ, ਕਥਾ ਕਰਨ ਆਦਿ ਵਿੱਚ ਪ੍ਰਬੀਨਤਾ ਹਾਸਿਲ ਕਰ ਚੁੱਕੇ ਸਨ। ਉਨ੍ਹਾ ਦੇ ਨੇਕ-ਮਿੱਠ ਬੋਲੜੇਸੁਭਾਅ, ਆਗਿਆਕਾਰੀ ਭਾਵਨਾ ਸਿੱਖੀ ਸਿਦਕ ਵਿੱਚ ਨਿਸ਼ਠਤਾ ਆਦਿ ਗੁਣਾ ਕਰਕੇ ਗੁਰ-ਦਰਬਾਰ ਵਿੱਚ ਹਰ ਕੋਈ ਬਹੁਤ ਸਤਿਕਾਰਕਰਦਾ ਸੀ।</p>
+          <p class="mb-4">After Banda Singh's martyrdom, the Mughals inflicted heavy losses on the Sikhs, vowing to erase their very trace. They banned Diwali and Vaisakhi gatherings at Amritsar. The Khalsa took refuge in forests and hills. To rally the Khalsa and plan for the future, Bhai Mani Singh sought permission from the Lahore governor to hold a Diwali gathering at Amritsar.</p>
           
-          <p class="mb-4">ਭਾਈ ਮਨੀ ਸਿੰਘ ਜੀ ਦਸਵੇਂ ਪਾਤਸ਼ਾਹ ਦੇ ਸਮੇਂ ਮੁਖੀ ਸਿੱਖਾਂ ਵਿੱਚੋਂ ਸਨ। ਆਪ ਗੁਰੂ ਸਾਹਿਬ ਨਾਲ ਭੰਗਾਣੀ, ਨਦੌਣ, ਅਨੰਦਪੁਰਸਾਹਿਬ ਦੀਆਂ ਜੰਗਾਂ ਸਮੇਂ ਬਹਾਦਰੀ ਨਾਲ ਲੜੇ। ਆਪ ਦੀ ਬਹਾਦਰੀ-ਵਿਦਵਤਾ ਗੁਣਾਂ ਕਰਕੇ ਗੁਰੂ ਸਾਹਿਬ ਨੇ ਆਪ ਨੂੰ 'ਦੀਵਾਨ' ਦੀਉਪਾਧੀ ਨਾਲ ਨਿਵਾਜਿਆ। ਖ਼ਾਲਸਾ ਸਾਜਨਾ ਸਮੇਂ ਆਪ ਨੇ ਆਪਣੇ ਪੰਜਾਂ ਸਪੁੱਤਰਾਂ ਸਮੇਤ ਅੰਮ੍ਰਿਤਪਾਨ ਕੀਤਾ। ਗੁਰੂ ਸਾਹਿਬ ਨੇਅੰਮ੍ਰਿਤਸਰ ਦੀ ਸੰਗਤ ਵੱਲੋਂ ਬੇਨਤੀ ਕਰਨ 'ਤੇ ਆਪ ਜੀ ਨੂੰ ਸ੍ਰੀ ਹਰਿਮੰਦਰ ਸਾਹਿਬ ਦਾ ਗ੍ਰੰਥੀ ਅਤੇ ਸ੍ਰੀ ਅਕਾਲ ਤਖ਼ਤ ਸਾਹਿਬ ਦਾਜਥੇਦਾਰ ਨਿਯੁਕਤ ਕਰਕੇ ਭੇਜਿਆ।</p>
+          <p class="mb-4">The Lahore court agreed on condition of paying five thousand rupees (tax). The government's intent was to inflict heavy losses when the Sikhs assembled. Sensing this, Bhai Mani Singh sent messages telling Sikhs not to come to Amritsar. After Diwali, when the Mughals demanded the tax, he flatly refused. Arrested and taken to Lahore, he was offered many temptations to convert, but remained unshaken in the Guru's will. Finally, on 25 Har 1734, the executioners cut him limb by limb at Nakhas Chowk, Lahore.</p>
           
-          <p class="mb-4">ਬਾਬਾ ਬੰਦਾ ਸਿੰਘ ਬਹਾਦਰ ਦੀ ਸ਼ਹੀਦੀ ਉਪਰੰਤ ਮੁਗਲ ਹਕੂਮਤ ਨੇ ਸਿੱਖਾਂ ਦਾ ਭਾਰੀ ਜਾਨੀ-ਮਾਲੀ ਨੁਕਸਾਨ ਕੀਤਾ। ਸਿੱਖਾਂ ਦਾਖੁਰਾ-ਖੋਜ ਮਿਟਾਉਣ ਦਾ ਤਹੱਈਆ ਕੀਤਾ। ਹਕੂਮਤ ਨੇ ਅੰਮ੍ਰਿਤਸਰ ਦੀਵਾਲੀ-ਵੈਸਾਖੀ ਇਕੱਠਾਂ 'ਤੇ ਪੂਰਨ ਪਾਬੰਦੀ ਲਾ ਦਿੱਤੀ। ਖ਼ਾਲਸਾਜੰਗਲ, ਬੇਲਿਆਂ, ਪਹਾੜਾਂ 'ਚ ਪਨਾਹ ਲਈ ਬੈਠਾ ਸੀ। ਭਾਈ ਮਨੀ ਸਿੰਘ ਜੀ ਨੇ ਖ਼ਾਲਸੇ ਦੀ ਤਾਕਤ ਨੂੰ ਇਕੱਤਰ ਕਰਨ ਅਤੇ ਭਵਿੱਖਮੁਖੀਯੋਜਨਾਵਾਂ ਨੂੰ ਉਲੀਕਣ ਲਈ ਲਾਹੌਰ ਦੇ ਸੂਬੇ ਕੋਲੋਂ ਦੀਵਾਲੀ ਮੌਕੇ ਅੰਮ੍ਰਿਤਸਰ ਇਕੱਠ ਕਰਨ ਦੀ ਆਗਿਆ ਮੰਗੀ।</p>
-          
-          <p class="mb-4">ਲਾਹੌਰ ਦਰਬਾਰ ਨੇਪੰਜ ਹਜ਼ਾਰ ਕਰ (ਟੈਕਸ) ਦੇਣ ਦੀ ਸ਼ਰਤ 'ਤੇ ਮਨਜ਼ੂਰੀ ਦਿੱਤੀ। ਹਕੂਮਤ ਦੀ ਮਨਸ਼ਾ ਸੀ ਕਿ ਜਦੋਂ ਸਿੱਖ ਇਕੱਤਰ ਹੋਣ ਤਾਂ ਉਨ੍ਹਾਂ ਦਾ ਭਾਰੀਜਾਨੀ-ਮਾਲੀ ਨੁਕਸਾਨ ਕੀਤਾ ਜਾਵੇ। ਭਾਈ ਮਨੀ ਸਿੰਘ ਜੀ ਨੇ ਹਕੂਮਤ ਦੇ ਇਰਾਦਿਆ ਨੂੰ ਭਾਂਪਦਿਆ ਸਿੱਖਾਂ ਨੂੰ ਅੰਮ੍ਰਿਤਸਰ ਨਾ ਆਉਣ ਦੇਸੁਨੇਹੇ ਭੇਜ ਦਿੱਤੇ।</p>
-          
-          <p class="mb-4">ਮੁਗਲ ਹਕੂਮਤ ਨੇ ਦੀਵਾਲੀ ਉਪਰੰਤ ਜਦੋਂ ਕਰ ਮੰਗਿਆ ਤਾਂ ਭਾਈ ਮਨੀ ਸਿੰਘ ਜੀ ਨੇ ਕਰ ਦੇਣ ਤੋਂ ਸਪੱਸ਼ਟ ਨਾਂਹ ਕਰ ਦਿੱਤੀ।ਭਾਈ ਸਾਹਿਬ ਨੂੰ ਗ੍ਰਿਫਤਾਰ ਕਰਕੇ ਲਾਹੌਰ ਲਿਜਾਇਆ ਗਿਆ, ਜਿਥੇ ਉਨਾਂ ਨੂੰ ਧਰਮ ਬਦਲਣ ਦੇ ਅਨੇਕ ਲਾਲਚ ਦਿੱਤੇ ਗਏ, ਪਰ ਭਾਈਸਾਹਿਬ ਗੁਰੂ ਭਾਣੇ ਵਿੱਚ ਅਡੋਲ ਰਹੇ। ਅੰਤ ਜਲਾਦਾਂ ਨੇ 25 ਹਾੜ 1734ਈ. ਨੂੰ ਉਨ੍ਹਾ ਦਾ ਬੰਦ-ਬੰਦ ਕੱਟ ਕੇ ਨਖ਼ਾਸ ਚੌਂਕ ਲਾਹੌਰ ਵਿਖੇਸ਼ਹੀਦ ਕਰ ਦਿੱਤਾ।</p>
-          
-          <p class="mb-4">ਇਸ ਤਰ੍ਹਾਂ ਭਾਈ ਮਨੀ ਸਿੰਘ ਜੀ ਦੀ ਸ਼ਖ਼ਸੀਅਤ ਸਿਦਕਵਾਨ ਗੁਰਸਿੱਖ, ਪ੍ਰਚਾਰਕ ਅਤੇ ਯੁੱਧ ਕਲਾ ਵਿੱਚ ਨਿਪੁੰਨ ਵਜੋਂ ਉਭਰ ਕੇਸਾਹਮਣੇ ਆਉਂਦੀ ਹੈ। ਆਪ ਨੇ ਕਥਾ ਵਾਰਤਾ ਰਾਹੀਂ ਸਿੱਖ ਸਿਧਾਂਤਾਂ ਅਤੇ ਪਰੰਪਰਾਵਾਂ ਨੂੰ ਸਿੱਖ ਜਗਤ ਅੰਦਰ ਦ੍ਰਿੜ ਕਰਵਾਇਆ। ਭਾਈ ਮਨੀ ਸਿੰਘ ਜੀ ਦੀ ਸ਼ਹਾਦਤ ਨੇ ਜਿਥੇ ਸਿੱਖ ਕੌਮ ਅੰਦਰ ਜੋਸ਼-ਜ਼ਜਬਾ ਭਰਿਆ ਉਥੇ ਮੁਗਲ ਹਕੂਮਤ ਵਿਰੁੱਧ ਸਿੱਖ ਸੰਘਰਸ਼ ਨੂੰ ਹੋਰ ਪ੍ਰਚੰਡਕੀਤਾ।</p>
+          <p class="mb-4">Thus, Bhai Mani Singh's personality emerges as a devoted Gursikh, skilled in preaching and warfare. Through katha, he strengthened Sikh principles and traditions within the Sikh world. His martyrdom filled the Sikh nation with zeal and intensified the Sikh struggle against Mughal rule.</p>
         `,
         'bhai-garja-singh-bota-singh': `
-          <p class="mb-4">ਭਾਈ ਗਰਜਾ ਸਿੰਘ ਜੀ ਅਤੇ ਭਾਈ ਬੋਤਾ ਸਿੰਘ ਜੀ ਮਾਝੇ ਇਲਾਕੇ ਦੇ ਭੜਾਣੇ (ਭਢਾਣੇ) ਨਗਰ ਦੇ ਵਸਨੀਕ ਸੂਰਬੀਰ ਯੋਧੇ ਸਨ। ਭਾਈ ਗਰਜਾ ਸਿੰਘ ਰੰਗਰੇਟੇ ਅਤੇ ਭਾਈ ਬੋਤਾ ਸਿੰਘ ਕਿਸਾਨ ਪਰਿਵਾਰ ਨਾਲ ਸੰਬੰਧਿਤ ਸਨ। ਜਿਸ ਸਮੇਂ ਜ਼ਕਰੀਆ ਖ਼ਾਨ ਲਾਹੌਰ ਦਾ ਸੂਬੇਦਾਰ ਬਣਿਆ ਤਾਂ ਉਸ ਨੇ ਸਿੰਘਾਂ ਤੇ ਕਰੜਾਈ ਵਰਤੀ। ਸਿੰਘਾਂ ਦੇ ਸਿਰਾਂ ਦੇ ਮੁੱਲ ਰੱਖ ਦਿੱਤੇ ਗਏ। ਸਿੰਘਾਂ ਨੇ ਜੰਗਲ ਬੇਲਿਆਂ ਨੂੰ ਆਪਣੀ ਠਾਹਰ ਬਣਾਇਆ ਤੇ ਬਹੁਤੇ ਸਿੰਘ ਸਤਲੁਜ ਤੋਂ ਪਾਰ ਨਿਕਲ ਗਏ।</p>
+          <p class="mb-4">From Bhadhaṇe (Bhraḍhaṇe) in the Majha, Bhai Garja Singh (a Ranghreta) and Bhai Bota Singh (a farmer) were valiant warriors. When Zakirya Khan became governor of Lahore, he imposed bounties on Sikh heads. Many Sikhs hid in forests or crossed the Sutlej; Garja Singh and Bota Singh stayed in the Majha, slipping secretly to amritsar and Tarn Taran for darshan and ishnan.</p>
           
-          <p class="mb-4">ਭਾਈ ਗਰਜਾ ਸਿੰਘ ਤੇ ਭਾਈ ਬੋਤਾ ਸਿੰਘ ਮਾਝੇ ਇਲਾਕੇ ਵਿੱਚ ਹੀ ਰਹੇ ਤੇ ਹੋਰ ਸਿੰਘਾਂ ਵਾਂਗ ਲੁਕ-ਛਿਪ ਕੇ ਸ੍ਰੀ ਅੰਮ੍ਰਿਤਸਰ ਤੇ ਸ੍ਰੀ ਤਰਨ ਤਾਰਨ ਸਾਹਿਬ ਦੇ ਦਰਸ਼ਨ ਇਸ਼ਨਾਨ ਕਰ ਆਉਂਦੇ ਸਨ। ਇਸੇ ਤਰ੍ਹਾਂ ਇੱਕ ਦਿਨ ਦੋਵੇਂ ਸਿੰਘ ਇਸ਼ਨਾਨ ਕਰਕੇ ਵਾਪਸ ਪਰਤ ਰਹੇ ਸਨ ਕਿ ਤਰਨ ਤਾਰਨ ਦੇ ਨਜ਼ਦੀਕ ਨੂਰਦੀਨ ਦੀ ਸਰਾਂ ਦੇ ਕੋਲ ਉਨ੍ਹਾਂ ਦੇ ਕੰਨੀ ਦੋ ਰਾਹੀਆਂ ਦੀ ਆਵਾਜ਼ ਪਈ ਜੋ ਆਪਸ ਵਿੱਚ ਗੱਲਬਾਤ ਕਰ ਰਹੇ ਸਨ।</p>
+          <p class="mb-4">One day near Nuruddin's sarai close to Tarn Taran, they overheard two travelers say, "There seem to be Singhs behind those bushes." The other replied, "They cannot be Singhs, for Singhs don't hide. Zakirya Khan had it proclaimed that the Sikhs are finished—these must be thieves or cowards." Nervous, the travelers hurried on.</p>
           
-          <p class="mb-4">ਦੋਵੇਂ ਰਾਹੀ ਜੋ ਗੱਲਬਾਤ ਕਰ ਰਹੇ ਸਨ ਉਨ੍ਹਾਂ 'ਚੋਂ ਇੱਕ ਬੋਲਿਆ ਇਹ ਝਾੜੀਆਂ ਪਿੱਛੇ ਸਿੰਘ ਜਾਪਦੇ ਹਨ। ਦੂਜਾ ਬੋਲਿਆ ਨਹੀਂ ਉਹ ਸਿੰਘ ਨਹੀਂ ਹੋ ਸਕਦੇ ਕਿਉਂਕਿ ਸਿੰਘ ਲੁਕਦੇ ਨਹੀਂ।ਜ਼ਕਰੀਆ ਖ਼ਾਨ ਨੇ ਇਹ ਢੰਡੋਰਾ ਵੀ ਪਿਟਵਾਇਆ ਹੈ ਕਿ ਸਿੱਖਾਂ ਦਾ ਖੁਰਾ-ਖੋਜ ਮਿਟ ਗਿਆ ਹੈ। ਇਹ ਕੋਈ ਚੋਰ-ਉਚੱਕਾ ਜਾਂ ਕੋਈ ਕਾਇਰ ਹੋਵੇਗਾ।</p>
+          <p class="mb-4">Cut to the heart, the two Singhs resolved to prove that the Khalsa still lived. Fashioning stout cudgels from berry wood, they set up a Khalsa toll on the royal road between Delhi and Lahore near the sarai, collecting one ana per cart and one paisa per donkey. Travelers paid silently; those who asked were told, "This is the Khalsa's toll." No one dared resist. But no traveler reported it to Zakirya Khan.</p>
           
-          <p class="mb-4">ਉਨ੍ਹਾਂ ਰਾਹੀਆਂ ਦੀ ਬੋਲੀ ਨੇ ਸਿੰਘਾਂ ਦੇ ਮਨ ਤੇ ਗਹਿਰਾ ਅਸਰ ਕੀਤਾ। ਦੋਵੇਂ ਸਿੰਘਾਂ ਨੇ ਮਤਾ ਕੀਤਾ ਕਿ ਅਜਿਹੀ ਯੋਜਨਾ ਬਣਾਈ ਜਾਵੇ ਜਿਸ ਨਾਲ ਲਾਹੌਰ ਦੇ ਸੂਬੇਦਾਰ ਨੂੰ ਕੰਨ ਹੋ ਜਾਣ ਕਿ ਖ਼ਾਲਸਾ ਅਜੇ ਖ਼ਤਮ ਨਹੀਂ ਹੋਇਆ। ਭਾਈ ਗਰਜਾ ਸਿੰਘ ਤੇ ਭਾਈ ਬੋਤਾ ਸਿੰਘ ਨੇ ਆਪਣੀਆਂ ਕਿਰਪਾਨਾਂ ਨਾਲ ਬੇਰੀ ਦੇ ਦੋ ਮਜਬੂਤ ਡੰਡੇ ਬਣਾ ਕੇ ਫੜ ਲਏ।</p>
+          <p class="mb-4">After many days with no government response, the Singhs sent a letter to Zakirya Khan through a passerby:</p>
           
-          <p class="mb-4">ਸਿੰਘਾਂ ਨੇ ਨੂਰਦੀਨ ਦੀ ਸਰਾਂ ਦੇ ਨਜ਼ਦੀਕ ਦਿੱਲੀ ਤੋਂ ਲਾਹੌਰ ਜਾਂਦੇ ਸ਼ਾਹੀ ਮਾਰਗ ਤੇ ਖ਼ਾਲਸਾ ਰਾਜ ਦੀ ਚੁੰਗੀ ਸਥਾਪਿਤ ਕਰਕੇ ਸੜਕ ਤੋਂ ਗੁਜ਼ਰਨ ਵਾਲਿਆਂ ਤੋਂ ਮਹਿਸੂਲ ਉਗਰਾਹੁਣਾ ਸ਼ੁਰੂ ਕਰ ਦਿੱਤਾ।ਗੱਡੇ ਨੂੰ ਇੱਕ ਆਨਾ ਅਤੇ ਖੋਤੇ ਨੂੰ ਇੱਕ ਪੈਸਾ ਮਹਿਸੂਸ ਲਾਇਆ ਗਿਆ। ਸੜਕ ਤੋਂ ਗੁਜ਼ਰਨ ਵਾਲੇ ਰਾਹੀ ਸਿੰਘਾਂ ਨੂੰ ਚੁੱਪ-ਚਾਪ ਮਹਿਸੂਲ ਦਿੰਦੇ ਤੇ ਅੱਗੇ ਵਧ ਜਾਂਦੇ। ਜੇਕਰ ਕੋਈ ਪੁੱਛਦਾ ਤਾਂ ਉਸ ਨੂੰ ਦੱਸਦੇ ਕਿ ਇਹ ਖ਼ਾਲਸਾ ਰਾਜ ਦੀ ਚੁੰਗੀ ਹੈ।</p>
+          <p class="mb-4">"This letter writes Singh Bota:<br>
+          a staff in hand, I stand in the road.<br>
+          One ana for the cart, one paisa for the donkey—<br>
+          Tell Sister-in-law Khan that so says Singh Bota."</p>
           
-          <p class="mb-4">ਸਿੰਘਾਂ ਦਾ ਜਨਤਾ ਪਾਸੋਂ ਮਹਿਸੂਲ ਉਗਰਾਹੁਣ ਦਾ ਮਨਸੂਬਾ ਇਹ ਸੀ ਕਿ ਜ਼ਕਰੀਆ ਖ਼ਾਨ ਨੂੰ ਪਤਾ ਲੱਗ ਜਾਵੇ ਕਿ ਖ਼ਾਲਸਾ ਅਜੇ ਖ਼ਤਮ ਨਹੀਂ ਹੋਇਆ। ਪਰ ਕਿਸੇ ਵੀ ਰਾਹੀ ਨੇ ਸਿੰਘਾਂ ਦੀ ਇਸ ਗੱਲ ਨੂੰ ਜ਼ਕਰੀਆ ਖ਼ਾਨ ਕੋਲ ਨਾ ਪਹੁੰਚਾਇਆ। ਇਸੇ ਤਰ੍ਹਾਂ ਕਈ ਦਿਨ ਬਤੀਤ ਹੋ ਗਏ। ਮੁਗ਼ਲ ਹਕੂਮਤ ਵੱਲੋਂ ਕੋਈ ਹਿਲਜੁਲ ਨਾ ਹੋਈ ਤਾਂ ਸਿੰਘਾਂ ਨੇ ਇੱਕ ਰਾਹੀ ਹੱਥ ਲਾਹੌਰ ਦੇ ਸੂਬੇਦਾਰ ਨੂੰ ਚਿੱਠੀ ਲਿਖ ਕੇ ਭੇਜੀ ਜਿਸ ਦੀ ਇਬਾਰਤ ਇਸ ਪ੍ਰਕਾਰ ਸੀ:</p>
+          <p class="mb-4">Reading it, Zakirya Khan fumed, dispatching Jalaluddin with one hundred ready soldiers to arrest them. Surrounded, the faujdar advised surrender, return the collections, and accept pardon; but the Singhs replied, "a Sikh bows to none but the Guru. Do what you can with your force." The first group of five soldiers was cut down, then the next. The Singhs seized their swords and pressed Jalaluddin.</p>
           
-          <p class="mb-4">"ਚਿੱਠੀ ਲਿਖੈ ਯੌਂ ਸਿੰਘ ਬੋਤਾ। ਹਥ ਹੈ ਸੋਟਾ ਵਿਚ ਰਾਹ ਖੜੋਤਾ। ਆਨਾ ਲਾਯਾ ਗੱਡੇ ਨੂੰ ਪੈਸਾ ਲਾਯਾ ਖੋਤਾ। ਆਖੋ ਭਾਬੀ ਖਾਨੋਂ ਨੂੰ ਯੌਂ ਆਖੈ ਸਿੰਘ ਬੋਤਾ।"</p>
-          
-          <p class="mb-4">ਜਿਸ ਸਮੇਂ ਰਾਹਗੀਰ ਨੇ ਚਿੱਠੀ ਜ਼ਕਰੀਆ ਖ਼ਾਨ ਪਾਸ ਪਹੁੰਚਾਈ ਤਾਂ ਚਿੱਠੀ ਪੜ੍ਹ ਕੇ ਉਹ ਅੱਗ ਬਬੂਲਾ ਹੋ ਗਿਆ। ਉਸ ਨੇ ਆਪਣੇ ਫ਼ੌਜਦਾਰ ਜਲਾਲੁੱਦੀਨ ਨਾਲ ਸੌ ਤਿਆਰ ਬਰ ਤਿਆਰ ਸਿਪਾਹੀ ਭੇਜ ਕੇ ਭਾਈ ਗਰਜਾ ਸਿੰਘ ਤੇ ਭਾਈ ਬੋਤਾ ਸਿੰਘ ਤੇ ਚੜ੍ਹਾਈ ਕਰਨ ਦਾ ਹੁਕਮ ਜਾਰੀ ਕੀਤਾ।</p>
-          
-          <p class="mb-4">ਜਲਾਲੁੱਦੀਨ ਸਿਪਾਹੀਆਂ ਸਮੇਤ ਨੂਰਦੀਨ ਦੀ ਸਰਾਂ ਕੋਲ ਪਹੁੰਚ ਕੇ ਭਾਈ ਗਰਜਾ ਸਿੰਘ ਅਤੇ ਭਾਈ ਬੋਤਾ ਸਿੰਘ ਨੂੰ ਆ ਘੇਰਾ ਪਾਇਆ। ਸਿੰਘ ਪਹਿਲਾਂ ਹੀ ਇਹ ਚਾਹੁੰਦੇ ਸਨ ਕਿ ਸਾਡੀ ਹੋਂਦ ਦਾ ਮੁਗ਼ਲਾਂ ਨੂੰ ਪਤਾ ਲੱਗੇ। ਦੋਵੇਂ ਸਿੰਘ ਗੁਰੂ ਦੇ ਆਸਰੇ ਤਿਆਰ-ਬਰ-ਤਿਆਰ ਹੋ ਕੇ ਮੁਗ਼ਲਾਂ ਅੱਗੇ ਡਟ ਗਏ।</p>
-          
-          <p class="mb-4">ਦੋਵੇਂ ਸਿੰਘਾਂ ਨੇ ਪਿੱਠ ਨਾਲ ਪਿੱਠ ਜੋੜ ਲਈ ਤੇ ਗੁਰੂ ਸਾਹਿਬ ਦਾ ਧਿਆਨ ਧਰ ਕੇ ਰਣਤੱਤੇ ਵਿੱਚ ਜੂਝ ਪਏ। ਮੁਗ਼ਲਾਂ ਨੇ ਤਲਵਾਰਾਂ ਤੇ ਤੀਰਾਂ ਨਾਲ ਸਿੰਘਾਂ ਤੇ ਹੱਲਾ ਕੀਤਾ ਪਰ ਸਿੰਘ ਹਰ ਹੱਲੇ ਦਾ ਵਾਰ ਸੰਭਾਲਦੇ ਰਹੇ। ਫ਼ੌਜਦਾਰ ਨੇ ਵੇਖਿਆ ਕਿ ਸਿੰਘ ਸਾਡੇ ਕਾਬੂ ਵਿੱਚ ਨਹੀਂ ਆ ਰਹੇ।</p>
-          
-          <p class="mb-4">ਆਖ਼ਰ ਜਲਾਲੁੱਦੀਨ ਨੇ ਬੰਦੂਕਾਂ ਦੀਆਂ ਗੋਲੀਆਂ ਦਾਗਣ ਦਾ ਹੁਕਮ ਕੀਤਾ। ਸਿਪਾਹੀਆਂ ਨੇ ਗੋਲੀਆਂ ਦਾਗਣੀਆਂ ਸ਼ੁਰੂ ਕਰ ਦਿੱਤੀਆਂ ਜਿਸ ਨਾਲ ਸਿੰਘਾਂ ਨੂੰ ਗੰਭੀਰ ਫੱਟ ਲੱਗੇ ਪਰ ਉਹ ਜਿੰਨੀ ਜੋਗੇ ਸਨ ਹਿੰਮਤ ਰੱਖ ਕੇ ਰਣਤੱਤੇ ਵਿੱਚ ਡਟੇ ਰਹੇ। ਮੁਗ਼ਲਾਂ ਦੀਆਂ ਗੋਲੀਆਂ ਨਾਲ ਆਖ਼ਰ ਸਿੰਘ ਨਿਢਾਲ ਹੋ ਕੇ ਧਰਤੀ 'ਤੇ ਡਿੱਗ ਗਏ।</p>
-          
-          <p class="mb-4">ਇਸ ਪ੍ਰਕਾਰ ਰਾਹੀਆਂ ਦੀ ਬੋਲੀ 'ਤੇ ਸਿੰਘਾਂ ਨੇ ਖ਼ਾਲਸਾ ਰਾਜ ਦੀ ਚੁੰਗੀ ਸਥਾਪਿਤ ਕਰਕੇ ਜ਼ਕਰੀਆ ਖ਼ਾਨ ਨੂੰ ਦੱਸ ਦਿੱਤਾ ਕਿ ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਦਾ ਥਾਪਿਆ ਹੋਇਆ ਖ਼ਾਲਸਾ ਸਦੀਵ ਤੇ ਅਮਰ ਹੈ। ਭਾਈ ਗਰਜਾ ਸਿੰਘ ਜੀ ਅਤੇ ਭਾਈ ਬੋਤਾ ਸਿੰਘ ਜੀ ਦੀ ਸ਼ਹੀਦੀ 18ਵੀਂ ਸਦੀ ਦੀ ਇੱਕ ਅਦੁੱਤੀ ਸ਼ਹਾਦਤ ਸੀ ਜਿਸ ਨੇ ਸਿੱਖ ਸੰਘਰਸ਼ ਨੂੰ ਬਲ ਦਿੱਤਾ। ਇਹ ਘਟਨਾ ਸੰਨ1739 ਈ. ਦੀ ਮੰਨੀ ਜਾਂਦੀ ਹੈ।</p>
+          <p class="mb-4">Ordered to take them alive, the troops finally resorted to musket fire. Even grievously wounded, the Singhs stood their ground until they fell. Fearing they might rise again, the soldiers hesitated to approach; only when certain of their martyrdom did they advance, then hacked their bodies to pieces. This occurred around 1739 CE. Their stand proclaimed that the Khalsa lives—eternal and unfading.</p>
         `,
         'chota-ghallughara': `
-          <p class="mb-4">'ਘੱਲੂਘਾਰਾ' ਸ਼ਬਦ ਦਾ ਅਰਥ ਸਰਬਨਾਸ਼, ਤਬਾਹੀ ਜਾ ਬਰਬਾਦੀ ਆਦਿ ਹਨ। ਉਹ ਤਬਾਹੀ ਜਾਂ ਬਰਬਾਦੀ ਜੋ ਕਿਸੇ ਹਾਕਮਜਾਂ ਤਾਨਾਸ਼ਾਹ ਵੱਲੋ ਕੀਤੀ ਗਈ ਹੋਵੇ। ਅੰਗਰੇਜ਼ੀ ਭਾਸ਼ਾ ਵਿੱਚ 'ਘੱਲੂਘਾਰਾ' ਲਈ Holocaust ਸ਼ਬਦ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ, ਜਿਸ ਦਾਅਰਥ ਅੱਗ ਦੁਆਰਾ ਕੀਤੀ ਗਈ ਤਬਾਹੀ ਹਨ। 18ਵੀਂ ਸਦੀ ਦੌਰਾਨ ਮੁਗਲ ਹਕੂਮਤ ਨੇ ਸਿੱਖਾਂ ਦੀ ਨਸ਼ਲਕੁਸੀ ਕਰਨ ਲਈ ਦੋਘੱਲੂਘਾਰਿਆਂ ਨੂੰ ਅੰਜ਼ਾਮ ਦਿੱਤਾ ਸੀ। ਪਹਿਲਾ ਘੱਲੂਘਾਰਾ ਮਈ 1746ਈ. 'ਚ ਕਾਹਨੂੰਵਾਨ ਅਤੇ ਦੂਜਾ ਘੱਲੂਘਾਰਾ 1762ਈ. 'ਚਕੁੱਪ-ਰਹੀੜੇ ਦੇ ਸਥਾਨ 'ਤੇ ਵਾਪਰਿਆ ਸੀ। ਦੂਜੇ ਘੱਲੂਘਾਰੇ ਦੇ ਮੁਕਾਬਲੇ ਪਹਿਲੇ ਘੱਲੂਘਾਰੇ ਵਿੱਚ ਸਿੱਖਾਂ ਦਾ ਜਾਨੀ-ਮਾਲੀ ਨੁਕਸਾਨ ਘੱਟਹੋਇਆ ਸੀ। ਇਸ ਲਈ ਸਿੱਖ ਇਤਿਹਾਸ ਦੇ ਇਨ੍ਹਾਂ ਦੋ ਸਾਕਿਆਂ ਨੂੰ 'ਛੋਟਾ ਘੱਲੂਘਾਰਾ ਵੱਡਾ ਘੱਲੂਘਾਰਾ' ਦੇ ਨਾਮ ਨਾਲ ਯਾਦ ਕੀਤਾ ਜਾਂਦਾਹੈ।</p>
+          <p class="mb-4">Ghallūghara—extermination by tyrants—aptly names the two 18th‑century genocides inflicted on the Sikhs. The first (1746, Kahnūwan area) cost fewer than the second (1762, Kup‑Raheera), hence they are remembered as Small and Great Ghallūghara.</p>
           
-          <p class="mb-4">ਜ਼ਕਰੀਆ ਖਾਂ ਦੀ ਮੌਤ ਉਪਰੰਤ ਉਸ ਦਾ ਪੁੱਤਰ ਯਹੀਆ ਖਾਂ ਲਾਹੌਰ ਦਾ ਸੂਬੇਦਾਰ ਬਣਿਆ। ਉਹ ਵੀ ਆਪਣੇ ਪਿਤਾ ਵਾਂਗ ਸਿੱਖਾਂਦਾ ਜਾਨੀ ਦੁਸ਼ਮਣ ਸੀ ਅਤੇ ਸਿੱਖਾਂ ਦਾ ਨਾਮੋ-ਨਿਸ਼ਾਨ ਪੰਜਾਬ ਦੀ ਸਰ-ਜ਼ਮੀਨ ਤੋਂ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦਾ ਸੀ। ਯਹੀਆ ਖਾਂ ਨੇ ਲਖਪਤਿ ਰਾਇਨੂੰ ਦੀਵਾਨ ਨਿਯੁਕਤ ਕੀਤਾ ਸੀ। ਲਖਪਤਿ ਰਾਇ ਦਾ ਭਰਾ ਜਸਪਤਿ ਰਾਇ ਐਮਨਾਬਾਦ ਦਾ ਫੌਜਦਾਰ ਸੀ। ਸਿੱਖ ਹਾਕਮ ਧਿਰ ਦੀਆਂਸਖ਼ਤੀਆਂ ਕਾਰਨ ਜੰਗਲ-ਬੇਲਿਆਂ ਵਿੱਚ ਜਗ੍ਹਾ-ਜਗ੍ਹਾ ਭਟਕਦਿਆਂ ਹਕੂਮਤ ਨਾਲ ਜੂਝ ਰਹੇ ਸਨ।</p>
+          <p class="mb-4">After Zakariya Khan's death, his son Yahiya Khan became Lahore's governor—equally bent on Sikh annihilation. His diwan Lakhpat Rai (whose brother Jaspat Rai was faujdar of Eminabad) spearheaded the campaign. When Jaspat Rai was beheaded in battle by Bhai Nibhahu Singh, Lakhpat Rai swore bare‑headed in court to avenge him and destroy Sikh Dharma, even banning words like "Guru" and "Granth."</p>
           
-          <p class="mb-4">ਸਿੱਖਾਂ ਦਾ ਇਕ ਵੱਡਾ ਜਥਾ ਨਵਾਬਕਪੂਰ ਸਿੰਘ, ਸ੍ਰ. ਜੱਸਾ ਸਿੰਘ ਆਹਲੂਵਾਲੀਆ, ਭਾਈ ਸੁੱਖਾ ਸਿੰਘ ਮਾੜੀ ਕੰਬੋਕੀ ਆਦਿ ਸਿੱਖ ਸਰਦਾਰਾਂ ਦੀ ਅਗਵਾਈ ਹੇਠ ਐਮਨਾਬਾਦਦੇ ਆਸ-ਪਾਸ ਜੰਗਲ 'ਚ ਵਿਚਰ ਰਿਹਾ ਸੀ। ਸਿੱਖ ਜਥੇ ਨੇ ਸ੍ਰੀ ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਦਾ ਪਾਵਨ ਅਸਥਾਨ ਗੁ. ਰੋੜੀ ਸਾਹਿਬ ਵਿਖੇਠਹਿਰਾਉ ਕੀਤਾ। ਦੀਵਾਨ ਲਖਪਤਿ ਰਾਇ ਨੇ ਜਸਪਤਿ ਰਾਇ ਨੂੰ ਸਿੱਖਾਂ 'ਤੇ ਹਮਲਾ ਕਰਨ ਲਈ ਸੁਨੇਹਾ ਭੇਜਿਆ। ਸਿੱਖਾਂ ਤੇ ਜਸਪਤਿਰਾਇ ਦੀਆਂ ਫੌਜਾਂ ਵਿਚਾਲੇ ਹੋਈ ਲੜਾਈ ਵਿੱਚ ਭਾਈ ਨਿਬਾਹੂ ਸਿੰਘ ਨੇ ਜਸਪਤਿ ਰਾਇ ਦਾ ਸਿਰ ਵੱਢ ਕੇ ਮੌਤ ਦੇ ਘਾਟ ਉਤਾਰਿਆ ਸੀ।</p>
+          <p class="mb-4">Learning that a large Sikh jatha with women, elders, and children (15–20,000) had gathered in the Kahnūwan forest, the Mughal army first cleared the dense woods to bring in artillery. The Sikhs answered bravely but were pressed towards Parol and Kathūa; supplies ran out. With Ravi on one side, hills on another, and armies behind, the Sikhs decided: the foot‑bound should climb the hills, the able swim the Ravi, the horsemen fight through to the plains.</p>
           
-          <p class="mb-4">ਦੀਵਾਨ ਲਖਪਤਿ ਰਾਇ ਆਪਣੇ ਭਰਾ ਦੀ ਮੌਤ ਦੀ ਖਬਰ ਸੁਣ ਕੇ ਆਪੇ ਤੋਂ ਬਾਹਰ ਹੋ ਗਿਆ। ਉਸ ਨੇ ਯਹੀਆ ਖਾਂ ਦੇ ਭਰੇਦਰਬਾਰ ਵਿੱਚ ਪੱਗੜੀ ਉਤਾਰ ਕੇ ਸਹੁੰ ਖਾਧੀ ਕਿ "ਉਹ ਉਦੋਂ ਤੱਕ ਪਗੜੀ ਧਾਰਨ ਨਹੀਂ ਕਰੇਗਾ ਜਦੋਂ ਤੱਕ ਉਹ ਆਪਣੇ ਭਰਾ ਦੀ ਮੌਤ ਦਾਬਦਲਾ ਸਿੱਖਾਂ ਤੋਂ ਨਹੀਂ ਲੈ ਲੈਂਦਾ। ਸਿੱਖ ਧਰਮ ਇੱਕ ਖੱਤਰੀ ਨੇ ਸ਼ੁਰੂ ਕੀਤਾ ਸੀ, ਇਸ ਦਾ ਅੰਤ ਵੀ ਇਕ ਖੱਤਰ ਕਰੂਗਾ।" ਯਹੀਆ ਖਾਂ ਨੇਲਖਪਤਿ ਰਾਇ ਨੂੰ ਹਰ ਪ੍ਰਕਾਰ ਦੀ ਮਦਦ ਦੇਣ ਦਾ ਭਰੋਸਾ ਦਿੱਤਾ।</p>
-          
-          <p class="mb-4">ਦੀਵਾਨ ਲਖਪਤਿ ਰਾਇ ਨੇ ਸਭ ਤੋਂ ਪਹਿਲਾਂ ਲਾਹੌਰ ਦੇ ਵਸਨੀਕ ਸਿੱਖਾਂਨੂੰ ਸ਼ਹੀਦ ਕੀਤਾ। ਉਸਨੇ ਸਿੱਖ ਧਰਮ ਦੇ ਸਤਿਕਾਰਤ ਸ਼ਬਦ ਗੁਰ, ਗ੍ਰੰਥ ਆਦਿ ਸ਼ਬਦ ਬੋਲਣ 'ਤੇ ਵੀ ਪਾਬੰਦੀ ਲਾ ਦਿੱਤੀ ਸੀ। ਗੁੜ ਨੂੰ ਰੋੜੀਜਾਂ ਭੇਲੀ ਅਤੇ ਗ੍ਰੰਥ ਨੂੰ ਪੋਥੀ ਕਹਿਣ ਦਾ ਹੁਕਮ ਜਾਰੀ ਕੀਤਾ ਗਿਆ ਸੀ। ਉਸਨੇ ਇਸ ਸਮੇਂ ਕਈ ਗੁਰ-ਅਸਥਾਨਾਂ ਦੀ ਬੇਹੁਰਮਤੀ ਵੀ ਕੀਤੀਸੀ।</p>
-          
-          <p class="mb-4">ਜਸਪਤਿ ਰਾਇ ਲਾਹੌਰ ਦੇ ਸਿੱਖਾਂ ਨੂੰ ਖਤਮ ਕਰਨ ਅਤੇ ਹੋਰ ਪਾਬੰਦੀਆਂ ਤੋਂ ਬਾਅਦ ਸਿੱਖਾਂ ਨੂੰ ਖਤਮ ਕਰਨ ਲਈ ਜੰਗਲਾਂ ਵੱਲਵਧਿਆ। ਉਸ ਨੂੰ ਖਬਰ ਮਿਲੀ ਕਿ ਸਿੱਖ ਵੱਡੀ ਗਿਣਤੀ ਵਿੱਚ ਕਾਹਨੂੰਵਾਨ ਦੀ ਛੰਭ ਵਿੱਚ ਇਕੱਠੇ ਹੋਏ ਹਨ। ਸਿੱਖਾਂ ਦੀ ਗਿਣਤੀ ਬੀਬੀਆਂ, ਬੱਚਿਆਂ, ਬਜ਼ੁਰਗਾਂ ਸਮੇਤ 15-20 ਹਜ਼ਾਰ ਸੀ। ਕਾਹਨੂੰਵਾਨ ਦੇ ਸੰਘਣੇ ਜੰਗਲ 'ਚ ਤੋਪਾਂ ਨਹੀਂ ਜਾ ਸਕਦੀਆਂ ਸਨ, ਇਸ ਲਈ ਮੁਗਲਫੌਜ ਨੇ ਪਹਿਲਾਂ ਰੁੱਖ-ਝਾੜੀਆਂ ਨੂੰ ਵੱਢ ਕੇ ਰਸਤਾ ਬਣਾਇਆ।</p>
-          
-          <p class="mb-4">ਲਖਪਤਿ ਰਾਇ ਦੇ ਹਮਲਿਆਂ ਦਾ ਸਿੱਖਾਂ ਨੇ ਬਰਾਬਰੀ ਦਾ ਜਵਾਬ ਦਿੱਤਾ।ਮੁਗਲ ਫੌਜ ਨੇ ਤੋਪਾਂ ਅਤੇ ਵੱਡੀ ਗਿਣਤੀ ਵਿੱਚ ਫੌਜ ਦੀ ਸਹਾਇਤਾ ਨਾਲ ਸਿੱਖਾਂ ਨੂੰ ਪੜੋਲ ਅਤੇ ਕਠੂਆ ਦੇ ਇਲਾਕੇ ਵੱਲ ਧੱਕ ਦਿੱਤਾ ਸੀ।ਸਿੱਖਾਂ ਕੋਲ ਜਮ੍ਹਾਂ ਰਸਦ-ਪਾਣੀ ਵੀ ਖਤਮ ਹੋ ਰਿਹਾ ਸੀ। ਸਿੱਖਾਂ ਦੇ ਇਕ ਪਾਸੇ ਰਾਵੀ ਦਰਿਆ, ਇਕ ਪਾਸੇ ਉੱਚੇ ਪਹਾੜ ਅਤੇ ਇਕ ਪਾਸੇ ਮਗਰ ਮੈਦਾਨੀ ਇਲਾਕੇ ਵਿੱਚ ਮੁਗਲ ਫੌਜ ਦਾਲਸ਼ਕਰ ਸੀ।</p>
-          
-          <p class="mb-4">ਸਿੱਖਾਂ ਨੇ ਵਿਚਾਰ ਕੀਤੀ ਕਿ ਜਿਹੜੇ ਸਿੱਖ ਪੈਦਲ ਹਨ ਉਹ ਪਹਾੜ ਚੜ੍ਹ ਜਾਣ, ਜੋ ਰਾਵੀ ਦਰਿਆ ਨੂੰ ਪਾਰ ਕਰ ਸਕਦੇ ਹਨਉਹ ਪਾਰ ਕਰ ਜਾਣ ਅਤੇ ਜੋ ਘੋੜ ਸਵਾਰ ਹਨ ਉਹ ਲਖਪਤਿ ਰਾਇ ਨਾਲ ਮੁਕਾਬਲਾ ਕਰਦੇ ਹੋਏ ਵੱਖ-ਵੱਖ ਮੈਦਾਨੀ ਇਲਾਕਿਆਂ ਨੂੰ ਨਿਕਲਜਾਣ। ਲਾਹੌਰ ਹਕੂਮਤ ਦਾ ਸੁਨੇਹਾ ਮਿਲਣ 'ਤੇ ਪਹਾੜੀਆਂ ਨੇ ਵੀ ਸਿੱਖਾਂ ਨਾਲ ਭਲੀ ਨਾ ਕੀਤੀ। ਜੋ ਸਿੱਖ ਪਹਾੜੀਆਂ ਹੱਥੋਂ ਬਚ ਨਿਕਲੇ ਉਹਕੀਰਤਪੁਰ ਸਾਹਿਬ ਦੇ ਸਥਾਨ 'ਤੇ ਸਿੱਖ ਜਥਿਆਂ ਨਾਲ ਜਾ ਰਲੇ ਸਨ।</p>
-          
-          <p class="mb-4">ਰਾਵੀ ਦਰਿਆ ਦਾ ਤੇਜ਼ ਵਹਾਅ ਹੋਣ ਕਰਕੇ ਪਾਰ ਨਿਕਲਣਾ ਔਖਾ ਸੀ। ਭਾਈ ਹਰਿਦਿਆਲ ਸਿੰਘ ਡੱਲੇਵਾਲ ਅਤੇ ਉਸਦਾ ਭਰਾ ਰਾਵੀ ਦਰਿਆ ਦੇ ਤੇਜ਼ ਵਹਾਅ ਵਿੱਚ ਵਹਿ ਗਏ ਸਨ। ਸਿੱਖ ਲਖਪਤਿ ਰਾਇ ਦੀ ਫੌਜ ਨਾਲ ਟਾਕਰਾ ਕਰਦੇ ਬਿਆਸ ਦਰਿਆ ਵੱਲ ਵੱਧਣ ਲੱਗੇ। ਸ੍ਰੀ ਹਰਿਗੋਬਿੰਦਪੁਰ ਸਾਹਿਬ ਦੇ ਪੱਤਣ ਤੋਂ ਬਿਆਸ ਦਰਿਆ ਪਾਰ ਕਰਦਿਆਂ ਸਿੰਘਾਂ ਦਾ ਟਾਕਰਾ ਅਦੀਨਾ ਬੇਗ ਨਾਲ ਹੋਇਆ। ਲਖਪਤਿ ਰਾਇ ਵੀ ਸਿੱਖਾਂ ਦਾ ਪਿੱਛਾ ਕਰ ਰਿਹਾਸੀ। ਸਿੱਖ ਅਦੀਨਾ ਬੇਗ ਨਾਲ ਜੂਝਦਿਆਂ ਮਾਲਵੇ ਦੇ ਵੱਖ-ਵੱਖ ਪਿੰਡਾਂ ਵਿੱਚ ਖਿਲਰ ਗਏ ਸਨ। ਮਾਲਵੇ ਵਿੱਚ ਜ਼ਖਮੀ ਸਿੰਘਾਂ ਦੀ ਮਲਮਪੱਟੀ ਕੀਤੀ ਗਈ, ਜਿਸ ਨਾਲ ਸਿੱਖ ਸਿਹਤਯਾਬ ਹੋਏ ਸਨ।</p>
-          
-          <p class="mb-4">ਛੋਟੇ ਘੱਲੂਘਾਰੇ ਦਾ ਸਾਕਾ ਫਰਵਰੀ ਤੋਂ ਮਈ 1746 ਤੱਕ ਵਾਪਰਿਆ ਸੀ। ਇਸ ਸਾਕੇ ਵਿੱਚ ਸੱਤ ਤੋਂ ਦਸ ਹਜ਼ਾਰ ਸਿੱਖਾਂ ਦੀਆਂ ਸ਼ਹੀਦੀਆਂ ਹੋਈਆਂ ਸਨ। ਲਖਪਤਿ ਰਾਇ ਕਰੀਬ ਤਿੰਨ ਹਜ਼ਾਰ ਸਿੱਖਾਂ ਨੂੰ ਬੰਦੀ ਬਣਾ ਕੇ ਲਾਹੌਰ ਲੈ ਗਿਆ, ਜਿਨ੍ਹਾਂ ਨੂੰ ਨਖ਼ਾਸ ਚੌਂਕ ਵਿਖੇਸ਼ਹੀਦ ਕਰ ਦਿੱਤਾ ਗਿਆ ਸੀ। ਇਸ ਘੱਲੂਘਾਰੇ ਵਿੱਚ ਲਖਪਤਿ ਰਾਇ ਦਾ ਪੁੱਤਰ ਹਰਭਜ ਰਾਇ, ਯਹੀਆ ਖਾਂ ਦਾ ਪੁੱਤਰ ਨਾਹਰ ਖਾਂ, ਫੌਜਦਾਰ ਕਰਮ ਬਖਸ਼ ਸਮੇਤ ਕਈ ਫੌਜਦਾਰ ਵੀ ਮਾਰੇ ਗਏ ਸਨ। ਖ਼ਾਲਸਾ ਪੰਥ ਹਰ ਸਾਲ 3 ਜੇਠ ਨੂੰ ਛੋਟੇ ਘੱਲੂਘਾਰੇ ਦੇ ਸ਼ਹੀਦ-ਸਿੰਘਾਂ ਨੂੰਯਾਦ ਕਰਦਾ ਹੈ।</p>
+          <p class="mb-4">Many perished in the Ravi's current; others fell to hill tribes alerted by Lahore. Pursued through Harigobindpur, adīna Beg harried the crossing of the Beas. By May, thousands were dead; three thousand were captured and later executed at Lahore's Nakhas Chowk. The Panth remembers these martyrs each year on 3 Jeṭh.</p>
         `,
         'bhai-taru-singh-shahadat': `
-          <p class="mb-4">ਭਾਈ ਤਾਰੂ ਸਿੰਘ ਜੀ ਨਾਮ ਅਭਿਆਸੀ, ਪਰਉਪਕਾਰੀ ਅਤੇ ਆਦਰਸ਼ਵਾਦੀ ਜੀਵਨ ਜਾਂਚ ਵਾਲੇ ਗੁਰਸਿੱਖ ਸਨ। ਆਪ ਦਾਜਨਮ ਭਾਈ ਜੋਧ ਸਿੰਘ ਦੇ ਗ੍ਰਿਹ 1720 ਈ. ਵਿੱਚ ਨਗਰ ਪੂਹਲਾ, ਜ਼ਿਲਾ ਤਰਨ ਤਾਰਨ ਵਿਖੇ ਕਿਸਾਨੀ ਕਿੱਤੇ ਨਾਲ ਸਬੰਧ ਰੱਖਣ ਵਾਲੇ ਪਰਿਵਾਰ 'ਚ ਹੋਇਆ। ਭਾਈ ਤਾਰੂ ਸਿੰਘ ਜੀ ਦੀ ਮਾਤਾ ਜੀ ਨੇ ਆਪ ਨੂੰ ਬਚਪਨ ਤੋਂ ਹੀ ਗੁਰਬਾਣੀ ਅਤੇ ਗੁਰ ਇਤਿਹਾਸ ਦੀ ਅਜਿਹੀ ਗੁੜ੍ਹਤੀ ਦਿੱਤੀ ਕਿ ਆਪ ਦੇ ਮਨ ਵਿੱਚ ਸਿੱਖੀ ਪ੍ਰਤੀ ਅਟੁੱਟ ਸ਼ਰਧਾ ਅਤੇ ਗੁਰਸਿੱਖਾਂ ਦੀ ਸੇਵਾ ਕਰਨ ਦਾ ਚਾਉ ਪੈਦਾ ਹੋ ਗਿਆ।</p>
+          <p class="mb-4">Bhai Taru Singh was a devoted practitioner of Naam, charitable, and idealistic. Born in 1720 at Puhla (district Tarn Taran) to Bhai Jodh Singh, a farming family, his mother imbued him from childhood with Gurbani and Sikh history, planting unshakable faith and zeal for serving the Sikhs. Farming honestly, he helped the needy from his earnings and remained immersed in Gurbani practice. People around him were deeply influenced, and all respected him.</p>
           
-          <p class="mb-4">ਆਪਖੇਤੀਬਾੜੀ ਦਾ ਧੰਦਾ ਕਰਦਾ ਹੋਏ ਦਸਾਂ-ਨੂੰਹਾਂ ਦੀ ਕਿਰਤ ਕਮਾਈ ਵਿੱਚੋਂ ਲੋੜਵੰਦਾਂ ਦੀ ਮਦਦ ਕਰਦੇ ਅਤੇ ਗੁਰਬਾਣੀ ਅਭਿਆਸ ਵਿੱਚ ਮਸਤ ਰਹਿੰਦੇ ਸਨ। ਆਪ ਦੀ ਜੀਵਨ-ਜਾਚ ਤੋਂ ਆਲੇ-ਦੁਆਲੇ ਦੇ ਲੋਕ ਬਹੁਤ ਪ੍ਰਭਾਵਿਤ ਸਨ, ਜਿਸ ਕਰਕੇ ਸਭ ਆਪ ਦਾ ਸਤਿਕਾਰ ਕਰਦੇ ਸਨ।</p>
+          <p class="mb-4">Governor Zakirya Khan was committing atrocities against the Sikhs. After Massa Ranghar, who desecrated Harmandir Sahib, was punished by Bhai Sukha Singh and Bhai Mehtab Singh, Zakirya Khan raged. Spies were everywhere, paid in wealth and favors. On the slander of Haribhagat Niranjania from Jandiala (accusing him of aiding Singhs), Moman Khan arrested Bhai Taru Singh and took him to Lahore. He was pressed to convert to Islam with threats and inducements, but he never wavered. With steadfast faith in Gurmat, he prayed to keep Sikhi with hair and breath and to remain in Chardi Kala.</p>
           
-          <p class="mb-4">ਲਾਹੌਰ ਦਾ ਸੂਬੇਦਾਰ ਜਕਰੀਆਂ ਖਾਨ ਸਿੱਖਾਂ 'ਤੇ ਬਹੁਤ ਜਾਨੀ ਜ਼ੁਲਮ ਕਰ ਰਿਹਾ ਸੀ। ਸਿੱਖਾਂ ਨੂੰ ਚੁਣ-ਚੁਣ ਖਤਮ ਕਰ ਰਿਹਾਸੀ। ਸਿੱਖ ਕੁਝ ਸਮੇਂ ਲਈ ਜੰਗਲ-ਪਹਾੜਾਂ ਵੱਲ ਨਿਕਲ ਜਾਂਦੇ ਅਤੇ ਜਥੇਬੰਦਕ ਹੋ ਕੇ ਫਿਰ ਜ਼ੁਲਮੀ ਹਕੂਮਤ ਵਿਰੁੱਧ ਜੂਝਦੇ ਸਨ। ਭਾਈਤਾਰੂ ਸਿੰਘ ਜੀ ਦਾ ਨਗਰ ਲਾਹੌਰ-ਪੱਟੀ ਸੜਕ 'ਤੇ ਸਥਿਤ ਸੀ। ਭਾਈ ਸਾਹਿਬ ਆਉਂਦੇ-ਜਾਂਦੇ ਯਾਤਰੀ ਦੀ ਬਿਨਾ ਭੇਦਭਾਵ ਪ੍ਰਸ਼ਾਦੇ, ਜਲ-ਪਾਣੀ ਨਾਲ ਸੇਵਾ ਕਰਦੇ ਸਨ।</p>
+          <p class="mb-4">Seeing his resolve, the qazi ordered his hair cut. Bhai Taru Singh declared he would not allow such desecration. At Nakhas Chowk (Lahore), the executioner flayed his scalp with his hair using a rasping tool. Bhai Sahib remained absorbed in Waheguru, unshaken. By Divine Will, Zakirya Khan suffered a blockage of urine; despite medicine, he did not recover. Remorseful for his tyranny, he sent Bhai Subeg Singh with five thousand rupees to the Singhs at Kahnuwan to seek a remedy.</p>
           
-          <p class="mb-4">ਸ੍ਰੀ ਹਰਿਮੰਦਰ ਸਾਹਿਬ ਦੀ ਬੇਹੁਰਮਤੀ ਕਰਨ ਵਾਲੇ ਮੱਸਾ ਰੰਘੜ ਨੂੰ ਜਦੋਂ ਭਾਈ ਸੁੱਖਾ ਸਿੰਘ ਅਤੇ ਭਾਈ ਮਹਿਤਾਬ ਸਿੰਘ ਨੇ ਮੌਤਦੇ ਘਾਟ ਉਤਾਰਿਆ ਤਾਂ ਜ਼ਕਰੀਆਂ ਖਾਂ ਬਹੁਤ ਕ੍ਰੋਧਿਤ ਹੋਇਆ। ਜ਼ਾਬਰ ਹਕੂਮਤ ਨਾਲ ਜੂਝਣ ਵਾਲੇ ਸਿੰਘਾਂ ਦਾ ਅਉਣ-ਜਾਣ ਭਾਈ ਤਾਰੂ ਸਿੰਘ ਜੀ ਕੋਲ ਲੱਗਾ ਰਹਿੰਦਾ ਸੀ। ਮਾਝੇ ਦੇ ਪਿੰਡਾਂ ਵਿੱਚ ਅਨੇਕ ਮੁਖ਼ਬਰ ਲਾਹੌਰ ਦਰਬਾਰ ਲਈ ਕੰਮ ਕਰਦੇ ਸਨ।</p>
+          <p class="mb-4">Nawab Kapur Singh, consulting the Sikhs, said: "If Bhai Taru Singh's shoe strikes Zakirya Khan's head, the blockage may open." After the shoe was applied, the blockage cleared—but Zakirya Khan lived only four more days.</p>
           
-          <p class="mb-4">ਭਾਈ ਸਾਹਿਬ ਨੂੰ ਜੰਡਿਆਲਾ ਦੇ ਹਰਿਭਗਤ ਨਿਰੰਜਨੀਏ ਦੀ ਸੂਹ 'ਤੇ (ਸਿੰਘਾਂ ਦੀ ਮਦਦਕਰਨ ਦੇ ਦੋਸ਼ਾਂ ਤਹਿਤ) ਮੋਮਨ ਖਾਂ ਨੇ ਗ੍ਰਿਫਤਾਰ ਕਰਕੇ ਲਾਹੌਰ ਜ਼ਕਰੀਆ ਖਾਂ ਦੀ ਕਚਹਿਰੀ 'ਚ ਪੇਸ਼ ਕੀਤਾ। ਭਾਈ ਸਾਹਿਬ ਨੂੰ ਇਸਲਾਮ ਧਰਮ ਕਬੂਲਣ ਲਈ ਕਿਹਾ ਗਿਆ, ਅਨੇਕ ਲਾਲਚ-ਡਰਾਵੇ ਦਿੱਤੇ ਗਏ, ਪਰ ਆਪ ਆਪਣੇ ਅਕੀਦੇ ਅਤੇ ਗੁਰਮਤਿ ਆਦਰਸ਼ ਤੋਂ ਨਾ ਡੋਲੇ।</p>
-          
-          <p class="mb-4">ਆਪ ਜੀ ਦਾ ਗੁਰਮਤਿ ਵਿੱਚ ਅਟੁੱਟ ਵਿਸ਼ਵਾਸ ਸੀ। ਭਾਈ ਸਾਹਿਬ ਨੇ ਸਿੱਖੀ ਕੇਸਾਂ-ਸੁਆਸਾਂ ਸੰਗ ਨਿਭਣ ਅਤੇ ਚੜਦੀ ਕਲਾ ਦੀ ਅਰਦਾਸ ਕੀਤੀ। ਭਾਈ ਤਾਰੂ ਸਿੰਘ ਜੀ ਦੀ ਸਿੱਖ ਧਰਮ ਪ੍ਰਤੀ ਦ੍ਰਿੜਤਾ ਨੂੰ ਦੇਖ ਕੇ ਕਾਜ਼ੀ ਨੇ ਭਾਈ ਸਾਹਿਬ ਦੇ ਕੇਸ ਕਤਲ ਕਰਨ ਦਾ ਫੁਰਮਾਣਜਾਰੀ ਕਰ ਦਿੱਤਾ।</p>
-          
-          <p class="mb-4">ਭਾਈ ਸਾਹਿਬ ਨੇ ਸਪੱਸ਼ਟ ਕਹਿ ਦਿੱਤਾ ਕਿ ਉਹ ਕੇਸਾਂ ਦੀ ਬੇਅਦਬੀ ਨਹੀ ਹੋਣ ਦੇਣਗੇ। ਨਖ਼ਾਸ ਚੌਂਕ (ਲਾਹੌਰ) ਵਿਖੇਜ਼ਲਾਦ ਨੇ ਰੰਬੀ ਨਾਲ ਭਾਈ ਸਾਹਿਬ ਦੀ ਕੇਸਾਂ ਸਮੇਤ ਖੋਪਰੀ ਉਤਾਰ ਦਿੱਤੀ। ਭਾਈ ਸਾਹਿਬ ਵਾਹਿਗੁਰੂ ਦੇ ਰੰਗ ਵਿੱਚ ਅਡੋਲ ਗੁਰਬਾਣੀ ਅਭਿਆਸ ਵਿੱਚ ਮਸਤ ਸਨ।</p>
-          
-          <p class="mb-4">ਵਾਹਿਗੁਰੂ ਦੀ ਰਜ਼ਾ ਐਸੀ ਹੋਈ ਕਿ ਜ਼ਕਰੀਆ ਖਾਂ ਨੂੰ ਪਿਸ਼ਾਬ ਦਾ ਬੰਨ੍ਹ ਪੈ ਗਿਆ। ਹਕੀਮਾਂ ਦੇ ਦਵਾ-ਦਾਰੂ ਨਾਲ ਵੀ ਕੋਈ ਫ਼ਰਕ ਨਹੀਂ ਪਿਆ। ਜ਼ਕਰੀਆ ਖਾਂ ਸਿੱਖਾਂ 'ਤੇ ਕੀਤੇ ਜ਼ੁਲਮਾਂ ਦਾ ਪਸ਼ਚਾਤਾਪ ਕਰਨ ਲੱਗਾ। ਜ਼ਕਰੀਆਂ ਖਾਂ ਨੇ ਆਪਣੀ ਸਿਹਤਯਾਬੀ ਲਈ ਭਾਈ ਸੁਬੇਗ ਸਿੰਘ ਨੂੰ ਪੰਜ ਹਜ਼ਾਰ ਰੁਪਏ ਦੀ ਭੇਟ ਦੇ ਕੇ ਕਾਹਨੂੰਵਾਨ ਛੰਭ ਵਿੱਚ ਸਿੰਘਾਂ ਪਾਸ ਭੇਜਿਆ।</p>
-          
-          <p class="mb-4">ਨਵਾਬ ਕਪੂਰ ਸਿੰਘ ਨੇ ਸਿੰਘਾਂ ਨਾਲ ਵਿਚਾਰ-ਚਰਚਾ ਕਰਕੇ ਕਿਹਾ "ਭਾਈ ਤਾਰੂ ਸਿੰਘ ਦੀ ਜੁੱਤੀ ਜੇ ਜ਼ਕਰੀਆ ਖਾਂ ਦੇ ਸਿਰ ਵਿੱਚ ਮਾਰੀ ਜਾਵੇ ਤਾਂ ਉਸਦਾ ਪਿਸ਼ਾਬ ਦਾ ਬੰਨ੍ਹ ਖੁਲ੍ਹ ਸਕਦਾ ਹੈ"। ਜ਼ਕਰੀਆ ਖਾਂ ਦੇ ਸਿਰ ਵਿੱਚ ਜੁੱਤੀਆਂ ਵੱਜਣ ਨਾਲ ਪਿਸ਼ਾਬ ਦਾ ਬੰਨ੍ਹ ਤਾਂ ਟੁਟ ਗਿਆ ਪਰ ਉਹ ਚਾਰ ਕੁਦਿਨ ਹੀ ਜਿਉਂਦਾ ਰਿਹਾ।</p>
-          
-          <p class="mb-4">ਭਾਈ ਤਾਰੂ ਸਿੰਘ ਜੀ ਖੋਪਰੀ ਉਤਰਨ ਉਪਰੰਤ 22 ਦਿਨ ਜੀਵਤ ਰਹੇ ਅਤੇ 1 ਸਾਵਣ 1745 ਈ. ਨੂੰ ਅਕਾਲ ਚਲਾਣਾ ਕਰ ਗਏ। ਭਾਈ ਤਾਰੂ ਸਿੰਘ ਜੀ ਨੇ ਮੁਗਲ ਹਕੂਮਤ ਦੀ ਈਨ ਨਾ ਮੰਨਦਿਆਂ ਅਨੇਕਾਂ ਕਸ਼ਟ ਸਰੀਰ 'ਤੇ ਸਹਾਰ ਲਏ ਪਰ ਆਪਣੇ ਅਕੀਦੇ ਤੋਂ ਨਾ ਡੋਲੇ।</p>
-          
-          <p class="mb-4">ਉਨ੍ਹਾਂ ਸ਼ਹਾਦਤ ਦੇ ਕੇ ਜਗਤ ਨੂੰ ਸੁਨੇਹਾ ਦੇ ਦਿੱਤਾ ਕਿ ਸਿੱਖ ਲਈ ਉਸਦੇ ਕੇਸ ਆਪਣੀ ਜ਼ਿੰਦਗੀ ਤੋਂ ਵੀ ਬਹੁਮੁੱਲੇ ਹਨ। ਸਿੱਖਜਾਨ ਤਾਂ ਦੇ ਸਕਦਾ ਹੈ ਪਰ ਆਪਣੇ ਰੋਮਾਂ ਦੀ ਬੇਅਦਬੀ ਨਹੀਂ ਸਹਿ ਸਕਦਾ। ਭਾਈ ਤਾਰੂ ਸਿੰਘ ਜੀ ਦੀ ਸ਼ਹੀਦੀ ਤੋਂ ਪ੍ਰੇਰਨਾ ਲੈਂਦਿਆਂ ਸਾਨੂੰ ਆਪਣੇ ਕੇਸ਼ਾਂ ਦੀ ਸੰਭਾਲ ਅਤੇ ਸਤਿਕਾਰ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ। ਕੇਸ ਗੁਰੂ ਦੀ ਮੋਹਰ ਹਨ।</p>
+          <p class="mb-4">Bhai Taru Singh lived 22 days after losing his scalp, and on 1 Savan 1745 CE, he departed. He bore countless tortures rather than accept oppression, declaring to the world that a Sikh's hair is dearer than life. A Sikh may lay down his life, but cannot bear dishonor to a single hair. Inspired by his martyrdom, we should care for and honor our kesh—the Guru's seal.</p>
         `,
         'dal-khalsa-da-gathan': `
-          <p class="mb-4">ਬੰਦਾ ਸਿੰਘ ਬਹਾਦਰ ਵੱਲੋਂ ਖੜ੍ਹੀਆਂ ਕੀਤੀਆਂ ਫੌਜਾਂ ਦੇ ਖੇਰੂੰ-ਖੇਰੂੰ ਹੋਣ ਤੋਂ ਬਾਅਦ, ਸਿੱਖ ਯੋਧੇ ਛੋਟੇ-ਛੋਟੇ ਜੱਥਿਆਂ ਦੇ ਰੂਪ ਵਿੱਚ ਮੁਗ਼ਲ ਤਾਕਤ ਨੂੰ ਚੁਣੌਤੀ ਦਿੰਦੇ ਰਹੇ। ਇਹ ਜੱਥੇ ਹਥਿਆਰਬੰਦ ਸਨ ਅਤੇ ਅਤਿ ਗਤੀਸ਼ੀਲ ਗੁਰੀਲਾ ਯੁੱਧ ਦੇ ਮਾਹਰ ਸਨ, ਜੋ ਲੋੜ ਪੈਣ 'ਤੇ ਇਕੱਠੇ ਹੋ ਜਾਂਦੇ ਸਨ। ਦੀਵਾਨ ਦਰਬਾਰਾ ਸਿੰਘ ਦੀ ਅਗਵਾਈ ਹੇਠ, ਇਹ ਜੱਥੇ ਵਿਸਾਖੀ ਅਤੇ ਦਿਵਾਲੀ ਮੌਕੇ ਅੰਮ੍ਰਿਤਸਰ ਵਿਖੇ ਇਕੱਠੇ ਹੁੰਦੇ ਸਨ।</p>
+          <p class="mb-4">After Banda Singh's forces dispersed, Sikh fighters continued as small, swift guerrilla jathas, uniting when needed—especially on Vaisakhi and Diwalī in amritsar under Dīvan Darbara Singh. In 1733, Zakariya Khan, failing to crush them, offered a compromise—bestowing the title Nawab on Bhai Kapūr Singh, whom the Sikhs accepted as leader. For administration, he divided the force into:</p>
           
-          <p class="mb-4">1733 ਵਿੱਚ ਲਾਹੌਰ ਦੇ ਮੁਗ਼ਲ ਗਵਰਨਰ ਜ਼ਕਰੀਆ ਖ਼ਾਨ ਨੇ ਸਿੱਖਾਂ ਨੂੰ ਦਬਾਉਣ ਵਿੱਚ ਅਸਫਲ ਰਹਿਣ ਤੋਂ ਬਾਅਦ ਉਨ੍ਹਾਂ ਨਾਲ ਸਮਝੌਤਾ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ। ਇਸ ਦੌਰਾਨ ਇਕ ਜਥੇ ਦੇ ਜਥੇਦਾਰ ਭਾਈ ਕਪੂਰ ਸਿੰਘ ਨੂੰ ਸਿੱਖਾਂ ਨੂੰ ਆਪਣਾ ਆਗੂ ਮੰਨਿਆ ਅਤੇ ਨਵਾਬ ਦਾ ਖਿਤਾਬ ਦਿੱਤਾ। ਨਵਾਬ ਕਪੂਰ ਸਿੰਘ ਨੇ ਪ੍ਰਬੰਧਕੀ ਸਹੂਲਤ ਲਈ ਸਮੁੱਚੀ ਫੌਜ ਨੂੰ ਦੋ ਹਿੱਸਿਆਂ ਵਿੱਚ ਵੰਡਿਆ: ਬੁੱਢਾ ਦਲ (ਬਜ਼ੁਰਗਾਂ ਦਾ ਸਮੂਹ) ਅਤੇ ਤਰਨਾ ਦਲ (ਨੌਜਵਾਨਾਂ ਦਾ ਸਮੂਹ, ਜਿਸ ਨੂੰ ਅੱਗੇ ਪੰਜ ਜੱਥਿਆਂ ਵਿੱਚ ਵੰਡਿਆ ਗਿਆ)।</p>
+          <p class="mb-4">Buḍḍha Dal (veterans)<br/>
+          Taruna Dal (youth)—later into five jathas.</p>
           
-          <p class="mb-4">1735 ਵਿੱਚ ਸਮਝੌਤਾ ਟੁੱਟਣ ਅਤੇ ਮੁੜ ਜ਼ੁਲਮ ਸ਼ੁਰੂ ਹੋਣ ਕਾਰਨ ਖ਼ਾਲਸਾ ਫਿਰ ਛੋਟੇ ਸਮੂਹਾਂ ਵਿੱਚ ਵੰਡਿਆ ਗਿਆ। 1747 ਵਿੱਚ ਅਹਿਮਦ ਸ਼ਾਹ ਦੁਰਾਨੀ ਦੇ ਹਮਲੇ ਤੋਂ ਬਾਅਦ, ਨਵਾਬ ਕਪੂਰ ਸਿੰਘ ਨੇ 29 ਮਾਰਚ 1748 ਦੀ ਵਿਸਾਖੀ ਵਾਲੇ ਦਿਨ ਅੰਮ੍ਰਿਤਸਰ ਵਿਖੇ ਸਾਰੇ ਜੱਥਿਆਂ ਦੀ ਏਕਤਾ ਦੀ ਲੋੜ 'ਤੇ ਜ਼ੋਰ ਦਿੱਤਾ।</p>
+          <p class="mb-4">When truce broke in 1735, the Khalsa re‑scattered. After Ahmad Shah Durrani's invasion (1747), 29 March 1748 (Vaisakhi) in amritsar, the Khalsa—by Gurmata—united its fighting strength as the Dal Khalsa, appointing Sardar Jassa Singh ahluwalia as supreme leader. Sixty‑five jathas were consolidated into eleven Misls, each with its own standard:</p>
           
-          <p class="mb-4">ਗੁਰਮਤੇ ਰਾਹੀਂ, ਖ਼ਾਲਸੇ ਦੀ ਸਮੁੱਚੀ ਲੜਾਕੂ ਸ਼ਕਤੀ ਨੂੰ ਦਲ ਖ਼ਾਲਸਾ ਸੰਗਠਨ ਵਿੱਚ ਇੱਕਜੁੱਟ ਕੀਤਾ ਗਿਆ, ਜਿਸ ਦੀ ਜਥੇਦਾਰੀ ਸਰਦਾਰ ਜੱਸਾ ਸਿੰਘ ਆਹਲੂਵਾਲੀਆ ਨੂੰ ਸੌਂਪੀ ਗਈ। ਉਸ ਸਮੇਂ ਦੇ 65 ਜੱਥਿਆਂ ਨੂੰ 11 ਜਥੇ (ਮਿਸਲਾਂ) ਵਿੱਚ ਇੱਕਠੇ ਦਿੱਤਾ ਗਿਆ, ਹਰ ਇੱਕ ਦਾ ਆਪਣਾ ਝੰਡਾ ਅਤੇ ਨਾਮ ਸੀ। ਇਹ ਮੁੱਖ ਤੌਰ 'ਤੇ ਘੋੜਸਵਾਰ ਫੌਜ ਸੀ।</p>
           
-          <p class="mb-4"><strong>ਮਿਸਲਾਂ ਦੇ ਨਾਮ ਤੇ ਜਥੇਦਾਰ:</strong><br/>
-          ਆਹਲੂਵਾਲੀਆ ਮਿਸਲ - ਸ੍ਰ. ਜੱਸਾ ਸਿੰਘ ਆਹਲੂਵਾਲੀਆ<br/>
-          ਫੈਜਲਪੁਰੀਆ ਮਿਸਲ - ਨਵਾਬ ਕਪੂਰ ਸਿੰਘ<br/>
-          ਸ਼ੁਕਰਚੱਕੀਆ ਮਿਸਲ - ਸ੍ਰ. ਨੌਧ ਸਿੰਘ<br/>
-          ਨਿਸ਼ਾਨਵਾਲੀਆ ਮਿਸਲ - ਸ੍ਰ. ਦਸੌਂਦਾ ਸਿੰਘ<br/>
-          ਭੰਗੀ ਮਿਸਲ - ਸ੍ਰ. ਹਰੀ ਸਿੰਘ<br/>
-          ਕਨੱਈਆ ਮਿਸਲ - ਸ੍ਰ. ਜੈ ਸਿੰਘ ਕਾਨ੍ਹਾਂ<br/>
-          ਨਕੱਈ ਮਿਸਲ - ਸ੍ਰ. ਹੀਰਾ ਸਿੰਘ<br/>
-          ਡੱਲੇਵਾਲੀਆ ਮਿਸਲ - ਸ੍ਰ. ਗੁਲਾਬ ਸਿੰਘ<br/>
-          ਸ਼ਹੀਦੀ ਮਿਸਲ - ਬਾਬਾ ਦੀਪ ਸਿੰਘ ਜੀ<br/>
-          ਕਰੋੜ ਸਿੰਘੀਆ ਮਿਸਲ - ਸ੍ਰ. ਕਰੋੜਾ ਸਿੰਘ<br/>
-          ਰਾਮਗੜ੍ਹੀਆ ਮਿਸਲ - ਸ੍ਰ. ਨੰਦ ਸਿੰਘ, ਸ੍ਰ. ਜੱਸਾ ਸਿੰਘ ਰਾਮਗੜ੍ਹੀਆ</p>
+          <p class="mb-4"><strong>Misl Names and Leaders:</strong><br/>
+          ahluwalia — S. Jassa Singh ahluwalia<br/>
+          Faizullapuria — Nawab Kapūr Singh<br/>
+          Shukarchakkīa — S. Naudh Singh<br/>
+          Nishanwalia — S. Dasaunda Singh<br/>
+          Bhaṅgī — S. Harī Singh<br/>
+          Kanaiha — S. Jai Singh Kanhaiya<br/>
+          Nakkai — S. Hīra Singh<br/>
+          Dallewalia — S. Gulab Singh<br/>
+          Shaheedī — Baba Dīp Singh Ji<br/>
+          Karor Singhīa — S. Karora Singh<br/>
+          Ramgaṛhia — S. Nand Singh / S. Jassa Singh Ramgaṛhia</p>
           
-          <p class="mb-4">ਇਹ 11 ਮਿਸਲਾਂ ਅੱਗੇ ਬੁੱਢਾ ਦਲ ਤੇ ਤਰਨਾ ਦਲ ਵਿਚ ਵੰਡੀਆਂ ਹੋਈਆਂ ਸਨ। ਦਲ ਖ਼ਾਲਸਾ ਦੀਆਂ ਸਾਂਝੀਆਂ ਮੁਹਿੰਮਾਂ ਉੱਤੇ ਮਿਸਲ ਨਿਸ਼ਾਨਾਂਵਾਲੀ ਦਲ ਦਾ ਨਿਸ਼ਾਨ ਲੈ ਕੇ ਅੱਗੇ ਚੱਲਦੀ ਸੀ।</p>
+          <p class="mb-4">These Misls fell within Buḍḍha Dal and Taruna Dal; on joint campaigns, the Nishanwalia carried the Panthic standard.</p>
           
-          <p class="mb-4">ਦਲ ਖ਼ਾਲਸਾ ਨੇ ਥੋੜ੍ਹੇ ਹੀ ਸਮੇਂ ਵਿੱਚ ਜ਼ਿਆਦਾਤਰ ਪੰਜਾਬ ਖੇਤਰ 'ਤੇ ਆਪਣਾ ਅਧਿਕਾਰ ਸਥਾਪਿਤ ਕਰ ਲਿਆ। 1755 ਤੱਕ ਪਹੁੰਚਦਿਆਂ ਸਿੰਘਾਂ ਨੇ ਰਾਖੀ ਪ੍ਰਬੰਧ ਰਾਹੀਂ ਪੰਜਾਬ ਦੇ ਵੱਡੇ ਹਿੱਸੇ ਉੱਤੇ ਆਪਣਾ ਦਾਅਵਾ ਕਾਇਮ ਕਰ ਲਿਆ ਸੀ। ਫਰਬਰੀ 1762 'ਚ ਵੱਡਾ ਘੱਲੂਘਾਰਾ ਵਾਪਰਿਆ ਉਸਤੋਂ ਕੁਝ ਮਹੀਨਿਆਂ ਬਾਅਦ ਹੀ ਦਲ ਖ਼ਾਲਸਾ ਨੇ ਅਹਿਮਦ ਸ਼ਾਹ ਦੁਰਾਨੀ ਦੇ ਗਵਰਨਰ ਅਤੇ ਖੁਦ ਸ਼ਾਹ ਨੂੰ ਹਰਾਇਆ। ਇਸ ਤੋਂ ਕੁਝ ਸਮੇਂ ਬਾਅਦ ਹੀ ਜਨਵਰੀ 1764 ਤੋਂ ਮਈ 1765 ਤੱਕ ਸਿੰਘਾਂ ਨੇ ਸਰਹਿੰਦ, ਮੁਲਤਾਨ ਤੇ ਲਾਹੌਰ 'ਤੇ ਕਬਜ਼ੇ ਜਮਾ ਲਏ ਸਨ।</p>
-          
-          <p class="mb-4">ਅਠਾਰਵੀਂ ਸਦੀ ਚ 1708 ਤੋਂ ਲੈ ਕੇ ਤਕਰੀਬਨ 1769 ਤੱਕ ਲਗਾਤਾਰ ਹਥਿਆਰਬੱਧ ਸੰਘਰਸ਼ ਚੱਲਦਾ ਰਿਹਾ ਜਿਸਦੇ ਸਦਕਾ ਪੰਜਾਬ ਵਿਚ ਸਿੰਘਾਂ ਨੇ ਉਸ ਸਮੇਂ ਦੀਆਂ ਤਿੰਨੋਂ ਵੱਡੀਆਂ ਤਾਕਤਾਂ ਦੁਰਾਨੀ, ਮੁਗ਼ਲ ਤੇ ਮਰਹੱਟਿਆਂ ਨੂੰ ਮਾਤ ਦੇ ਕੇ ਆਪਣਾ ਸੁਤੰਤਰ ਰਾਜ ਕਾਇਮ ਕੀਤਾ।</p>
+          <p class="mb-4">Within years the Dal Khalsa controlled much of Punjab; by 1755 their protective levies (rakhī) reached far. Even after the Great Ghallughara (1762), the Khalsa humbled the Durranis—seizing Sirhind, Multan, and Lahore by 1764–65. From 1708–1769, relentless armed struggle brought down the three great powers—Durrani, Mughal, and Maratha—and established Sikh sovereignty in Punjab.</p>
         `,
         'baba-deep-singh-ji-di-jang': `
           <p class="mb-4">ਬਾਬਾ ਦੀਪ ਸਿੰਘ ਜੀ ਦਾ ਜਨਮ 14 ਮਾਘ 1682ਈ. ਵਿੱਚ ਭਾਈ ਭਗਤਾ ਜੀ ਤੇ ਮਾਤਾ ਜਿਉਣੀ ਜੀ ਦੇ ਘਰ ਪਿੰਡ ਪਹੂਵਿੰਡ (ਤਰਨ ਤਾਰਨ) ਵਿਖੇ ਹੋਇਆ। ਬਾਬਾ ਜੀ ਦਾ ਪਰਿਵਾਰ ਗੁਰੂ ਘਰ ਦਾ ਅਨਿੰਨ ਸੇਵਕ ਸੀ। ਬਾਬਾ ਜੀ ਨੂੰ ਗੁਰਮਤਿ ਦੀ ਸਿੱਖਿਆ ਘਰਵਿੱਚੋਂ ਹੀ ਪ੍ਰਾਪਤ ਹੋਈ। ਬਾਬਾ ਜੀ ਆਪਣੇ ਪਿਤਾ ਨਾਲ ਖੇਤੀਬਾੜੀ ਦੇ ਕੰਮ ਵਿੱਚ ਮਦਦ ਕਰਾਉਂਦੇ ਸਨ। ਆਪ ਜੀ ਨੂੰ ਬਚਪਨ ਤੋਂ ਨੇਜ਼ਾਬਾਜੀ, ਘੋੜਸਵਾਰੀ ਆਦਿ ਦੀ ਸਿਖਲਾਈ ਪ੍ਰਾਪਤ ਕਰਨ ਦਾ ਸੌਂਕ ਸੀ। ਆਪ ਜੀ ਕੱਦ-ਕਾਠ ਦੇ ਰਿਸ਼ਟ-ਪੁਸ਼ਟ ਅਤੇ ਪ੍ਰਭਾਵਸ਼ਾਲੀ ਸ਼ਖ਼ਸੀਅਤ ਦੇ ਮਾਲਕ ਸਨ।</p>
