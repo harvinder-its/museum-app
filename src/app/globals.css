@@ -332,8 +332,8 @@ footer {
 /* Improve touch targets on mobile */
 @media (max-width: 768px) {
   button, a {
-    min-height: 44px;
-    min-width: 44px;
+    min-height: 36px;
+    min-width: 36px;
   }
   
   input[type="range"] {
@@ -392,8 +392,8 @@ footer {
   
   /* Mobile-friendly buttons */
   .mobile-button {
-    min-height: 44px;
-    min-width: 44px;
+    min-height: 36px;
+    min-width: 36px;
     padding: 0.75rem;
   }
   
