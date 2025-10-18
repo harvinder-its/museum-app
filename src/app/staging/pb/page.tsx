@@ -1784,7 +1784,7 @@ export default function Home() {
           } ${
             isDarkMode ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'
           } border-b lg:border-b-0 lg:border-r`}>
-            <div className={`h-auto lg:h-screen overflow-y-auto lg:sticky lg:top-16 pt-4 lg:pt-8 p-4 md:p-6 lg:p-8`}>
+            <div className={`h-full lg:h-screen lg:overflow-y-auto lg:sticky lg:top-16 pt-4 lg:pt-8 p-4 md:p-6 lg:p-8 flex flex-col`}>
               {/* Top Right Controls - Only visible on mobile/tablet */}
               <div className="lg:hidden absolute top-4 right-4 flex items-center space-x-2">
                 {/* Language Dropdown */}
@@ -1836,7 +1836,7 @@ export default function Home() {
                     }}
                   />
                   <span className={`text-xs sm:text-sm font-semibold ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
-                    Australian Sikh Association
+                    ਆਸਟ੍ਰੇਲੀਅਨ ਸਿੱਖ ਐਸੋਸੀਏਸ਼ਨ
                   </span>
                 </a>
                 
@@ -1881,7 +1881,7 @@ export default function Home() {
                 </div>
               </div>
               
-              <nav className="space-y-2 md:space-y-3">
+              <nav className="space-y-2 md:space-y-3 flex-1 overflow-y-auto">
                 {sections.map((section, index) => (
                   <button
                     key={section.id}
