@@ -1656,7 +1656,7 @@ export default function Home() {
           sectionRefs.current[sectionId] = el;
         }}
       >
-        <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 w-full overflow-x-hidden">
+        <div className="max-w-4xl mx-auto px-2 sm:px-3 md:px-4 lg:px-6 w-full overflow-x-hidden">
           <h2 className={`text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-left leading-tight ${isDarkMode ? 'text-gray-100' : 'text-gray-900'}`}>
             {section.label}
           </h2>
@@ -1753,7 +1753,7 @@ export default function Home() {
             isDarkMode={isDarkMode}
           />
           
-          <div className={`text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`} 
+          <div className={`text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-4 sm:mb-6 md:mb-8 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`} 
                dangerouslySetInnerHTML={{ __html: getContent(sectionId) }}>
           </div>
           
@@ -1896,7 +1896,7 @@ export default function Home() {
                           : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 opacity-80 hover:opacity-100'
                     }`}
                   >
-                    <span className="font-[550] text-xs md:text-sm leading-tight">{section.label}</span>
+                    <span className="font-[550] text-sm md:text-base leading-tight">{section.label}</span>
                   </button>
                 ))}
               </nav>
@@ -1960,7 +1960,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="px-4 sm:px-6 lg:px-8 w-full max-w-full overflow-x-hidden">
+            <div className="w-full max-w-full overflow-x-hidden">
               
               <div className="overflow-y-auto w-full">
                 {sections.map((section) => (
