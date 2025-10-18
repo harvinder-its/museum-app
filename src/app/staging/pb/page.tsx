@@ -1785,23 +1785,42 @@ export default function Home() {
             isDarkMode ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'
           } border-b lg:border-b-0 lg:border-r`}>
             <div className={`h-auto lg:h-screen overflow-y-auto lg:sticky lg:top-16 pt-4 lg:pt-8 p-4 md:p-6 lg:p-8`}>
-              {/* Close Button - Only visible on mobile/tablet */}
-              <button
-                onClick={toggleMobileSidebar}
-                className={`lg:hidden absolute top-4 right-4 p-2 rounded-md transition-colors ${
-                  isDarkMode 
-                    ? 'text-gray-300 hover:text-white hover:bg-gray-700' 
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
-                }`}
-                title="Close menu"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
+              {/* Top Right Controls - Only visible on mobile/tablet */}
+              <div className="lg:hidden absolute top-4 right-4 flex items-center space-x-2">
+                {/* Language Dropdown */}
+                <div className="relative z-50">
+                  <select
+                    onChange={(e) => handleLanguageChange(e.target.value as 'en' | 'pb')}
+                    value="pb"
+                    className={`p-2 rounded-md text-sm font-medium transition-colors cursor-pointer relative z-50 ${
+                      isDarkMode
+                        ? 'text-gray-300 hover:text-white hover:bg-gray-700 bg-gray-800 border-gray-600' 
+                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 bg-white border-gray-300'
+                    } border shadow-lg`}
+                  >
+                    <option value="en">EN</option>
+                    <option value="pb">ਪੰ</option>
+                  </select>
+                </div>
+
+                {/* Close Button */}
+                <button
+                  onClick={toggleMobileSidebar}
+                  className={`p-2 rounded-md transition-colors ${
+                    isDarkMode 
+                      ? 'text-gray-300 hover:text-white hover:bg-gray-700' 
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                  }`}
+                  title="Close menu"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
 
               {/* Logo Section */}
-              <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center justify-between mb-4 pt-16 lg:pt-0">
                 <a 
                   href="https://asaltd.org.au/" 
                   target="_blank" 
@@ -1915,23 +1934,8 @@ export default function Home() {
                 </svg>
               </button>
 
-              {/* Language Dropdown and Theme Toggle */}
-              <div className="flex items-center space-x-2">
-                <div className="relative z-50">
-                  <select
-                    onChange={(e) => handleLanguageChange(e.target.value as 'en' | 'pb')}
-                    value="pb"
-                    className={`p-2 rounded-md text-sm font-medium transition-colors cursor-pointer relative z-50 ${
-                      isDarkMode
-                        ? 'text-gray-300 hover:text-white hover:bg-gray-700 bg-gray-800 border-gray-600' 
-                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 bg-white border-gray-300'
-                    } border shadow-lg`}
-                  >
-                    <option value="en">EN</option>
-                    <option value="pb">ਪੰ</option>
-                  </select>
-                </div>
-
+              {/* Theme Toggle - Only visible on mobile/tablet */}
+              <div className="lg:hidden flex items-center justify-center">
                 <button
                   onClick={toggleTheme}
                   className={`p-2 rounded-md transition-colors ${
