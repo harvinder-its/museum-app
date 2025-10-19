@@ -2,12 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-interface HeaderProps {
-  isDarkMode: boolean;
-  toggleTheme: () => void;
-}
-
-export default function Header({ isDarkMode, toggleTheme }: HeaderProps) {
+export default function Header() {
   const [isHidden, setIsHidden] = useState(false);
 
   useEffect(() => {

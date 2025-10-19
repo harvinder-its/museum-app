@@ -6,7 +6,7 @@ interface AudioPlayerProps {
   isDarkMode: boolean;
 }
 
-export default function AudioPlayer(_: AudioPlayerProps) {
-  // Temporarily hide the audio player until narration files are available.
+export default function AudioPlayer(props: AudioPlayerProps) {
+  void props; // Player hidden until narration files are available.
   return null;
 }

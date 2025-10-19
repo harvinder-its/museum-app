@@ -7,15 +7,28 @@ export default function ResponsiveTest() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
+    setIsDarkMode((previous) => !previous);
   };
 
   return (
     <div className={`${isDarkMode ? 'dark' : ''} min-h-screen w-full ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
-      <Header isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+      <Header />
       
       <div className="pt-32 lg:pt-36">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-end">
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className={`rounded-md px-4 py-2 text-sm font-medium transition-colors ${
+                isDarkMode
+                  ? 'bg-gray-800 text-gray-200 hover:bg-gray-700'
+                  : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+              }`}
+            >
+              Toggle Theme
+            </button>
+          </div>
           <h1 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
             Mobile & Tablet Responsiveness Test
           </h1>
@@ -136,5 +149,3 @@ export default function ResponsiveTest() {
     </div>
   );
 }
-
-

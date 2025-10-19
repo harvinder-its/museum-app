@@ -1685,7 +1685,7 @@ export default function Home() {
 
   return (
     <div className={`${isDarkMode ? 'dark' : ''} min-h-screen w-full ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
-      <Header isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+      <Header />
 
       {/* Main container with proper spacing for header */}
       <div className="pt-16"> {/* Add top padding to account for fixed header */}
@@ -1747,12 +1747,14 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="flex items-center hover:opacity-80 transition-opacity"
                 >
-                  <img 
-                    src={isDarkMode ? "/images/asa-logo-dark.webp" : "/images/logo.png"} 
-                    alt="Museum Logo" 
+                  <Image
+                    src={isDarkMode ? '/images/asa-logo-dark.webp' : '/images/logo.png'}
+                    alt="Museum Logo"
+                    width={40}
+                    height={40}
                     className="w-8 h-8 sm:w-10 sm:h-10 mr-2"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
+                    onError={(event) => {
+                      event.currentTarget.style.display = 'none';
                     }}
                   />
                   <span className={`text-xs sm:text-sm font-semibold ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>

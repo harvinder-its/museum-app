@@ -90,7 +90,7 @@ export default function LanguageSelection() {
                 This museum is a home for Sikh tradition, Sikh history, core values, and Gurmat. Here, seeing becomes listening,
                 and memory turns into practice. Traditional arts anchor the journey - miniature painting in the Kangra style,
                 with its attentive line and quiet color; oil painting and sculpture that give memory weight and breath. Alongside
-                them, digital painting and other contemporary media keep the conversation alive for today's gaze.
+                them, digital painting and other contemporary media keep the conversation alive for today&#39;s gaze.
               </p>
               <p className="mb-4">
                 Across every medium runs a single thread: Gurmat - Guru-centered wisdom - understood here as a way of life where Naam,

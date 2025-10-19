@@ -30,13 +30,9 @@ export default function About() {
     }
   }, [isDarkMode]);
 
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
   return (
     <div className={`${isDarkMode ? 'dark' : ''}`}>
-      <Header isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+      <Header />
       
       {/* Main Content */}
       <div className="pt-20 min-h-screen">
