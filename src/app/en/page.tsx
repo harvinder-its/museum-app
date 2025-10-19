@@ -54,7 +54,6 @@ export default function Home() {
     { id: '18vi-sadi-da-singh', label: '18th Century Singh' },
     { id: 'jain-khan-di-maut-te-sarhind-utte-kabza', label: 'Victory over Sirhind' },
     { id: 'patshahi-badshahi', label: 'Paatshahi - Baadshahi' },
-    { id: 'singh-vs-singh', label: 'Singh vs Singh' },
     { id: 'darbar-maharaja-ranjit-singh', label: 'Darbar Maharaj Ranjeet Singh' },
     { id: 'akali-phula-singh-ji', label: 'Akali Phoola Singh' },
     { id: 'sardar-hari-singh-nalwa', label: 'Sardar Hari Singh Nalwa' },
@@ -1023,7 +1022,7 @@ export default function Home() {
           
           
           <p class="mb-4"><strong>Misl Names and Leaders:</strong><br/>
-          ahluwalia — S. Jassa Singh ahluwalia<br/>
+          Ahluwalia — S. Jassa Singh Ahluwalia<br/>
           Faizullapuria — Nawab Kapūr Singh<br/>
           Shukarchakkīa — S. Naudh Singh<br/>
           Nishanwalia — S. Dasaunda Singh<br/>

@@ -54,7 +54,6 @@ export default function Home() {
     { id: '18vi-sadi-da-singh', label: '੧੮ਵੀਂ ਸਦੀ ਦਾ ਸਿੰਘ' },
     { id: 'jain-khan-di-maut-te-sarhind-utte-kabza', label: 'ਜੈਨ ਖਾਨ ਦੀ ਮੌਤ ਤੇ ਸਰਹਿੰਦ ਉੱਤੇ ਕਬਜ਼ਾ' },
     { id: 'patshahi-badshahi', label: 'ਪਾਤਸ਼ਾਹੀ - ਬਾਦਸ਼ਾਹੀ' },
-    { id: 'singh-vs-singh', label: 'ਸਿੰਘ vs ਸਿੰਘ' },
     { id: 'darbar-maharaja-ranjit-singh', label: 'ਦਰਬਾਰ ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ' },
     { id: 'akali-phula-singh-ji', label: 'ਅਕਾਲੀ ਫੂਲਾ ਸਿੰਘ ਜੀ' },
     { id: 'sardar-hari-singh-nalwa', label: 'ਸਰਦਾਰ ਹਰੀ ਸਿੰਘ ਨਲਵਾ' },
