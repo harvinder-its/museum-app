@@ -87,27 +87,24 @@ export default function LanguageSelection() {
           >
             <div className="mx-auto w-full max-w-4xl md:max-w-5xl">
               <p className="mb-4">
-                This museum is a home for Sikh tradition, Sikh history, core values, and Gurmat. Here, seeing becomes listening,
-                and memory turns into practice. Traditional arts anchor the journey - miniature painting in the Kangra style,
-                with its attentive line and quiet color; oil painting and sculpture that give memory weight and breath. Alongside
-                them, digital painting and other contemporary media keep the conversation alive for today&#39;s gaze.
+                This permanent exhibition celebrates the profound spirit of Sikh heritage, tracing a journey from the symbolic essence of
+                the Guru Sahiban to the late twentieth century. Through artworks rendered in classical Kangra and Mughal styles, expressive
+                oil paintings, sculptures, and contemporary media, it illuminates the Sikh values of justice, courage, compassion, equality,
+                and devotion.
               </p>
               <p className="mb-4">
-                Across every medium runs a single thread: Gurmat - Guru-centered wisdom - understood here as a way of life where Naam,
-                Kirat, and Vand meet seva, sarbat da bhala, and chardi kala. Kirtan and Dhadi kala sound through the galleries as living
-                archives: raga as devotion, dhadi as courage.
+                The exhibition honors the living traditions of Kirtan and Dhadi, reflecting the Sikh philosophy of sound and spirit, from the
+                meditative Rabab of Guru Nanak to the resounding Nagara of the Khalsa, echoing divine harmony and collective awakening.
               </p>
               <p>
-                This is not a hall of trophies but a place of practice. Take your time. Read a label; hold one idea; listen for one note.
-                If a work sends you back into the world a little more truthful, a little more tender, then this museum has kept faith with
-                its purpose.
+                Together, these works create a timeless dialogue uniting spirituality, history, and artistic expression.
               </p>
             </div>
           </div>
 
           <div className="mt-auto flex flex-col items-center">
             <div
-              className={`text-center text-sm sm:text-base ${
+              className={`mt-8 text-center text-sm sm:text-base md:text-lg ${
                 isDarkMode ? 'text-gray-300' : 'text-gray-600'
               }`}
             >
