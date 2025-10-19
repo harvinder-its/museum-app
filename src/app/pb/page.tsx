@@ -7,6 +7,7 @@ import Header from '@/components/Header';
 import AudioPlayer from '@/components/AudioPlayer';
 import FixedAudioPlayer from '@/components/FixedAudioPlayer';
 import Footer from '@/components/Footer';
+import { getArtDetails } from '@/data/artDetails';
 
 type NavItem = {
   id: string;
@@ -1517,126 +1518,10 @@ export default function Home() {
     };
 
     const getImageDetails = (id: string) => {
-      const detailsMap: { [key: string]: { artist: string; type: string } } = {
-        'guru-nanak-dev-ji': { artist: 'Unknown Artist',  type: 'Digital Art' },
-        'guru-angad-dev-ji': { artist: 'Unknown Artist',  type: 'Digital Art' },
-        'guru-amardas-ji': { artist: 'Unknown Artist',  type: 'Digital Art' },
-        'guru-ramdas-ji': { artist: 'Unknown Artist',  type: 'Digital Art' },
-        'guru-arjan-dev-ji': { artist: 'Unknown Artist',  type: 'Digital Art' },
-        'guru-hargobind-sahib-ji': { artist: 'Unknown Artist',  type: 'Digital Art' },
-        'guru-har-rai-sahib-ji': { artist: 'Unknown Artist',  type: 'Digital Art' },
-        'guru-har-krishan-sahib-ji': { artist: 'Unknown Artist',  type: 'Digital Art' },
-        'guru-teg-bahadur-ji': { artist: 'Unknown Artist',  type: 'Digital Art' },
-        'guru-gobind-singh-ji': { artist: 'Unknown Artist',  type: 'Digital Art' },
-        'guru-granth-sahib-ji': { artist: 'Unknown Artist',  type: 'Digital Art' },
-        bhaimanisingh: { artist: 'Unknown Artist',  type: 'Digital Art' },
-        bhaitarusingh: { artist: 'Unknown Artist',  type: 'Digital Art' },
-        bhaishubegsingh: { artist: 'Unknown Artist',  type: 'Digital Art' },
-        babadeepsingh: { artist: 'Unknown Artist',  type: 'Digital Art' },
-        jarnail: { artist: 'Unknown Artist',  type: 'Digital Art' },
-        nawabkapursingh: { artist: 'Unknown Artist',  type: 'Digital Art' },
-        jassasinghramgharia: { artist: 'Unknown Artist',  type: 'Digital Art' },
-        jassasinghahluwalia: { artist: 'Unknown Artist',  type: 'Digital Art' },
-        baghelsingh: { artist: 'Unknown Artist',  type: 'Digital Art' },
-        chotaghallughara: { artist: 'Unknown Artist',  type: 'Digital Art' },
-        dalkhalsa: { artist: 'Unknown Artist',  type: 'Digital Art' },
-        vadaghallughara: { artist: 'Unknown Artist',  type: 'Digital Art' },
-        foundation: { artist: 'Unknown Artist',  type: 'Digital Art' },
-        history: { artist: 'Unknown Artist',  type: 'Digital Art' },
-        portrait: { artist: 'Unknown Artist',  type: 'Digital Art' },
-        'gadar-lehar-portrait': { artist: 'Unknown Artist',  type: 'Digital Art' },
-        'babbar-akali-lehar-portrait': { artist: 'Unknown Artist',  type: 'Digital Art' },
-        '20th-century-portraits': { artist: 'Unknown Artist',  type: 'Digital Art' },
-        'modern-art-style-painting': { artist: 'Unknown Artist',  type: 'Digital Art' },
-        'teja-ghallughara': { artist: 'Unknown Artist',  type: 'Digital Art' },
-        '1978': { artist: 'Unknown Artist',  type: 'Digital Art' },
-        'teja-ghallughara-portrait': { artist: 'Unknown Artist',  type: 'Digital Art' },
-        'sikh-genocide': { artist: 'Unknown Artist',  type: 'Digital Art' },
-        'punjabi-culture': { artist: 'Unknown Artist',  type: 'Digital Art' },
-        // Foundation subsections
-        'pritham-bhagauti-simri-kai': { artist: 'ਪਰਮ ਸਿੰਘ',  type: 'Traditional Arms' },
-        'nam-japo': { artist: 'ਜਸਪ੍ਰੀਤ ਸਿੰਘ',  type: 'Oil Painting' },
-        'kirt-karo': { artist: 'ਜਸਪ੍ਰੀਤ ਸਿੰਘ',  type: 'Oil Painting' },
-        'vand-chhako': { artist: 'ਜਸਪ੍ਰੀਤ ਸਿੰਘ',  type: 'Oil Painting' },
-        'ang-sahib': { artist: 'ਮਨਜੀਤ ਕੌਰ',  type: 'Miniature Style Painting' },
-        'patshahi-badshahi': { artist: 'ਪਰਮ ਸਿੰਘ',  type: 'Oil Painting' },
-        // History subsections
-        'chappar-jhiri-di-jang': { artist: 'ਪਰਮ ਸਿੰਘ',  type: 'Canvas Print' },
-        'baba-banda-singh-bahadur': { artist: 'ਜਗਦੀਪ ਸਿੰਘ',  type: 'Oil Painting' },
-        'bhai-tara-singh-wan-di-jang': { artist: 'ਪਰਮ ਸਿੰਘ',  type: 'Canvas Print' },
-        'chavinde-waliyan-bibiyan-di-jang': { artist: 'ਪਰਮ ਸਿੰਘ',  type: 'Oil Painting' },
-        'bhai-mani-singh-shahadat': { artist: 'ਕੁਲਦੀਪ ਸਿੰਘ',  type: 'Oil Painting' },
-        'bhai-garja-singh-bota-singh': { artist: 'ਮਨਿੰਦਰ ਸਿੰਘ',  type: 'Oil Painting Replica' },
-        'chota-ghallughara': { artist: 'ਪਰਮ ਸਿੰਘ',  type: 'Canvas Print' },
-        'bhai-taru-singh-shahadat': { artist: 'ਜਗਵਿੰਦਰ ਸਿੰਘ',  type: 'Low Relief' },
-        'dal-khalsa-da-gathan': { artist: 'ਪਰਮ ਸਿੰਘ',  type: 'Oil Painting' },
-        'baba-deep-singh-ji-di-jang': { artist: 'ਪਰਮ ਸਿੰਘ',  type: 'Oil Painting' },
-        'vada-ghallughara': { artist: 'ਪਰਮ ਸਿੰਘ',  type: 'Canvas Print' },
-        'akali': { artist: 'ਮਨਜੀਤ ਕੌਰ',  type: 'Miniature Painting Replica' },
-        'jassa-singh-ramgharia': { artist: 'ਮਨਜੀਤ ਕੌਰ',  type: 'Miniature Painting Replica' },
-        '18vi-sadi-da-singh': { artist: 'ਪਰਮ ਸਿੰਘ',  type: 'Oil Painting' },
-        'jain-khan-di-maut-te-sarhind-utte-kabza': { artist: 'ਪਰਮ ਸਿੰਘ',  type: 'Oil Painting' },
-        'singh-vs-singh': { artist: 'ਜਗਵਿੰਦਰ ਸਿੰਘ',  type: 'Metal Sculpture' },
-        'darbar-maharaja-ranjit-singh': { artist: 'ਜਗਦੀਪ ਸਿੰਘ',  type: 'Oil Painting' },
-        'anglo-sikh-jangan-mudki-di-jang': { artist: 'ਗੁਰਰਾਜ ਸਿੰਘ',  type: 'Oil Painting' },
-        'kuka-lehar': { artist: 'ਜਸਪ੍ਰੀਤ ਸਿੰਘ',  type: 'Oil Painting' },
-        'gadar-lehar': { artist: 'ਕੁਲਦੀਪ ਸਿੰਘ',  type: 'Oil Painting' },
-        'babbar-akali-lehar': { artist: 'ਕੁਲਦੀਪ ਸਿੰਘ',  type: 'Oil Painting' },
-        'vishav-jangan': { artist: 'ਜਗਦੀਪ ਸਿੰਘ',  type: 'Oil Painting' },
-        // Portrait subsections
-        'akali-phula-singh-ji': { artist: 'ਪਰਮ ਸਿੰਘ',  type: 'Oil Painting' },
-        'sardar-hari-singh-nalwa': { artist: 'ਪਰਮ ਸਿੰਘ',  type: 'Oil Painting' },
-        'maharani-jind-kaur': { artist: 'ਸੁਯਸ਼',  type: 'Oil Painting' },
-        'kanwar-naunihal-singh': { artist: 'ਸੁਯਸ਼',  type: 'Oil Painting' },
-        'maharaja-dalip-singh': { artist: 'ਸੁਯਸ਼',  type: 'Oil Painting' },
-        // Gadar Lehar Portrait subsections
-        'baba-sohan-singh-bhakna': { artist: 'ਕੁਲਦੀਪ ਸਿੰਘ',  type: 'Oil Painting' },
-        'shahid-kartar-singh-sarabha': { artist: 'ਗੁਰਸ਼ਰਨ ਸਿੰਘ',  type: 'Oil Painting' },
-        'bibi-gulab-kaur': { artist: 'ਡੇਨੀਅਲ',  type: 'Oil Painting' },
-        // Babbar Akali Lehar Portrait subsections
-        'babbar-karam-singh': { artist: 'ਕੁਲਦੀਪ ਸਿੰਘ',  type: 'Oil Painting' },
-        'babbar-ratan-singh': { artist: 'ਕੁਲਦੀਪ ਸਿੰਘ',  type: 'Oil Painting' },
-        'babbar-kishan-singh-gargaj': { artist: 'ਕੁਲਦੀਪ ਸਿੰਘ',  type: 'Oil Painting' },
-        'babbar-dhanna-singh-bahibal-kalan': { artist: 'ਸੁਯਸ਼',  type: 'Oil Painting' },
-        'babbar-harbans-singh-sarhala': { artist: 'ਸੁਯਸ਼',  type: 'Oil Painting' },
-        // 20th Century Portraits subsections
-        'bhai-vir-singh-ji': { artist: 'ਸੁਯਸ਼',  type: 'Oil Painting' },
-        'pro-puran-singh': { artist: 'ਡੇਨੀਅਲ',  type: 'Oil Painting' },
-        'gyani-ditt-singh': { artist: 'ਸੁਯਸ਼',  type: 'Oil Painting' },
-        'bhai-randhir-singh-ji': { artist: 'ਗੁਰਰਾਜ ਸਿੰਘ',  type: 'Oil Painting' },
-        'master-tara-singh': { artist: 'ਗੁਰਰਾਜ ਸਿੰਘ',  type: 'Oil Painting' },
-        'dr-ganda-singh': { artist: 'ਪਰਮ ਸਿੰਘ',  type: 'Oil Painting' },
-        'karam-singh-historian': { artist: 'ਗੁਰਸ਼ਰਨ ਸਿੰਘ',  type: 'Oil Painting' },
-        'bibi-harnam-kaur': { artist: 'ਸੁਯਸ਼',  type: 'Oil Painting' },
-        'bhai-kahan-singh-nabha': { artist: 'ਪਰਮ ਸਿੰਘ',  type: 'Oil Painting' },
-        // Modern Art Style Painting subsections
-        '1947-di-vand': { artist: 'ਰਵਿੰਦਰ ਸਿੰਘ',  type: 'Canvas Print' },
-        // ਤੀਜਾ ਘੱਲੂਘਾਰਾ subsections
-        'santan-di-shahadat': { artist: 'ਪਰਮ ਸਿੰਘ',  type: 'Canvas Print' },
-        // 1978 subsections
-        'bhai-fauja-singh-ji': { artist: 'ਜਸਪ੍ਰੀਤ ਸਿੰਘ',  type: 'Oil Painting' },
-        // ਤੀਜਾ ਘੱਲੂਘਾਰਾ Portrait subsections
-        'teja-ghallughara-june-1984': { artist: 'ਜਗਵਿੰਦਰ ਸਿੰਘ',  type: 'Model' },
-        'sant-jarnail-singh-ji': { artist: 'ਗੁਰਰਾਜ ਸਿੰਘ',  type: 'Oil Painting' },
-        'bhai-amrik-singh-ji': { artist: 'ਸੁਯਸ਼',  type: 'Oil Painting' },
-        'general-subeg-singh-ji': { artist: 'ਸੁਯਸ਼',  type: 'Oil Painting' },
-        'baba-thahara-singh-ji': { artist: 'ਸੁਯਸ਼',  type: 'Oil Painting' },
-        'bibi-upkar-kaur': { artist: 'ਸੁਯਸ਼',  type: 'Oil Painting' },
-        'bhai-mehnga-singh-babar': { artist: 'ਸੁਯਸ਼',  type: 'Oil Painting' },
-        // Sikh Genocide subsections
-        'november-1984': { artist: 'ਜਸਪ੍ਰੀਤ ਸਿੰਘ',  type: 'Oil Painting' },
-        // Punjabi Culture subsections
-        'purana-ghar': { artist: 'ਜਗਦੀਪ ਸਿੰਘ',  type: 'Miniature Model' },
-        'stepu': { artist: 'ਸੁਖਪ੍ਰੀਤ ਸਿੰਘ ਆਰਟਿਸਟ',  type: 'Oil Painting' },
-        'maan-di-kala': { artist: 'ਜਸਪ੍ਰੀਤ ਸਿੰਘ',  type: 'Oil Painting' },
-        'dadi-pota': { artist: 'ਪਰਮ ਸਿੰਘ',  type: 'Canvas Print' },
-        // Kirtan subsections
-        'kirtan-instruments': { artist: '',  type: 'Set of Instruments' },
-        'kirtan': { artist: 'ਜਗਵਿੰਦਰ ਸਿੰਘ',  type: 'Sculpture' },
-        // Map
-        'map': { artist: 'ਪਰਮ ਸਿੰਘ',  type: 'Paper Print' },
-      };
-      return detailsMap[id] || { artist: 'Unknown', type: 'Unknown' };
+      const details = getArtDetails(id);
+      const artist = details?.artistPb?.trim() || details?.artistEn?.trim() || 'ਅਣਪਛਾਤਾ';
+      const medium = details?.mediumPb?.trim() || details?.mediumEn?.trim() || 'Unknown';
+      return { artist, medium };
     };
 
     const getAudioSrc = (id: string) => {
@@ -1741,8 +1626,8 @@ export default function Home() {
                 <span className={`text-xs ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>{imageDetails.artist}</span>
               </div>
               <div className="flex justify-end items-center gap-1 sm:gap-2">
-                <span className="text-xs font-medium text-[#faba04]">Type:</span>
-                <span className={`text-xs ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>Medium</span>
+                <span className="text-xs font-medium text-[#faba04]">Medium:</span>
+                <span className={`text-xs ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>{imageDetails.medium}</span>
               </div>
             </div>
           </div>
