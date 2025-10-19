@@ -75,19 +75,16 @@ export default function LanguageSelection() {
             <p className={`mt-3 text-lg md:text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               ਸਿੱਖ ਮਿਊਜ਼ੀਅਮ ਵਿੱਚ ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ
             </p>
-            <p className={`mt-2 text-base font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-              Located in Gurdwara Sahib Glenwood
-            </p>
           </div>
 
           <div
-            className={`mt-4 w-full text-left text-sm leading-relaxed sm:text-base md:text-lg ${
+            className={`mt-4 w-full text-justify text-sm leading-relaxed sm:text-base md:text-lg ${
               isDarkMode ? 'text-gray-300' : 'text-gray-700'
             }`}
           >
             <div className="mx-auto w-full max-w-4xl md:max-w-5xl">
               <p className="mb-4">
-                This permanent exhibition celebrates the profound spirit of Sikh heritage, tracing a journey from the symbolic essence of
+                The permanent exhibition at the Sikh Museum Sydney celebrates the profound spirit of Sikh heritage, tracing a journey from the symbolic essence of
                 the Guru Sahiban to the late twentieth century. Through artworks rendered in classical Kangra and Mughal styles, expressive
                 oil paintings, sculptures, and contemporary media, it illuminates the Sikh values of justice, courage, compassion, equality,
                 and devotion.
