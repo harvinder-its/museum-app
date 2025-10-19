@@ -436,6 +436,7 @@ export default function Home() {
         'dr-ganda-singh': '/images/museumpaintings/46-doctor-gandha-singh.jpg',
         'karam-singh-historian': '/images/museumpaintings/47-karm-singh-historian.jpg',
         'bibi-harnam-kaur': '/images/museumpaintings/48-bibi-harnam-kaur.jpg',
+        'bhai-kahan-singh-nabha': '/images/museumpaintings/49-bhai-kaahn-singh-nabha.jpg',
         // History section (World Wars)
         'vishav-jangan': '/images/museumpaintings/50-sikhs-in-world-wars.jpg',
         // Modern Art Style Painting
