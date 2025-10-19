@@ -1,28 +1,57 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 interface HeaderProps {
   isDarkMode: boolean;
   toggleTheme: () => void;
-  basePath?: string;
 }
 
-export default function Header({ isDarkMode, toggleTheme, basePath = "" }: HeaderProps) {
+export default function Header({ isDarkMode, toggleTheme }: HeaderProps) {
+  const [isHidden, setIsHidden] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsHidden(window.scrollY > 0);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 right-0 z-40 w-full max-w-full">
-      {/* Top Bar - Operating Hours */}
-      <div className="bg-[#040d6a] text-white py-2 px-4">
-        <div className="max-w-[1280px] mx-auto text-center text-xs sm:text-sm">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center space-y-1 sm:space-y-0">
-            <span>Gurudwara Sahib Standard Operating Hours</span>
-            <span className="hidden sm:inline mx-2">|</span>
-            <span>Weekdays: 4.30 AM to 9.00 PM</span>
-            <span className="hidden sm:inline mx-2">|</span>
-            <span>Weekends: 3.30 AM to 10.00 PM</span>
+    <header
+      className={`fixed top-0 right-0 z-40 w-full max-w-full transform transition-transform duration-300 ${
+        isHidden ? '-translate-y-full' : 'translate-y-0'
+      }`}
+    >
+      <div className="bg-[#040d6a] text-white">
+        <div className="relative mx-auto max-w-[1280px] overflow-hidden px-4 py-2">
+          <div
+            className="scrolling-text whitespace-nowrap text-xs font-medium sm:text-sm"
+            aria-label="Museum opening hours and visitor information"
+          >
+            Special Opening Tuesday 21st: 10:00am – 8:00pm • Regular Hours: Saturday 12:00pm – 8:00pm, Sunday 10:00am – 6:00pm • Group visits welcomed by appointment; school and institutional tours typically run monthly.
           </div>
         </div>
       </div>
 
+      <style jsx>{`
+        @keyframes header-marquee {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+
+        .scrolling-text {
+          display: inline-block;
+          animation: header-marquee 35s linear infinite;
+        }
+      `}</style>
     </header>
   );
 }
