@@ -204,10 +204,10 @@ export default function Home() {
   const getCarouselImages = (id: string) => {
     const carouselMap: { [key: string]: string[] } = {
       'purana-ghar': [
-        '/images/museumpaintings/62OldHomeModel.jpg',
-        '/images/museumpaintings/62OldHomeModel2.jpg',
-        '/images/museumpaintings/62OldHomeModel3.jpg',
-        '/images/museumpaintings/62OldHomeModel4.jpg'
+        '/images/museumpaintings/62-old-home-model.jpg',
+        '/images/museumpaintings/62-old-home-model-2.jpg',
+        '/images/museumpaintings/62-old-home-model-3.jpg',
+        '/images/museumpaintings/62-old-home-model-4.jpg'
       ]
     };
     return carouselMap[id] || [];
@@ -385,17 +385,17 @@ export default function Home() {
         'guru-gobind-singh-ji': '/images/guru-gobind-singh-ji.jpg',
         'guru-granth-sahib-ji': '/images/guru-granth-sahib-ji.jpg',
         // Foundation section
-        'pritham-bhagauti-simri-kai': '/images/museumpaintings/1-in-the-beginning-i-remember-bhagauti-shastar.jpg',
-        'nam-japo': '/images/museumpaintings/2-naam-japo-pray.jpeg',
-        'kirt-karo': '/images/museumpaintings/3-kirat-karo-earn-an-honest-living.jpg',
-        'vand-chhako': '/images/museumpaintings/4-vand-shako-share-what-you-have.jpg',
-        'ang-sahib': '/images/museumpaintings/5-shabad-guru-surat-dhun-chela.jpg',
-        'patshahi-badshahi': '/images/museumpaintings/21-patshahi-badshahi.JPG',
+        'pritham-bhagauti-simri-kai': '/images/museumpaintings/01-shastar.jpg',
+        'nam-japo': '/images/museumpaintings/02-naam-japo.jpg',
+        'kirt-karo': '/images/museumpaintings/03-kirat-karo.jpg',
+        'vand-chhako': '/images/museumpaintings/04-vand-shako.jpg',
+        'ang-sahib': '/images/museumpaintings/05-ang-sahib.jpg',
+        'patshahi-badshahi': '/images/museumpaintings/21-patshahi-badshahi.jpg',
         // History section
-        'chappar-jhiri-di-jang': '/images/museumpaintings/6-battle-of-chappad-chidi.jpg',
-        'baba-banda-singh-bahadur': '/images/museumpaintings/7-baba-banda-singh-bahadar.jpg',
-        'bhai-tara-singh-wan-di-jang': '/images/museumpaintings/8-tara-singh-van.png',
-        'chavinde-waliyan-bibiyan-di-jang': '/images/museumpaintings/9-chawinde-walian-bibian.jpg',
+        'chappar-jhiri-di-jang': '/images/museumpaintings/06-battle-of-chappad-chidi.jpg',
+        'baba-banda-singh-bahadur': '/images/museumpaintings/07-baba-banda-singh-bahadar.jpg',
+        'bhai-tara-singh-wan-di-jang': '/images/museumpaintings/08-tara-singh-van.jpg',
+        'chavinde-waliyan-bibiyan-di-jang': '/images/museumpaintings/09-chawinde-walian-bibian.jpg',
         'bhai-mani-singh-shahadat': '/images/museumpaintings/10-bhai-mani-singh.jpg',
         'bhai-garja-singh-bota-singh': '/images/museumpaintings/11-bhai-garja-singh-bota-singh.jpg',
         'chota-ghallughara': '/images/museumpaintings/12-chhota-ghallughara.jpg',
@@ -406,60 +406,60 @@ export default function Home() {
         'akali': '/images/museumpaintings/17-akali-timeless.jpg',
         'jassa-singh-ramgharia': '/images/museumpaintings/18-jassa-singh-ramgarhia.jpg',
         '18vi-sadi-da-singh': '/images/museumpaintings/19-18th-century-singh.jpg',
-        'jain-khan-di-maut-te-sarhind-utte-kabza': '/images/museumpaintings/20-jain-khaan-and-victory-over-sirhind.jpg',
-        'darbar-maharaja-ranjit-singh': '/images/museumpaintings/23-darbar-maharaja-ranjit-singh.jpeg',
+        'jain-khan-di-maut-te-sarhind-utte-kabza': '/images/museumpaintings/20-jain-khaan-victory-over-sirhind.jpg',
+        'darbar-maharaja-ranjit-singh': '/images/museumpaintings/23-darbar-maharaja-ranjit-singh.jpg',
         'anglo-sikh-jangan-mudki-di-jang': '/images/museumpaintings/29-anglo-sikh-war.jpg',
-        'kuka-lehar': '/images/museumpaintings/30-kooka-lehar.jpeg',
+        'kuka-lehar': '/images/museumpaintings/30-kooka-lehar.jpg',
         'gadar-lehar': '/images/museumpaintings/31-ghadar-movement.jpg',
         'babbar-akali-lehar': '/images/museumpaintings/35-babbar-akali-movement.jpg',
         // Portrait section
         'akali-phula-singh-ji': '/images/museumpaintings/24-akali-phoola-singh-ji.jpg',
-        'sardar-hari-singh-nalwa': '/images/museumpaintings/25-sardar-hari-singh-nalwa.png',
+        'sardar-hari-singh-nalwa': '/images/museumpaintings/25-sardar-hari-singh-nalwa.jpg',
         'maharani-jind-kaur': '/images/museumpaintings/26-maharani-jind-kaur.jpg',
         'kanwar-naunihal-singh': '/images/museumpaintings/27-kunwar-nau-nihal-singh.jpg',
         'maharaja-dalip-singh': '/images/museumpaintings/28-maharaj-duleep-singh.jpg',
         // Gadar Lehar Portrait section
         'baba-sohan-singh-bhakna': '/images/museumpaintings/32-baba-sohan-singh-bhakna.jpg',
-        'shahid-kartar-singh-sarabha': '/images/museumpaintings/33-kartar-singh-sarabha.jpeg',
+        'shahid-kartar-singh-sarabha': '/images/museumpaintings/33-kartar-singh-sarabha.jpg',
         'bibi-gulab-kaur': '/images/museumpaintings/34-bibi-gulab-kaur.jpg',
         // Babbar Akali Lehar Portrait section
-        'babbar-karam-singh': '/images/museumpaintings/36-babar-karm-singh-rakkad.jpeg',
-        'babbar-ratan-singh': '/images/museumpaintings/37-babar-ratan-singh.jpeg',
-        'babbar-kishan-singh-gargaj': '/images/museumpaintings/338-babar-kishan-singh-gadgajj.jpeg',
+        'babbar-karam-singh': '/images/museumpaintings/36-babar-karm-singh-rakkad.jpg',
+        'babbar-ratan-singh': '/images/museumpaintings/37-babar-ratan-singh.jpg',
+        'babbar-kishan-singh-gargaj': '/images/museumpaintings/38-babar-kishan-singh-gadgajj.jpg',
         'babbar-dhanna-singh-bahibal-kalan': '/images/museumpaintings/39-babar-dhanna-singh-behbalpur.jpg',
         // 20th Century Portraits section
         'bhai-vir-singh-ji': '/images/museumpaintings/41-bhai-veer-singh-ji.jpg',
-        'pro-puran-singh': '/images/museumpaintings/42ProfPooranSingh.JPG',
-        'gyani-ditt-singh': '/images/museumpaintings/43GiyaniDittSingh.JPG',
-        'bhai-randhir-singh-ji': '/images/museumpaintings/44BhaiRandhirSinghJi.jpg',
-        'master-tara-singh': '/images/museumpaintings/45MasterTaraSingh.jpg',
-        'dr-ganda-singh': '/images/museumpaintings/46DoctorGandhaSingh.jpg',
-        'karam-singh-historian': '/images/museumpaintings/47KarmSinghHistorian.jpg',
-        'bibi-harnam-kaur': '/images/museumpaintings/48BibiHarnamKaur.jpg',
+        'pro-puran-singh': '/images/museumpaintings/42-prof-pooran-singh.jpg',
+        'gyani-ditt-singh': '/images/museumpaintings/43-giyani-ditt-singh.jpg',
+        'bhai-randhir-singh-ji': '/images/museumpaintings/44-bhai-randhir-singh-ji.jpg',
+        'master-tara-singh': '/images/museumpaintings/45-master-tara-singh.jpg',
+        'dr-ganda-singh': '/images/museumpaintings/46-doctor-gandha-singh.jpg',
+        'karam-singh-historian': '/images/museumpaintings/47-karm-singh-historian.jpg',
+        'bibi-harnam-kaur': '/images/museumpaintings/48-bibi-harnam-kaur.jpg',
         // History section (World Wars)
-        'vishav-jangan': '/images/museumpaintings/50SikhsInWorldWars.jpg',
+        'vishav-jangan': '/images/museumpaintings/50-sikhs-in-world-wars.jpg',
         // Modern Art Style Painting
-        '1947-di-vand': '/images/museumpaintings/51Partitionof1947.jpg',
+        '1947-di-vand': '/images/museumpaintings/51-partition-of-1947.jpg',
         // 1978 section
-        'bhai-fauja-singh-ji': '/images/museumpaintings/52BhaiFaujaSingh-Saka 1978.jpg',
+        'bhai-fauja-singh-ji': '/images/museumpaintings/52-bhai-fauja-singh-saka-1978.jpg',
         // Teja Ghallughara Portrait section
-        'santan-di-shahadat': '/images/museumpaintings/53MartyrdomSantJarnailSinghJi.jpg',
-        'teja-ghallughara-june-1984': '/images/museumpaintings/54AkalTakhatSahibModel.jpg',
-        'sant-jarnail-singh-ji': '/images/museumpaintings/55SantJarnailSinghJi.jpg',
-        'bhai-amrik-singh-ji': '/images/museumpaintings/56BhaiAmrikSinghji.jpg',
-        'general-subeg-singh-ji': '/images/museumpaintings/57GeneralSubeghSinghJi.jpg',
-        'baba-thahara-singh-ji': '/images/museumpaintings/58BabaThahraSinghJi.jpg',
-        'bibi-upkar-kaur': '/images/museumpaintings/59BibiUpkarKaurJi.jpg',
-        'bhai-mehnga-singh-babar': '/images/museumpaintings/60BhaiMehngaSinghBabbar.jpg',
+        'santan-di-shahadat': '/images/museumpaintings/53-martyrdom-sant-jarnail-singh-ji.jpg',
+        'teja-ghallughara-june-1984': '/images/museumpaintings/54-akal-takhat-sahib-model.jpg',
+        'sant-jarnail-singh-ji': '/images/museumpaintings/55-sant-jarnail-singh-ji.jpg',
+        'bhai-amrik-singh-ji': '/images/museumpaintings/56-bhai-amrik-singh-ji.jpg',
+        'general-subeg-singh-ji': '/images/museumpaintings/57-general-subegh-singh-ji.jpg',
+        'baba-thahara-singh-ji': '/images/museumpaintings/58-baba-thahra-singh-ji.jpg',
+        'bibi-upkar-kaur': '/images/museumpaintings/59-bibi-upkar-kaur-ji.jpg',
+        'bhai-mehnga-singh-babar': '/images/museumpaintings/60-bhai-mehnga-singh-babbar.jpg',
         // Sikh Genocide section
-        'november-1984': '/images/museumpaintings/61November1984.jpg',
+        'november-1984': '/images/museumpaintings/61-november-1984.jpg',
         // Punjabi Culture section
-        'purana-ghar': '/images/museumpaintings/62OldHomeModel.jpg', // Default image for carousel
-        'stepu': '/images/museumpaintings/63Stapoo.JPG',
-        'maan-di-kala': '/images/museumpaintings/64Mother_sCreation.jpg',
-        'dadi-pota': '/images/museumpaintings/65DadiPota.jpg',
+        'purana-ghar': '/images/museumpaintings/62-old-home-model.jpg', // Default image for carousel
+        'stepu': '/images/museumpaintings/63-stapoo.jpg',
+        'maan-di-kala': '/images/museumpaintings/64-mothers-creation.jpg',
+        'dadi-pota': '/images/museumpaintings/65-dadi-pota.jpg',
         // Kirtan
-        'kirtan': '/images/museumpaintings/67KirtanSculpture.jpg',
+        'kirtan': '/images/museumpaintings/67-kirtan-sculpture.jpg',
         // Old mappings (kept for backward compatibility)
         bhaimanisingh: '/images/bhai-mani-singh.jpg',
         bhaitarusingh: '/images/bhai-taru-singh.jpeg',
