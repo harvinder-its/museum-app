@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Museum - Sikh History & Heritage | Digital Museum",
     description: "Learn about Museum's mission to preserve and celebrate Sikh heritage through digital innovation.",
-    url: 'https://museum.app/staging/about',
+    url: 'https://museum.app/about',
   },
   twitter: {
     title: "About Museum - Sikh History & Heritage | Digital Museum",

@@ -174,7 +174,7 @@ export default function Home() {
   };
 
   const handleLanguageChange = (language: 'en' | 'pb') => {
-    router.push(`/staging/${language}`);
+    router.push(`/${language}`);
   };
 
   const toggleMobileSidebar = () => {
@@ -1685,7 +1685,7 @@ export default function Home() {
 
   return (
     <div className={`${isDarkMode ? 'dark' : ''} min-h-screen w-full ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
-      <Header isDarkMode={isDarkMode} toggleTheme={toggleTheme} basePath="/staging" />
+      <Header isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
 
       {/* Main container with proper spacing for header */}
       <div className="pt-16"> {/* Add top padding to account for fixed header */}
