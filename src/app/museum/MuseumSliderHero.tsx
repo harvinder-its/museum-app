@@ -29,7 +29,7 @@ export function MuseumSliderHero() {
 
   const truncate = (text: string, maxChars: number) => {
     if (text.length <= maxChars) return text;
-    return `${text.slice(0, maxChars).trimEnd()}...`;
+    return `${text.slice(0, maxChars).trimEnd()}…`;
   };
 
   return (
@@ -53,13 +53,16 @@ export function MuseumSliderHero() {
       }
       onPausedChange={(next) => {
         const currentKey = `${(MUSEUM_SLIDES[activeIndex] ?? MUSEUM_SLIDES[0]).filename}:${lang}`;
+        // If user expanded "Read more", keep autoplay paused until collapsed.
         if (expandedByKey[currentKey] && next === false) return;
         setManualPaused(next);
       }}
     >
-      {(active) => {
-        const copy = MUSEUM_SLIDES[active] ?? MUSEUM_SLIDES[0];
-        const displayTitle = lang === "pa" && copy.titlePa ? copy.titlePa : copy.title;
+      {(activeIndex) => {
+        const copy = MUSEUM_SLIDES[activeIndex] ?? MUSEUM_SLIDES[0];
+        const titleEn = copy.title;
+        const titlePa = copy.titlePa;
+        const displayTitle = lang === "pa" && titlePa ? titlePa : titleEn;
         const description =
           lang === "pa" ? copy.descriptionPa ?? copy.description : copy.description;
         const key = `${copy.filename}:${lang}`;
@@ -139,6 +142,16 @@ export function MuseumSliderHero() {
                       className="inline-flex cursor-pointer items-center gap-1 p-0 text-xs font-semibold text-white/90 underline decoration-white/40 underline-offset-4 transition hover:text-white hover:decoration-white/80"
                     >
                       <span>{isExpanded ? readLessLabel : readMoreLabel}</span>
+                      {!isExpanded ? (
+                        <svg
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                          className="h-3.5 w-3.5"
+                          fill="currentColor"
+                        >
+                          <path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z" />
+                        </svg>
+                      ) : null}
                     </button>
                   </div>
                 ) : null}
